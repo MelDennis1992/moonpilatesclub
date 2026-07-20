@@ -1,0 +1,12 @@
+# Fichiers système et IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.gemini/
+
+# Dossiers d'entreprise privés
+BRANDING & IDENTITE VISUELLE/
+BUSINESS & FINANCE/
+LOCAUX/
+MARKETING & RESEAUX SOCIAUX/
