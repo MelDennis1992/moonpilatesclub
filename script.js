@@ -75,12 +75,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // ─── PRICING TOGGLES ───
   const pricingData = {
     newmoon: {
-      6:  { price: '150',   per: 'CHF 37,5 / séance',   eng: 'Engagement 6 mois', url: 'https://backoffice.bsport.io/customer/payment/pass/675955/?membership=4466&force=true' },
-      12: { price: '140',   per: 'CHF 35 / séance',  eng: 'Engagement 12 mois', url: 'https://backoffice.bsport.io/customer/payment/pass/675939/?membership=4466&force=true' }
+      6:  { price: '150',   per: 'CHF 37,5 / séance',   eng: 'Engagement 6 mois', url: 'https://backoffice.bsport.io/checkout/4466/subscription/30689?force=true' },
+      12: { price: '140',   per: 'CHF 35 / séance',  eng: 'Engagement 12 mois', url: 'https://backoffice.bsport.io/checkout/4466/subscription/30690?force=true' }
     },
     halfmoon: {
-      6:  { price: '250',   per: 'CHF 31,25 / séance',  eng: 'Engagement 6 mois', url: 'https://backoffice.bsport.io/customer/payment/pass/675956/?membership=4466&force=true' },
-      12: { price: '240',   per: 'CHF 30 / séance',   eng: 'Engagement 12 mois', url: 'https://backoffice.bsport.io/customer/payment/pass/675948/?membership=4466&force=true' }
+      6:  { price: '250',   per: 'CHF 31,25 / séance',  eng: 'Engagement 6 mois', url: 'https://backoffice.bsport.io/checkout/4466/subscription/30691?force=true' },
+      12: { price: '240',   per: 'CHF 30 / séance',   eng: 'Engagement 12 mois', url: 'https://backoffice.bsport.io/checkout/4466/subscription/30693?force=true' }
     },
     annual: {
       nm: { price: "1'540", per: '4 cours par mois · CHF 32 / séance', url: 'https://backoffice.bsport.io/customer/payment/pass/682887/?membership=4466&force=true' },
