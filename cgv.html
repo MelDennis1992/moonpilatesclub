@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CGV - Moon Pilates Club Lausanne</title>
   <meta name="description" content="Conditions Générales de Vente (CGV) de Moon Pilates Club Lausanne." />
-  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="icon" type="image/png" href="logo.png?v=2" />
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -70,11 +70,7 @@
     <!-- ANNOUNCEMENT BAR -->
     <div class="announcement-bar" id="announcement-bar">
       <div class="announcement-inner">
-        <span>🎉 OUVERTURE OFFICIELLE 17.08.2026</span>
-        <span class="announcement-dot">·</span>
-        <span>-20% SUR TOUS NOS ABONNEMENTS</span>
-        <span class="announcement-dot">·</span>
-        <span>CODE PROMO : LASTCHANCE20 🌙</span>
+        <span>✨ Ouvert depuis le 17 août 2026, viens découvrir le studio ! 🌙</span>
       </div>
       <button class="announcement-close" id="announcement-close" aria-label="Fermer">×</button>
     </div>
@@ -82,7 +78,7 @@
     <!-- NAVIGATION -->
     <nav class="nav scrolled" id="navbar" style="position: relative;">
       <a href="index.html#hero" class="nav-logo">
-        <img src="logo.png" alt="Moon Pilates Club Logo" class="nav-logo-img" />
+        <img src="logo.png?v=2" alt="Moon Pilates Club Logo" class="nav-logo-img" />
       </a>
       <div class="nav-links" id="nav-links">
         <a href="index.html#cours" class="nav-link">Cours</a>
@@ -91,6 +87,7 @@
         <a href="index.html#forfaits" class="nav-link">Formules</a>
         <a href="index.html#cadeaux" class="nav-link">Bons Cadeaux</a>
         <a href="index.html#concept" class="nav-link">À propos</a>
+        <a href="index.html#acces" class="nav-link">Accès au studio</a>
         <a href="index.html#contact" class="nav-link">Contact</a>
         <a href="index.html#planning" class="nav-cta" id="nav-reserver">Réserver</a>
       </div>
@@ -188,9 +185,9 @@
     <div class="container footer-inner">
       <div class="footer-brand">
         <a href="index.html#hero" class="nav-logo footer-logo">
-          <img src="logo.png" alt="Moon Pilates Club Logo" class="nav-logo-img" />
+          <img src="logo.png?v=2" alt="Moon Pilates Club Logo" class="nav-logo-img" />
         </a>
-        <p>1er centre lausannois combinant<br/>Pilates Mat · Reformer · Lagree</p>
+        <p>Studio lausannois · 6 disciplines<br/>Lagree · Reformer · Mat · Sculpt · Barre · Yoga</p>
       </div>
       <div class="footer-links">
         <a href="index.html#cours">Cours</a>
@@ -199,6 +196,7 @@
         <a href="index.html#forfaits">Formules</a>
         <a href="index.html#cadeaux">Bons Cadeaux</a>
         <a href="index.html#concept">À propos</a>
+        <a href="index.html#acces">Accès au studio</a>
         <a href="index.html#contact">Contact</a>
         <a href="index.html#faq">FAQ</a>
       </div>
@@ -208,6 +206,13 @@
       </div>
     </div>
   </footer>
+
+  <!-- BACK TO TOP BUTTON -->
+  <button class="back-to-top" id="back-to-top" aria-label="Remonter en haut de la page">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -235,6 +240,22 @@
       if (closeBtn && bar) {
         closeBtn.addEventListener('click', () => {
           bar.style.display = 'none';
+        });
+      }
+
+      // Back to top button
+      const backToTopBtn = document.getElementById('back-to-top');
+      if (backToTopBtn) {
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 300) {
+            backToTopBtn.classList.add('visible');
+          } else {
+            backToTopBtn.classList.remove('visible');
+          }
+        }, { passive: true });
+
+        backToTopBtn.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
         });
       }
     });

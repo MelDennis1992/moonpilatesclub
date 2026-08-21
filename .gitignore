@@ -4,9 +4,12 @@ Thumbs.db
 .vscode/
 .idea/
 .gemini/
+.env
+deploy.py
 
 # Dossiers d'entreprise privés
 BRANDING & IDENTITE VISUELLE/
 BUSINESS & FINANCE/
 LOCAUX/
 MARKETING & RESEAUX SOCIAUX/
+

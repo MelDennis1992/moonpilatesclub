@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=11" />
 </head>
 <body>
 
@@ -21,11 +21,7 @@
     <!-- ANNOUNCEMENT BAR -->
     <div class="announcement-bar" id="announcement-bar">
       <div class="announcement-inner">
-        <span>🎉 OUVERTURE LE 17.08.2026</span>
-        <span class="separator">·</span>
-        <span>⚡ PLUS QUE 6/50 ABONNEMENTS À -20%</span>
-        <span class="separator">·</span>
-        <span>CODE : <strong>LASTCHANCE20</strong> 🌙</span>
+        <span>✨ Ouvert depuis le 17 août 2026, viens découvrir le studio ! 🌙</span>
       </div>
       <button class="announcement-close" id="announcement-close" aria-label="Fermer">×</button>
     </div>
@@ -42,6 +38,7 @@
         <a href="#forfaits" class="nav-link">Formules</a>
         <a href="#cadeaux" class="nav-link">Bons Cadeaux</a>
         <a href="#concept" class="nav-link">À propos</a>
+        <a href="#acces" class="nav-link">Accès au studio</a>
         <a href="#contact" class="nav-link">Contact</a>
         <a href="#planning" class="nav-cta" id="nav-reserver">Réserver</a>
       </div>
@@ -277,7 +274,8 @@
           Curieux·se de tester nos cours ? Venez découvrir le studio dans un cadre moderne et convivial, sans prérequis.
         </p>
 
-        <div class="pricing-grid decouverte-grid" style="margin-bottom: 0;">
+        <!-- DESKTOP GRID -->
+        <div class="pricing-grid decouverte-grid only-desktop" style="margin-bottom: 0;">
           <!-- 1 SÉANCE -->
           <div class="pricing-card reveal" style="--delay:0s">
             <div class="pricing-moon">🌸</div>
@@ -300,8 +298,7 @@
           </div>
 
           <!-- 2 SÉANCES -->
-          <div class="pricing-card pricing-featured reveal" style="--delay:0.1s">
-            <div class="pricing-badge">Le Plus Choisi</div>
+          <div class="pricing-card reveal" style="--delay:0.1s">
             <div class="pricing-moon">🌸🌸</div>
             <h3 class="pricing-name">2 séances</h3>
             <p class="pricing-tagline">Pour confirmer le coup de cœur</p>
@@ -318,11 +315,12 @@
               <li>✓ Accès Moon Café après le cours</li>
               <li>✓ Aucun prérequis nécessaire</li>
             </ul>
-            <a href="https://backoffice.bsport.io/customer/payment/pass/675962/?membership=4466&force=true" target="_blank" class="btn btn-primary" style="margin-top: auto;">Réserver mes 2 séances</a>
+            <a href="https://backoffice.bsport.io/customer/payment/pass/675962/?membership=4466&force=true" target="_blank" class="btn btn-outline" style="margin-top: auto;">Réserver mes 2 séances</a>
           </div>
 
-          <!-- 3 SÉANCES -->
-          <div class="pricing-card reveal" style="--delay:0.2s">
+          <!-- 3 SÉANCES - FEATURED TOP -->
+          <div class="pricing-card pricing-featured reveal" style="--delay:0.2s">
+            <div class="pricing-badge">⭐ Le Plus Choisi</div>
             <div class="pricing-moon">🌸🌸🌸</div>
             <h3 class="pricing-name">3 séances</h3>
             <p class="pricing-tagline">Pour vraiment ressentir les effets</p>
@@ -339,7 +337,54 @@
               <li>✓ Accès Moon Café après le cours</li>
               <li>✓ Aucun prérequis nécessaire</li>
             </ul>
-            <a href="https://backoffice.bsport.io/customer/payment/pass/682886/?membership=4466&force=true" target="_blank" class="btn btn-outline" style="margin-top: auto;">Réserver mes 3 séances</a>
+            <a href="https://backoffice.bsport.io/customer/payment/pass/682886/?membership=4466&force=true" target="_blank" class="btn btn-primary" style="margin-top: auto;">Réserver mes 3 séances</a>
+          </div>
+        </div>
+
+        <!-- MOBILE COMPACT SELECTOR -->
+        <div class="mobile-pricing-wrapper only-mobile reveal">
+          <div class="mobile-swipe-guide">
+            <span>👈 Glissez la carte ou touchez les onglets 👉</span>
+          </div>
+
+          <div class="mobile-pills-container">
+            <div class="mobile-pills" id="pills-decouverte">
+              <button class="mobile-pill" data-target="dec-1">1 séance</button>
+              <button class="mobile-pill" data-target="dec-2">2 séances</button>
+              <button class="mobile-pill active" data-target="dec-3">3 séances <span class="pill-tag">⭐ Top</span></button>
+            </div>
+          </div>
+
+          <div class="pricing-card mobile-card pricing-featured" id="card-dec-mobile">
+            <div class="pricing-badge" id="dec-m-badge">⭐ Le Plus Choisi</div>
+            <div class="pricing-moon" id="dec-m-icon">🌸🌸🌸</div>
+            <h3 class="pricing-name" id="dec-m-name">3 séances Découverte</h3>
+            <p class="pricing-tagline" id="dec-m-tagline">Pour vraiment ressentir les effets</p>
+            <div class="pricing-price" style="margin-top: 18px;">
+              <span class="price-currency">CHF</span>
+              <span class="price-amount" id="dec-m-price">85</span>
+              <span class="price-period" id="dec-m-period">/ pack</span>
+            </div>
+            <p class="price-per-session" id="dec-m-per">CHF 28,3 / cours</p>
+            <ul class="pricing-features">
+              <li>✓ Présentation du studio & des machines</li>
+              <li>✓ Séance guidée (max. 6 personnes)</li>
+              <li>✓ Conseils personnalisés selon votre niveau</li>
+              <li>✓ Accès Moon Café après le cours</li>
+              <li>✓ Aucun prérequis nécessaire</li>
+            </ul>
+            <a href="https://backoffice.bsport.io/customer/payment/pass/682886/?membership=4466&force=true" target="_blank" class="btn btn-primary" id="dec-m-btn" style="margin-top: 16px;">Réserver mes 3 séances</a>
+          </div>
+
+          <!-- Mobile Pagination & Arrows Navigation -->
+          <div class="mobile-nav-bar">
+            <button class="mobile-nav-arrow prev" data-section="decouverte" aria-label="Offre précédente">‹</button>
+            <div class="mobile-dots" id="dots-decouverte">
+              <span class="dot" data-target="dec-1"></span>
+              <span class="dot" data-target="dec-2"></span>
+              <span class="dot active" data-target="dec-3"></span>
+            </div>
+            <button class="mobile-nav-arrow next" data-section="decouverte" aria-label="Offre suivante">›</button>
           </div>
         </div>
       </div>
@@ -353,7 +398,8 @@
         <h2 class="section-title reveal" style="text-align:center">Choisissez votre<br/><em>formule</em></h2>
         <p class="tarifs-sub reveal" style="text-align:center; margin-bottom:64px;">6 disciplines · Lausanne</p>
 
-        <div class="pricing-grid">
+        <!-- DESKTOP GRID -->
+        <div class="pricing-grid only-desktop">
           <!-- NEW MOON -->
           <div class="pricing-card reveal" style="--delay:0s" id="card-newmoon">
             <div class="pricing-moon">🌑</div>
@@ -431,7 +477,6 @@
             <a href="https://backoffice.bsport.io/checkout/4466/subscription/30694?force=true" target="_blank" class="btn btn-outline">Choisir Full Moon</a>
           </div>
 
-
           <!-- ANNUEL -->
           <div class="pricing-card pricing-annual reveal" style="--delay:0.3s" id="card-annual">
             <div class="pricing-badge pricing-badge-gold">Meilleur Prix</div>
@@ -459,6 +504,62 @@
             <a href="https://backoffice.bsport.io/customer/payment/pass/682887/?membership=4466&force=true" target="_blank" class="btn btn-primary" id="btn-annual">Choisir Annuel</a>
           </div>
         </div>
+
+        <!-- MOBILE COMPACT SELECTOR -->
+        <div class="mobile-pricing-wrapper only-mobile reveal">
+          <div class="mobile-swipe-guide">
+            <span>👈 Glissez la carte ou touchez les onglets 👉</span>
+          </div>
+
+          <div class="mobile-pills-container">
+            <div class="mobile-pills" id="pills-forfaits">
+              <button class="mobile-pill" data-target="forfait-newmoon">New Moon</button>
+              <button class="mobile-pill active" data-target="forfait-halfmoon">Half Moon <span class="pill-tag">⭐ Top</span></button>
+              <button class="mobile-pill" data-target="forfait-fullmoon">Full Moon</button>
+              <button class="mobile-pill" data-target="forfait-annual">Annuel ✨</button>
+            </div>
+          </div>
+
+          <div class="pricing-card mobile-card pricing-featured" id="card-forfait-mobile">
+            <div class="pricing-badge" id="forfait-m-badge">Plus Populaire</div>
+            <div class="pricing-moon" id="forfait-m-icon">🌗</div>
+            <h3 class="pricing-name" id="forfait-m-name">Half Moon</h3>
+            <p class="pricing-tagline" id="forfait-m-tagline">Pour pratiquer régulièrement</p>
+            
+            <div class="pricing-toggle" id="forfait-m-toggle">
+              <button class="toggle-btn active" id="forfait-m-tog1">6 mois</button>
+              <button class="toggle-btn" id="forfait-m-tog2">12 mois</button>
+            </div>
+
+            <div class="pricing-price">
+              <span class="price-currency">CHF</span>
+              <span class="price-amount" id="forfait-m-price">250</span>
+              <span class="price-period" id="forfait-m-period">/ mois</span>
+            </div>
+            <p class="price-per-session" id="forfait-m-per">CHF 31,25 / séance</p>
+            <ul class="pricing-features" id="forfait-m-features">
+              <li>✓ 8 cours par mois</li>
+              <li>✓ 6 disciplines complémentaires</li>
+              <li>Lagree · Reformer · Mat · Sculpt · Barre · Yoga</li>
+              <li>✓ Ateliers à venir</li>
+              <li>✓ -10% sur vos boissons Moon Café</li>
+            </ul>
+            <p class="pricing-engagement" id="forfait-m-eng">Engagement 6 mois</p>
+            <a href="https://backoffice.bsport.io/checkout/4466/subscription/30691?force=true" target="_blank" class="btn btn-primary" id="forfait-m-btn">Choisir Half Moon</a>
+          </div>
+
+          <!-- Mobile Pagination & Arrows Navigation -->
+          <div class="mobile-nav-bar">
+            <button class="mobile-nav-arrow prev" data-section="forfaits" aria-label="Formule précédente">‹</button>
+            <div class="mobile-dots" id="dots-forfaits">
+              <span class="dot" data-target="forfait-newmoon"></span>
+              <span class="dot active" data-target="forfait-halfmoon"></span>
+              <span class="dot" data-target="forfait-fullmoon"></span>
+              <span class="dot" data-target="forfait-annual"></span>
+            </div>
+            <button class="mobile-nav-arrow next" data-section="forfaits" aria-label="Formule suivante">›</button>
+          </div>
+        </div>
       </div>
 
       <!-- SEPARATOR -->
@@ -482,7 +583,8 @@
           <div class="badge"><span class="badge-icon">✉️</span><span>Version papier ou digitale</span></div>
         </div>
 
-        <div class="pricing-grid">
+        <!-- DESKTOP GRID -->
+        <div class="pricing-grid only-desktop">
           <!-- CARTE 3 SÉANCES -->
           <div class="pricing-card reveal" style="--delay:0s">
             <div class="pricing-moon">🎁</div>
@@ -564,12 +666,94 @@
             <a href="https://backoffice.bsport.io/checkout/4466/giftcard/13388/?force=true" target="_blank" class="btn btn-outline" style="margin-top: auto;">Offrir cette carte</a>
           </div>
         </div>
-      </div>
 
-      <div class="promo-banner reveal">
-        <span class="promo-icon">🌙</span>
-        <p>Plus que <strong>6/50 abonnements à -20%</strong> avec le code <strong class="promo-code">LASTCHANCE20</strong></p>
-        <span class="promo-icon">🌙</span>
+        <!-- MOBILE COMPACT SELECTOR -->
+        <div class="mobile-pricing-wrapper only-mobile reveal">
+          <div class="mobile-swipe-guide">
+            <span>👈 Glissez la carte ou touchez les onglets 👉</span>
+          </div>
+
+          <div class="mobile-pills-container">
+            <div class="mobile-pills" id="pills-cadeaux">
+              <button class="mobile-pill" data-target="cad-3">3 Séances (85.-)</button>
+              <button class="mobile-pill active" data-target="cad-150">CHF 150.- <span class="pill-tag">⭐ Idéal</span></button>
+              <button class="mobile-pill" data-target="cad-250">CHF 250.-</button>
+              <button class="mobile-pill" data-target="cad-350">CHF 350.-</button>
+            </div>
+          </div>
+
+          <div class="pricing-card mobile-card pricing-featured" id="card-cadeau-mobile">
+            <div class="pricing-badge" id="cad-m-badge">Idéal pour débuter</div>
+            <div class="pricing-moon" id="cad-m-icon">🎁</div>
+            <h3 class="pricing-name" id="cad-m-name">Carte Cadeau CHF 150.-</h3>
+            <p class="pricing-tagline" id="cad-m-tagline">Liberté de choisir</p>
+            <div class="pricing-price" style="margin-top: 18px;">
+              <span class="price-currency">CHF</span>
+              <span class="price-amount" id="cad-m-price">150</span>
+            </div>
+            <p class="price-per-session" id="cad-m-per">Utilisable sur tous les cours</p>
+            <ul class="pricing-features">
+              <li>✓ Valable sur tous les cours & formules</li>
+              <li>✓ 6 disciplines complémentaires</li>
+              <li>Lagree · Reformer · Mat · Sculpt · Barre · Yoga</li>
+              <li>✓ Accès Moon Café inclus</li>
+              <li>✓ Valable 1 an</li>
+            </ul>
+            <a href="https://backoffice.bsport.io/checkout/4466/giftcard/13386/?force=true" target="_blank" class="btn btn-primary" id="cad-m-btn" style="margin-top: 16px;">Offrir cette carte</a>
+          </div>
+
+          <!-- Mobile Pagination & Arrows Navigation -->
+          <div class="mobile-nav-bar">
+            <button class="mobile-nav-arrow prev" data-section="cadeaux" aria-label="Carte précédente">‹</button>
+            <div class="mobile-dots" id="dots-cadeaux">
+              <span class="dot" data-target="cad-3"></span>
+              <span class="dot active" data-target="cad-150"></span>
+              <span class="dot" data-target="cad-250"></span>
+              <span class="dot" data-target="cad-350"></span>
+            </div>
+            <button class="mobile-nav-arrow next" data-section="cadeaux" aria-label="Carte suivante">›</button>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APP MOBILE SECTION -->
+  <section class="app-section" id="app">
+    <div class="container">
+      <div class="app-card reveal">
+        <div class="app-content">
+          <p class="app-label">Application officielle</p>
+          <h2 class="app-title">TÉLÉCHARGEZ<br/>L'APPLICATION MOBILE</h2>
+          <p class="app-desc">
+            L'application mobile <strong>Moon Pilates Club</strong> vous permet de gérer votre planning de cours en toute simplicité. Une organisation optimisée pour une expérience encore plus fluide.
+          </p>
+          <div class="app-buttons">
+            <a href="https://apps.apple.com/fr/app/moon-pilates-club/id6751106468" target="_blank" rel="noopener noreferrer" class="store-btn app-store-btn" aria-label="Télécharger dans l'App Store">
+              <svg class="store-icon" viewBox="0 0 384 512" fill="currentColor">
+                <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/>
+              </svg>
+              <div class="store-btn-text">
+                <span class="store-small">Télécharger dans</span>
+                <span class="store-big">l’App Store</span>
+              </div>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.bsport_101__4466&hl=fr_CH&pli=1" target="_blank" rel="noopener noreferrer" class="store-btn google-play-btn" aria-label="Disponible sur Google Play">
+              <svg class="store-icon" viewBox="0 0 512 512" fill="currentColor">
+                <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/>
+              </svg>
+              <div class="store-btn-text">
+                <span class="store-small">DISPONIBLE SUR</span>
+                <span class="store-big">Google Play</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="app-mockup-wrap">
+          <img src="app-mockup.png?v=3" alt="Application Mobile Moon Pilates Club" class="app-phone-image" style="max-width: 340px; width: 100%; height: auto; display: block;" />
+        </div>
       </div>
     </div>
   </section>
@@ -672,10 +856,10 @@
               </div>
             </div>
             <div class="contact-item reveal">
-              <div class="contact-icon">📅</div>
+              <div class="contact-icon">📞</div>
               <div>
-                <p class="contact-label">Ouverture officielle</p>
-                <p>17 août 2026</p>
+                <p class="contact-label">Téléphone</p>
+                <a href="tel:+41783359292">+41 (0)78 335 92 92</a>
               </div>
             </div>
             <div class="contact-item reveal">
@@ -683,6 +867,42 @@
               <div>
                 <p class="contact-label">Contact</p>
                 <a href="mailto:hello@moonpilatesclub.com">hello@moonpilatesclub.com</a>
+              </div>
+            </div>
+            <div class="contact-item reveal">
+              <div class="contact-icon">☕</div>
+              <div style="width: 100%;">
+                <p class="contact-label">Horaires Moon Café</p>
+                <div class="cafe-schedule">
+                  <div class="schedule-row">
+                    <span class="day">Lundi</span>
+                    <span class="hours">12:00–14:00 · 16:00–19:00</span>
+                  </div>
+                  <div class="schedule-row">
+                    <span class="day">Mardi</span>
+                    <span class="hours">07:00–14:00 · 16:00–19:00</span>
+                  </div>
+                  <div class="schedule-row">
+                    <span class="day">Mercredi</span>
+                    <span class="hours">09:00–14:00 · 16:00–19:00</span>
+                  </div>
+                  <div class="schedule-row">
+                    <span class="day">Jeudi</span>
+                    <span class="hours">07:00–14:00 · 17:00–19:30</span>
+                  </div>
+                  <div class="schedule-row">
+                    <span class="day">Vendredi</span>
+                    <span class="hours">09:00–14:00 · 16:00–19:00</span>
+                  </div>
+                  <div class="schedule-row">
+                    <span class="day">Samedi</span>
+                    <span class="hours">08:30–14:00</span>
+                  </div>
+                  <div class="schedule-row closed">
+                    <span class="day">Dimanche</span>
+                    <span class="hours">Fermé</span>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="contact-item reveal">
@@ -737,14 +957,59 @@
     </div>
   </section>
 
-  <div class="map-container">
-    <iframe
-      src="https://maps.google.com/maps?q=GJ9P%2BPR%20Lausanne,%20Suisse&t=&z=16&ie=UTF8&iwloc=&output=embed"
-      width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-      title="Moon Pilates Club Lausanne - Galeries Benjamin-Constant">
-    </iframe>
-  </div>
+  <!-- STUDIO ACCESS & LOCATION MAP -->
+  <section class="access-section" id="acces">
+    <div class="container">
+      <div class="access-card reveal">
+        <div class="access-header">
+          <span class="access-icon-badge">🧭</span>
+          <div>
+            <h3 class="access-title">Accès au studio</h3>
+            <p class="access-subtitle">Galeries Benjamin-Constant 1, 6ème étage · 1003 Lausanne</p>
+          </div>
+        </div>
+        <div class="access-grid">
+          <div class="access-item">
+            <div class="access-item-icon">🚇</div>
+            <div class="access-item-body">
+              <strong>Métro M2</strong>
+              <p>Arrêt <em>Bessières</em> (à 2 min à pied)</p>
+            </div>
+          </div>
+          <div class="access-item">
+            <div class="access-item-icon">🚌</div>
+            <div class="access-item-body">
+              <strong>Lignes de Bus</strong>
+              <p>Arrêts <em>Benjamin-Constant</em> (13 & 16) ou <em>St-François</em></p>
+            </div>
+          </div>
+          <div class="access-item">
+            <div class="access-item-icon">🚗</div>
+            <div class="access-item-body">
+              <strong>Parking</strong>
+              <p>Hôtel de la Paix (ext./souterrain) ou rue (3 CHF/h)</p>
+            </div>
+          </div>
+          <div class="access-item access-landmark">
+            <div class="access-item-icon">📍</div>
+            <div class="access-item-body">
+              <strong>Repère</strong>
+              <p>Juste en face du restaurant <strong>Luigia&nbsp;!</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="map-container">
+      <iframe
+        src="https://maps.google.com/maps?q=GJ9P%2BPR%20Lausanne,%20Suisse&t=&z=16&ie=UTF8&iwloc=&output=embed"
+        width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Moon Pilates Club Lausanne - Galeries Benjamin-Constant">
+      </iframe>
+    </div>
+  </section>
 
   <!-- FOOTER -->
   <footer class="footer">
@@ -762,6 +1027,7 @@
         <a href="#forfaits">Formules</a>
         <a href="#cadeaux">Bons Cadeaux</a>
         <a href="#concept">À propos</a>
+        <a href="#acces">Accès au studio</a>
         <a href="#contact">Contact</a>
         <a href="#faq">FAQ</a>
       </div>
@@ -772,6 +1038,13 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- BACK TO TOP BUTTON -->
+  <button class="back-to-top" id="back-to-top" aria-label="Remonter en haut de la page">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <script src="script.js?v=11"></script>
 </body>
 </html>
