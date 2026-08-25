@@ -851,6 +851,10 @@ ul { list-style: none; }
 }
 .promo-icon { font-size: 1.2rem; }
 
+.prive-hidden {
+  display: none !important;
+}
+
 /* ===========================
    RESPONSIVE UTILITIES & MOBILE PRICING
    =========================== */

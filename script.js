@@ -586,6 +586,238 @@ document.addEventListener('DOMContentLoaded', () => {
 
   enableSwipe(document.getElementById('card-cadeau-mobile'), () => navCadeaux('next'), () => navCadeaux('prev'));
 
+
+  // ─── 4. SESSIONS PRIVÉES (SOLO & DUO) ───
+
+  // Desktop Format Switcher (Solo / Duo)
+  const tabSolo = document.getElementById('prive-tab-solo');
+  const tabDuo = document.getElementById('prive-tab-duo');
+  const gridSolo = document.getElementById('prive-grid-solo');
+  const gridDuo = document.getElementById('prive-grid-duo');
+
+  if (tabSolo && tabDuo && gridSolo && gridDuo) {
+    tabSolo.addEventListener('click', () => {
+      tabSolo.classList.add('active');
+      tabDuo.classList.remove('active');
+      gridSolo.classList.remove('prive-hidden');
+      gridDuo.classList.add('prive-hidden');
+    });
+
+    tabDuo.addEventListener('click', () => {
+      tabDuo.classList.add('active');
+      tabSolo.classList.remove('active');
+      gridDuo.classList.remove('prive-hidden');
+      gridSolo.classList.add('prive-hidden');
+    });
+  }
+
+  // Mobile Sessions Privées Selector
+  const privesKeys = ['prive-solo-1', 'prive-solo-5', 'prive-solo-10', 'prive-duo-1', 'prive-duo-5', 'prive-duo-10'];
+  const privesData = {
+    'prive-solo-1': {
+      name: '1 séance Solo',
+      tagline: '50 min d\'attention exclusive & personnalisée',
+      price: '110',
+      period: '/ séance',
+      per: 'CHF 110.- / cours',
+      badge: '',
+      icon: '👤',
+      btnText: 'Réserver 1 cours Solo',
+      btnClass: 'btn btn-outline',
+      isFeatured: false,
+      features: [
+        '✓ 50 minutes en tête-à-tête avec votre coach',
+        '✓ 1 discipline au choix parmi les 6',
+        '✓ Correction posturale & intensité 100% adaptée',
+        '✓ Idéal pour débuter ou cibler un objectif précis',
+        '✓ Boisson signature au Moon Café incluse'
+      ],
+      url: 'https://backoffice.bsport.io/customer/payment/pass/787309/?membership=4466&force=true'
+    },
+    'prive-solo-5': {
+      name: 'Pack 5 séances Solo',
+      tagline: 'Pour un suivi régulier et des progrès rapides',
+      price: '525',
+      period: '/ pack',
+      per: 'CHF 105.- / cours (au lieu de 110.-)',
+      badge: '⭐ Recommandé',
+      icon: '👤✨',
+      btnText: 'Choisir le pack 5 Solo',
+      btnClass: 'btn btn-primary',
+      isFeatured: true,
+      features: [
+        '✓ 5 séances privées de 50 minutes',
+        '✓ Programme évolutif selon vos objectifs',
+        '✓ Combinez vos disciplines préférées',
+        '✓ Créneaux réservés selon vos disponibilités',
+        '✓ Débriefing & détente au Moon Café'
+      ],
+      url: 'https://backoffice.bsport.io/customer/payment/pass/787307/?membership=4466&force=true'
+    },
+    'prive-solo-10': {
+      name: 'Pack 10 séances Solo',
+      tagline: 'L\'immersion complète pour des résultats durables',
+      price: '990',
+      period: '/ pack',
+      per: 'CHF 99.- / cours · Économisez 110.-',
+      badge: 'Meilleur Tarif',
+      icon: '👑',
+      btnText: 'Choisir le pack 10 Solo',
+      btnClass: 'btn btn-outline',
+      isFeatured: false,
+      features: [
+        '✓ 10 séances privées de 50 minutes',
+        '✓ Accompagnement sur mesure continu',
+        '✓ Accès libre à l\'ensemble des 6 disciplines',
+        '✓ Flexibilité maximale de réservation',
+        '✓ Espace lounge & Moon Café inclus'
+      ],
+      url: 'https://backoffice.bsport.io/customer/payment/pass/787304/?membership=4466&force=true'
+    },
+    'prive-duo-1': {
+      name: '1 séance Duo',
+      tagline: 'Partagez l\'expérience à deux avec votre coach',
+      price: '140',
+      period: '/ séance',
+      per: 'CHF 70.- / cours / personne',
+      badge: '',
+      icon: '👥',
+      btnText: 'Réserver 1 cours Duo',
+      btnClass: 'btn btn-outline',
+      isFeatured: false,
+      features: [
+        '✓ 50 minutes en binôme avec votre coach',
+        '✓ Avec un ami, un proche ou votre partenaire',
+        '✓ Séance adaptée aux niveaux des 2 personnes',
+        '✓ 1 discipline au choix parmi les 6',
+        '✓ Moment convivial au Moon Café après la séance'
+      ],
+      url: 'https://backoffice.bsport.io/customer/payment/pass/787322/?membership=4466&force=true'
+    },
+    'prive-duo-5': {
+      name: 'Pack 5 séances Duo',
+      tagline: 'Motivation et régularité partagées en duo',
+      price: '650',
+      period: '/ pack',
+      per: 'CHF 65.- / cours / pers. (325.- par pers.)',
+      badge: '⭐ Le Plus Prisé',
+      icon: '👥✨',
+      btnText: 'Choisir le pack 5 Duo',
+      btnClass: 'btn btn-primary',
+      isFeatured: true,
+      features: [
+        '✓ 5 séances privées en duo (50 min)',
+        '✓ Progression en binôme motivante & sur mesure',
+        '✓ Toutes les disciplines disponibles',
+        '✓ Créneaux réservés selon vos disponibilités',
+        '✓ Boisson signature au Moon Café incluse'
+      ],
+      url: 'https://backoffice.bsport.io/customer/payment/pass/787329/?membership=4466&force=true'
+    },
+    'prive-duo-10': {
+      name: 'Pack 10 séances Duo',
+      tagline: 'Le tarif le plus avantageux pour pratiquer à deux',
+      price: "1'250",
+      period: '/ pack',
+      per: 'CHF 62.50 / cours / pers. (625.- par pers.)',
+      badge: 'Économique à Deux',
+      icon: '👯‍♀️',
+      btnText: 'Choisir le pack 10 Duo',
+      btnClass: 'btn btn-outline',
+      isFeatured: false,
+      features: [
+        '✓ 10 séances privées en duo (50 min)',
+        '✓ Le tarif le plus bas par séance et par personne',
+        '✓ Encadrement sur mesure complet et régulier',
+        '✓ Flexibilité de réservation sur l\'année',
+        '✓ Espace détente & Moon Café inclus'
+      ],
+      url: 'https://backoffice.bsport.io/customer/payment/pass/787331/?membership=4466&force=true'
+    }
+  };
+
+  function selectPrive(targetKey) {
+    const data = privesData[targetKey];
+    if (!data) return;
+
+    document.querySelectorAll('#pills-prives .mobile-pill').forEach(p => {
+      if (p.dataset.target === targetKey) {
+        p.classList.add('active');
+        p.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      } else {
+        p.classList.remove('active');
+      }
+    });
+
+    const nameEl = document.getElementById('prive-m-name');
+    const tagEl = document.getElementById('prive-m-tagline');
+    const priceEl = document.getElementById('prive-m-price');
+    const perEl = document.getElementById('prive-m-per');
+    const periodEl = document.getElementById('prive-m-period');
+    const badgeEl = document.getElementById('prive-m-badge');
+    const iconEl = document.getElementById('prive-m-icon');
+    const btnEl = document.getElementById('prive-m-btn');
+    const featEl = document.getElementById('prive-m-features');
+    const cardEl = document.getElementById('card-prive-mobile');
+
+    if (nameEl) nameEl.textContent = data.name;
+    if (tagEl) tagEl.textContent = data.tagline;
+    if (priceEl) priceEl.textContent = data.price;
+    if (perEl) perEl.textContent = data.per;
+    if (periodEl) periodEl.textContent = data.period;
+    if (iconEl) iconEl.textContent = data.icon;
+    if (btnEl) {
+      btnEl.textContent = data.btnText;
+      btnEl.setAttribute('href', data.url);
+      btnEl.className = data.btnClass;
+    }
+    if (badgeEl) {
+      if (data.badge) {
+        badgeEl.textContent = data.badge;
+        badgeEl.style.display = 'block';
+      } else {
+        badgeEl.style.display = 'none';
+      }
+    }
+    if (cardEl) {
+      if (data.isFeatured) {
+        cardEl.classList.add('pricing-featured');
+      } else {
+        cardEl.classList.remove('pricing-featured');
+      }
+    }
+    if (featEl && data.features) {
+      featEl.innerHTML = data.features.map(f => `<li>${f}</li>`).join('');
+    }
+    updateDots('prives', targetKey);
+  }
+
+  document.querySelectorAll('#pills-prives .mobile-pill').forEach(pill => {
+    pill.addEventListener('click', () => selectPrive(pill.dataset.target));
+  });
+
+  document.querySelectorAll('#dots-prives .dot').forEach(dot => {
+    dot.addEventListener('click', () => selectPrive(dot.dataset.target));
+  });
+
+  function navPrives(direction) {
+    const currentActive = document.querySelector('#pills-prives .mobile-pill.active')?.dataset.target || 'prive-solo-5';
+    let idx = privesKeys.indexOf(currentActive);
+    if (direction === 'next') {
+      idx = (idx + 1) % privesKeys.length;
+    } else {
+      idx = (idx - 1 + privesKeys.length) % privesKeys.length;
+    }
+    selectPrive(privesKeys[idx]);
+  }
+
+  document.querySelectorAll('.mobile-nav-arrow[data-section="prives"]').forEach(arrow => {
+    arrow.addEventListener('click', () => navPrives(arrow.classList.contains('next') ? 'next' : 'prev'));
+  });
+
+  enableSwipe(document.getElementById('card-prive-mobile'), () => navPrives('next'), () => navPrives('prev'));
+
+
   // ─── FAQ ACCORDION ───
   document.querySelectorAll('.faq-question').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -670,7 +902,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   // ─── SMOOTH ACTIVE NAV LINKS ───
-  const sections = document.querySelectorAll('section[id], #planning, #decouverte, #forfaits, #cadeaux');
+  const sections = document.querySelectorAll('section[id], #planning, #decouverte, #forfaits, #prives, #cadeaux');
   const navLinkEls = document.querySelectorAll('.nav-link');
 
   const sectionObserver = new IntersectionObserver((entries) => {

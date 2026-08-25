@@ -36,6 +36,7 @@
         <a href="#planning" class="nav-link">Planning</a>
         <a href="#decouverte" class="nav-link">Découverte</a>
         <a href="#forfaits" class="nav-link">Formules</a>
+        <a href="#prives" class="nav-link">Cours Privés</a>
         <a href="#cadeaux" class="nav-link">Bons Cadeaux</a>
         <a href="#concept" class="nav-link">À propos</a>
         <a href="#acces" class="nav-link">Accès au studio</a>
@@ -565,6 +566,225 @@
       <!-- SEPARATOR -->
       <div style="border-top: 1px solid rgba(123, 89, 89, 0.12); margin-bottom: 80px; margin-top: 80px;"></div>
 
+      <!-- SESSIONS PRIVÉES (SOLO & DUO) -->
+      <div class="prives-section" id="prives" style="margin-bottom: 80px;">
+        <p class="section-label reveal" style="text-align:center">🤍 Sessions Privées ✨</p>
+        <h2 class="section-title reveal" style="text-align:center">Coaching <em>Privé</em></h2>
+        <p class="tarifs-sub reveal" style="text-align:center; max-width:760px; margin-left:auto; margin-right:auto; margin-bottom:16px;">
+          Un accompagnement 100 % sur mesure pour atteindre vos objectifs. Nos sessions privées de 50 minutes vous offrent un encadrement exclusif, adapté à votre niveau, votre condition physique et vos envies du moment. 🧘‍♀️
+        </p>
+        <p class="tarifs-sub reveal" style="text-align:center; max-width:760px; margin-left:auto; margin-right:auto; margin-bottom:28px; font-size:0.88rem; opacity:0.8;">
+          <strong>Discipline au choix :</strong> Lagree · Reformer · Mat Pilates · Sculpt · Barre · Hatha Yoga · Power Yoga 🌿
+        </p>
+
+        <!-- Value Badges -->
+        <div class="concept-badges reveal" style="justify-content:center; margin-bottom:40px; margin-top:0;">
+          <div class="badge"><span class="badge-icon">👤</span><span>Sur-mesure & Posture ciblée</span></div>
+          <div class="badge"><span class="badge-icon">🕒</span><span>Créneaux Flexibles (Heures creuses)</span></div>
+          <div class="badge"><span class="badge-icon">☕</span><span>Détente & Moon Café inclus</span></div>
+        </div>
+
+        <!-- Format Switcher (Solo / Duo) Desktop -->
+        <div class="prive-type-switch-container reveal" style="display:flex; justify-content:center; margin-bottom:40px;">
+          <div class="pricing-toggle" style="max-width:320px; width:100%; padding:4px;">
+            <button class="toggle-btn active" id="prive-tab-solo" data-prive-tab="solo" style="font-size:0.88rem; padding:8px 18px;">👤 Moon Solo</button>
+            <button class="toggle-btn" id="prive-tab-duo" data-prive-tab="duo" style="font-size:0.88rem; padding:8px 18px;">👥 Moon Duo</button>
+          </div>
+        </div>
+
+        <!-- DESKTOP GRID - SOLO -->
+        <div class="pricing-grid decouverte-grid only-desktop prive-grid" id="prive-grid-solo">
+          <!-- 1 COURS SOLO -->
+          <div class="pricing-card reveal" style="--delay:0s">
+            <div class="pricing-moon">👤</div>
+            <h3 class="pricing-name">1 séance Solo</h3>
+            <p class="pricing-tagline">50 min d'attention exclusive & personnalisée</p>
+            <div class="pricing-price" style="margin-top: 24px;">
+              <span class="price-currency">CHF</span>
+              <span class="price-amount">110</span>
+              <span class="price-period">/ séance</span>
+            </div>
+            <p class="price-per-session">CHF 110.- / cours</p>
+            <ul class="pricing-features">
+              <li>✓ 50 minutes en tête-à-tête avec votre coach</li>
+              <li>✓ 1 discipline au choix parmi les 6</li>
+              <li>✓ Correction posturale & intensité 100% adaptée</li>
+              <li>✓ Idéal pour débuter ou cibler un objectif précis</li>
+              <li>✓ Boisson signature au Moon Café incluse</li>
+            </ul>
+            <a href="https://backoffice.bsport.io/customer/payment/pass/787309/?membership=4466&force=true" target="_blank" class="btn btn-outline" style="margin-top: auto;">Réserver 1 cours Solo</a>
+          </div>
+
+          <!-- 5 COURS SOLO (FEATURED) -->
+          <div class="pricing-card pricing-featured reveal" style="--delay:0.1s">
+            <div class="pricing-badge">⭐ Recommandé</div>
+            <div class="pricing-moon">👤✨</div>
+            <h3 class="pricing-name">Pack 5 séances</h3>
+            <p class="pricing-tagline">Pour un suivi régulier et des progrès rapides</p>
+            <div class="pricing-price" style="margin-top: 24px;">
+              <span class="price-currency">CHF</span>
+              <span class="price-amount">525</span>
+              <span class="price-period">/ pack</span>
+            </div>
+            <p class="price-per-session">CHF 105.- / cours (au lieu de 110.-)</p>
+            <ul class="pricing-features">
+              <li>✓ 5 séances privées de 50 minutes</li>
+              <li>✓ Programme évolutif selon vos objectifs</li>
+              <li>✓ Combinez vos disciplines préférées</li>
+              <li>✓ Créneaux réservés selon vos disponibilités</li>
+              <li>✓ Débriefing & détente au Moon Café</li>
+            </ul>
+            <a href="https://backoffice.bsport.io/customer/payment/pass/787307/?membership=4466&force=true" target="_blank" class="btn btn-primary" style="margin-top: auto;">Choisir le pack 5 Solo</a>
+          </div>
+
+          <!-- 10 COURS SOLO -->
+          <div class="pricing-card reveal" style="--delay:0.2s">
+            <div class="pricing-badge" style="background: var(--gold); color: var(--charcoal);">Meilleur Tarif</div>
+            <div class="pricing-moon">👑</div>
+            <h3 class="pricing-name">Pack 10 séances</h3>
+            <p class="pricing-tagline">L'immersion complète pour des résultats durables</p>
+            <div class="pricing-price" style="margin-top: 24px;">
+              <span class="price-currency">CHF</span>
+              <span class="price-amount">990</span>
+              <span class="price-period">/ pack</span>
+            </div>
+            <p class="price-per-session">CHF 99.- / cours · Économisez 110.-</p>
+            <ul class="pricing-features">
+              <li>✓ 10 séances privées de 50 minutes</li>
+              <li>✓ Accompagnement sur mesure continu</li>
+              <li>✓ Accès libre à l'ensemble des 6 disciplines</li>
+              <li>✓ Flexibilité maximale de réservation</li>
+              <li>✓ Espace lounge & Moon Café inclus</li>
+            </ul>
+            <a href="https://backoffice.bsport.io/customer/payment/pass/787304/?membership=4466&force=true" target="_blank" class="btn btn-outline" style="margin-top: auto;">Choisir le pack 10 Solo</a>
+          </div>
+        </div>
+
+        <!-- DESKTOP GRID - DUO -->
+        <div class="pricing-grid decouverte-grid only-desktop prive-grid prive-hidden" id="prive-grid-duo">
+          <!-- 1 COURS DUO -->
+          <div class="pricing-card reveal" style="--delay:0s">
+            <div class="pricing-moon">👥</div>
+            <h3 class="pricing-name">1 séance Duo</h3>
+            <p class="pricing-tagline">Partagez l'expérience à deux avec votre coach</p>
+            <div class="pricing-price" style="margin-top: 24px;">
+              <span class="price-currency">CHF</span>
+              <span class="price-amount">140</span>
+              <span class="price-period">/ séance</span>
+            </div>
+            <p class="price-per-session">CHF 70.- / cours / personne</p>
+            <ul class="pricing-features">
+              <li>✓ 50 minutes en binôme avec votre coach</li>
+              <li>✓ Avec un ami, un proche ou votre partenaire</li>
+              <li>✓ Séance adaptée aux niveaux des 2 personnes</li>
+              <li>✓ 1 discipline au choix parmi les 6</li>
+              <li>✓ Moment convivial au Moon Café après la séance</li>
+            </ul>
+            <a href="https://backoffice.bsport.io/customer/payment/pass/787322/?membership=4466&force=true" target="_blank" class="btn btn-outline" style="margin-top: auto;">Réserver 1 cours Duo</a>
+          </div>
+
+          <!-- 5 COURS DUO (FEATURED) -->
+          <div class="pricing-card pricing-featured reveal" style="--delay:0.1s">
+            <div class="pricing-badge">⭐ Le Plus Prisé</div>
+            <div class="pricing-moon">👥✨</div>
+            <h3 class="pricing-name">Pack 5 séances Duo</h3>
+            <p class="pricing-tagline">Motivation et régularité partagées en duo</p>
+            <div class="pricing-price" style="margin-top: 24px;">
+              <span class="price-currency">CHF</span>
+              <span class="price-amount">650</span>
+              <span class="price-period">/ pack</span>
+            </div>
+            <p class="price-per-session">CHF 65.- / cours / pers. (325.- par pers.)</p>
+            <ul class="pricing-features">
+              <li>✓ 5 séances privées en duo (50 min)</li>
+              <li>✓ Progression en binôme motivante & sur mesure</li>
+              <li>✓ Toutes les disciplines disponibles</li>
+              <li>✓ Créneaux réservés selon vos disponibilités</li>
+              <li>✓ Boisson signature au Moon Café incluse</li>
+            </ul>
+            <a href="https://backoffice.bsport.io/customer/payment/pass/787329/?membership=4466&force=true" target="_blank" class="btn btn-primary" style="margin-top: auto;">Choisir le pack 5 Duo</a>
+          </div>
+
+          <!-- 10 COURS DUO -->
+          <div class="pricing-card reveal" style="--delay:0.2s">
+            <div class="pricing-badge" style="background: var(--gold); color: var(--charcoal);">Économique à Deux</div>
+            <div class="pricing-moon">👯‍♀️</div>
+            <h3 class="pricing-name">Pack 10 séances Duo</h3>
+            <p class="pricing-tagline">Le tarif le plus avantageux pour pratiquer à deux</p>
+            <div class="pricing-price" style="margin-top: 24px;">
+              <span class="price-currency">CHF</span>
+              <span class="price-amount">1'250</span>
+              <span class="price-period">/ pack</span>
+            </div>
+            <p class="price-per-session">CHF 62.50 / cours / pers. (625.- par pers.)</p>
+            <ul class="pricing-features">
+              <li>✓ 10 séances privées en duo (50 min)</li>
+              <li>✓ Le tarif le plus bas par séance et par personne</li>
+              <li>✓ Encadrement sur mesure complet et régulier</li>
+              <li>✓ Flexibilité de réservation sur l'année</li>
+              <li>✓ Espace détente & Moon Café inclus</li>
+            </ul>
+            <a href="https://backoffice.bsport.io/customer/payment/pass/787331/?membership=4466&force=true" target="_blank" class="btn btn-outline" style="margin-top: auto;">Choisir le pack 10 Duo</a>
+          </div>
+        </div>
+
+        <!-- MOBILE COMPACT SELECTOR FOR SESSIONS PRIVÉES -->
+        <div class="mobile-pricing-wrapper only-mobile reveal">
+          <div class="mobile-swipe-guide">
+            <span>👈 Glissez la carte ou touchez les onglets 👉</span>
+          </div>
+
+          <div class="mobile-pills-container">
+            <div class="mobile-pills" id="pills-prives">
+              <button class="mobile-pill" data-target="prive-solo-1">1 Solo</button>
+              <button class="mobile-pill active" data-target="prive-solo-5">5 Solo <span class="pill-tag">⭐ Top</span></button>
+              <button class="mobile-pill" data-target="prive-solo-10">10 Solo</button>
+              <button class="mobile-pill" data-target="prive-duo-1">1 Duo</button>
+              <button class="mobile-pill" data-target="prive-duo-5">5 Duo ✨</button>
+              <button class="mobile-pill" data-target="prive-duo-10">10 Duo</button>
+            </div>
+          </div>
+
+          <div class="pricing-card mobile-card pricing-featured" id="card-prive-mobile">
+            <div class="pricing-badge" id="prive-m-badge">⭐ Recommandé</div>
+            <div class="pricing-moon" id="prive-m-icon">👤✨</div>
+            <h3 class="pricing-name" id="prive-m-name">Pack 5 séances Solo</h3>
+            <p class="pricing-tagline" id="prive-m-tagline">Pour un suivi régulier et des progrès rapides</p>
+            <div class="pricing-price" style="margin-top: 18px;">
+              <span class="price-currency">CHF</span>
+              <span class="price-amount" id="prive-m-price">525</span>
+              <span class="price-period" id="prive-m-period">/ pack</span>
+            </div>
+            <p class="price-per-session" id="prive-m-per">CHF 105.- / cours (au lieu de 110.-)</p>
+            <ul class="pricing-features" id="prive-m-features">
+              <li>✓ 5 séances privées de 50 minutes</li>
+              <li>✓ Programme évolutif selon vos objectifs</li>
+              <li>✓ Combinez vos disciplines préférées</li>
+              <li>✓ Créneaux réservés selon vos disponibilités</li>
+              <li>✓ Débriefing & détente au Moon Café</li>
+            </ul>
+            <a href="https://backoffice.bsport.io/customer/payment/pass/787307/?membership=4466&force=true" target="_blank" class="btn btn-primary" id="prive-m-btn" style="margin-top: 16px;">Choisir le pack 5 Solo</a>
+          </div>
+
+          <!-- Mobile Pagination & Arrows Navigation -->
+          <div class="mobile-nav-bar">
+            <button class="mobile-nav-arrow prev" data-section="prives" aria-label="Offre précédente">‹</button>
+            <div class="mobile-dots" id="dots-prives">
+              <span class="dot" data-target="prive-solo-1"></span>
+              <span class="dot active" data-target="prive-solo-5"></span>
+              <span class="dot" data-target="prive-solo-10"></span>
+              <span class="dot" data-target="prive-duo-1"></span>
+              <span class="dot" data-target="prive-duo-5"></span>
+              <span class="dot" data-target="prive-duo-10"></span>
+            </div>
+            <button class="mobile-nav-arrow next" data-section="prives" aria-label="Offre suivante">›</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- SEPARATOR -->
+      <div style="border-top: 1px solid rgba(123, 89, 89, 0.12); margin-bottom: 80px; margin-top: 80px;"></div>
+
       <!-- BONS CADEAUX -->
       <div class="cadeaux-section" id="cadeaux" style="margin-bottom: 80px;">
         <p class="section-label reveal" style="text-align:center">Offrir</p>
@@ -836,6 +1056,15 @@
             <p>Oui, il est possible de suspendre votre abonnement pour une durée d'un mois, sans justificatif. Votre abonnement sera automatiquement décalé d'un mois, sans perte de séances.</p>
           </div>
         </div>
+        <div class="faq-item reveal">
+          <button class="faq-question" id="faq-btn-prives" aria-expanded="false" aria-controls="faq-ans-prives">
+            Comment se déroulent les cours privés Solo et Duo ?
+            <span class="faq-arrow">↓</span>
+          </button>
+          <div class="faq-answer" id="faq-ans-prives" role="region" aria-labelledby="faq-btn-prives">
+            <p>Nos séances privées de 50 minutes (Solo ou Duo) offrent un encadrement exclusif 100% sur mesure. Vous choisissez la discipline souhaitée (Lagree, Reformer, Mat Pilates, Sculpt, Barre, Yoga) et profitez d'horaires flexibles en heures creuses selon vos disponibilités. Après l'effort, un moment de détente au Moon Café vous attend pour prolonger l'expérience.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -1025,6 +1254,7 @@
         <a href="#planning">Planning</a>
         <a href="#decouverte">Découverte</a>
         <a href="#forfaits">Formules</a>
+        <a href="#prives">Cours Privés</a>
         <a href="#cadeaux">Bons Cadeaux</a>
         <a href="#concept">À propos</a>
         <a href="#acces">Accès au studio</a>
