@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=14" />
+  <link rel="stylesheet" href="style.css?v=15" />
 </head>
 <body>
 
@@ -145,90 +145,56 @@
       <div class="section-header-center">
         <p class="section-label reveal">L'équipe Moon</p>
         <h2 class="section-title reveal">Nos <em>Coachs</em></h2>
-        <p class="section-subtitle reveal">Des enseignantes passionnées et certifiées, dédiées à votre progression, votre alignement et votre bien-être au quotidien.</p>
+        <p class="section-subtitle reveal">Des enseignantes passionnées et certifiées, dédiées à votre progression, votre alignement et votre bien-être au studio.</p>
       </div>
 
-      <div class="coachs-grid">
-        <!-- Coach 1 -->
-        <div class="coach-card reveal" style="--delay:0s">
+      <div class="coachs-grid-duo">
+        <!-- Florence -->
+        <div class="coach-card reveal" style="--delay:0s" data-coach-modal="modal-florence">
           <div class="coach-img-wrap">
-            <img src="coach-1.jpg" alt="Coach Moon Pilates" class="coach-img" />
-            <div class="coach-badge">Fondatrice & Head Coach</div>
+            <img src="florence.jpg" alt="Florence - Coach Moon Pilates" class="coach-img" />
+            <div class="coach-badge">Pilates & Breathwork</div>
+            <div class="coach-hover-overlay">
+              <span>Voir le profil & bio →</span>
+            </div>
           </div>
           <div class="coach-content">
-            <h3 class="coach-name">Mélieste</h3>
-            <p class="coach-role">Lagree · Pilates Reformer · Sculpt</p>
-            <p class="coach-bio">Passionnée par le mouvement conscient et la haute intensité sans impact, elle vous guide avec précision pour dépasser vos limites en toute sécurité.</p>
+            <h3 class="coach-name">Florence</h3>
+            <p class="coach-role">Pilates Reformer · Pilates Mat · Breathwork</p>
+            <p class="coach-bio">Formée au Pilates et au breathwork avec une solide expérience internationale, ses cours allient dynamisme, conscience du souffle, mobilité et force en profondeur.</p>
             <div class="coach-tags">
-              <span class="coach-tag">Précision</span>
-              <span class="coach-tag">Intensité</span>
+              <span class="coach-tag">Pilates</span>
+              <span class="coach-tag">Breathwork</span>
               <span class="coach-tag">Alignement</span>
+              <span class="coach-tag">🇫🇷 / 🇬🇧</span>
             </div>
             <div class="coach-footer">
-              <a href="#planning" class="coach-btn">Réserver un cours →</a>
+              <button type="button" class="coach-btn open-coach-modal" data-target="modal-florence">Découvrir son profil & bio →</button>
             </div>
           </div>
         </div>
 
-        <!-- Coach 2 -->
-        <div class="coach-card reveal" style="--delay:0.1s">
+        <!-- Lesly -->
+        <div class="coach-card reveal" style="--delay:0.1s" data-coach-modal="modal-lesly">
           <div class="coach-img-wrap">
-            <img src="coach-2.jpg" alt="Coach Moon Pilates" class="coach-img" />
-            <div class="coach-badge">Coach Pilates</div>
+            <img src="lesly.jpg" alt="Lesly - Coach Moon Pilates" class="coach-img" />
+            <div class="coach-badge">Lagree, Pilates & Yoga</div>
+            <div class="coach-hover-overlay">
+              <span>Voir le profil & bio →</span>
+            </div>
           </div>
           <div class="coach-content">
-            <h3 class="coach-name">Camille</h3>
-            <p class="coach-role">Pilates Reformer · Pilates Mat</p>
-            <p class="coach-bio">Spécialiste de la posture et du renforcement profond, Camille allie fluidité, écoute du corps et travail musculaire ciblé pour affiner votre silhouette.</p>
+            <h3 class="coach-name">Lesly</h3>
+            <p class="coach-role">Lagree · Pilates Reformer & Mat · Yoga · Fitness</p>
+            <p class="coach-bio">Danseuse, certifiée en fitness, Lagree et Pilates, Lesly vous transmet une énergie contagieuse, entre dynamisme, humour, flow franglais et sueur garantie !</p>
             <div class="coach-tags">
-              <span class="coach-tag">Posture</span>
-              <span class="coach-tag">Fluidité</span>
-              <span class="coach-tag">Renforcement</span>
+              <span class="coach-tag">Lagree</span>
+              <span class="coach-tag">Reformer</span>
+              <span class="coach-tag">Yoga & Fitness</span>
+              <span class="coach-tag">Sweat & Smiles</span>
             </div>
             <div class="coach-footer">
-              <a href="#planning" class="coach-btn">Réserver un cours →</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Coach 3 -->
-        <div class="coach-card reveal" style="--delay:0.2s">
-          <div class="coach-img-wrap">
-            <img src="coach-3.jpg" alt="Coach Moon Pilates" class="coach-img" />
-            <div class="coach-badge">Coach Lagree & Barre</div>
-          </div>
-          <div class="coach-content">
-            <h3 class="coach-name">Sophie</h3>
-            <p class="coach-role">Lagree · Barre · Sculpt</p>
-            <p class="coach-bio">Une énergie communicative et un dynamisme stimulant pour tonifier l'ensemble du corps, booster votre endurance et célébrer chaque mouvement.</p>
-            <div class="coach-tags">
-              <span class="coach-tag">Énergie</span>
-              <span class="coach-tag">Tonicité</span>
-              <span class="coach-tag">Endurance</span>
-            </div>
-            <div class="coach-footer">
-              <a href="#planning" class="coach-btn">Réserver un cours →</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Coach 4 -->
-        <div class="coach-card reveal" style="--delay:0.3s">
-          <div class="coach-img-wrap">
-            <img src="coach-4.jpg" alt="Coach Moon Pilates" class="coach-img" />
-            <div class="coach-badge">Coach Yoga & Mobilité</div>
-          </div>
-          <div class="coach-content">
-            <h3 class="coach-name">Léa</h3>
-            <p class="coach-role">Yoga Vinyasa · Yin Yoga · Mobilité</p>
-            <p class="coach-bio">Focalisée sur la respiration, la flexibilité et le relâchement des tensions, Léa vous offre un équilibre parfait entre ancrage et lâcher-prise.</p>
-            <div class="coach-tags">
-              <span class="coach-tag">Souplesse</span>
-              <span class="coach-tag">Respiration</span>
-              <span class="coach-tag">Mindfulness</span>
-            </div>
-            <div class="coach-footer">
-              <a href="#planning" class="coach-btn">Réserver un cours →</a>
+              <button type="button" class="coach-btn open-coach-modal" data-target="modal-lesly">Découvrir son profil & bio →</button>
             </div>
           </div>
         </div>
@@ -244,6 +210,115 @@
       </div>
     </div>
   </section>
+
+  <!-- COACH MODALS -->
+  <!-- Modal Florence -->
+  <div class="coach-modal-backdrop" id="modal-florence" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-florence-title">
+    <div class="coach-modal-container">
+      <button class="coach-modal-close" aria-label="Fermer la boîte de dialogue">×</button>
+      <div class="coach-modal-content">
+        <div class="coach-modal-photo-col">
+          <img src="florence.jpg" alt="Florence" class="coach-modal-img" />
+          <div class="coach-modal-badge">Pilates & Breathwork</div>
+        </div>
+        <div class="coach-modal-text-col">
+          <div class="coach-modal-header">
+            <p class="coach-modal-subtitle">Coach Moon Pilates Club</p>
+            <h3 class="coach-modal-title" id="modal-florence-title">Florence</h3>
+            <p class="coach-modal-specialties">Pilates Reformer · Pilates Mat · Breathwork · Mobilité</p>
+          </div>
+
+          <div class="coach-modal-body">
+            <p>Formée au Pilates et au breathwork, Florence a forgé son expérience à l'étranger, notamment sous le soleil de l’Indonésie.</p>
+            <p>Ses cours sont à la fois ultra-dynamiques et profondément ancrés dans la pleine conscience. Dans un flow continu, c'est le souffle qui vient guider chaque mouvement, avec une attention toute particulière portée sur l'alignement et la posture. Avec Florence, prépare-toi à travailler ta force en profondeur, à gagner en mobilité et à créer une vraie connexion corps-esprit.</p>
+            
+            <div class="coach-modal-details">
+              <div class="coach-detail-item">
+                <div class="coach-detail-icon">🗣️</div>
+                <div class="coach-detail-text">
+                  <strong>Good to know :</strong>
+                  <span>Florence donne ses cours aussi bien en français qu'en anglais (fluently!).</span>
+                </div>
+              </div>
+              <div class="coach-detail-item">
+                <div class="coach-detail-icon">🔥</div>
+                <div class="coach-detail-text">
+                  <strong>Ses exos favoris :</strong>
+                  <span>Le shoulder bridge, le short spine massage et le boomerang.</span>
+                </div>
+              </div>
+              <div class="coach-detail-item">
+                <div class="coach-detail-icon">🎧</div>
+                <div class="coach-detail-text">
+                  <strong>Dans ses playlists :</strong>
+                  <span>Un mix rythmé de vibes Italo Disco et d'électro pour te porter tout au long de l'effort.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="coach-modal-actions">
+            <a href="#planning" class="btn btn-primary coach-modal-cta">Réserver un cours avec Florence</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Lesly -->
+  <div class="coach-modal-backdrop" id="modal-lesly" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-lesly-title">
+    <div class="coach-modal-container">
+      <button class="coach-modal-close" aria-label="Fermer la boîte de dialogue">×</button>
+      <div class="coach-modal-content">
+        <div class="coach-modal-photo-col">
+          <img src="lesly.jpg" alt="Lesly" class="coach-modal-img" />
+          <div class="coach-modal-badge">Lagree, Pilates & Yoga</div>
+        </div>
+        <div class="coach-modal-text-col">
+          <div class="coach-modal-header">
+            <p class="coach-modal-subtitle">Coach Moon Pilates Club</p>
+            <h3 class="coach-modal-title" id="modal-lesly-title">Lesly</h3>
+            <p class="coach-modal-specialties">Lagree · Pilates Reformer & Mat · Yoga · Fitness Trainer</p>
+          </div>
+
+          <div class="coach-modal-body">
+            <p>Sportive dans l’âme depuis toujours, Lesly a grandi entre la danse et les arts martiaux. Adolescente, elle se lance dans le fitness avant de se consacrer à la danse à un niveau semi-professionnel dès 2005, année où elle donne également ses premiers cours.</p>
+            <p>Très vite, elle se passionne pour les thérapies alternatives (principalement le massage thaï et la médecine traditionnelle chinoise). Entre 2009 et 2026, elle exerce en parallèle de ses cours dans des spas, des centres de santé et en clinique.</p>
+            <p>En 2014, c'est le coup de foudre pour le yoga, qu’elle se met naturellement à enseigner. Toujours en quête de nouveaux défis, elle découvre la pole dance en 2022—une discipline qui la passionne encore aujourd'hui et qu'elle a enseignée de 2023 à 2025.</p>
+            <p>En 2024, c'est le switch total : elle décide de se dédier à 100 % au sport. Elle se certifie en tant que fitness trainer, personal trainer et group trainer, avant d'enchaîner avec le Pilates (Mat & Reformer) et le Lagree. Aujourd’hui, elle se consacre pleinement à l’enseignement pour vous faire transpirer, tout en relançant sa carrière de danseuse après une petite pause.</p>
+            
+            <div class="coach-modal-details">
+              <div class="coach-detail-item">
+                <div class="coach-detail-icon">🗣️</div>
+                <div class="coach-detail-text">
+                  <strong>Good to know :</strong>
+                  <span>Lesly donne ses cours en français, mais attendez-vous à un bon flow de franglais tout au long de la session !</span>
+                </div>
+              </div>
+              <div class="coach-detail-item">
+                <div class="coach-detail-icon">🔥</div>
+                <div class="coach-detail-text">
+                  <strong>La vibe de ses cours :</strong>
+                  <span>Dynamisme, humour, fun et sueur (sweat & smiles !).</span>
+                </div>
+              </div>
+              <div class="coach-detail-item">
+                <div class="coach-detail-icon">🎧</div>
+                <div class="coach-detail-text">
+                  <strong>Dans ses playlists :</strong>
+                  <span>Un mix ultra varié pour tout déchirer : electro, pop, metal, hip-hop, world ou même R&B.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="coach-modal-actions">
+            <a href="#planning" class="btn btn-primary coach-modal-cta">Réserver un cours avec Lesly</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- COURS / CLASSES -->
   <section class="cours" id="cours">
@@ -1386,6 +1461,6 @@
     </svg>
   </button>
 
-  <script src="script.js?v=12"></script>
+  <script src="script.js?v=13"></script>
 </body>
 </html>

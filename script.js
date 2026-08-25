@@ -1009,4 +1009,70 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ─── COACH MODALS POPUP ───
+  function openCoachModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (!modal) return;
+    modal.classList.add('active');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeCoachModals() {
+    document.querySelectorAll('.coach-modal-backdrop.active').forEach(modal => {
+      modal.classList.remove('active');
+      modal.setAttribute('aria-hidden', 'true');
+    });
+    document.body.style.overflow = '';
+  }
+
+  // Clic sur une carte coach
+  document.querySelectorAll('[data-coach-modal]').forEach(card => {
+    card.addEventListener('click', (e) => {
+      const modalId = card.getAttribute('data-coach-modal');
+      if (modalId) openCoachModal(modalId);
+    });
+  });
+
+  // Clic sur bouton "Découvrir son profil"
+  document.querySelectorAll('.open-coach-modal').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const targetId = btn.getAttribute('data-target');
+      if (targetId) openCoachModal(targetId);
+    });
+  });
+
+  // Bouton de fermeture
+  document.querySelectorAll('.coach-modal-close').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      closeCoachModals();
+    });
+  });
+
+  // Fermeture au clic en dehors de la boîte
+  document.querySelectorAll('.coach-modal-backdrop').forEach(backdrop => {
+    backdrop.addEventListener('click', (e) => {
+      if (e.target === backdrop) {
+        closeCoachModals();
+      }
+    });
+  });
+
+  // Fermeture lors du clic sur le bouton d'action vers le planning
+  document.querySelectorAll('.coach-modal-cta').forEach(cta => {
+    cta.addEventListener('click', () => {
+      closeCoachModals();
+    });
+  });
+
+  // Fermeture avec la touche Échap
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeCoachModals();
+    }
+  });
+
 });
+
