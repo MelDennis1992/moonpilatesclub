@@ -966,7 +966,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   // ─── SMOOTH ACTIVE NAV LINKS ───
-  const sections = document.querySelectorAll('section[id], #planning, #decouverte, #forfaits, #prives, #cadeaux');
+  const sections = document.querySelectorAll('section[id], #planning, #forfaits, #prives, #cadeaux');
   const navLinkEls = document.querySelectorAll('.nav-link');
 
   const sectionObserver = new IntersectionObserver((entries) => {
