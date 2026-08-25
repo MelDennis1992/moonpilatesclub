@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=11" />
+  <link rel="stylesheet" href="style.css?v=12" />
 </head>
 <body>
 
@@ -581,21 +581,21 @@
         <div class="concept-badges reveal" style="justify-content:center; margin-bottom:40px; margin-top:0;">
           <div class="badge"><span class="badge-icon">👤</span><span>Sur-mesure & Posture ciblée</span></div>
           <div class="badge"><span class="badge-icon">🕒</span><span>Créneaux Flexibles (Heures creuses)</span></div>
-          <div class="badge"><span class="badge-icon">☕</span><span>Détente & Moon Café inclus</span></div>
+          <div class="badge"><span class="badge-icon">☕</span><span>Espace Moon Café pour débriefer</span></div>
         </div>
 
         <!-- Format Switcher (Solo / Duo) Desktop -->
-        <div class="prive-type-switch-container reveal" style="display:flex; justify-content:center; margin-bottom:40px;">
-          <div class="pricing-toggle" style="max-width:320px; width:100%; padding:4px;">
-            <button class="toggle-btn active" id="prive-tab-solo" data-prive-tab="solo" style="font-size:0.88rem; padding:8px 18px;">👤 Moon Solo</button>
-            <button class="toggle-btn" id="prive-tab-duo" data-prive-tab="duo" style="font-size:0.88rem; padding:8px 18px;">👥 Moon Duo</button>
+        <div class="prive-type-switch-container reveal only-desktop" style="display:flex; justify-content:center; margin-bottom:40px;">
+          <div class="pricing-toggle" style="max-width:340px; width:100%; padding:4px;">
+            <button class="toggle-btn active" id="prive-tab-solo" data-prive-tab="solo" style="font-size:0.9rem; padding:10px 20px;">👤 Moon Solo</button>
+            <button class="toggle-btn" id="prive-tab-duo" data-prive-tab="duo" style="font-size:0.9rem; padding:10px 20px;">👥 Moon Duo</button>
           </div>
         </div>
 
-        <!-- DESKTOP GRID - SOLO -->
+        <!-- DESKTOP GRID - SOLO (1 ROW, 3 CARDS) -->
         <div class="pricing-grid decouverte-grid only-desktop prive-grid" id="prive-grid-solo">
           <!-- 1 COURS SOLO -->
-          <div class="pricing-card reveal" style="--delay:0s">
+          <div class="pricing-card reveal visible" style="--delay:0s">
             <div class="pricing-moon">👤</div>
             <h3 class="pricing-name">1 séance Solo</h3>
             <p class="pricing-tagline">50 min d'attention exclusive & personnalisée</p>
@@ -610,13 +610,13 @@
               <li>✓ 1 discipline au choix parmi les 6</li>
               <li>✓ Correction posturale & intensité 100% adaptée</li>
               <li>✓ Idéal pour débuter ou cibler un objectif précis</li>
-              <li>✓ Boisson signature au Moon Café incluse</li>
+              <li>✓ Espace Moon Café accessible après votre cours</li>
             </ul>
             <a href="https://backoffice.bsport.io/customer/payment/pass/787309/?membership=4466&force=true" target="_blank" class="btn btn-outline" style="margin-top: auto;">Réserver 1 cours Solo</a>
           </div>
 
           <!-- 5 COURS SOLO (FEATURED) -->
-          <div class="pricing-card pricing-featured reveal" style="--delay:0.1s">
+          <div class="pricing-card pricing-featured reveal visible" style="--delay:0.1s">
             <div class="pricing-badge">⭐ Recommandé</div>
             <div class="pricing-moon">👤✨</div>
             <h3 class="pricing-name">Pack 5 séances</h3>
@@ -638,7 +638,7 @@
           </div>
 
           <!-- 10 COURS SOLO -->
-          <div class="pricing-card reveal" style="--delay:0.2s">
+          <div class="pricing-card reveal visible" style="--delay:0.2s">
             <div class="pricing-badge" style="background: var(--gold); color: var(--charcoal);">Meilleur Tarif</div>
             <div class="pricing-moon">👑</div>
             <h3 class="pricing-name">Pack 10 séances</h3>
@@ -654,16 +654,16 @@
               <li>✓ Accompagnement sur mesure continu</li>
               <li>✓ Accès libre à l'ensemble des 6 disciplines</li>
               <li>✓ Flexibilité maximale de réservation</li>
-              <li>✓ Espace lounge & Moon Café inclus</li>
+              <li>✓ Espace lounge & Moon Café après vos cours</li>
             </ul>
             <a href="https://backoffice.bsport.io/customer/payment/pass/787304/?membership=4466&force=true" target="_blank" class="btn btn-outline" style="margin-top: auto;">Choisir le pack 10 Solo</a>
           </div>
         </div>
 
-        <!-- DESKTOP GRID - DUO -->
+        <!-- DESKTOP GRID - DUO (1 ROW, 3 CARDS) -->
         <div class="pricing-grid decouverte-grid only-desktop prive-grid prive-hidden" id="prive-grid-duo">
           <!-- 1 COURS DUO -->
-          <div class="pricing-card reveal" style="--delay:0s">
+          <div class="pricing-card reveal visible" style="--delay:0s">
             <div class="pricing-moon">👥</div>
             <h3 class="pricing-name">1 séance Duo</h3>
             <p class="pricing-tagline">Partagez l'expérience à deux avec votre coach</p>
@@ -684,7 +684,7 @@
           </div>
 
           <!-- 5 COURS DUO (FEATURED) -->
-          <div class="pricing-card pricing-featured reveal" style="--delay:0.1s">
+          <div class="pricing-card pricing-featured reveal visible" style="--delay:0.1s">
             <div class="pricing-badge">⭐ Le Plus Prisé</div>
             <div class="pricing-moon">👥✨</div>
             <h3 class="pricing-name">Pack 5 séances Duo</h3>
@@ -700,13 +700,13 @@
               <li>✓ Progression en binôme motivante & sur mesure</li>
               <li>✓ Toutes les disciplines disponibles</li>
               <li>✓ Créneaux réservés selon vos disponibilités</li>
-              <li>✓ Boisson signature au Moon Café incluse</li>
+              <li>✓ Espace Moon Café accessible après l'effort</li>
             </ul>
             <a href="https://backoffice.bsport.io/customer/payment/pass/787329/?membership=4466&force=true" target="_blank" class="btn btn-primary" style="margin-top: auto;">Choisir le pack 5 Duo</a>
           </div>
 
           <!-- 10 COURS DUO -->
-          <div class="pricing-card reveal" style="--delay:0.2s">
+          <div class="pricing-card reveal visible" style="--delay:0.2s">
             <div class="pricing-badge" style="background: var(--gold); color: var(--charcoal);">Économique à Deux</div>
             <div class="pricing-moon">👯‍♀️</div>
             <h3 class="pricing-name">Pack 10 séances Duo</h3>
@@ -722,29 +722,36 @@
               <li>✓ Le tarif le plus bas par séance et par personne</li>
               <li>✓ Encadrement sur mesure complet et régulier</li>
               <li>✓ Flexibilité de réservation sur l'année</li>
-              <li>✓ Espace détente & Moon Café inclus</li>
+              <li>✓ Espace détente & Moon Café après vos cours</li>
             </ul>
             <a href="https://backoffice.bsport.io/customer/payment/pass/787331/?membership=4466&force=true" target="_blank" class="btn btn-outline" style="margin-top: auto;">Choisir le pack 10 Duo</a>
           </div>
         </div>
 
-        <!-- MOBILE COMPACT SELECTOR FOR SESSIONS PRIVÉES -->
+        <!-- MOBILE COMPACT SELECTOR FOR SESSIONS PRIVÉES (ULTRA-INTUITIF) -->
         <div class="mobile-pricing-wrapper only-mobile reveal">
           <div class="mobile-swipe-guide">
-            <span>👈 Glissez la carte ou touchez les onglets 👉</span>
+            <span>👈 Glissez la carte ou touchez les options 👉</span>
           </div>
 
-          <div class="mobile-pills-container">
-            <div class="mobile-pills" id="pills-prives">
-              <button class="mobile-pill" data-target="prive-solo-1">1 Solo</button>
-              <button class="mobile-pill active" data-target="prive-solo-5">5 Solo <span class="pill-tag">⭐ Top</span></button>
-              <button class="mobile-pill" data-target="prive-solo-10">10 Solo</button>
-              <button class="mobile-pill" data-target="prive-duo-1">1 Duo</button>
-              <button class="mobile-pill" data-target="prive-duo-5">5 Duo ✨</button>
-              <button class="mobile-pill" data-target="prive-duo-10">10 Duo</button>
+          <!-- Mobile Format Switcher (Solo / Duo) -->
+          <div class="mobile-format-switch-container" style="display:flex; justify-content:center; margin-bottom:14px;">
+            <div class="pricing-toggle" style="width:100%; max-width:320px; padding:3px;">
+              <button class="toggle-btn active" id="prive-m-tab-solo" data-m-format="solo" style="font-size:0.85rem; padding:8px 14px;">👤 Moon Solo</button>
+              <button class="toggle-btn" id="prive-m-tab-duo" data-m-format="duo" style="font-size:0.85rem; padding:8px 14px;">👥 Moon Duo</button>
             </div>
           </div>
 
+          <!-- Mobile Sessions Count Pills (1 ligne) -->
+          <div class="mobile-pills-container" style="margin-bottom:18px;">
+            <div class="mobile-pills" id="pills-prives-count" style="justify-content:center;">
+              <button class="mobile-pill" data-count="1">1 séance</button>
+              <button class="mobile-pill active" data-count="5">5 séances <span class="pill-tag">⭐ Top</span></button>
+              <button class="mobile-pill" data-count="10">10 séances</button>
+            </div>
+          </div>
+
+          <!-- Dynamic Mobile Card -->
           <div class="pricing-card mobile-card pricing-featured" id="card-prive-mobile">
             <div class="pricing-badge" id="prive-m-badge">⭐ Recommandé</div>
             <div class="pricing-moon" id="prive-m-icon">👤✨</div>
@@ -770,12 +777,9 @@
           <div class="mobile-nav-bar">
             <button class="mobile-nav-arrow prev" data-section="prives" aria-label="Offre précédente">‹</button>
             <div class="mobile-dots" id="dots-prives">
-              <span class="dot" data-target="prive-solo-1"></span>
-              <span class="dot active" data-target="prive-solo-5"></span>
-              <span class="dot" data-target="prive-solo-10"></span>
-              <span class="dot" data-target="prive-duo-1"></span>
-              <span class="dot" data-target="prive-duo-5"></span>
-              <span class="dot" data-target="prive-duo-10"></span>
+              <span class="dot" data-count="1"></span>
+              <span class="dot active" data-count="5"></span>
+              <span class="dot" data-count="10"></span>
             </div>
             <button class="mobile-nav-arrow next" data-section="prives" aria-label="Offre suivante">›</button>
           </div>
@@ -1275,6 +1279,6 @@
     </svg>
   </button>
 
-  <script src="script.js?v=11"></script>
+  <script src="script.js?v=12"></script>
 </body>
 </html>

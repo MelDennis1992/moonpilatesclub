@@ -854,6 +854,19 @@ ul { list-style: none; }
 .prive-hidden {
   display: none !important;
 }
+.prive-grid {
+  grid-template-columns: repeat(3, 1fr) !important;
+  max-width: 1050px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: stretch;
+}
+.prive-type-switch-container .pricing-toggle,
+.mobile-format-switch-container .pricing-toggle {
+  background: var(--cream-dark);
+  border: 1px solid rgba(123, 89, 89, 0.12);
+  border-radius: 50px;
+}
 
 /* ===========================
    RESPONSIVE UTILITIES & MOBILE PRICING
