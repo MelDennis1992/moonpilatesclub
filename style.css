@@ -1532,7 +1532,6 @@ ul { list-style: none; }
 }
 
 /* SMARTPHONE MOCKUP & FLOATING PHOTOS */
-/* SMARTPHONE MOCKUP & FLOATING PHOTOS */
 .app-mockup-wrap {
   display: flex;
   justify-content: center;
@@ -1794,6 +1793,7 @@ ul { list-style: none; }
   text-align: center;
   border: 1px solid rgba(253, 209, 149, 0.25);
   letter-spacing: 0.02em;
+}
 
 /* ===========================
    FAQ
