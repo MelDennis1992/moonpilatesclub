@@ -35,10 +35,10 @@
         <a href="#concept" class="nav-link">À propos</a>
         <a href="#cours" class="nav-link">Cours</a>
         <a href="#coachs" class="nav-link">Coachs</a>
-        <a href="#planning" class="nav-link">Planning</a>
         <a href="#forfaits" class="nav-link">Formules</a>
         <a href="#prives" class="nav-link">Cours Privés</a>
         <a href="#cadeaux" class="nav-link">Bons Cadeaux</a>
+        <a href="#planning" class="nav-link">Planning</a>
         <a href="#acces" class="nav-link">Accès au studio</a>
         <a href="#contact" class="nav-link">Contact</a>
         <a href="#planning" class="nav-cta" id="nav-reserver">Réserver</a>
@@ -403,49 +403,6 @@
       </div>
     </div>
   </div>
-
-  <!-- PLANNING -->
-  <section class="planning" id="planning">
-    <div class="container">
-      <p class="section-label reveal" style="text-align:center">Horaires des cours</p>
-      <h2 class="section-title reveal" style="text-align:center">Notre <em>Planning</em></h2>
-      <p class="planning-sub reveal" style="text-align:center; max-width:600px; margin-left:auto; margin-right:auto; margin-bottom:48px;">
-        Réservez vos cours en ligne parmi nos 6 disciplines. Sélectionnez votre créneau ci-dessous.
-      </p>
-
-      <div class="planning-widget-container reveal">
-        <!-- Bsport Widget -->
-        <script id="insert-bsport-widget-cdn">!function (b, s, p, o, r, t) { typeof window.BsportWidget === "undefined" && !document.getElementById("bsport-widget-cdn") && !function () { m = b.createElement(s), m.id = "bsport-widget-cdn", m.src = p, b.getElementsByTagName("head")[0].appendChild(m) }() }(document, "script", "https://cdn.bsport.io/scripts/widget.js")</script>
-        <script id="bsport-widget-mount">
-            function MountBsportWidget(config, repeat=1) {
-                if (repeat > 50) { return }
-                if (!window.BsportWidget) {
-                    return setTimeout(() => {
-                        MountBsportWidget(config,repeat+1)
-                    }, 100 * repeat || 1)
-                }
-                BsportWidget.mount(config)
-            }
-        </script>
-        <script>
-            MountBsportWidget({
-                    "parentElement": "bsport-widget-152784",
-                    "companyId": 4466,
-                    "franchiseId": null,
-                    "dialogMode": 1,
-                    "widgetType": "calendar", 
-                    "showFab": false,
-                    "fullScreenPopup": false,
-                    "styles":undefined,
-                    "config": {
-                        "calendar": {}
-                    }  
-                })
-        </script>
-        <div id="bsport-widget-152784"></div>
-      </div>
-    </div>
-  </section>
 
   <!-- PRICING -->
   <section class="tarifs" id="tarifs">
@@ -1127,6 +1084,49 @@
     </div>
   </section>
 
+  <!-- PLANNING -->
+  <section class="planning" id="planning">
+    <div class="container">
+      <p class="section-label reveal" style="text-align:center">Horaires des cours</p>
+      <h2 class="section-title reveal" style="text-align:center">Notre <em>Planning</em></h2>
+      <p class="planning-sub reveal" style="text-align:center; max-width:600px; margin-left:auto; margin-right:auto; margin-bottom:48px;">
+        Réservez vos cours en ligne parmi nos 6 disciplines. Sélectionnez votre créneau ci-dessous.
+      </p>
+
+      <div class="planning-widget-container reveal">
+        <!-- Bsport Widget -->
+        <script id="insert-bsport-widget-cdn">!function (b, s, p, o, r, t) { typeof window.BsportWidget === "undefined" && !document.getElementById("bsport-widget-cdn") && !function () { m = b.createElement(s), m.id = "bsport-widget-cdn", m.src = p, b.getElementsByTagName("head")[0].appendChild(m) }() }(document, "script", "https://cdn.bsport.io/scripts/widget.js")</script>
+        <script id="bsport-widget-mount">
+            function MountBsportWidget(config, repeat=1) {
+                if (repeat > 50) { return }
+                if (!window.BsportWidget) {
+                    return setTimeout(() => {
+                        MountBsportWidget(config,repeat+1)
+                    }, 100 * repeat || 1)
+                }
+                BsportWidget.mount(config)
+            }
+        </script>
+        <script>
+            MountBsportWidget({
+                    "parentElement": "bsport-widget-152784",
+                    "companyId": 4466,
+                    "franchiseId": null,
+                    "dialogMode": 1,
+                    "widgetType": "calendar", 
+                    "showFab": false,
+                    "fullScreenPopup": false,
+                    "styles":undefined,
+                    "config": {
+                        "calendar": {}
+                    }  
+                })
+        </script>
+        <div id="bsport-widget-152784"></div>
+      </div>
+    </div>
+  </section>
+
   <!-- APP MOBILE SECTION -->
   <section class="app-section" id="app">
     <div class="container">
@@ -1251,6 +1251,16 @@
           </button>
           <div class="faq-answer" id="faq-ans-prives" role="region" aria-labelledby="faq-btn-prives">
             <p>Nos séances privées de 50 minutes (Solo ou Duo) offrent un encadrement exclusif 100% sur mesure. Vous choisissez la discipline souhaitée (Lagree, Reformer, Mat Pilates, Sculpt, Barre, Yoga) et profitez d'horaires flexibles en heures creuses selon vos disponibilités. Après l'effort, un moment de détente au Moon Café vous attend pour prolonger l'expérience.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-question" id="faq-btn-grossesse" aria-expanded="false" aria-controls="faq-ans-grossesse">
+            Les cours sont-ils adaptés aux femmes enceintes ?
+            <span class="faq-arrow">↓</span>
+          </button>
+          <div class="faq-answer" id="faq-ans-grossesse" role="region" aria-labelledby="faq-btn-grossesse">
+            <p>Actuellement, nous ne proposons pas de cours de Pilates Reformer adaptés aux femmes enceintes car nous ne souhaitons prendre aucun risque, même si nos coachs sont très expérimentées. En revanche, nous proposons des cours de yoga adaptés.</p>
+            <p style="margin-top: 10px;">Il est toutefois possible que nous proposions des cours de Reformer pour les femmes enceintes à l'avenir.</p>
           </div>
         </div>
       </div>
@@ -1441,10 +1451,10 @@
         <a href="#concept">À propos</a>
         <a href="#cours">Cours</a>
         <a href="#coachs">Coachs</a>
-        <a href="#planning">Planning</a>
         <a href="#forfaits">Formules</a>
         <a href="#prives">Cours Privés</a>
         <a href="#cadeaux">Bons Cadeaux</a>
+        <a href="#planning">Planning</a>
         <a href="#acces">Accès au studio</a>
         <a href="#contact">Contact</a>
         <a href="#faq">FAQ</a>
