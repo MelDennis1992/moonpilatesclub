@@ -316,7 +316,7 @@ document.addEventListener('DOMContentLoaded', () => {
       icon: '🌕',
       badge: 'Séances Illimitées',
       hasToggle: false,
-      single: { price: '350', period: '/ mois', per: 'Séances illimitées', eng: 'Engagement 3 mois minimum', url: 'https://backoffice.bsport.io/checkout/4466/subscription/30694?force=true' },
+      single: { price: '350', period: '/ mois', per: 'Séances illimitées · ~14 CHF / cours*', eng: 'Engagement 3 mois minimum (*base 24 séances/mois)', url: 'https://backoffice.bsport.io/checkout/4466/subscription/30694?force=true' },
       features: ['✓ 1 cours par jour max', '✓ 6 disciplines complémentaires', 'Lagree · Reformer · Mat · Sculpt · Barre · Yoga', '✓ Ateliers (inclus)', '✓ -10% sur vos boissons Moon Café'],
       isFeatured: false
     },
