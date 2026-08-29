@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=20" />
+  <link rel="stylesheet" href="style.css?v=22" />
 </head>
 <body>
 
@@ -1160,68 +1160,180 @@
         </div>
 
         <div class="app-mockup-wrap">
-          <!-- iPhone Pro Mockup -->
-          <div class="iphone-mockup">
-            <div class="iphone-island"></div>
-            <div class="iphone-screen">
-              <div class="iphone-status-bar">
-                <span class="iphone-time">09:41</span>
-                <div class="iphone-status-icons">
-                  <span class="status-dot"></span>
-                  <span class="status-wifi">📶</span>
-                  <span class="status-battery"></span>
-                </div>
-              </div>
-
-              <div class="iphone-app-header">
-                <div class="app-header-brand">
-                  <span class="brand-moon">🌙</span>
-                  <div>
-                    <span class="brand-name">Moon Pilates Club</span>
-                    <span class="brand-sub">Lausanne</span>
+          <div class="dual-iphones-container">
+            <!-- iPhone Gauche: Découverte des cours & photos réelles du studio -->
+            <div class="iphone-mockup phone-left">
+              <div class="iphone-island"></div>
+              <div class="iphone-screen">
+                <div class="iphone-status-bar">
+                  <span class="iphone-time">09:41</span>
+                  <div class="iphone-status-icons">
+                    <span class="status-dot"></span>
+                    <span class="status-wifi">📶</span>
+                    <span class="status-battery"></span>
                   </div>
                 </div>
-                <div class="app-header-notif">⚡ Ouvert</div>
-              </div>
 
-              <div class="iphone-photo-screen">
-                <img src="app-photo-1.jpg?v=2" alt="Studio Moon Pilates Club - Sweat, sip & glow" class="iphone-screen-img" />
-                <div class="iphone-screen-card">
-                  <span class="screen-badge">Séance du jour</span>
-                  <p class="screen-heading">Lagree & Reformer Flow</p>
-                  <p class="screen-meta">18:30 · 50 min · Florence</p>
-                  <div class="screen-action-btn">Réserver en 1 clic →</div>
+                <div class="iphone-app-header-kysko">
+                  <span class="header-studio-name">Moon Club Lausanne</span>
+                  <div class="header-search-bar">
+                    <span>🔍 Rechercher un cours...</span>
+                    <span class="search-filter-icon">⚙️</span>
+                  </div>
+                  <div class="header-pill-tabs">
+                    <span class="pill-tab active">Cours</span>
+                    <span class="pill-tab">Privés</span>
+                    <span class="pill-tab">Workshops</span>
+                  </div>
                 </div>
-              </div>
 
-              <div class="iphone-tab-bar">
-                <div class="iphone-tab active">
-                  <span class="tab-icon">🌙</span>
-                  <span class="tab-text">Accueil</span>
-                </div>
-                <div class="iphone-tab">
-                  <span class="tab-icon">📅</span>
-                  <span class="tab-text">Planning</span>
-                </div>
-                <div class="iphone-tab">
-                  <span class="tab-icon">✨</span>
-                  <span class="tab-text">Formules</span>
-                </div>
-                <div class="iphone-tab">
-                  <span class="tab-icon">👤</span>
-                  <span class="tab-text">Profil</span>
-                </div>
-              </div>
+                <div class="iphone-feed-scroll">
+                  <!-- Carte Cours 1 -->
+                  <div class="app-feed-card">
+                    <div class="feed-card-img-wrap">
+                      <img src="app-photo-1.jpg?v=2" alt="Pilates Reformer & Barre" />
+                      <span class="feed-card-badge">Pilates Reformer</span>
+                    </div>
+                    <div class="feed-card-meta">
+                      <span class="meta-time">📅 Aujourd'hui · 18:30</span>
+                      <span class="meta-coach">Florence · Tous niveaux</span>
+                    </div>
+                  </div>
 
-              <div class="iphone-home-indicator"></div>
+                  <!-- Carte Cours 2 -->
+                  <div class="app-feed-card">
+                    <div class="feed-card-img-wrap">
+                      <img src="app-photo-2.jpg?v=2" alt="Lagree Microformer" />
+                      <span class="feed-card-badge">Lagree Fitness</span>
+                    </div>
+                    <div class="feed-card-meta">
+                      <span class="meta-time">📅 Demain · 08:00</span>
+                      <span class="meta-coach">Lesly · Intense</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="iphone-cta-bar">
+                  <div class="app-login-btn">RÉSERVER UNE SÉANCE</div>
+                </div>
+
+                <div class="iphone-home-indicator"></div>
+              </div>
             </div>
-          </div>
 
-          <!-- Carte photo flottante secondaire -->
-          <div class="app-floating-photo card-right">
-            <img src="app-photo-2.jpg?v=2" alt="Entraînement Lagree sur Microformer" />
-            <div class="floating-photo-tag">
-              <span>Lagree & Reformer</span>
+            <!-- iPhone Droite: Planning en direct & créneaux du studio -->
+            <div class="iphone-mockup phone-right">
+              <div class="iphone-island"></div>
+              <div class="iphone-screen">
+                <div class="iphone-status-bar">
+                  <span class="iphone-time">09:41</span>
+                  <div class="iphone-status-icons">
+                    <span class="status-dot"></span>
+                    <span class="status-wifi">📶</span>
+                    <span class="status-battery"></span>
+                  </div>
+                </div>
+
+                <div class="iphone-app-header-schedule">
+                  <div class="schedule-location-row">
+                    <span class="schedule-loc-title">Moon Lausanne ▾</span>
+                  </div>
+                  <div class="schedule-filter-chips">
+                    <span class="chip-filter active">📍 Tous cours</span>
+                    <span class="chip-filter">👤 Coach ▾</span>
+                    <span class="chip-filter">📅 Dates</span>
+                  </div>
+                </div>
+
+                <div class="iphone-schedule-list">
+                  <div class="schedule-day-label">AUJOURD'HUI</div>
+
+                  <div class="schedule-item-row">
+                    <div class="item-time-col">
+                      <span class="time-main">08:00</span>
+                      <span class="time-sub">50 min</span>
+                    </div>
+                    <div class="item-info-col">
+                      <span class="class-name">Lagree Flow</span>
+                      <span class="coach-name-sub">Florence</span>
+                      <span class="room-sub">Studio Microformer</span>
+                    </div>
+                    <div class="item-badge-col">
+                      <span class="badge-level">Tous niveaux</span>
+                      <span class="places-count">6/6</span>
+                    </div>
+                  </div>
+
+                  <div class="schedule-item-row">
+                    <div class="item-time-col">
+                      <span class="time-main">12:15</span>
+                      <span class="time-sub">50 min</span>
+                    </div>
+                    <div class="item-info-col">
+                      <span class="class-name">Pilates Reformer</span>
+                      <span class="coach-name-sub">Lesly</span>
+                      <span class="room-sub">Studio Reformer</span>
+                    </div>
+                    <div class="item-badge-col">
+                      <span class="badge-level open">Disponible</span>
+                      <span class="places-count">4/6</span>
+                    </div>
+                  </div>
+
+                  <div class="schedule-item-row">
+                    <div class="item-time-col">
+                      <span class="time-main">17:30</span>
+                      <span class="time-sub">50 min</span>
+                    </div>
+                    <div class="item-info-col">
+                      <span class="class-name">Sculpt & Barre</span>
+                      <span class="coach-name-sub">Florence</span>
+                      <span class="room-sub">Studio Barre</span>
+                    </div>
+                    <div class="item-badge-col">
+                      <span class="badge-level open">1 place</span>
+                      <span class="places-count">5/6</span>
+                    </div>
+                  </div>
+
+                  <div class="schedule-item-row">
+                    <div class="item-time-col">
+                      <span class="time-main">18:30</span>
+                      <span class="time-sub">50 min</span>
+                    </div>
+                    <div class="item-info-col">
+                      <span class="class-name">Lagree Intense</span>
+                      <span class="coach-name-sub">Lesly</span>
+                      <span class="room-sub">Studio Microformer</span>
+                    </div>
+                    <div class="item-badge-col">
+                      <span class="badge-level waitlist">Attente</span>
+                      <span class="places-count">6/6</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="iphone-tab-bar">
+                  <div class="iphone-tab active">
+                    <span class="tab-icon">📅</span>
+                    <span class="tab-text">Planning</span>
+                  </div>
+                  <div class="iphone-tab">
+                    <span class="tab-icon">🌙</span>
+                    <span class="tab-text">Studio</span>
+                  </div>
+                  <div class="iphone-tab">
+                    <span class="tab-icon">✨</span>
+                    <span class="tab-text">Pass</span>
+                  </div>
+                  <div class="iphone-tab">
+                    <span class="tab-icon">👤</span>
+                    <span class="tab-text">Profil</span>
+                  </div>
+                </div>
+
+                <div class="iphone-home-indicator"></div>
+              </div>
             </div>
           </div>
         </div>
