@@ -1133,6 +1133,10 @@ ul { list-style: none; }
   cursor: pointer;
   color: rgba(58, 40, 32, 0.55);
   transition: var(--transition);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none;
+  touch-action: manipulation;
+  user-select: none;
 }
 .pricing-featured .toggle-btn { color: rgba(255,255,255,0.5); }
 .toggle-btn.active {
@@ -1312,7 +1316,8 @@ ul { list-style: none; }
 
 .mobile-pill {
   flex: 1 0 auto;
-  padding: 10px 14px;
+  min-height: 44px;
+  padding: 10px 16px;
   border-radius: 14px;
   background: var(--white);
   border: 1.5px solid rgba(139, 94, 82, 0.18);
@@ -1329,6 +1334,10 @@ ul { list-style: none; }
   align-items: center;
   justify-content: center;
   gap: 6px;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none;
+  touch-action: manipulation;
+  user-select: none;
 }
 
 .mobile-pill:hover {
@@ -1365,6 +1374,22 @@ ul { list-style: none; }
   animation: fadeInCard 0.3s ease;
   touch-action: pan-y;
   user-select: none;
+}
+
+.mobile-card .pricing-toggle {
+  min-height: 44px;
+  padding: 4px;
+  margin-bottom: 22px;
+}
+
+.mobile-card .toggle-btn {
+  min-height: 38px;
+  padding: 8px 16px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @keyframes fadeInCard {

@@ -83,18 +83,24 @@ document.addEventListener('DOMContentLoaded', () => {
       12: { price: '240',   per: 'CHF 30 / séance',   eng: 'Engagement 12 mois', url: 'https://backoffice.bsport.io/checkout/4466/subscription/30693?force=true' }
     },
     annual: {
-      nm: { price: "1'540", per: '4 cours par mois · CHF 32 / séance', url: 'https://backoffice.bsport.io/customer/payment/pass/682887/?membership=4466&force=true' },
-      hm: { price: "2'640", per: '8 cours par mois · CHF 27 / séance', url: 'https://backoffice.bsport.io/customer/payment/pass/682889/?membership=4466&force=true' }
+      nm: { price: "1'540", per: '4 cours par mois · CHF 32 / séance', cours: '✓ 4 cours par mois (48 séances / an)', url: 'https://backoffice.bsport.io/customer/payment/pass/682887/?membership=4466&force=true' },
+      hm: { price: "2'640", per: '8 cours par mois · CHF 27 / séance', cours: '✓ 8 cours par mois (96 séances / an)', url: 'https://backoffice.bsport.io/customer/payment/pass/682889/?membership=4466&force=true' }
     }
   };
 
-  document.querySelectorAll('.toggle-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
+  // Only bind desktop toggle buttons (exclude mobile card toggles)
+  document.querySelectorAll('.pricing-grid .toggle-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
       const plan = btn.dataset.plan;
+      if (!plan || !pricingData[plan]) return;
       const period = isNaN(btn.dataset.period) ? btn.dataset.period : parseInt(btn.dataset.period);
 
       // Remove active from siblings in same toggle group
-      btn.closest('.pricing-toggle').querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
+      const parentToggle = btn.closest('.pricing-toggle');
+      if (parentToggle) {
+        parentToggle.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
+      }
       btn.classList.add('active');
 
       const data = pricingData[plan][period];
@@ -104,6 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const perEl = document.getElementById(`per-${plan}`);
       const engEl = document.getElementById(`eng-${plan}`);
       const btnEl = document.getElementById(`btn-${plan}`);
+      const coursEl = document.getElementById(`feat-${plan}-cours`);
 
       if (priceEl) {
         priceEl.style.transform = 'scale(0.85)';
@@ -118,6 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (perEl) perEl.textContent = data.per;
       if (engEl && data.eng) engEl.textContent = data.eng;
       if (btnEl && data.url) btnEl.setAttribute('href', data.url);
+      if (coursEl && data.cours) coursEl.textContent = data.cours;
     });
   });
 
@@ -136,26 +144,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Helper for touch swipe gestures
+  // Helper for touch swipe gestures (Safari-safe)
   function enableSwipe(cardEl, onSwipeLeft, onSwipeRight) {
     if (!cardEl) return;
     let startX = 0, startY = 0, endX = 0, endY = 0;
+    let isInteractive = false;
 
     cardEl.addEventListener('touchstart', e => {
-      startX = e.changedTouches[0].screenX;
-      startY = e.changedTouches[0].screenY;
+      if (e.target.closest('button, a, .toggle-btn, .mobile-pill, .dot')) {
+        isInteractive = true;
+        return;
+      }
+      isInteractive = false;
+      if (e.changedTouches && e.changedTouches.length > 0) {
+        startX = e.changedTouches[0].screenX;
+        startY = e.changedTouches[0].screenY;
+      }
     }, { passive: true });
 
     cardEl.addEventListener('touchend', e => {
-      endX = e.changedTouches[0].screenX;
-      endY = e.changedTouches[0].screenY;
-      const diffX = endX - startX;
-      const diffY = endY - startY;
-      if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 35) {
-        if (diffX < 0) {
-          onSwipeLeft(); // swipe left -> next
-        } else {
-          onSwipeRight(); // swipe right -> prev
+      if (isInteractive) return;
+      if (e.changedTouches && e.changedTouches.length > 0) {
+        endX = e.changedTouches[0].screenX;
+        endY = e.changedTouches[0].screenY;
+        const diffX = endX - startX;
+        const diffY = endY - startY;
+        if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 40) {
+          if (diffX < 0) {
+            onSwipeLeft(); // swipe left -> next
+          } else {
+            onSwipeRight(); // swipe right -> prev
+          }
         }
       }
     }, { passive: true });
@@ -316,7 +335,7 @@ document.addEventListener('DOMContentLoaded', () => {
       icon: '🌕',
       badge: 'Séances Illimitées',
       hasToggle: false,
-      single: { price: '350', period: '/ mois', per: 'Séances illimitées · ~14 CHF / cours*', eng: 'Engagement 3 mois minimum (*base 24 séances/mois)', url: 'https://backoffice.bsport.io/checkout/4466/subscription/30694?force=true' },
+      single: { price: '350', period: '/ mois', per: 'Séances illimitées · ~14 CHF / séance*', eng: 'Engagement 3 mois minimum (*base 24 séances/mois)', url: 'https://backoffice.bsport.io/checkout/4466/subscription/30694?force=true' },
       features: ['✓ 1 cours par jour max', '✓ 6 disciplines complémentaires', 'Lagree · Reformer · Mat · Sculpt · Barre · Yoga', '✓ Ateliers (inclus)', '✓ -10% sur vos boissons Moon Café'],
       isFeatured: false
     },
@@ -327,10 +346,24 @@ document.addEventListener('DOMContentLoaded', () => {
       badge: 'Meilleur Prix',
       hasToggle: true,
       toggles: [
-        { label: 'New Moon', price: "1'540", per: '4 cours par mois · CHF 32 / séance', eng: 'Valide 1 an · Paiement unique', url: 'https://backoffice.bsport.io/customer/payment/pass/682887/?membership=4466&force=true' },
-        { label: 'Half Moon', price: "2'640", per: '8 cours par mois · CHF 27 / séance', eng: 'Valide 1 an · Paiement unique', url: 'https://backoffice.bsport.io/customer/payment/pass/682889/?membership=4466&force=true' }
+        {
+          label: 'New Moon',
+          price: "1'540",
+          per: '4 cours par mois · CHF 32 / séance',
+          eng: 'Valide 1 an · Paiement unique',
+          features: ['✓ 4 cours par mois (48 séances / an)', '✓ 6 disciplines complémentaires', 'Lagree · Reformer · Mat · Sculpt · Barre · Yoga', '✓ Ateliers à venir', '✓ -10% sur vos boissons Moon Café'],
+          url: 'https://backoffice.bsport.io/customer/payment/pass/682887/?membership=4466&force=true'
+        },
+        {
+          label: 'Half Moon',
+          price: "2'640",
+          per: '8 cours par mois · CHF 27 / séance',
+          eng: 'Valide 1 an · Paiement unique',
+          features: ['✓ 8 cours par mois (96 séances / an)', '✓ 6 disciplines complémentaires', 'Lagree · Reformer · Mat · Sculpt · Barre · Yoga', '✓ Ateliers à venir', '✓ -10% sur vos boissons Moon Café'],
+          url: 'https://backoffice.bsport.io/customer/payment/pass/682889/?membership=4466&force=true'
+        }
       ],
-      features: ['✓ 4 ou 8 cours par mois', '✓ 6 disciplines complémentaires', 'Lagree · Reformer · Mat · Sculpt · Barre · Yoga', '✓ Ateliers à venir', '✓ -10% sur vos boissons Moon Café'],
+      features: ['✓ 8 cours par mois (96 séances / an)', '✓ 6 disciplines complémentaires', 'Lagree · Reformer · Mat · Sculpt · Barre · Yoga', '✓ Ateliers à venir', '✓ -10% sur vos boissons Moon Café'],
       isFeatured: true
     }
   };
@@ -387,6 +420,8 @@ document.addEventListener('DOMContentLoaded', () => {
       periodEl.textContent = currentForfaitPlan === 'forfait-annual' ? '/ an' : '/ mois';
     }
 
+    let activeFeatures = data.features;
+
     if (data.hasToggle) {
       toggleEl.style.display = 'flex';
       const tog1 = document.getElementById('forfait-m-tog1');
@@ -398,6 +433,9 @@ document.addEventListener('DOMContentLoaded', () => {
         tog2.className = currentForfaitToggleIdx === 1 ? 'toggle-btn active' : 'toggle-btn';
       }
       const activeToggle = data.toggles[currentForfaitToggleIdx] || data.toggles[0];
+      if (activeToggle && activeToggle.features) {
+        activeFeatures = activeToggle.features;
+      }
       if (priceEl) priceEl.textContent = activeToggle.price;
       if (perEl) perEl.textContent = activeToggle.per;
       if (engEl) engEl.textContent = activeToggle.eng;
@@ -417,14 +455,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (featEl) {
-      featEl.innerHTML = data.features.map(f => `<li>${f}</li>`).join('');
+      featEl.innerHTML = activeFeatures.map(f => `<li>${f}</li>`).join('');
     }
 
     updateDots('forfaits', currentForfaitPlan);
   }
 
   document.querySelectorAll('#pills-forfaits .mobile-pill').forEach(pill => {
-    pill.addEventListener('click', () => {
+    pill.addEventListener('click', (e) => {
+      e.stopPropagation();
       currentForfaitPlan = pill.dataset.target;
       currentForfaitToggleIdx = 0;
       updateForfaitMobileCard();
@@ -432,7 +471,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   document.querySelectorAll('#dots-forfaits .dot').forEach(dot => {
-    dot.addEventListener('click', () => {
+    dot.addEventListener('click', (e) => {
+      e.stopPropagation();
       currentForfaitPlan = dot.dataset.target;
       currentForfaitToggleIdx = 0;
       updateForfaitMobileCard();
@@ -452,7 +492,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   document.querySelectorAll('.mobile-nav-arrow[data-section="forfaits"]').forEach(arrow => {
-    arrow.addEventListener('click', () => navForfaits(arrow.classList.contains('next') ? 'next' : 'prev'));
+    arrow.addEventListener('click', (e) => {
+      e.stopPropagation();
+      navForfaits(arrow.classList.contains('next') ? 'next' : 'prev');
+    });
   });
 
   enableSwipe(document.getElementById('card-forfait-mobile'), () => navForfaits('next'), () => navForfaits('prev'));
@@ -460,13 +503,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const mToggle1 = document.getElementById('forfait-m-tog1');
   const mToggle2 = document.getElementById('forfait-m-tog2');
   if (mToggle1) {
-    mToggle1.addEventListener('click', () => {
+    mToggle1.addEventListener('click', (e) => {
+      e.stopPropagation();
       currentForfaitToggleIdx = 0;
       updateForfaitMobileCard();
     });
   }
   if (mToggle2) {
-    mToggle2.addEventListener('click', () => {
+    mToggle2.addEventListener('click', (e) => {
+      e.stopPropagation();
       currentForfaitToggleIdx = 1;
       updateForfaitMobileCard();
     });
