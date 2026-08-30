@@ -1270,8 +1270,13 @@ ul { list-style: none; }
 }
 
 .mobile-pricing-wrapper {
-  max-width: 480px;
+  max-width: 440px;
+  width: 100%;
   margin: 0 auto;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .mobile-swipe-guide {
@@ -1296,6 +1301,10 @@ ul { list-style: none; }
 
 .mobile-pills-container {
   position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
   overflow: hidden;
 }
 
@@ -1303,19 +1312,19 @@ ul { list-style: none; }
   display: flex;
   gap: 8px;
   overflow-x: auto;
-  padding: 4px 4px 16px;
-  margin-bottom: 8px;
+  padding: 4px 6px 12px;
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
-  justify-content: flex-start;
-  scroll-behavior: smooth;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
 }
 .mobile-pills::-webkit-scrollbar {
   display: none;
 }
 
 .mobile-pill {
-  flex: 1 0 auto;
+  flex: 0 0 auto;
   min-height: 44px;
   padding: 10px 16px;
   border-radius: 14px;
@@ -1368,18 +1377,52 @@ ul { list-style: none; }
 }
 
 .mobile-card {
-  max-width: 100%;
+  width: 100%;
+  max-width: 400px;
   margin: 0 auto;
   min-height: 440px;
   animation: fadeInCard 0.3s ease;
   touch-action: pan-y;
   user-select: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.mobile-card .pricing-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  white-space: nowrap;
+}
+
+.mobile-card .pricing-moon {
+  text-align: center;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+.mobile-card .pricing-name {
+  text-align: center;
+}
+
+.mobile-card .pricing-tagline {
+  text-align: center;
+  margin-bottom: 16px;
 }
 
 .mobile-card .pricing-toggle {
+  width: 100%;
+  max-width: 280px;
   min-height: 44px;
   padding: 4px;
-  margin-bottom: 22px;
+  margin: 0 auto 20px;
+  display: flex;
+  justify-content: center;
 }
 
 .mobile-card .toggle-btn {
@@ -1392,6 +1435,38 @@ ul { list-style: none; }
   justify-content: center;
 }
 
+.mobile-card .pricing-price {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 4px;
+  margin-bottom: 4px;
+  text-align: center;
+}
+
+.mobile-card .price-per-session {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.mobile-card .pricing-features {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.mobile-card .pricing-engagement {
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.mobile-card .btn {
+  width: 100%;
+  margin-top: auto;
+}
+
 @keyframes fadeInCard {
   from { opacity: 0.6; transform: translateY(6px); }
   to { opacity: 1; transform: translateY(0); }
@@ -1402,7 +1477,9 @@ ul { list-style: none; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 16px;
+  width: 100%;
+  max-width: 400px;
+  margin: 16px auto 0;
   padding: 0 10px;
 }
 
