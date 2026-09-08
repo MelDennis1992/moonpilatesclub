@@ -11,7 +11,21 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=25" />
+  <link rel="stylesheet" href="style.css?v=28" />
+
+  <!-- Bsport Widget SDK -->
+  <script id="insert-bsport-widget-cdn">!function (b, s, p, o, r, t) { typeof window.BsportWidget === "undefined" && !document.getElementById("bsport-widget-cdn") && !function () { m = b.createElement(s), m.id = "bsport-widget-cdn", m.src = p, b.getElementsByTagName("head")[0].appendChild(m) }() }(document, "script", "https://cdn.bsport.io/scripts/widget.js")</script>
+  <script id="bsport-widget-mount">
+      function MountBsportWidget(config, repeat=1) {
+          if (repeat > 50) { return }
+          if (!window.BsportWidget) {
+              return setTimeout(() => {
+                  MountBsportWidget(config,repeat+1)
+              }, 100 * repeat || 1)
+          }
+          BsportWidget.mount(config)
+      }
+  </script>
 </head>
 <body>
 
@@ -21,7 +35,7 @@
     <!-- ANNOUNCEMENT BAR -->
     <div class="announcement-bar" id="announcement-bar">
       <div class="announcement-inner">
-        <span>✨ Ouvert depuis le 17 août 2026, viens découvrir le studio ! 🌙</span>
+        <span data-i18n="announcement_text">✨ Ouvert depuis le 17 août 2026, viens découvrir le studio ! 🌙</span>
       </div>
       <button class="announcement-close" id="announcement-close" aria-label="Fermer">×</button>
     </div>
@@ -32,16 +46,39 @@
         <img src="logo.png?v=2" alt="Moon Pilates Club Logo" class="nav-logo-img" />
       </a>
       <div class="nav-links" id="nav-links">
-        <a href="#concept" class="nav-link">À propos</a>
-        <a href="#cours" class="nav-link">Cours</a>
-        <a href="#coachs" class="nav-link">Coachs</a>
-        <a href="#forfaits" class="nav-link">Formules</a>
-        <a href="#prives" class="nav-link">Cours Privés</a>
-        <a href="#cadeaux" class="nav-link">Bons Cadeaux</a>
-        <a href="#planning" class="nav-link">Planning</a>
-        <a href="#acces" class="nav-link">Accès au studio</a>
-        <a href="#contact" class="nav-link">Contact</a>
-        <a href="#planning" class="nav-cta" id="nav-reserver">Réserver</a>
+        <a href="#concept" class="nav-link" data-i18n="nav_concept">À propos</a>
+        <a href="#cours" class="nav-link" data-i18n="nav_cours">Cours</a>
+        <a href="#coachs" class="nav-link" data-i18n="nav_coachs">Coachs</a>
+        <a href="#forfaits" class="nav-link" data-i18n="nav_forfaits">Formules</a>
+        <a href="#prives" class="nav-link" data-i18n="nav_prives">Cours Privés</a>
+        <a href="#cadeaux" class="nav-link" data-i18n="nav_cadeaux">Bons Cadeaux</a>
+        <a href="#planning" class="nav-link" data-i18n="nav_planning">Planning</a>
+        <a href="#acces" class="nav-link" data-i18n="nav_acces">Accès au studio</a>
+        <a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a>
+        <a href="#planning" class="nav-cta" id="nav-reserver" data-i18n="nav_reserver">Réserver</a>
+        <div class="nav-bsport-login" id="nav-bsport-login">
+          <div id="bsport-widget-969829"></div>
+        </div>
+        <script>
+          MountBsportWidget({
+            "parentElement": "bsport-widget-969829",
+            "companyId": 4466,
+            "franchiseId": null,
+            "dialogMode": 1,
+            "widgetType": "loginButton", 
+            "showFab": false,
+            "fullScreenPopup": false,
+            "styles": undefined,
+            "config": {
+              "loginButton": { "openMemberProfile": true }
+            }  
+          });
+        </script>
+        <div class="lang-switch" id="lang-switch">
+          <button type="button" class="lang-btn active" data-lang="fr">FR</button>
+          <span class="lang-divider">|</span>
+          <button type="button" class="lang-btn" data-lang="en">EN</button>
+        </div>
       </div>
       <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -57,39 +94,39 @@
       <div class="hero-overlay"></div>
     </div>
     <div class="hero-content">
-      <h1 class="hero-title reveal">
+      <h1 class="hero-title reveal" data-i18n-html="hero_title">
         <em>Lagree</em><br/>& pilates
       </h1>
-      <p class="hero-sub reveal">Lagree · Reformer · Pilates Mat · Sculpt · Barre · Yoga<br/>Petits groupes de 6 personnes maximum</p>
+      <p class="hero-sub reveal" data-i18n-html="hero_sub">Lagree · Reformer · Pilates Mat · Sculpt · Barre · Yoga<br/>Petits groupes de 6 personnes maximum</p>
       <div class="hero-actions reveal">
-        <a href="#tarifs" class="btn btn-primary">Découvrir les formules</a>
-        <a href="#cours" class="btn btn-ghost">Nos cours →</a>
+        <a href="#tarifs" class="btn btn-primary" data-i18n="hero_btn_tarifs">Découvrir les formules</a>
+        <a href="#cours" class="btn btn-ghost" data-i18n="hero_btn_cours">Nos cours →</a>
       </div>
     </div>
     <div class="hero-scroll-hint">
       <div class="scroll-line"></div>
-      <span>Défiler</span>
+      <span data-i18n="hero_scroll">Défiler</span>
     </div>
   </section>
 
   <!-- TICKER BAND -->
   <div class="ticker-wrap">
     <div class="ticker-track">
-      <span>6 disciplines · Lagree — Reformer — Pilates Mat — Sculpt — Barre — Yoga</span>
+      <span data-i18n="ticker_item_1">6 disciplines · Lagree — Reformer — Pilates Mat — Sculpt — Barre — Yoga</span>
       <span aria-hidden="true">🌙</span>
-      <span>Petits groupes · Encadrement premium</span>
+      <span data-i18n="ticker_item_2">Petits groupes · Encadrement premium</span>
       <span aria-hidden="true">🌙</span>
-      <span>Moon Café · Specialty Coffee & Matcha</span>
+      <span data-i18n="ticker_item_3">Moon Café · Specialty Coffee & Matcha</span>
       <span aria-hidden="true">🌙</span>
-      <span>Galeries Benjamin-Constant · Lausanne</span>
+      <span data-i18n="ticker_item_4">Galeries Benjamin-Constant · Lausanne</span>
       <span aria-hidden="true">🌙</span>
-      <span>6 disciplines · Lagree — Reformer — Pilates Mat — Sculpt — Barre — Yoga</span>
+      <span data-i18n="ticker_item_1">6 disciplines · Lagree — Reformer — Pilates Mat — Sculpt — Barre — Yoga</span>
       <span aria-hidden="true">🌙</span>
-      <span>Petits groupes · Encadrement premium</span>
+      <span data-i18n="ticker_item_2">Petits groupes · Encadrement premium</span>
       <span aria-hidden="true">🌙</span>
-      <span>Moon Café · Specialty Coffee & Matcha</span>
+      <span data-i18n="ticker_item_3">Moon Café · Specialty Coffee & Matcha</span>
       <span aria-hidden="true">🌙</span>
-      <span>Galeries Benjamin-Constant · Lausanne</span>
+      <span data-i18n="ticker_item_4">Galeries Benjamin-Constant · Lausanne</span>
       <span aria-hidden="true">🌙</span>
     </div>
   </div>
@@ -99,38 +136,38 @@
     <div class="container">
       <div class="concept-grid">
         <div class="concept-text">
-          <p class="section-label reveal">Notre concept</p>
-          <h2 class="section-title reveal">Bienvenue chez<br/><em>Moon Club</em></h2>
-          <p class="concept-body reveal">Notre centre est un <strong>lieu dédié au mouvement, au bien-être et à la performance</strong>, vous proposant une approche globale et équilibrée à travers <strong>6 disciplines complémentaires</strong> : Lagree, Pilates Reformer, Pilates Mat, Sculpt, Barre et Yoga.</p>
-          <p class="concept-body reveal">Toutes nos disciplines sont <strong>à faible impact pour vos articulations</strong>. Elles allient renforcement profond, mobilité, posture et tonicité musculaire, pour sculpter et renforcer votre corps en toute sécurité.</p>
-          <p class="concept-body reveal">Tous nos cours se déroulent en <strong>petits groupes de 6 personnes maximum</strong>, garantissant un encadrement d'exception et une attention sur-mesure.</p>
+          <p class="section-label reveal" data-i18n="concept_label">Notre concept</p>
+          <h2 class="section-title reveal" data-i18n-html="concept_title">Bienvenue chez<br/><em>Moon Club</em></h2>
+          <p class="concept-body reveal" data-i18n-html="concept_p1">Notre centre est un <strong>lieu dédié au mouvement, au bien-être et à la performance</strong>, vous proposant une approche globale et équilibrée à travers <strong>6 disciplines complémentaires</strong> : Lagree, Pilates Reformer, Pilates Mat, Sculpt, Barre et Yoga.</p>
+          <p class="concept-body reveal" data-i18n-html="concept_p2">Toutes nos disciplines sont <strong>à faible impact pour vos articulations</strong>. Elles allient renforcement profond, mobilité, posture et tonicité musculaire, pour sculpter et renforcer votre corps en toute sécurité.</p>
+          <p class="concept-body reveal" data-i18n-html="concept_p3">Tous nos cours se déroulent en <strong>petits groupes de 6 personnes maximum</strong>, garantissant un encadrement d'exception et une attention sur-mesure.</p>
           <div class="concept-badges reveal">
-            <div class="badge"><span class="badge-icon">🧘</span><span>Petits groupes</span></div>
-            <div class="badge"><span class="badge-icon">☕</span><span>Moon Café</span></div>
-            <div class="badge"><span class="badge-icon">✨</span><span>Coachs experts</span></div>
+            <div class="badge"><span class="badge-icon">🧘</span><span data-i18n="badge_groups">Petits groupes</span></div>
+            <div class="badge"><span class="badge-icon">☕</span><span data-i18n="badge_cafe">Moon Café</span></div>
+            <div class="badge"><span class="badge-icon">✨</span><span data-i18n="badge_coachs">Coachs experts</span></div>
           </div>
         </div>
         <div class="concept-visual reveal">
           <div class="concept-card">
             <div class="concept-card-inner">
-              <h3>6 disciplines<br/><em>complémentaires</em></h3>
-              <p>Une offre complète et variée pour sculpter, tonifier et renforcer votre corps tout en préservant vos articulations.</p>
-              <a href="#cours" class="card-link">Découvrir nos cours →</a>
+              <h3 data-i18n-html="card_6disc_title">6 disciplines<br/><em>complémentaires</em></h3>
+              <p data-i18n="card_6disc_desc">Une offre complète et variée pour sculpter, tonifier et renforcer votre corps tout en préservant vos articulations.</p>
+              <a href="#cours" class="card-link" data-i18n="card_6disc_link">Découvrir nos cours →</a>
             </div>
             <div class="concept-moon-deco"></div>
           </div>
           <div class="concept-stat-grid">
             <div class="concept-stat">
               <span class="stat-num">6</span>
-              <span class="stat-label">max par cours</span>
+              <span class="stat-label" data-i18n="stat_max">max par cours</span>
             </div>
             <div class="concept-stat">
               <span class="stat-num">50'</span>
-              <span class="stat-label">par séance</span>
+              <span class="stat-label" data-i18n="stat_duration">par séance</span>
             </div>
             <div class="concept-stat">
               <span class="stat-num">6</span>
-              <span class="stat-label">disciplines</span>
+              <span class="stat-label" data-i18n="stat_disciplines">disciplines</span>
             </div>
           </div>
         </div>
@@ -141,81 +178,79 @@
   <!-- COURS / CLASSES -->
   <section class="cours" id="cours">
     <div class="container">
-      <p class="section-label reveal" style="text-align:center">Nos disciplines</p>
-      <h2 class="section-title reveal" style="text-align:center">Des cours pour<br/><em>chaque objectif</em></h2>
+      <p class="section-label reveal" style="text-align:center" data-i18n="cours_label">Nos disciplines</p>
+      <h2 class="section-title reveal" style="text-align:center" data-i18n-html="cours_title">Des cours pour<br/><em>chaque objectif</em></h2>
       <div class="cours-grid">
         <div class="cours-card reveal" style="--delay:0s">
           <div class="cours-icon">🔥</div>
-          <h3>Lagree</h3>
-          <p>Entraînement intense sur Microformer. Gainage, endurance et tonicité musculaire au rendez-vous.</p>
+          <h3 data-i18n="lagree_title">Lagree</h3>
+          <p data-i18n="lagree_desc">Entraînement intense sur Microformer. Gainage, endurance et tonicité musculaire au rendez-vous.</p>
           <ul>
-            <li>Tous niveaux</li>
-            <li>50 min</li>
-            <li>6 pers. max</li>
+            <li data-i18n="lagree_tag1">Tous niveaux</li>
+            <li data-i18n="lagree_tag2">50 min</li>
+            <li data-i18n="lagree_tag3">6 pers. max</li>
           </ul>
         </div>
         <div class="cours-card reveal" style="--delay:0.1s">
           <div class="cours-icon">🌊</div>
-          <h3>Pilates Reformer</h3>
-          <p>Posture, mobilité et renforcement profond sur le Reformer. Idéal pour sculpter le corps en douceur et sans choc.</p>
+          <h3 data-i18n="reformer_title">Pilates Reformer</h3>
+          <p data-i18n="reformer_desc">Posture, mobilité et renforcement profond sur le Reformer. Idéal pour sculpter le corps en douceur et sans choc.</p>
           <ul>
-            <li>Tous niveaux</li>
-            <li>50 min</li>
-            <li>6 pers. max</li>
+            <li data-i18n="reformer_tag1">Tous niveaux</li>
+            <li data-i18n="reformer_tag2">50 min</li>
+            <li data-i18n="reformer_tag3">6 pers. max</li>
           </ul>
         </div>
         <div class="cours-card reveal" style="--delay:0.2s">
           <div class="cours-icon">🧘</div>
-          <h3>Pilates Mat</h3>
-          <p>Les fondamentaux du Pilates au sol revisités à travers une méthode contemporaine. Respiration, centrage et renforcement profond pour développer posture et mobilité.</p>
+          <h3 data-i18n="mat_title">Pilates Mat</h3>
+          <p data-i18n="mat_desc">Les fondamentaux du Pilates au sol revisités à travers une méthode contemporaine. Respiration, centrage et renforcement profond pour développer posture et mobilité.</p>
           <ul>
-            <li>Fondamentaux & Contemporain</li>
-            <li>50 min</li>
-            <li>6 pers. max</li>
+            <li data-i18n="mat_tag1">Fondamentaux & Contemporain</li>
+            <li data-i18n="mat_tag2">50 min</li>
+            <li data-i18n="mat_tag3">6 pers. max</li>
           </ul>
         </div>
         <div class="cours-card reveal" style="--delay:0.3s">
           <div class="cours-icon">⚡</div>
-          <h3>Sculpt</h3>
-          <p>Un cours dynamique combinant les principes du Pilates et un travail de renforcement ciblé pour tonifier et sculpter le corps.</p>
+          <h3 data-i18n="sculpt_title">Sculpt</h3>
+          <p data-i18n="sculpt_desc">Un cours dynamique combinant les principes du Pilates et un travail de renforcement ciblé pour tonifier et sculpter le corps.</p>
           <ul>
-            <li>Tous niveaux</li>
-            <li>50 min</li>
-            <li>6 pers. max</li>
+            <li data-i18n="sculpt_tag1">Tous niveaux</li>
+            <li data-i18n="sculpt_tag2">50 min</li>
+            <li data-i18n="sculpt_tag3">6 pers. max</li>
           </ul>
         </div>
         <div class="cours-card reveal" style="--delay:0.4s">
           <div class="cours-icon">🩰</div>
-          <h3>Barre</h3>
-          <p>Inspiré de la danse, ce cours sculpte et allonge la silhouette avec des mouvements précis et élégants, sans choc articulaire.</p>
+          <h3 data-i18n="barre_title">Barre</h3>
+          <p data-i18n="barre_desc">Inspiré de la danse, ce cours sculpte et allonge la silhouette avec des mouvements précis et élégants, sans choc articulaire.</p>
           <ul>
-            <li>Tous niveaux</li>
-            <li>50 min</li>
-            <li>6 pers. max</li>
+            <li data-i18n="barre_tag1">Tous niveaux</li>
+            <li data-i18n="barre_tag2">50 min</li>
+            <li data-i18n="barre_tag3">6 pers. max</li>
           </ul>
         </div>
         <div class="cours-card reveal" style="--delay:0.5s">
           <div class="cours-icon">☀️</div>
-          <h3>Yoga</h3>
-          <p>Retrouvez nos cours de Hatha et Power Yoga. Flexibilité, équilibre et dynamisme pour harmoniser le corps et l'esprit.</p>
+          <h3 data-i18n="yoga_title">Yoga</h3>
+          <p data-i18n="yoga_desc">Retrouvez nos cours de Hatha et Power Yoga. Flexibilité, équilibre et dynamisme pour harmoniser le corps et l'esprit.</p>
           <ul>
-            <li>Hatha & Power Yoga</li>
-            <li>50 min</li>
-            <li>6 pers. max</li>
+            <li data-i18n="yoga_tag1">Hatha & Power Yoga</li>
+            <li data-i18n="yoga_tag2">50 min</li>
+            <li data-i18n="yoga_tag3">6 pers. max</li>
           </ul>
         </div>
         <div class="cours-card cours-card-special reveal" style="--delay:0.6s">
           <div class="cours-icon">✨</div>
-          <h3>Ateliers & Workshops</h3>
-          <p>Des workshops thématiques pour approfondir votre pratique et rencontrer la communauté Moon Club.</p>
+          <h3 data-i18n="workshops_title">Ateliers & Workshops</h3>
+          <p data-i18n="workshops_desc">Des workshops thématiques pour approfondir votre pratique et rencontrer la communauté Moon Club.</p>
           <ul>
-            <li>Programme à venir</li>
-            <li>Inclus Full Moon</li>
+            <li data-i18n="workshops_tag1">Programme à venir</li>
+            <li data-i18n="workshops_tag2">Inclus Full Moon</li>
           </ul>
-        </div>
-      </div>
       <div class="cours-cta reveal">
-        <a href="#planning" class="btn btn-primary">Voir le planning complet</a>
+        <a href="#planning" class="btn btn-primary" data-i18n="btn_view_planning">Voir le planning complet</a>
       </div>
     </div>
   </section>
@@ -224,9 +259,9 @@
   <section class="coachs" id="coachs">
     <div class="container">
       <div class="section-header-center">
-        <p class="section-label reveal">L'équipe Moon</p>
-        <h2 class="section-title reveal">Nos <em>Coachs</em></h2>
-        <p class="section-subtitle reveal">Des enseignantes passionnées et certifiées, dédiées à votre progression, votre alignement et votre bien-être au studio.</p>
+        <p class="section-label reveal" data-i18n="coachs_label">L'équipe Moon</p>
+        <h2 class="section-title reveal" data-i18n-html="coachs_title">Nos <em>Coachs</em></h2>
+        <p class="section-subtitle reveal" data-i18n="coachs_subtitle">Des enseignantes passionnées et certifiées, dédiées à votre progression, votre alignement et votre bien-être au studio.</p>
       </div>
 
       <div class="coachs-grid-duo">
@@ -234,9 +269,9 @@
         <div class="coach-card reveal" style="--delay:0s" data-coach-modal="modal-florence">
           <div class="coach-img-wrap">
             <img src="florence.jpg?v=2" alt="Florence - Coach Moon Pilates" class="coach-img" />
-            <div class="coach-badge">Coach Moon Club</div>
+            <div class="coach-badge" data-i18n="badge_coach_moon">Coach Moon Club</div>
             <div class="coach-hover-overlay">
-              <span>Voir le profil & bio →</span>
+              <span data-i18n="coach_hover">Voir le profil & bio →</span>
             </div>
           </div>
           <div class="coach-content">
@@ -251,7 +286,7 @@
               <span class="coach-tag">Barre</span>
             </div>
             <div class="coach-footer">
-              <button type="button" class="coach-btn open-coach-modal" data-target="modal-florence">Découvrir son profil & bio →</button>
+              <button type="button" class="coach-btn open-coach-modal" data-target="modal-florence" data-i18n="btn_discover_profile">Découvrir son profil & bio →</button>
             </div>
           </div>
         </div>
@@ -260,9 +295,9 @@
         <div class="coach-card reveal" style="--delay:0.1s" data-coach-modal="modal-lesly">
           <div class="coach-img-wrap">
             <img src="lesly.jpg?v=2" alt="Lesly - Coach Moon Pilates" class="coach-img" />
-            <div class="coach-badge">Coach · 6 Disciplines</div>
+            <div class="coach-badge" data-i18n="badge_coach_6disc">Coach · 6 Disciplines</div>
             <div class="coach-hover-overlay">
-              <span>Voir le profil & bio →</span>
+              <span data-i18n="coach_hover">Voir le profil & bio →</span>
             </div>
           </div>
           <div class="coach-content">
@@ -278,7 +313,7 @@
               <span class="coach-tag">Yoga</span>
             </div>
             <div class="coach-footer">
-              <button type="button" class="coach-btn open-coach-modal" data-target="modal-lesly">Découvrir son profil & bio →</button>
+              <button type="button" class="coach-btn open-coach-modal" data-target="modal-lesly" data-i18n="btn_discover_profile">Découvrir son profil & bio →</button>
             </div>
           </div>
         </div>
@@ -287,10 +322,10 @@
       <!-- Coachs Callout -->
       <div class="coachs-callout reveal">
         <div class="coachs-callout-text">
-          <h4>Vous souhaitez un accompagnement sur-mesure ?</h4>
-          <p>Nos coachs sont également disponibles pour des séances individuelles privées ou en duo.</p>
+          <h4 data-i18n="coach_callout_title">Vous souhaitez un accompagnement sur-mesure ?</h4>
+          <p data-i18n="coach_callout_desc">Nos coachs sont également disponibles pour des séances individuelles privées ou en duo.</p>
         </div>
-        <a href="#prives" class="btn btn-outline">Découvrir le coaching privé</a>
+        <a href="#prives" class="btn btn-outline" data-i18n="btn_discover_private">Découvrir le coaching privé</a>
       </div>
     </div>
   </section>
@@ -303,7 +338,7 @@
       <div class="coach-modal-content">
         <div class="coach-modal-photo-col">
           <img src="florence.jpg?v=2" alt="Florence" class="coach-modal-img" />
-          <div class="coach-modal-badge">Coach Moon Club</div>
+          <div class="coach-modal-badge" data-i18n="badge_coach_moon">Coach Moon Club</div>
         </div>
         <div class="coach-modal-text-col">
           <div class="coach-modal-header">
@@ -356,7 +391,7 @@
       <div class="coach-modal-content">
         <div class="coach-modal-photo-col">
           <img src="lesly.jpg?v=2" alt="Lesly" class="coach-modal-img" />
-          <div class="coach-modal-badge">Coach · 6 Disciplines</div>
+          <div class="coach-modal-badge" data-i18n="badge_coach_6disc">Coach · 6 Disciplines</div>
         </div>
         <div class="coach-modal-text-col">
           <div class="coach-modal-header">
@@ -410,9 +445,9 @@
 
       <!-- SÉANCES DÉCOUVERTE -->
       <div class="decouverte-section" id="decouverte" style="margin-bottom: 80px;">
-        <p class="section-label reveal" style="text-align:center">Premiers pas</p>
-        <h2 class="section-title reveal" style="text-align:center">Séances <em>Découverte</em></h2>
-        <p class="tarifs-sub reveal" style="text-align:center; max-width:600px; margin-left:auto; margin-right:auto; margin-bottom:48px;">
+        <p class="section-label reveal" style="text-align:center" data-i18n="dec_label">Premiers pas</p>
+        <h2 class="section-title reveal" style="text-align:center" data-i18n-html="dec_title">Séances <em>Découverte</em></h2>
+        <p class="tarifs-sub reveal" style="text-align:center; max-width:600px; margin-left:auto; margin-right:auto; margin-bottom:48px;" data-i18n="dec_sub">
           Curieux·se de tester nos cours ? Venez découvrir le studio dans un cadre moderne et convivial, sans prérequis.
         </p>
 
@@ -421,65 +456,65 @@
           <!-- 1 SÉANCE -->
           <div class="pricing-card reveal" style="--delay:0s">
             <div class="pricing-moon">🌸</div>
-            <h3 class="pricing-name">1 séance</h3>
-            <p class="pricing-tagline">Pour une première découverte</p>
+            <h3 class="pricing-name" data-i18n="dec_card1_title">1 séance</h3>
+            <p class="pricing-tagline" data-i18n="dec_card1_tagline">Pour une première découverte</p>
             <div class="pricing-price" style="margin-top: 24px;">
               <span class="price-currency">CHF</span>
               <span class="price-amount">35</span>
               <span class="price-period">/ séance</span>
             </div>
-            <p class="price-per-session">CHF 35.- / cours</p>
+            <p class="price-per-session" data-i18n="dec_card1_unit">CHF 35.- / cours</p>
             <ul class="pricing-features">
-              <li>✓ Présentation du studio & des machines</li>
-              <li>✓ Séance guidée (max. 6 personnes)</li>
-              <li>✓ Conseils personnalisés selon votre niveau</li>
-              <li>✓ Accès Moon Café après le cours</li>
-              <li>✓ Aucun prérequis nécessaire</li>
+              <li data-i18n="dec_f1">✓ Présentation du studio & des machines</li>
+              <li data-i18n="dec_f2">✓ Séance guidée (max. 6 personnes)</li>
+              <li data-i18n="dec_f3">✓ Conseils personnalisés selon votre niveau</li>
+              <li data-i18n="dec_f4">✓ Accès Moon Café après le cours</li>
+              <li data-i18n="dec_f5">✓ Aucun prérequis nécessaire</li>
             </ul>
-            <a href="https://backoffice.bsport.io/customer/payment/pass/675960/?membership=4466&force=true" target="_blank" class="btn btn-outline" style="margin-top: auto;">Réserver ma séance</a>
+            <a href="https://backoffice.bsport.io/customer/payment/pass/675960/?membership=4466&force=true" target="_blank" class="btn btn-outline" style="margin-top: auto;" data-i18n="dec_btn1">Réserver ma séance</a>
           </div>
 
           <!-- 2 SÉANCES -->
           <div class="pricing-card reveal" style="--delay:0.1s">
             <div class="pricing-moon">🌸🌸</div>
-            <h3 class="pricing-name">2 séances</h3>
-            <p class="pricing-tagline">Pour confirmer le coup de cœur</p>
+            <h3 class="pricing-name" data-i18n="dec_card2_title">2 séances</h3>
+            <p class="pricing-tagline" data-i18n="dec_card2_tagline">Pour confirmer le coup de cœur</p>
             <div class="pricing-price" style="margin-top: 24px;">
               <span class="price-currency">CHF</span>
               <span class="price-amount">60</span>
               <span class="price-period">/ pack</span>
             </div>
-            <p class="price-per-session">CHF 30.- / cours</p>
+            <p class="price-per-session" data-i18n="dec_card2_unit">CHF 30.- / cours</p>
             <ul class="pricing-features">
-              <li>✓ Présentation du studio & des machines</li>
-              <li>✓ Séance guidée (max. 6 personnes)</li>
-              <li>✓ Conseils personnalisés selon votre niveau</li>
-              <li>✓ Accès Moon Café après le cours</li>
-              <li>✓ Aucun prérequis nécessaire</li>
+              <li data-i18n="dec_f1">✓ Présentation du studio & des machines</li>
+              <li data-i18n="dec_f2">✓ Séance guidée (max. 6 personnes)</li>
+              <li data-i18n="dec_f3">✓ Conseils personnalisés selon votre niveau</li>
+              <li data-i18n="dec_f4">✓ Accès Moon Café après le cours</li>
+              <li data-i18n="dec_f5">✓ Aucun prérequis nécessaire</li>
             </ul>
-            <a href="https://backoffice.bsport.io/customer/payment/pass/675962/?membership=4466&force=true" target="_blank" class="btn btn-outline" style="margin-top: auto;">Réserver mes 2 séances</a>
+            <a href="https://backoffice.bsport.io/customer/payment/pass/675962/?membership=4466&force=true" target="_blank" class="btn btn-outline" style="margin-top: auto;" data-i18n="dec_btn2">Réserver mes 2 séances</a>
           </div>
 
           <!-- 3 SÉANCES - FEATURED TOP -->
           <div class="pricing-card pricing-featured reveal" style="--delay:0.2s">
-            <div class="pricing-badge">⭐ Le Plus Choisi</div>
+            <div class="pricing-badge" data-i18n="dec_top_badge">⭐ Le Plus Choisi</div>
             <div class="pricing-moon">🌸🌸🌸</div>
-            <h3 class="pricing-name">3 séances</h3>
-            <p class="pricing-tagline">Pour vraiment ressentir les effets</p>
+            <h3 class="pricing-name" data-i18n="dec_card3_title">3 séances</h3>
+            <p class="pricing-tagline" data-i18n="dec_card3_tagline">Pour vraiment ressentir les effets</p>
             <div class="pricing-price" style="margin-top: 24px;">
               <span class="price-currency">CHF</span>
               <span class="price-amount">85</span>
               <span class="price-period">/ pack</span>
             </div>
-            <p class="price-per-session">CHF 28,3 / cours</p>
+            <p class="price-per-session" data-i18n="dec_card3_unit">CHF 28,3 / cours</p>
             <ul class="pricing-features">
-              <li>✓ Présentation du studio & des machines</li>
-              <li>✓ Séance guidée (max. 6 personnes)</li>
-              <li>✓ Conseils personnalisés selon votre niveau</li>
-              <li>✓ Accès Moon Café après le cours</li>
-              <li>✓ Aucun prérequis nécessaire</li>
+              <li data-i18n="dec_f1">✓ Présentation du studio & des machines</li>
+              <li data-i18n="dec_f2">✓ Séance guidée (max. 6 personnes)</li>
+              <li data-i18n="dec_f3">✓ Conseils personnalisés selon votre niveau</li>
+              <li data-i18n="dec_f4">✓ Accès Moon Café après le cours</li>
+              <li data-i18n="dec_f5">✓ Aucun prérequis nécessaire</li>
             </ul>
-            <a href="https://backoffice.bsport.io/customer/payment/pass/682886/?membership=4466&force=true" target="_blank" class="btn btn-primary" style="margin-top: auto;">Réserver mes 3 séances</a>
+            <a href="https://backoffice.bsport.io/customer/payment/pass/682886/?membership=4466&force=true" target="_blank" class="btn btn-primary" style="margin-top: auto;" data-i18n="dec_btn3">Réserver mes 3 séances</a>
           </div>
         </div>
 
@@ -491,31 +526,31 @@
 
           <div class="mobile-pills-container">
             <div class="mobile-pills" id="pills-decouverte">
-              <button class="mobile-pill" data-target="dec-1">1 séance</button>
-              <button class="mobile-pill" data-target="dec-2">2 séances</button>
+              <button class="mobile-pill" data-target="dec-1" data-i18n="dec_card1_title">1 séance</button>
+              <button class="mobile-pill" data-target="dec-2" data-i18n="dec_card2_title">2 séances</button>
               <button class="mobile-pill active" data-target="dec-3">3 séances <span class="pill-tag">⭐ Top</span></button>
             </div>
           </div>
 
           <div class="pricing-card mobile-card pricing-featured" id="card-dec-mobile">
-            <div class="pricing-badge" id="dec-m-badge">⭐ Le Plus Choisi</div>
+            <div class="pricing-badge" id="dec-m-badge" data-i18n="dec_top_badge">⭐ Le Plus Choisi</div>
             <div class="pricing-moon" id="dec-m-icon">🌸🌸🌸</div>
             <h3 class="pricing-name" id="dec-m-name">3 séances Découverte</h3>
-            <p class="pricing-tagline" id="dec-m-tagline">Pour vraiment ressentir les effets</p>
+            <p class="pricing-tagline" id="dec-m-tagline" data-i18n="dec_card3_tagline">Pour vraiment ressentir les effets</p>
             <div class="pricing-price" style="margin-top: 18px;">
               <span class="price-currency">CHF</span>
               <span class="price-amount" id="dec-m-price">85</span>
               <span class="price-period" id="dec-m-period">/ pack</span>
             </div>
-            <p class="price-per-session" id="dec-m-per">CHF 28,3 / cours</p>
+            <p class="price-per-session" id="dec-m-per" data-i18n="dec_card3_unit">CHF 28,3 / cours</p>
             <ul class="pricing-features">
-              <li>✓ Présentation du studio & des machines</li>
-              <li>✓ Séance guidée (max. 6 personnes)</li>
-              <li>✓ Conseils personnalisés selon votre niveau</li>
-              <li>✓ Accès Moon Café après le cours</li>
-              <li>✓ Aucun prérequis nécessaire</li>
+              <li data-i18n="dec_f1">✓ Présentation du studio & des machines</li>
+              <li data-i18n="dec_f2">✓ Séance guidée (max. 6 personnes)</li>
+              <li data-i18n="dec_f3">✓ Conseils personnalisés selon votre niveau</li>
+              <li data-i18n="dec_f4">✓ Accès Moon Café après le cours</li>
+              <li data-i18n="dec_f5">✓ Aucun prérequis nécessaire</li>
             </ul>
-            <a href="https://backoffice.bsport.io/customer/payment/pass/682886/?membership=4466&force=true" target="_blank" class="btn btn-primary" id="dec-m-btn" style="margin-top: 16px;">Réserver mes 3 séances</a>
+            <a href="https://backoffice.bsport.io/customer/payment/pass/682886/?membership=4466&force=true" target="_blank" class="btn btn-primary" id="dec-m-btn" style="margin-top: 16px;" data-i18n="dec_btn3">Réserver mes 3 séances</a>
           </div>
 
           <!-- Mobile Pagination & Arrows Navigation -->
@@ -536,20 +571,20 @@
 
       <!-- FORMULES / FORFAITS -->
       <div class="forfaits-section" id="forfaits" style="margin-bottom: 80px;">
-        <p class="section-label reveal" style="text-align:center">Nos forfaits</p>
-        <h2 class="section-title reveal" style="text-align:center">Choisissez votre<br/><em>formule</em></h2>
-        <p class="tarifs-sub reveal" style="text-align:center; margin-bottom:64px;">6 disciplines · Lausanne</p>
+        <p class="section-label reveal" style="text-align:center" data-i18n="forfaits_label">Nos forfaits</p>
+        <h2 class="section-title reveal" style="text-align:center" data-i18n-html="forfaits_title">Choisissez votre<br/><em>formule</em></h2>
+        <p class="tarifs-sub reveal" style="text-align:center; margin-bottom:64px;" data-i18n="forfaits_sub">6 disciplines · Lausanne</p>
 
         <!-- DESKTOP GRID -->
         <div class="pricing-grid only-desktop">
           <!-- NEW MOON -->
           <div class="pricing-card reveal" style="--delay:0s" id="card-newmoon">
             <div class="pricing-moon">🌑</div>
-            <h3 class="pricing-name">New Moon</h3>
-            <p class="pricing-tagline">Pour commencer en douceur</p>
+            <h3 class="pricing-name" data-i18n="newmoon_name">New Moon</h3>
+            <p class="pricing-tagline" data-i18n="newmoon_tagline">Pour commencer en douceur</p>
             <div class="pricing-toggle">
-              <button class="toggle-btn active" data-plan="newmoon" data-period="6">6 mois</button>
-              <button class="toggle-btn" data-plan="newmoon" data-period="12">12 mois</button>
+              <button class="toggle-btn active" data-plan="newmoon" data-period="6" data-i18n="toggle_6m">6 mois</button>
+              <button class="toggle-btn" data-plan="newmoon" data-period="12" data-i18n="toggle_12m">12 mois</button>
             </div>
             <div class="pricing-price">
               <span class="price-currency">CHF</span>
@@ -558,25 +593,25 @@
             </div>
             <p class="price-per-session" id="per-newmoon">CHF 37,5 / séance</p>
             <ul class="pricing-features">
-              <li>✓ 4 cours par mois</li>
-              <li>✓ 6 disciplines complémentaires</li>
-              <li>Lagree · Reformer · Mat · Sculpt · Barre · Yoga</li>
-              <li>✓ Ateliers à venir</li>
-              <li>✓ -10% sur vos boissons Moon Café</li>
+              <li data-i18n="newmoon_f1">✓ 4 cours par mois</li>
+              <li data-i18n="newmoon_f2">✓ 6 disciplines complémentaires</li>
+              <li data-i18n="newmoon_f3">Lagree · Reformer · Mat · Sculpt · Barre · Yoga</li>
+              <li data-i18n="newmoon_f4">✓ Ateliers à venir</li>
+              <li data-i18n="newmoon_f5">✓ -10% sur vos boissons Moon Café</li>
             </ul>
             <p class="pricing-engagement" id="eng-newmoon">Engagement 6 mois</p>
-            <a href="https://backoffice.bsport.io/checkout/4466/subscription/30689?force=true" target="_blank" class="btn btn-outline" id="btn-newmoon">Choisir New Moon</a>
+            <a href="https://backoffice.bsport.io/checkout/4466/subscription/30689?force=true" target="_blank" class="btn btn-outline" id="btn-newmoon" data-i18n="btn_choose_newmoon">Choisir New Moon</a>
           </div>
 
           <!-- HALF MOON - POPULAR -->
           <div class="pricing-card pricing-featured reveal" style="--delay:0.1s" id="card-halfmoon">
-            <div class="pricing-badge">Plus Populaire</div>
+            <div class="pricing-badge" data-i18n="badge_popular">Plus Populaire</div>
             <div class="pricing-moon">🌗</div>
-            <h3 class="pricing-name">Half Moon</h3>
-            <p class="pricing-tagline">Pour pratiquer régulièrement</p>
+            <h3 class="pricing-name" data-i18n="halfmoon_name">Half Moon</h3>
+            <p class="pricing-tagline" data-i18n="halfmoon_tagline">Pour pratiquer régulièrement</p>
             <div class="pricing-toggle">
-              <button class="toggle-btn active" data-plan="halfmoon" data-period="6">6 mois</button>
-              <button class="toggle-btn" data-plan="halfmoon" data-period="12">12 mois</button>
+              <button class="toggle-btn active" data-plan="halfmoon" data-period="6" data-i18n="toggle_6m">6 mois</button>
+              <button class="toggle-btn" data-plan="halfmoon" data-period="12" data-i18n="toggle_12m">12 mois</button>
             </div>
             <div class="pricing-price">
               <span class="price-currency">CHF</span>
@@ -585,21 +620,21 @@
             </div>
             <p class="price-per-session" id="per-halfmoon">CHF 31,25 / séance</p>
             <ul class="pricing-features">
-              <li>✓ 8 cours par mois</li>
-              <li>✓ 6 disciplines complémentaires</li>
-              <li>Lagree · Reformer · Mat · Sculpt · Barre · Yoga</li>
-              <li>✓ Ateliers à venir</li>
-              <li>✓ -10% sur vos boissons Moon Café</li>
+              <li data-i18n="halfmoon_f1">✓ 8 cours par mois</li>
+              <li data-i18n="halfmoon_f2">✓ 6 disciplines complémentaires</li>
+              <li data-i18n="halfmoon_f3">Lagree · Reformer · Mat · Sculpt · Barre · Yoga</li>
+              <li data-i18n="halfmoon_f4">✓ Ateliers à venir</li>
+              <li data-i18n="halfmoon_f5">✓ -10% sur vos boissons Moon Café</li>
             </ul>
             <p class="pricing-engagement" id="eng-halfmoon">Engagement 6 mois</p>
-            <a href="https://backoffice.bsport.io/checkout/4466/subscription/30691?force=true" target="_blank" class="btn btn-primary" id="btn-halfmoon">Choisir Half Moon</a>
+            <a href="https://backoffice.bsport.io/checkout/4466/subscription/30691?force=true" target="_blank" class="btn btn-primary" id="btn-halfmoon" data-i18n="btn_choose_halfmoon">Choisir Half Moon</a>
           </div>
 
           <!-- FULL MOON -->
           <div class="pricing-card reveal" style="--delay:0.2s" id="card-fullmoon">
             <div class="pricing-moon">🌕</div>
-            <h3 class="pricing-name">Full Moon</h3>
-            <p class="pricing-tagline">Pour les plus passionnées</p>
+            <h3 class="pricing-name" data-i18n="fullmoon_name">Full Moon</h3>
+            <p class="pricing-tagline" data-i18n="fullmoon_tagline">Pour les plus passionnées</p>
             <!-- Spacer = same height as .pricing-toggle so the card aligns with others -->
             <div class="pricing-toggle-spacer"></div>
             <div class="pricing-price">
@@ -607,24 +642,24 @@
               <span class="price-amount">350</span>
               <span class="price-period">/ mois</span>
             </div>
-            <p class="price-per-session">Séances illimitées · <strong>~14 CHF / séance*</strong></p>
+            <p class="price-per-session" data-i18n-html="fullmoon_per">Séances illimitées · <strong>~14 CHF / séance*</strong></p>
             <ul class="pricing-features">
-              <li>✓ 1 cours par jour max</li>
-              <li>✓ 6 disciplines complémentaires</li>
-              <li>Lagree · Reformer · Mat · Sculpt · Barre · Yoga</li>
-              <li>✓ Ateliers (inclus)</li>
-              <li>✓ -10% sur vos boissons Moon Café</li>
+              <li data-i18n="fullmoon_f1">✓ 1 cours par jour max</li>
+              <li data-i18n="fullmoon_f2">✓ 6 disciplines complémentaires</li>
+              <li data-i18n="fullmoon_f3">Lagree · Reformer · Mat · Sculpt · Barre · Yoga</li>
+              <li data-i18n="fullmoon_f4">✓ Ateliers (inclus)</li>
+              <li data-i18n="fullmoon_f5">✓ -10% sur vos boissons Moon Café</li>
             </ul>
-            <p class="pricing-engagement">Engagement 3 mois minimum<br/><span style="font-size:0.75rem; opacity:0.75; font-style:italic;">*Sur une base de 24 séances par mois</span></p>
-            <a href="https://backoffice.bsport.io/checkout/4466/subscription/30694?force=true" target="_blank" class="btn btn-outline">Choisir Full Moon</a>
+            <p class="pricing-engagement" data-i18n-html="fullmoon_eng">Engagement 3 mois minimum<br/><span style="font-size:0.75rem; opacity:0.75; font-style:italic;">*Sur une base de 24 séances par mois</span></p>
+            <a href="https://backoffice.bsport.io/checkout/4466/subscription/30694?force=true" target="_blank" class="btn btn-outline" data-i18n="btn_choose_fullmoon">Choisir Full Moon</a>
           </div>
 
           <!-- ANNUEL -->
           <div class="pricing-card pricing-annual reveal" style="--delay:0.3s" id="card-annual">
-            <div class="pricing-badge pricing-badge-gold">Meilleur Prix</div>
+            <div class="pricing-badge pricing-badge-gold" data-i18n="badge_best_price">Meilleur Prix</div>
             <div class="pricing-moon">✨</div>
-            <h3 class="pricing-name">Annuel</h3>
-            <p class="pricing-tagline">Flexibilité maximale</p>
+            <h3 class="pricing-name" data-i18n="annual_name">Annuel</h3>
+            <p class="pricing-tagline" data-i18n="annual_tagline">Flexibilité maximale</p>
             <div class="pricing-toggle">
               <button class="toggle-btn active" data-plan="annual" data-period="nm">New Moon</button>
               <button class="toggle-btn" data-plan="annual" data-period="hm">Half Moon</button>
@@ -637,13 +672,13 @@
             <p class="price-per-session" id="per-annual">4 cours par mois · CHF 32 / séance</p>
             <ul class="pricing-features" id="feat-annual-list">
               <li id="feat-annual-cours">✓ 4 cours par mois (48 séances / an)</li>
-              <li>✓ 6 disciplines complémentaires</li>
-              <li>Lagree · Reformer · Mat · Sculpt · Barre · Yoga</li>
-              <li>✓ Ateliers à venir</li>
-              <li>✓ -10% sur vos boissons Moon Café</li>
+              <li data-i18n="newmoon_f2">✓ 6 disciplines complémentaires</li>
+              <li data-i18n="newmoon_f3">Lagree · Reformer · Mat · Sculpt · Barre · Yoga</li>
+              <li data-i18n="newmoon_f4">✓ Ateliers à venir</li>
+              <li data-i18n="newmoon_f5">✓ -10% sur vos boissons Moon Café</li>
             </ul>
-            <p class="pricing-engagement">Valide 1 an · Paiement unique</p>
-            <a href="https://backoffice.bsport.io/customer/payment/pass/682887/?membership=4466&force=true" target="_blank" class="btn btn-primary" id="btn-annual">Choisir Annuel</a>
+            <p class="pricing-engagement" data-i18n="annual_valid">Valide 1 an · Paiement unique</p>
+            <a href="https://backoffice.bsport.io/customer/payment/pass/682887/?membership=4466&force=true" target="_blank" class="btn btn-primary" id="btn-annual" data-i18n="btn_choose_annual">Choisir Annuel</a>
           </div>
         </div>
 
@@ -655,22 +690,22 @@
 
           <div class="mobile-pills-container">
             <div class="mobile-pills" id="pills-forfaits">
-              <button class="mobile-pill" data-target="forfait-newmoon">New Moon</button>
+              <button class="mobile-pill" data-target="forfait-newmoon" data-i18n="newmoon_name">New Moon</button>
               <button class="mobile-pill active" data-target="forfait-halfmoon">Half Moon <span class="pill-tag">⭐ Top</span></button>
-              <button class="mobile-pill" data-target="forfait-fullmoon">Full Moon</button>
+              <button class="mobile-pill" data-target="forfait-fullmoon" data-i18n="fullmoon_name">Full Moon</button>
               <button class="mobile-pill" data-target="forfait-annual">Annuel ✨</button>
             </div>
           </div>
 
           <div class="pricing-card mobile-card pricing-featured" id="card-forfait-mobile">
-            <div class="pricing-badge" id="forfait-m-badge">Plus Populaire</div>
+            <div class="pricing-badge" id="forfait-m-badge" data-i18n="badge_popular">Plus Populaire</div>
             <div class="pricing-moon" id="forfait-m-icon">🌗</div>
-            <h3 class="pricing-name" id="forfait-m-name">Half Moon</h3>
-            <p class="pricing-tagline" id="forfait-m-tagline">Pour pratiquer régulièrement</p>
+            <h3 class="pricing-name" id="forfait-m-name" data-i18n="halfmoon_name">Half Moon</h3>
+            <p class="pricing-tagline" id="forfait-m-tagline" data-i18n="halfmoon_tagline">Pour pratiquer régulièrement</p>
             
             <div class="pricing-toggle" id="forfait-m-toggle">
-              <button class="toggle-btn active" id="forfait-m-tog1">6 mois</button>
-              <button class="toggle-btn" id="forfait-m-tog2">12 mois</button>
+              <button class="toggle-btn active" id="forfait-m-tog1" data-i18n="toggle_6m">6 mois</button>
+              <button class="toggle-btn" id="forfait-m-tog2" data-i18n="toggle_12m">12 mois</button>
             </div>
 
             <div class="pricing-price">
@@ -680,14 +715,14 @@
             </div>
             <p class="price-per-session" id="forfait-m-per">CHF 31,25 / séance</p>
             <ul class="pricing-features" id="forfait-m-features">
-              <li>✓ 8 cours par mois</li>
-              <li>✓ 6 disciplines complémentaires</li>
-              <li>Lagree · Reformer · Mat · Sculpt · Barre · Yoga</li>
-              <li>✓ Ateliers à venir</li>
-              <li>✓ -10% sur vos boissons Moon Café</li>
+              <li data-i18n="halfmoon_f1">✓ 8 cours par mois</li>
+              <li data-i18n="halfmoon_f2">✓ 6 disciplines complémentaires</li>
+              <li data-i18n="halfmoon_f3">Lagree · Reformer · Mat · Sculpt · Barre · Yoga</li>
+              <li data-i18n="halfmoon_f4">✓ Ateliers à venir</li>
+              <li data-i18n="halfmoon_f5">✓ -10% sur vos boissons Moon Café</li>
             </ul>
             <p class="pricing-engagement" id="forfait-m-eng">Engagement 6 mois</p>
-            <a href="https://backoffice.bsport.io/checkout/4466/subscription/30691?force=true" target="_blank" class="btn btn-primary" id="forfait-m-btn">Choisir Half Moon</a>
+            <a href="https://backoffice.bsport.io/checkout/4466/subscription/30691?force=true" target="_blank" class="btn btn-primary" id="forfait-m-btn" data-i18n="btn_choose_halfmoon">Choisir Half Moon</a>
           </div>
 
           <!-- Mobile Pagination & Arrows Navigation -->
@@ -709,27 +744,27 @@
 
       <!-- SESSIONS PRIVÉES (SOLO & DUO) -->
       <div class="prives-section" id="prives" style="margin-bottom: 80px;">
-        <p class="section-label reveal" style="text-align:center">🤍 Sessions Privées ✨</p>
-        <h2 class="section-title reveal" style="text-align:center">Coaching <em>Privé</em></h2>
-        <p class="tarifs-sub reveal" style="text-align:center; max-width:760px; margin-left:auto; margin-right:auto; margin-bottom:16px;">
+        <p class="section-label reveal" style="text-align:center" data-i18n="prives_label">🤍 Sessions Privées ✨</p>
+        <h2 class="section-title reveal" style="text-align:center" data-i18n-html="prives_title">Coaching <em>Privé</em></h2>
+        <p class="tarifs-sub reveal" style="text-align:center; max-width:760px; margin-left:auto; margin-right:auto; margin-bottom:16px;" data-i18n="prives_desc">
           Un accompagnement 100 % sur mesure pour atteindre vos objectifs. Nos sessions privées de 50 minutes vous offrent un encadrement exclusif, adapté à votre niveau, votre condition physique et vos envies du moment. 🧘‍♀️
         </p>
-        <p class="tarifs-sub reveal" style="text-align:center; max-width:760px; margin-left:auto; margin-right:auto; margin-bottom:28px; font-size:0.88rem; opacity:0.8;">
+        <p class="tarifs-sub reveal" style="text-align:center; max-width:760px; margin-left:auto; margin-right:auto; margin-bottom:28px; font-size:0.88rem; opacity:0.8;" data-i18n-html="prives_disc">
           <strong>Discipline au choix :</strong> Lagree · Reformer · Mat Pilates · Sculpt · Barre · Hatha Yoga · Power Yoga 🌿
         </p>
 
         <!-- Value Badges -->
         <div class="concept-badges reveal" style="justify-content:center; margin-bottom:40px; margin-top:0;">
-          <div class="badge"><span class="badge-icon">👤</span><span>Sur-mesure & Posture ciblée</span></div>
-          <div class="badge"><span class="badge-icon">🕒</span><span>Créneaux Flexibles (Heures creuses)</span></div>
-          <div class="badge"><span class="badge-icon">☕</span><span>Espace Moon Café pour débriefer</span></div>
+          <div class="badge"><span class="badge-icon">👤</span><span data-i18n="badge_priv_custom">Sur-mesure & Posture ciblée</span></div>
+          <div class="badge"><span class="badge-icon">🕒</span><span data-i18n="badge_priv_flex">Créneaux Flexibles (Heures creuses)</span></div>
+          <div class="badge"><span class="badge-icon">☕</span><span data-i18n="badge_priv_cafe">Espace Moon Café pour débriefer</span></div>
         </div>
 
         <!-- Format Switcher (Solo / Duo) Desktop -->
         <div class="prive-type-switch-container reveal only-desktop" style="display:flex; justify-content:center; margin-bottom:40px;">
           <div class="pricing-toggle" style="max-width:340px; width:100%; padding:4px;">
-            <button class="toggle-btn active" id="prive-tab-solo" data-prive-tab="solo" style="font-size:0.9rem; padding:10px 20px;">👤 Moon Solo</button>
-            <button class="toggle-btn" id="prive-tab-duo" data-prive-tab="duo" style="font-size:0.9rem; padding:10px 20px;">👥 Moon Duo</button>
+            <button class="toggle-btn active" id="prive-tab-solo" data-prive-tab="solo" style="font-size:0.9rem; padding:10px 20px;" data-i18n="tab_solo">👤 Moon Solo</button>
+            <button class="toggle-btn" id="prive-tab-duo" data-prive-tab="duo" style="font-size:0.9rem; padding:10px 20px;" data-i18n="tab_duo">👥 Moon Duo</button>
           </div>
         </div>
 
@@ -738,8 +773,8 @@
           <!-- 1 COURS SOLO -->
           <div class="pricing-card reveal visible" style="--delay:0s">
             <div class="pricing-moon">👤</div>
-            <h3 class="pricing-name">1 séance Solo</h3>
-            <p class="pricing-tagline">50 min d'attention exclusive & personnalisée</p>
+            <h3 class="pricing-name" data-i18n="solo_1_name">1 séance Solo</h3>
+            <p class="pricing-tagline" data-i18n="solo_1_tag">50 min d'attention exclusive & personnalisée</p>
             <div class="pricing-price" style="margin-top: 24px;">
               <span class="price-currency">CHF</span>
               <span class="price-amount">110</span>
@@ -747,21 +782,21 @@
             </div>
             <p class="price-per-session">CHF 110.- / cours</p>
             <ul class="pricing-features">
-              <li>✓ 50 minutes en tête-à-tête avec votre coach</li>
-              <li>✓ 1 discipline au choix parmi les 6</li>
-              <li>✓ Correction posturale & intensité 100% adaptée</li>
-              <li>✓ Idéal pour débuter ou cibler un objectif précis</li>
-              <li>✓ Espace Moon Café accessible après votre cours</li>
+              <li data-i18n="solo_1_f1">✓ 50 minutes en tête-à-tête avec votre coach</li>
+              <li data-i18n="solo_1_f2">✓ 1 discipline au choix parmi les 6</li>
+              <li data-i18n="solo_1_f3">✓ Correction posturale & intensité 100% adaptée</li>
+              <li data-i18n="solo_1_f4">✓ Idéal pour débuter ou cibler un objectif précis</li>
+              <li data-i18n="solo_1_f5">✓ Espace Moon Café accessible après votre cours</li>
             </ul>
-            <a href="https://backoffice.bsport.io/customer/payment/pass/787309/?membership=4466&force=true" target="_blank" class="btn btn-outline" style="margin-top: auto;">Réserver 1 cours Solo</a>
+            <a href="https://backoffice.bsport.io/customer/payment/pass/787309/?membership=4466&force=true" target="_blank" class="btn btn-outline" style="margin-top: auto;" data-i18n="btn_solo_1">Réserver 1 cours Solo</a>
           </div>
 
           <!-- 5 COURS SOLO (FEATURED) -->
           <div class="pricing-card pricing-featured reveal visible" style="--delay:0.1s">
             <div class="pricing-badge">⭐ Recommandé</div>
             <div class="pricing-moon">👤✨</div>
-            <h3 class="pricing-name">Pack 5 séances</h3>
-            <p class="pricing-tagline">Pour un suivi régulier et des progrès rapides</p>
+            <h3 class="pricing-name" data-i18n="solo_5_name">Pack 5 séances</h3>
+            <p class="pricing-tagline" data-i18n="solo_5_tag">Pour un suivi régulier et des progrès rapides</p>
             <div class="pricing-price" style="margin-top: 24px;">
               <span class="price-currency">CHF</span>
               <span class="price-amount">525</span>
@@ -769,21 +804,21 @@
             </div>
             <p class="price-per-session">CHF 105.- / cours (au lieu de 110.-)</p>
             <ul class="pricing-features">
-              <li>✓ 5 séances privées de 50 minutes</li>
-              <li>✓ Programme évolutif selon vos objectifs</li>
-              <li>✓ Combinez vos disciplines préférées</li>
-              <li>✓ Créneaux réservés selon vos disponibilités</li>
-              <li>✓ Débriefing & détente au Moon Café</li>
+              <li data-i18n="solo_5_f1">✓ 5 séances privées de 50 minutes</li>
+              <li data-i18n="solo_5_f2">✓ Programme évolutif selon vos objectifs</li>
+              <li data-i18n="solo_5_f3">✓ Combinez vos disciplines préférées</li>
+              <li data-i18n="solo_5_f4">✓ Créneaux réservés selon vos disponibilités</li>
+              <li data-i18n="solo_5_f5">✓ Débriefing & détente au Moon Café</li>
             </ul>
-            <a href="https://backoffice.bsport.io/customer/payment/pass/787307/?membership=4466&force=true" target="_blank" class="btn btn-primary" style="margin-top: auto;">Choisir le pack 5 Solo</a>
+            <a href="https://backoffice.bsport.io/customer/payment/pass/787307/?membership=4466&force=true" target="_blank" class="btn btn-primary" style="margin-top: auto;" data-i18n="btn_solo_5">Choisir le pack 5 Solo</a>
           </div>
 
           <!-- 10 COURS SOLO -->
           <div class="pricing-card reveal visible" style="--delay:0.2s">
             <div class="pricing-badge" style="background: var(--gold); color: var(--charcoal);">Meilleur Tarif</div>
             <div class="pricing-moon">👑</div>
-            <h3 class="pricing-name">Pack 10 séances</h3>
-            <p class="pricing-tagline">L'immersion complète pour des résultats durables</p>
+            <h3 class="pricing-name" data-i18n="solo_10_name">Pack 10 séances</h3>
+            <p class="pricing-tagline" data-i18n="solo_10_tag">L'immersion complète pour des résultats durables</p>
             <div class="pricing-price" style="margin-top: 24px;">
               <span class="price-currency">CHF</span>
               <span class="price-amount">990</span>
@@ -791,13 +826,13 @@
             </div>
             <p class="price-per-session">CHF 99.- / cours · Économisez 110.-</p>
             <ul class="pricing-features">
-              <li>✓ 10 séances privées de 50 minutes</li>
-              <li>✓ Accompagnement sur mesure continu</li>
-              <li>✓ Accès libre à l'ensemble des 6 disciplines</li>
-              <li>✓ Flexibilité maximale de réservation</li>
-              <li>✓ Espace lounge & Moon Café après vos cours</li>
+              <li data-i18n="solo_10_f1">✓ 10 séances privées de 50 minutes</li>
+              <li data-i18n="solo_10_f2">✓ Accompagnement sur mesure continu</li>
+              <li data-i18n="solo_10_f3">✓ Accès libre à l'ensemble des 6 disciplines</li>
+              <li data-i18n="solo_10_f4">✓ Flexibilité maximale de réservation</li>
+              <li data-i18n="solo_10_f5">✓ Espace lounge & Moon Café après vos cours</li>
             </ul>
-            <a href="https://backoffice.bsport.io/customer/payment/pass/787304/?membership=4466&force=true" target="_blank" class="btn btn-outline" style="margin-top: auto;">Choisir le pack 10 Solo</a>
+            <a href="https://backoffice.bsport.io/customer/payment/pass/787304/?membership=4466&force=true" target="_blank" class="btn btn-outline" style="margin-top: auto;" data-i18n="btn_solo_10">Choisir le pack 10 Solo</a>
           </div>
         </div>
 
@@ -806,8 +841,8 @@
           <!-- 1 COURS DUO -->
           <div class="pricing-card reveal visible" style="--delay:0s">
             <div class="pricing-moon">👥</div>
-            <h3 class="pricing-name">1 séance Duo</h3>
-            <p class="pricing-tagline">Partagez l'expérience à deux avec votre coach</p>
+            <h3 class="pricing-name" data-i18n="duo_1_name">1 séance Duo</h3>
+            <p class="pricing-tagline" data-i18n="duo_1_tag">Partagez l'expérience à deux avec votre coach</p>
             <div class="pricing-price" style="margin-top: 24px;">
               <span class="price-currency">CHF</span>
               <span class="price-amount">140</span>
@@ -815,21 +850,21 @@
             </div>
             <p class="price-per-session">CHF 70.- / cours / personne</p>
             <ul class="pricing-features">
-              <li>✓ 50 minutes en binôme avec votre coach</li>
-              <li>✓ Avec un ami, un proche ou votre partenaire</li>
-              <li>✓ Séance adaptée aux niveaux des 2 personnes</li>
-              <li>✓ 1 discipline au choix parmi les 6</li>
-              <li>✓ Moment convivial au Moon Café après la séance</li>
+              <li data-i18n="duo_1_f1">✓ 50 minutes en binôme avec votre coach</li>
+              <li data-i18n="duo_1_f2">✓ Avec un ami, un proche ou votre partenaire</li>
+              <li data-i18n="duo_1_f3">✓ Séance adaptée aux niveaux des 2 personnes</li>
+              <li data-i18n="duo_1_f4">✓ 1 discipline au choix parmi les 6</li>
+              <li data-i18n="duo_1_f5">✓ Moment convivial au Moon Café après la séance</li>
             </ul>
-            <a href="https://backoffice.bsport.io/customer/payment/pass/787322/?membership=4466&force=true" target="_blank" class="btn btn-outline" style="margin-top: auto;">Réserver 1 cours Duo</a>
+            <a href="https://backoffice.bsport.io/customer/payment/pass/787322/?membership=4466&force=true" target="_blank" class="btn btn-outline" style="margin-top: auto;" data-i18n="btn_duo_1">Réserver 1 cours Duo</a>
           </div>
 
           <!-- 5 COURS DUO (FEATURED) -->
           <div class="pricing-card pricing-featured reveal visible" style="--delay:0.1s">
             <div class="pricing-badge">⭐ Le Plus Prisé</div>
             <div class="pricing-moon">👥✨</div>
-            <h3 class="pricing-name">Pack 5 séances Duo</h3>
-            <p class="pricing-tagline">Motivation et régularité partagées en duo</p>
+            <h3 class="pricing-name" data-i18n="duo_5_name">Pack 5 séances Duo</h3>
+            <p class="pricing-tagline" data-i18n="duo_5_tag">Motivation et régularité partagées en duo</p>
             <div class="pricing-price" style="margin-top: 24px;">
               <span class="price-currency">CHF</span>
               <span class="price-amount">650</span>
@@ -837,21 +872,21 @@
             </div>
             <p class="price-per-session">CHF 65.- / cours / pers. (325.- par pers.)</p>
             <ul class="pricing-features">
-              <li>✓ 5 séances privées en duo (50 min)</li>
-              <li>✓ Progression en binôme motivante & sur mesure</li>
-              <li>✓ Toutes les disciplines disponibles</li>
-              <li>✓ Créneaux réservés selon vos disponibilités</li>
-              <li>✓ Espace Moon Café accessible après l'effort</li>
+              <li data-i18n="duo_5_f1">✓ 5 séances privées en duo (50 min)</li>
+              <li data-i18n="duo_5_f2">✓ Progression en binôme motivante & sur mesure</li>
+              <li data-i18n="duo_5_f3">✓ Toutes les disciplines disponibles</li>
+              <li data-i18n="duo_5_f4">✓ Créneaux réservés selon vos disponibilités</li>
+              <li data-i18n="duo_5_f5">✓ Espace Moon Café accessible après l'effort</li>
             </ul>
-            <a href="https://backoffice.bsport.io/customer/payment/pass/787329/?membership=4466&force=true" target="_blank" class="btn btn-primary" style="margin-top: auto;">Choisir le pack 5 Duo</a>
+            <a href="https://backoffice.bsport.io/customer/payment/pass/787329/?membership=4466&force=true" target="_blank" class="btn btn-primary" style="margin-top: auto;" data-i18n="btn_duo_5">Choisir le pack 5 Duo</a>
           </div>
 
           <!-- 10 COURS DUO -->
           <div class="pricing-card reveal visible" style="--delay:0.2s">
             <div class="pricing-badge" style="background: var(--gold); color: var(--charcoal);">Économique à Deux</div>
             <div class="pricing-moon">👯‍♀️</div>
-            <h3 class="pricing-name">Pack 10 séances Duo</h3>
-            <p class="pricing-tagline">Le tarif le plus avantageux pour pratiquer à deux</p>
+            <h3 class="pricing-name" data-i18n="duo_10_name">Pack 10 séances Duo</h3>
+            <p class="pricing-tagline" data-i18n="duo_10_tag">Le tarif le plus avantageux pour pratiquer à deux</p>
             <div class="pricing-price" style="margin-top: 24px;">
               <span class="price-currency">CHF</span>
               <span class="price-amount">1'250</span>
@@ -859,13 +894,13 @@
             </div>
             <p class="price-per-session">CHF 62.50 / cours / pers. (625.- par pers.)</p>
             <ul class="pricing-features">
-              <li>✓ 10 séances privées en duo (50 min)</li>
-              <li>✓ Le tarif le plus bas par séance et par personne</li>
-              <li>✓ Encadrement sur mesure complet et régulier</li>
-              <li>✓ Flexibilité de réservation sur l'année</li>
-              <li>✓ Espace détente & Moon Café après vos cours</li>
+              <li data-i18n="duo_10_f1">✓ 10 séances privées en duo (50 min)</li>
+              <li data-i18n="duo_10_f2">✓ Le tarif le plus bas par séance et par personne</li>
+              <li data-i18n="duo_10_f3">✓ Encadrement sur mesure complet et régulier</li>
+              <li data-i18n="duo_10_f4">✓ Flexibilité de réservation sur l'année</li>
+              <li data-i18n="duo_10_f5">✓ Espace détente & Moon Café après vos cours</li>
             </ul>
-            <a href="https://backoffice.bsport.io/customer/payment/pass/787331/?membership=4466&force=true" target="_blank" class="btn btn-outline" style="margin-top: auto;">Choisir le pack 10 Duo</a>
+            <a href="https://backoffice.bsport.io/customer/payment/pass/787331/?membership=4466&force=true" target="_blank" class="btn btn-outline" style="margin-top: auto;" data-i18n="btn_duo_10">Choisir le pack 10 Duo</a>
           </div>
         </div>
 
@@ -878,15 +913,15 @@
           <!-- Mobile Format Switcher (Solo / Duo) -->
           <div class="mobile-format-switch-container" style="display:flex; justify-content:center; margin-bottom:14px;">
             <div class="pricing-toggle" style="width:100%; max-width:320px; padding:3px;">
-              <button class="toggle-btn active" id="prive-m-tab-solo" data-m-format="solo" style="font-size:0.85rem; padding:8px 14px;">👤 Moon Solo</button>
-              <button class="toggle-btn" id="prive-m-tab-duo" data-m-format="duo" style="font-size:0.85rem; padding:8px 14px;">👥 Moon Duo</button>
+              <button class="toggle-btn active" id="prive-m-tab-solo" data-m-format="solo" style="font-size:0.85rem; padding:8px 14px;" data-i18n="tab_solo">👤 Moon Solo</button>
+              <button class="toggle-btn" id="prive-m-tab-duo" data-m-format="duo" style="font-size:0.85rem; padding:8px 14px;" data-i18n="tab_duo">👥 Moon Duo</button>
             </div>
           </div>
 
           <!-- Mobile Sessions Count Pills (1 ligne) -->
           <div class="mobile-pills-container" style="margin-bottom:18px;">
             <div class="mobile-pills" id="pills-prives-count" style="justify-content:center;">
-              <button class="mobile-pill" data-count="1">1 séance</button>
+              <button class="mobile-pill" data-count="1" data-i18n="solo_1_name">1 séance</button>
               <button class="mobile-pill active" data-count="5">5 séances <span class="pill-tag">⭐ Top</span></button>
               <button class="mobile-pill" data-count="10">10 séances</button>
             </div>
@@ -896,8 +931,8 @@
           <div class="pricing-card mobile-card pricing-featured" id="card-prive-mobile">
             <div class="pricing-badge" id="prive-m-badge">⭐ Recommandé</div>
             <div class="pricing-moon" id="prive-m-icon">👤✨</div>
-            <h3 class="pricing-name" id="prive-m-name">Pack 5 séances Solo</h3>
-            <p class="pricing-tagline" id="prive-m-tagline">Pour un suivi régulier et des progrès rapides</p>
+            <h3 class="pricing-name" id="prive-m-name" data-i18n="solo_5_name">Pack 5 séances Solo</h3>
+            <p class="pricing-tagline" id="prive-m-tagline" data-i18n="solo_5_tag">Pour un suivi régulier et des progrès rapides</p>
             <div class="pricing-price" style="margin-top: 18px;">
               <span class="price-currency">CHF</span>
               <span class="price-amount" id="prive-m-price">525</span>
@@ -905,13 +940,13 @@
             </div>
             <p class="price-per-session" id="prive-m-per">CHF 105.- / cours (au lieu de 110.-)</p>
             <ul class="pricing-features" id="prive-m-features">
-              <li>✓ 5 séances privées de 50 minutes</li>
-              <li>✓ Programme évolutif selon vos objectifs</li>
-              <li>✓ Combinez vos disciplines préférées</li>
-              <li>✓ Créneaux réservés selon vos disponibilités</li>
-              <li>✓ Débriefing & détente au Moon Café</li>
+              <li data-i18n="solo_5_f1">✓ 5 séances privées de 50 minutes</li>
+              <li data-i18n="solo_5_f2">✓ Programme évolutif selon vos objectifs</li>
+              <li data-i18n="solo_5_f3">✓ Combinez vos disciplines préférées</li>
+              <li data-i18n="solo_5_f4">✓ Créneaux réservés selon vos disponibilités</li>
+              <li data-i18n="solo_5_f5">✓ Débriefing & détente au Moon Café</li>
             </ul>
-            <a href="https://backoffice.bsport.io/customer/payment/pass/787307/?membership=4466&force=true" target="_blank" class="btn btn-primary" id="prive-m-btn" style="margin-top: 16px;">Choisir le pack 5 Solo</a>
+            <a href="https://backoffice.bsport.io/customer/payment/pass/787307/?membership=4466&force=true" target="_blank" class="btn btn-primary" id="prive-m-btn" style="margin-top: 16px;" data-i18n="btn_solo_5">Choisir le pack 5 Solo</a>
           </div>
 
           <!-- Mobile Pagination & Arrows Navigation -->
@@ -932,20 +967,20 @@
 
       <!-- BONS CADEAUX -->
       <div class="cadeaux-section" id="cadeaux" style="margin-bottom: 80px;">
-        <p class="section-label reveal" style="text-align:center">Offrir</p>
-        <h2 class="section-title reveal" style="text-align:center">Bons <em>Cadeaux</em></h2>
-        <p class="tarifs-sub reveal" style="text-align:center; max-width:700px; margin-left:auto; margin-right:auto; margin-bottom:24px;">
+        <p class="section-label reveal" style="text-align:center" data-i18n="cadeaux_label">Offrir</p>
+        <h2 class="section-title reveal" style="text-align:center" data-i18n-html="cadeaux_title">Bons <em>Cadeaux</em></h2>
+        <p class="tarifs-sub reveal" style="text-align:center; max-width:700px; margin-left:auto; margin-right:auto; margin-bottom:24px;" data-i18n="cadeaux_desc">
           Envie d'offrir un vrai moment pour soi ? Avec nos cartes cadeaux, faites découvrir l'univers Moon Club : un cours au choix pour renforcer le corps, améliorer la posture et se sentir bien. Accessible à tous les niveaux, dans un studio moderne et inspirant.
         </p>
-        <p class="tarifs-sub reveal" style="text-align:center; font-style:italic; margin-bottom:32px;">
+        <p class="tarifs-sub reveal" style="text-align:center; font-style:italic; margin-bottom:32px;" data-i18n="cadeaux_sub">
           💐 Pour un anniversaire, un Noël, une occasion spéciale... ou juste pour faire plaisir.
         </p>
         
         <!-- Badges -->
         <div class="concept-badges reveal" style="justify-content:center; margin-bottom:48px; margin-top:0;">
-          <div class="badge"><span class="badge-icon">📍</span><span>À Lausanne</span></div>
-          <div class="badge"><span class="badge-icon">📅</span><span>Valable 1 an</span></div>
-          <div class="badge"><span class="badge-icon">✉️</span><span>Version papier ou digitale</span></div>
+          <div class="badge"><span class="badge-icon">📍</span><span data-i18n="badge_lausanne">À Lausanne</span></div>
+          <div class="badge"><span class="badge-icon">📅</span><span data-i18n="badge_validity">Valable 1 an</span></div>
+          <div class="badge"><span class="badge-icon">✉️</span><span data-i18n="badge_format">Version papier ou digitale</span></div>
         </div>
 
         <!-- DESKTOP GRID -->
@@ -967,7 +1002,7 @@
               <li>✓ Accès Moon Café inclus</li>
               <li>✓ Valable 1 an</li>
             </ul>
-            <a href="https://backoffice.bsport.io/checkout/4466/giftcard/13387/?force=true" target="_blank" class="btn btn-outline" style="margin-top: auto;">Offrir cette carte</a>
+            <a href="https://backoffice.bsport.io/checkout/4466/giftcard/13387/?force=true" target="_blank" class="btn btn-outline" style="margin-top: auto;" data-i18n="btn_gift_card">Offrir cette carte</a>
           </div>
 
           <!-- CARTE 150 -->
@@ -988,7 +1023,7 @@
               <li>✓ Accès Moon Café inclus</li>
               <li>✓ Valable 1 an</li>
             </ul>
-            <a href="https://backoffice.bsport.io/checkout/4466/giftcard/13386/?force=true" target="_blank" class="btn btn-primary" style="margin-top: auto;">Offrir cette carte</a>
+            <a href="https://backoffice.bsport.io/checkout/4466/giftcard/13386/?force=true" target="_blank" class="btn btn-primary" style="margin-top: auto;" data-i18n="btn_gift_card">Offrir cette carte</a>
           </div>
 
           <!-- CARTE 250 -->
@@ -1008,7 +1043,7 @@
               <li>✓ Accès Moon Café inclus</li>
               <li>✓ Valable 1 an</li>
             </ul>
-            <a href="https://backoffice.bsport.io/checkout/4466/giftcard/13389/?force=true" target="_blank" class="btn btn-outline" style="margin-top: auto;">Offrir cette carte</a>
+            <a href="https://backoffice.bsport.io/checkout/4466/giftcard/13389/?force=true" target="_blank" class="btn btn-outline" style="margin-top: auto;" data-i18n="btn_gift_card">Offrir cette carte</a>
           </div>
 
           <!-- CARTE 350 -->
@@ -1028,7 +1063,7 @@
               <li>✓ Accès Moon Café inclus</li>
               <li>✓ Valable 1 an</li>
             </ul>
-            <a href="https://backoffice.bsport.io/checkout/4466/giftcard/13388/?force=true" target="_blank" class="btn btn-outline" style="margin-top: auto;">Offrir cette carte</a>
+            <a href="https://backoffice.bsport.io/checkout/4466/giftcard/13388/?force=true" target="_blank" class="btn btn-outline" style="margin-top: auto;" data-i18n="btn_gift_card">Offrir cette carte</a>
           </div>
         </div>
 
@@ -1064,7 +1099,7 @@
               <li>✓ Accès Moon Café inclus</li>
               <li>✓ Valable 1 an</li>
             </ul>
-            <a href="https://backoffice.bsport.io/checkout/4466/giftcard/13386/?force=true" target="_blank" class="btn btn-primary" id="cad-m-btn" style="margin-top: 16px;">Offrir cette carte</a>
+            <a href="https://backoffice.bsport.io/checkout/4466/giftcard/13386/?force=true" target="_blank" class="btn btn-primary" id="cad-m-btn" style="margin-top: 16px;" data-i18n="btn_gift_card">Offrir cette carte</a>
           </div>
 
           <!-- Mobile Pagination & Arrows Navigation -->
@@ -1087,26 +1122,14 @@
   <!-- PLANNING -->
   <section class="planning" id="planning">
     <div class="container">
-      <p class="section-label reveal" style="text-align:center">Horaires des cours</p>
-      <h2 class="section-title reveal" style="text-align:center">Notre <em>Planning</em></h2>
-      <p class="planning-sub reveal" style="text-align:center; max-width:600px; margin-left:auto; margin-right:auto; margin-bottom:48px;">
+      <p class="section-label reveal" style="text-align:center" data-i18n="planning_label">Horaires des cours</p>
+      <h2 class="section-title reveal" style="text-align:center" data-i18n-html="planning_title">Notre <em>Planning</em></h2>
+      <p class="planning-sub reveal" style="text-align:center; max-width:600px; margin-left:auto; margin-right:auto; margin-bottom:48px;" data-i18n="planning_sub">
         Réservez vos cours en ligne parmi nos 6 disciplines. Sélectionnez votre créneau ci-dessous.
       </p>
 
       <div class="planning-widget-container reveal">
-        <!-- Bsport Widget -->
-        <script id="insert-bsport-widget-cdn">!function (b, s, p, o, r, t) { typeof window.BsportWidget === "undefined" && !document.getElementById("bsport-widget-cdn") && !function () { m = b.createElement(s), m.id = "bsport-widget-cdn", m.src = p, b.getElementsByTagName("head")[0].appendChild(m) }() }(document, "script", "https://cdn.bsport.io/scripts/widget.js")</script>
-        <script id="bsport-widget-mount">
-            function MountBsportWidget(config, repeat=1) {
-                if (repeat > 50) { return }
-                if (!window.BsportWidget) {
-                    return setTimeout(() => {
-                        MountBsportWidget(config,repeat+1)
-                    }, 100 * repeat || 1)
-                }
-                BsportWidget.mount(config)
-            }
-        </script>
+        <!-- Bsport Calendar Widget -->
         <script>
             MountBsportWidget({
                     "parentElement": "bsport-widget-152784",
@@ -1132,9 +1155,9 @@
     <div class="container">
       <div class="app-card reveal">
         <div class="app-content">
-          <p class="app-label">Application officielle</p>
-          <h2 class="app-title">TÉLÉCHARGEZ<br/>L'APPLICATION MOBILE</h2>
-          <p class="app-desc">
+          <p class="app-label" data-i18n="app_label">Application officielle</p>
+          <h2 class="app-title" data-i18n-html="app_title">TÉLÉCHARGEZ<br/>L'APPLICATION MOBILE</h2>
+          <p class="app-desc" data-i18n-html="app_desc">
             L'application mobile <strong>Moon Pilates Club</strong> vous permet de gérer votre planning de cours en toute simplicité. Une organisation optimisée pour une expérience encore plus fluide.
           </p>
           <div class="app-buttons">
@@ -1143,8 +1166,8 @@
                 <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/>
               </svg>
               <div class="store-btn-text">
-                <span class="store-small">Télécharger dans</span>
-                <span class="store-big">l’App Store</span>
+                <span class="store-small" data-i18n="store_dl_app">Télécharger dans</span>
+                <span class="store-big" data-i18n="store_app_store">l’App Store</span>
               </div>
             </a>
             <a href="https://play.google.com/store/apps/details?id=com.bsport_101__4466&hl=fr_CH&pli=1" target="_blank" rel="noopener noreferrer" class="store-btn google-play-btn" aria-label="Disponible sur Google Play">
@@ -1152,8 +1175,8 @@
                 <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/>
               </svg>
               <div class="store-btn-text">
-                <span class="store-small">DISPONIBLE SUR</span>
-                <span class="store-big">Google Play</span>
+                <span class="store-small" data-i18n="store_dl_google">DISPONIBLE SUR</span>
+                <span class="store-big" data-i18n="store_google_play">Google Play</span>
               </div>
             </a>
           </div>
@@ -1344,8 +1367,8 @@
   <!-- FAQ -->
   <section class="faq" id="faq">
     <div class="container faq-container">
-      <p class="section-label reveal" style="text-align:center">Questions fréquentes</p>
-      <h2 class="section-title reveal" style="text-align:center">Tout ce que vous<br/><em>devez savoir</em></h2>
+      <p class="section-label reveal" style="text-align:center" data-i18n="faq_label">Questions fréquentes</p>
+      <h2 class="section-title reveal" style="text-align:center" data-i18n-html="faq_title">Tout ce que vous<br/><em>devez savoir</em></h2>
       <div class="faq-list">
         <div class="faq-item reveal">
           <button class="faq-question" id="faq-btn-1" aria-expanded="false" aria-controls="faq-ans-1">
@@ -1447,34 +1470,34 @@
     <div class="container">
       <div class="contact-grid">
         <div class="contact-info">
-          <p class="section-label reveal">Nous trouver</p>
-          <h2 class="section-title reveal">Venez nous<br/><em>rendre visite</em></h2>
+          <p class="section-label reveal" data-i18n="contact_label">Nous trouver</p>
+          <h2 class="section-title reveal" data-i18n-html="contact_title">Venez nous<br/><em>rendre visite</em></h2>
           <div class="contact-details">
             <div class="contact-item reveal">
               <div class="contact-icon">📍</div>
               <div>
-                <p class="contact-label">Adresse</p>
+                <p class="contact-label" data-i18n="lbl_address">Adresse</p>
                 <p>Galeries Benjamin-Constant 1<br/>6ème étage · 1003 Lausanne</p>
               </div>
             </div>
             <div class="contact-item reveal">
               <div class="contact-icon">📞</div>
               <div>
-                <p class="contact-label">Téléphone</p>
+                <p class="contact-label" data-i18n="lbl_phone">Téléphone</p>
                 <a href="tel:+41783359292">+41 (0)78 335 92 92</a>
               </div>
             </div>
             <div class="contact-item reveal">
               <div class="contact-icon">✉️</div>
               <div>
-                <p class="contact-label">Contact</p>
+                <p class="contact-label" data-i18n="lbl_contact">Contact</p>
                 <a href="mailto:hello@moonpilatesclub.com">hello@moonpilatesclub.com</a>
               </div>
             </div>
             <div class="contact-item reveal">
               <div class="contact-icon">☕</div>
               <div style="width: 100%;">
-                <p class="contact-label">Horaires Moon Café</p>
+                <p class="contact-label" data-i18n="lbl_cafe_hours">Horaires Moon Café</p>
                 <div class="cafe-schedule">
                   <div class="schedule-row">
                     <span class="day">Lundi</span>
@@ -1510,7 +1533,7 @@
             <div class="contact-item reveal">
               <div class="contact-icon">📱</div>
               <div>
-                <p class="contact-label">Réseaux sociaux</p>
+                <p class="contact-label" data-i18n="lbl_social">Réseaux sociaux</p>
                 <div class="social-links">
                   <a href="https://www.instagram.com/moon.pilates.club/" target="_blank" class="social-link">Instagram</a>
                 </div>
@@ -1519,25 +1542,25 @@
           </div>
         </div>
         <div class="contact-form-wrap reveal">
-          <h3>Envoyez-nous un message</h3>
+          <h3 data-i18n="form_title">Envoyez-nous un message</h3>
           <form class="contact-form" id="contact-form" onsubmit="handleFormSubmit(event)">
             <div class="form-group">
-              <label for="contact-name">Votre prénom</label>
-              <input type="text" id="contact-name" name="name" placeholder="Luna" required />
+              <label for="contact-name" data-i18n="form_lbl_name">Votre prénom</label>
+              <input type="text" id="contact-name" name="name" placeholder="Luna" data-i18n-placeholder="form_ph_name" required />
             </div>
             <div class="form-group">
-              <label for="contact-email">Email</label>
-              <input type="email" id="contact-email" name="email" placeholder="luna@email.com" required />
+              <label for="contact-email" data-i18n="form_lbl_email">Email</label>
+              <input type="email" id="contact-email" name="email" placeholder="luna@email.com" data-i18n-placeholder="form_ph_email" required />
             </div>
             <div class="form-group">
-              <label for="contact-message">Message</label>
-              <textarea id="contact-message" name="message" rows="4" placeholder="Votre message..." required></textarea>
+              <label for="contact-message" data-i18n="form_lbl_msg">Message</label>
+              <textarea id="contact-message" name="message" rows="4" placeholder="Votre message..." data-i18n-placeholder="form_ph_msg" required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary" id="form-submit-btn">Envoyer le message</button>
+            <button type="submit" class="btn btn-primary" id="form-submit-btn" data-i18n="btn_send_msg">Envoyer le message</button>
           </form>
           <div class="form-success" id="form-success" style="display:none">
             <span>🌙</span>
-            <p>Message envoyé ! Nous vous répondrons très vite.</p>
+            <p data-i18n="msg_sent_success">Message envoyé ! Nous vous répondrons très vite.</p>
           </div>
         </div>
       </div>
@@ -1566,37 +1589,37 @@
         <div class="access-header">
           <span class="access-icon-badge">🧭</span>
           <div>
-            <h3 class="access-title">Accès au studio</h3>
-            <p class="access-subtitle">Galeries Benjamin-Constant 1, 6ème étage · 1003 Lausanne</p>
+            <h3 class="access-title" data-i18n="access_title">Accès au studio</h3>
+            <p class="access-subtitle" data-i18n="access_sub">Galeries Benjamin-Constant 1, 6ème étage · 1003 Lausanne</p>
           </div>
         </div>
         <div class="access-grid">
           <div class="access-item">
             <div class="access-item-icon">🚇</div>
             <div class="access-item-body">
-              <strong>Métro M2</strong>
-              <p>Arrêt <em>Bessières</em> (à 2 min à pied)</p>
+              <strong data-i18n="acc_m2_title">Métro M2</strong>
+              <p data-i18n-html="acc_m2_desc">Arrêt <em>Bessières</em> (à 2 min à pied)</p>
             </div>
           </div>
           <div class="access-item">
             <div class="access-item-icon">🚌</div>
             <div class="access-item-body">
-              <strong>Lignes de Bus</strong>
-              <p>Arrêts <em>Benjamin-Constant</em> (13 & 16) ou <em>St-François</em></p>
+              <strong data-i18n="acc_bus_title">Lignes de Bus</strong>
+              <p data-i18n-html="acc_bus_desc">Arrêts <em>Benjamin-Constant</em> (13 & 16) ou <em>St-François</em></p>
             </div>
           </div>
           <div class="access-item">
             <div class="access-item-icon">🚗</div>
             <div class="access-item-body">
-              <strong>Parking</strong>
-              <p>Hôtel de la Paix (ext./souterrain) ou rue (3 CHF/h)</p>
+              <strong data-i18n="acc_park_title">Parking</strong>
+              <p data-i18n="acc_park_desc">Hôtel de la Paix (ext./souterrain) ou rue (3 CHF/h)</p>
             </div>
           </div>
           <div class="access-item access-landmark">
             <div class="access-item-icon">📍</div>
             <div class="access-item-body">
-              <strong>Repère</strong>
-              <p>Juste en face du restaurant <strong>Luigia&nbsp;!</strong></p>
+              <strong data-i18n="acc_mark_title">Repère</strong>
+              <p data-i18n-html="acc_mark_desc">Juste en face du restaurant <strong>Luigia&nbsp;!</strong></p>
             </div>
           </div>
         </div>
@@ -1620,22 +1643,22 @@
         <a href="#hero" class="nav-logo footer-logo">
           <img src="logo.png?v=2" alt="Moon Pilates Club Logo" class="nav-logo-img" />
         </a>
-        <p>Studio lausannois · 6 disciplines<br/>Lagree · Reformer · Mat · Sculpt · Barre · Yoga</p>
+        <p data-i18n-html="footer_tagline">Studio lausannois · 6 disciplines<br/>Lagree · Reformer · Mat · Sculpt · Barre · Yoga</p>
       </div>
       <div class="footer-links">
-        <a href="#concept">À propos</a>
-        <a href="#cours">Cours</a>
-        <a href="#coachs">Coachs</a>
-        <a href="#forfaits">Formules</a>
-        <a href="#prives">Cours Privés</a>
-        <a href="#cadeaux">Bons Cadeaux</a>
-        <a href="#planning">Planning</a>
-        <a href="#acces">Accès au studio</a>
-        <a href="#contact">Contact</a>
-        <a href="#faq">FAQ</a>
+        <a href="#concept" data-i18n="nav_concept">À propos</a>
+        <a href="#cours" data-i18n="nav_cours">Cours</a>
+        <a href="#coachs" data-i18n="nav_coachs">Coachs</a>
+        <a href="#forfaits" data-i18n="nav_forfaits">Formules</a>
+        <a href="#prives" data-i18n="nav_prives">Cours Privés</a>
+        <a href="#cadeaux" data-i18n="nav_cadeaux">Bons Cadeaux</a>
+        <a href="#planning" data-i18n="nav_planning">Planning</a>
+        <a href="#acces" data-i18n="nav_acces">Accès au studio</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
+        <a href="#faq" data-i18n="faq_label">FAQ</a>
       </div>
       <div class="footer-bottom">
-        <p>© 2026 Moon Pilates Club · Lausanne · Tous droits réservés · <a href="cgv.html" style="text-decoration: underline; opacity: 0.8; transition: opacity 0.2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.8">CGV</a></p>
+        <p><span data-i18n="footer_rights">© 2026 Moon Pilates Club · Lausanne · Tous droits réservés ·</span> <a href="cgv.html" style="text-decoration: underline; opacity: 0.8; transition: opacity 0.2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.8" data-i18n="footer_cgv">CGV</a></p>
         <p>Galeries Benjamin-Constant 1, 6ème étage, 1003 Lausanne</p>
       </div>
     </div>
@@ -1648,6 +1671,7 @@
     </svg>
   </button>
 
-  <script src="script.js?v=25"></script>
+  <script src="translations.js?v=1"></script>
+  <script src="script.js?v=27"></script>
 </body>
 </html>

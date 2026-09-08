@@ -293,6 +293,73 @@ ul { list-style: none; }
   transition: var(--transition);
 }
 .nav.scrolled .nav-cta { color: var(--terracotta); border-color: var(--terracotta); }
+
+/* Bsport Login Widget in Navbar */
+.nav-bsport-login {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+.nav-bsport-login #bsport-widget-969829 {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Language Switcher */
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 20px;
+  padding: 4px 10px;
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+.nav.scrolled .lang-switch {
+  background: rgba(196, 112, 82, 0.08);
+  border-color: rgba(196, 112, 82, 0.25);
+}
+.lang-btn {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  padding: 2px 4px;
+  transition: var(--transition);
+  line-height: 1;
+}
+.nav.scrolled .lang-btn {
+  color: var(--charcoal);
+}
+.lang-btn:hover {
+  color: var(--gold);
+}
+.nav.scrolled .lang-btn:hover {
+  color: var(--terracotta);
+}
+.lang-btn.active {
+  color: var(--gold);
+  font-weight: 700;
+}
+.nav.scrolled .lang-btn.active {
+  color: var(--terracotta);
+}
+.lang-divider {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.7rem;
+  user-select: none;
+}
+.nav.scrolled .lang-divider {
+  color: rgba(196, 112, 82, 0.3);
+}
+
 .nav-hamburger {
   display: none;
   flex-direction: column;
@@ -2614,6 +2681,27 @@ ul { list-style: none; }
   .nav-links.open { display: flex; }
   .nav-links .nav-link { color: var(--brown-text); }
   .nav-links .nav-cta { color: var(--terracotta); border-color: var(--terracotta); width: fit-content; }
+  .nav-links .nav-bsport-login {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    margin: 2px 0;
+  }
+  .nav-links .lang-switch {
+    background: rgba(196, 112, 82, 0.1);
+    border-color: rgba(196, 112, 82, 0.25);
+    margin-top: 4px;
+    align-self: flex-start;
+  }
+  .nav-links .lang-btn {
+    color: var(--charcoal);
+  }
+  .nav-links .lang-btn.active {
+    color: var(--terracotta);
+  }
+  .nav-links .lang-divider {
+    color: rgba(196, 112, 82, 0.4);
+  }
   .nav-hamburger { display: flex; }
   .instagram-grid { grid-template-columns: repeat(3, 1fr); }
   .decouverte-grid { grid-template-columns: repeat(2, 1fr); }
