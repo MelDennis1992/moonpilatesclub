@@ -26,6 +26,91 @@
           BsportWidget.mount(config)
       }
   </script>
+
+  <style id="bsport-brand-override">
+    /* High Specificity Moon Pilates Brand Styling for Bsport Widget */
+    html body #bsport-widget-969829 button,
+    html body #bsport-widget-969829 .MuiButton-root,
+    html body #bsport-widget-969829 .MuiButton-outlined,
+    html body #bsport-widget-969829 .MuiButton-outlinedPrimary,
+    html body #bsport-widget-authentication__login_button,
+    html body .nav-bsport-login button {
+      color: #7B5959 !important;
+      border-color: #7B5959 !important;
+      border-width: 1.5px !important;
+      border-style: solid !important;
+      background-color: rgba(123, 89, 89, 0.08) !important;
+      border-radius: 20px !important;
+      font-family: 'Inter', -apple-system, sans-serif !important;
+      font-size: 0.78rem !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.04em !important;
+      text-transform: uppercase !important;
+      box-shadow: none !important;
+      min-height: 28px !important;
+      padding: 5px 14px !important;
+      transition: all 0.3s ease !important;
+      cursor: pointer !important;
+    }
+
+    html body #bsport-widget-969829 svg,
+    html body #bsport-widget-969829 .MuiSvgIcon-root,
+    html body #bsport-widget-authentication__login_button svg,
+    html body #bsport-widget-authentication__login_button .MuiSvgIcon-root {
+      color: #7B5959 !important;
+      fill: #7B5959 !important;
+    }
+
+    html body #bsport-widget-969829 button:hover,
+    html body #bsport-widget-969829 .MuiButton-root:hover,
+    html body #bsport-widget-969829 .MuiButton-outlinedPrimary:hover,
+    html body #bsport-widget-authentication__login_button:hover,
+    html body .nav-bsport-login button:hover {
+      background-color: #7B5959 !important;
+      border-color: #7B5959 !important;
+      color: #FFFFFF !important;
+      transform: translateY(-1px);
+    }
+
+    html body #bsport-widget-969829 button:hover svg,
+    html body #bsport-widget-authentication__login_button:hover svg {
+      color: #FFFFFF !important;
+      fill: #FFFFFF !important;
+    }
+
+    /* Transparent top header state */
+    html body .nav:not(.scrolled) #bsport-widget-969829 button,
+    html body .nav:not(.scrolled) #bsport-widget-authentication__login_button {
+      color: #FFFFFF !important;
+      border-color: rgba(255, 255, 255, 0.65) !important;
+      background-color: rgba(255, 255, 255, 0.12) !important;
+    }
+    html body .nav:not(.scrolled) #bsport-widget-969829 svg,
+    html body .nav:not(.scrolled) #bsport-widget-authentication__login_button svg {
+      color: #FFFFFF !important;
+      fill: #FFFFFF !important;
+    }
+
+    html body .nav:not(.scrolled) #bsport-widget-969829 button:hover,
+    html body .nav:not(.scrolled) #bsport-widget-authentication__login_button:hover {
+      background-color: #7B5959 !important;
+      border-color: #7B5959 !important;
+      color: #FFFFFF !important;
+    }
+
+    /* Mobile drawer open state */
+    html body .nav-links.open #bsport-widget-969829 button,
+    html body .nav-links.open #bsport-widget-authentication__login_button {
+      color: #7B5959 !important;
+      border-color: #7B5959 !important;
+      background-color: rgba(123, 89, 89, 0.08) !important;
+    }
+    html body .nav-links.open #bsport-widget-969829 svg,
+    html body .nav-links.open #bsport-widget-authentication__login_button svg {
+      color: #7B5959 !important;
+      fill: #7B5959 !important;
+    }
+  </style>
 </head>
 <body>
 
