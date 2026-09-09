@@ -522,40 +522,68 @@ document.addEventListener('DOMContentLoaded', () => {
   const cadeauxKeys = ['cad-3', 'cad-150', 'cad-250', 'cad-350'];
   const cadeauxData = {
     'cad-3': {
-      name: 'Carte Cadeau 3 Séances',
+      name: 'Carte Cadeau 3 Séances Découverte',
       tagline: 'L\'expérience complète à offrir',
       price: '85',
-      per: '3 cours guidés · CHF 28,3 / séance',
+      per: 'Utilisable sur les 3 séances découvertes',
       badge: 'Découverte',
       btnClass: 'btn btn-outline',
-      url: 'https://backoffice.bsport.io/checkout/4466/giftcard/13387/?force=true'
+      url: 'https://backoffice.bsport.io/checkout/4466/giftcard/13387/?force=true',
+      features: [
+        '✓ Utilisable sur les 3 séances découvertes',
+        '✓ 6 disciplines complémentaires',
+        'Lagree · Reformer · Mat · Sculpt · Barre · Yoga',
+        '✓ Accès Moon Café inclus',
+        '✓ Valable 1 an'
+      ]
     },
     'cad-150': {
       name: 'Carte Cadeau CHF 150.-',
       tagline: 'Liberté de choisir',
       price: '150',
-      per: 'Utilisable sur tous les cours',
+      per: 'Uniquement utilisable sur les séances privées',
       badge: 'Idéal pour débuter',
       btnClass: 'btn btn-primary',
-      url: 'https://backoffice.bsport.io/checkout/4466/giftcard/13386/?force=true'
+      url: 'https://backoffice.bsport.io/checkout/4466/giftcard/13386/?force=true',
+      features: [
+        '✓ Uniquement utilisable sur les séances privées',
+        '✓ 6 disciplines complémentaires',
+        'Lagree · Reformer · Mat · Sculpt · Barre · Yoga',
+        '✓ Accès Moon Café inclus',
+        '✓ Valable 1 an'
+      ]
     },
     'cad-250': {
       name: 'Carte Cadeau CHF 250.-',
       tagline: 'Un vrai moment de bien-être',
       price: '250',
-      per: 'Utilisable sur tous les cours',
+      per: 'Uniquement utilisable sur les séances privées',
       badge: 'Moment Bien-être',
       btnClass: 'btn btn-outline',
-      url: 'https://backoffice.bsport.io/checkout/4466/giftcard/13389/?force=true'
+      url: 'https://backoffice.bsport.io/checkout/4466/giftcard/13389/?force=true',
+      features: [
+        '✓ Uniquement utilisable sur les séances privées',
+        '✓ 6 disciplines complémentaires',
+        'Lagree · Reformer · Mat · Sculpt · Barre · Yoga',
+        '✓ Accès Moon Café inclus',
+        '✓ Valable 1 an'
+      ]
     },
     'cad-350': {
       name: 'Carte Cadeau CHF 350.-',
       tagline: 'Le cadeau premium',
       price: '350',
-      per: 'Utilisable sur tous les cours',
+      per: 'Uniquement utilisable sur les séances privées',
       badge: 'Cadeau Premium',
       btnClass: 'btn btn-outline',
-      url: 'https://backoffice.bsport.io/checkout/4466/giftcard/13388/?force=true'
+      url: 'https://backoffice.bsport.io/checkout/4466/giftcard/13388/?force=true',
+      features: [
+        '✓ Uniquement utilisable sur les séances privées',
+        '✓ 6 disciplines complémentaires',
+        'Lagree · Reformer · Mat · Sculpt · Barre · Yoga',
+        '✓ Accès Moon Café inclus',
+        '✓ Valable 1 an'
+      ]
     }
   };
 
@@ -601,6 +629,10 @@ document.addEventListener('DOMContentLoaded', () => {
         cardEl.classList.add('pricing-featured');
       } else {
         cardEl.classList.remove('pricing-featured');
+      }
+      const featuresEl = cardEl.querySelector('.pricing-features');
+      if (featuresEl && data.features) {
+        featuresEl.innerHTML = data.features.map(f => `<li>${f}</li>`).join('');
       }
     }
     updateDots('cadeaux', targetKey);
