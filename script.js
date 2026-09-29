@@ -1059,6 +1059,46 @@ document.addEventListener('DOMContentLoaded', () => {
 
   sections.forEach(s => sectionObserver.observe(s));
 
+  // ─── TARIFS SUB-CATEGORIES SPY & CLICK ───
+  const subnavTabs = document.querySelectorAll('.tarifs-subnav-tab');
+  const subnavSections = [
+    document.getElementById('decouverte'),
+    document.getElementById('forfaits'),
+    document.getElementById('prives')
+  ].filter(Boolean);
+
+  if (subnavTabs.length > 0 && subnavSections.length > 0) {
+    const subnavObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          subnavTabs.forEach(tab => {
+            if (tab.getAttribute('data-subnav-target') === id) {
+              tab.classList.add('active');
+            } else {
+              tab.classList.remove('active');
+            }
+          });
+        }
+      });
+    }, { rootMargin: '-20% 0px -50% 0px', threshold: 0.1 });
+
+    subnavSections.forEach(sec => subnavObserver.observe(sec));
+
+    subnavTabs.forEach(tab => {
+      tab.addEventListener('click', (e) => {
+        const targetId = tab.getAttribute('data-subnav-target');
+        const targetEl = document.getElementById(targetId);
+        if (targetEl) {
+          e.preventDefault();
+          targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          subnavTabs.forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+        }
+      });
+    });
+  }
+
   // ─── PARALLAX HERO (subtle) ───
   const heroImg = document.querySelector('.hero-img');
   window.addEventListener('scroll', () => {
