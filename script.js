@@ -48,10 +48,22 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Close on nav link click
+    // Close on nav link click (except dropdown trigger on mobile)
     navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
+      link.addEventListener('click', (e) => {
+        if (link.classList.contains('nav-dropdown-trigger') && window.innerWidth <= 1024) {
+          e.preventDefault();
+          e.stopPropagation();
+          const parentDropdown = link.closest('.nav-dropdown');
+          if (parentDropdown) {
+            parentDropdown.classList.toggle('open');
+          }
+          return;
+        }
+
         navLinks.classList.remove('open');
+        const parentDropdown = document.getElementById('nav-dropdown-formules');
+        if (parentDropdown) parentDropdown.classList.remove('open');
         hamburger.querySelectorAll('span').forEach(s => {
           s.style.transform = '';
           s.style.opacity = '';

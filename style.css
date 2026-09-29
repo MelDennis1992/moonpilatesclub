@@ -3127,29 +3127,49 @@ ul { list-style: none; }
     justify-content: space-between;
     font-size: 0.95rem;
     font-weight: 600;
-    padding: 3px 0;
+    padding: 6px 0;
+    cursor: pointer;
   }
   .nav-dropdown-trigger .nav-arrow {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     margin-left: auto;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .nav-dropdown.open .nav-arrow {
+    transform: rotate(180deg);
   }
   .nav-dropdown-content {
     position: static;
     transform: none;
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
+    display: none;
     box-shadow: none;
     border: none;
     border-left: 2.5px solid var(--terracotta);
     border-radius: 0 12px 12px 0;
     background: rgba(123, 89, 89, 0.05);
     padding: 8px 12px;
-    margin: 6px 0 6px 6px;
-    width: calc(100% - 12px);
-    display: flex;
+    margin: 4px 0 8px 8px;
+    width: calc(100% - 16px);
     flex-direction: column;
     gap: 4px;
+    opacity: 0;
+  }
+  .nav-dropdown.open .nav-dropdown-content {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    animation: fadeInDown 0.25s ease forwards;
+  }
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-6px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
   .dropdown-item {
     font-size: 0.9rem;
