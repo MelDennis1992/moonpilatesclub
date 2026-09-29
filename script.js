@@ -313,7 +313,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { label: '6 mois', price: '150', per: 'CHF 37,5 / séance', eng: 'Engagement 6 mois', url: 'https://backoffice.bsport.io/checkout/4466/subscription/30689?force=true' },
         { label: '12 mois', price: '140', per: 'CHF 35 / séance', eng: 'Engagement 12 mois', url: 'https://backoffice.bsport.io/checkout/4466/subscription/30690?force=true' }
       ],
-      features: ['✓ 4 cours par mois', '✓ 6 disciplines complémentaires', 'Lagree · Reformer · Mat · Sculpt · Barre · Yoga', '✓ Ateliers à venir', '✓ 1 mois de gel offert sans frais', '✓ -10% sur vos boissons Moon Café'],
+      features: ['✓ 4 cours par mois', '✓ 6 disciplines complémentaires', 'Lagree · Reformer · Mat · Sculpt · Barre · Yoga', '✓ Rabais sur ateliers', '✓ 1 mois de gel offert sans frais', '✓ -10% sur vos boissons Moon Café'],
       isFeatured: false
     },
     'forfait-halfmoon': {
@@ -326,7 +326,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { label: '6 mois', price: '250', per: 'CHF 31,25 / séance', eng: 'Engagement 6 mois', url: 'https://backoffice.bsport.io/checkout/4466/subscription/30691?force=true' },
         { label: '12 mois', price: '240', per: 'CHF 30 / séance', eng: 'Engagement 12 mois', url: 'https://backoffice.bsport.io/checkout/4466/subscription/30693?force=true' }
       ],
-      features: ['✓ 8 cours par mois', '✓ 6 disciplines complémentaires', 'Lagree · Reformer · Mat · Sculpt · Barre · Yoga', '✓ Ateliers à venir', '✓ 1 mois de gel offert sans frais', '✓ -10% sur vos boissons Moon Café'],
+      features: ['✓ 8 cours par mois', '✓ 6 disciplines complémentaires', 'Lagree · Reformer · Mat · Sculpt · Barre · Yoga', '✓ Rabais sur ateliers', '✓ 1 mois de gel offert sans frais', '✓ -10% sur vos boissons Moon Café'],
       isFeatured: true
     },
     'forfait-fullmoon': {
@@ -336,7 +336,7 @@ document.addEventListener('DOMContentLoaded', () => {
       badge: 'Séances Illimitées',
       hasToggle: false,
       single: { price: '350', period: '/ mois', per: 'Séances illimitées · ~14 CHF / séance*', eng: 'Engagement 3 mois minimum (*base 24 séances/mois)', url: 'https://backoffice.bsport.io/checkout/4466/subscription/30694?force=true' },
-      features: ['✓ 1 cours par jour max', '✓ 6 disciplines complémentaires', 'Lagree · Reformer · Mat · Sculpt · Barre · Yoga', '✓ Ateliers (inclus)', '✓ 1 mois de gel offert sans frais', '✓ -10% sur vos boissons Moon Café'],
+      features: ['✓ 1 cours par jour max', '✓ 6 disciplines complémentaires', 'Lagree · Reformer · Mat · Sculpt · Barre · Yoga', '✓ Rabais exclusif sur ateliers', '✓ 1 mois de gel offert sans frais', '✓ -10% sur vos boissons Moon Café'],
       isFeatured: false
     },
     'forfait-annual': {
@@ -351,7 +351,7 @@ document.addEventListener('DOMContentLoaded', () => {
           price: "1'540",
           per: '4 cours par mois · CHF 32 / séance',
           eng: 'Valide 1 an · Paiement unique',
-          features: ['✓ 4 cours par mois (48 séances / an)', '✓ 6 disciplines complémentaires', 'Lagree · Reformer · Mat · Sculpt · Barre · Yoga', '✓ Ateliers à venir', '✓ 1 mois de gel offert sans frais', '✓ -10% sur vos boissons Moon Café'],
+          features: ['✓ 4 cours par mois (48 séances / an)', '✓ 6 disciplines complémentaires', 'Lagree · Reformer · Mat · Sculpt · Barre · Yoga', '✓ Rabais sur ateliers', '✓ 1 mois de gel offert sans frais', '✓ -10% sur vos boissons Moon Café'],
           url: 'https://backoffice.bsport.io/customer/payment/pass/682887/?membership=4466&force=true'
         },
         {
@@ -359,11 +359,11 @@ document.addEventListener('DOMContentLoaded', () => {
           price: "2'640",
           per: '8 cours par mois · CHF 27 / séance',
           eng: 'Valide 1 an · Paiement unique',
-          features: ['✓ 8 cours par mois (96 séances / an)', '✓ 6 disciplines complémentaires', 'Lagree · Reformer · Mat · Sculpt · Barre · Yoga', '✓ Ateliers à venir', '✓ 1 mois de gel offert sans frais', '✓ -10% sur vos boissons Moon Café'],
+          features: ['✓ 8 cours par mois (96 séances / an)', '✓ 6 disciplines complémentaires', 'Lagree · Reformer · Mat · Sculpt · Barre · Yoga', '✓ Rabais sur ateliers', '✓ 1 mois de gel offert sans frais', '✓ -10% sur vos boissons Moon Café'],
           url: 'https://backoffice.bsport.io/customer/payment/pass/682889/?membership=4466&force=true'
         }
       ],
-      features: ['✓ 8 cours par mois (96 séances / an)', '✓ 6 disciplines complémentaires', 'Lagree · Reformer · Mat · Sculpt · Barre · Yoga', '✓ Ateliers à venir', '✓ 1 mois de gel offert sans frais', '✓ -10% sur vos boissons Moon Café'],
+      features: ['✓ 8 cours par mois (96 séances / an)', '✓ 6 disciplines complémentaires', 'Lagree · Reformer · Mat · Sculpt · Barre · Yoga', '✓ Rabais sur ateliers', '✓ 1 mois de gel offert sans frais', '✓ -10% sur vos boissons Moon Café'],
       isFeatured: true
     }
   };

@@ -146,7 +146,7 @@ const translations = {
     "newmoon_f1": "✓ 4 cours par mois",
     "newmoon_f2": "✓ 6 disciplines complémentaires",
     "newmoon_f3": "Lagree · Reformer · Mat · Sculpt · Barre · Yoga",
-    "newmoon_f4": "✓ Ateliers à venir",
+    "newmoon_f4": "✓ Rabais sur ateliers",
     "newmoon_f5": "✓ -10% sur vos boissons Moon Café",
     "btn_choose_newmoon": "Choisir New Moon",
 
@@ -155,7 +155,7 @@ const translations = {
     "halfmoon_f1": "✓ 8 cours par mois",
     "halfmoon_f2": "✓ 6 disciplines complémentaires",
     "halfmoon_f3": "Lagree · Reformer · Mat · Sculpt · Barre · Yoga",
-    "halfmoon_f4": "✓ Ateliers à venir",
+    "halfmoon_f4": "✓ Rabais sur ateliers",
     "halfmoon_f5": "✓ -10% sur vos boissons Moon Café",
     "btn_choose_halfmoon": "Choisir Half Moon",
 
@@ -165,7 +165,7 @@ const translations = {
     "fullmoon_f1": "✓ 1 cours par jour max",
     "fullmoon_f2": "✓ 6 disciplines complémentaires",
     "fullmoon_f3": "Lagree · Reformer · Mat · Sculpt · Barre · Yoga",
-    "fullmoon_f4": "✓ Ateliers (inclus)",
+    "fullmoon_f4": "✓ Rabais exclusif sur ateliers",
     "fullmoon_f5": "✓ -10% sur vos boissons Moon Café",
     "fullmoon_eng": "Engagement 3 mois minimum<br/><span style=\"font-size:0.75rem; opacity:0.75; font-style:italic;\">*Sur une base de 24 séances par mois</span>",
     "btn_choose_fullmoon": "Choisir Full Moon",
@@ -293,7 +293,7 @@ const translations = {
     "lbl_address": "Adresse",
     "lbl_phone": "Téléphone",
     "lbl_contact": "Contact",
-    "lbl_cafe_hours": "Horaires Moon Café",
+    "lbl_cafe_hours": "Horaires d'ouverture",
     "lbl_social": "Réseaux sociaux",
     "form_title": "Envoyez-nous un message",
     "form_lbl_name": "Votre prénom",
@@ -325,7 +325,7 @@ const translations = {
 
   en: {
     // Announcement & Nav
-    "announcement_text": "✨ Open since August 17, 2026, come discover our studio! 🌙",
+    "announcement_text": "✨ Open since August 17, 2026 — come discover the studio! 🌙",
     "nav_concept": "About",
     "nav_cours": "Classes",
     "nav_coachs": "Coaches",
@@ -466,7 +466,7 @@ const translations = {
     "newmoon_f1": "✓ 4 classes per month",
     "newmoon_f2": "✓ 6 complementary disciplines",
     "newmoon_f3": "Lagree · Reformer · Mat · Sculpt · Barre · Yoga",
-    "newmoon_f4": "✓ Upcoming workshops",
+    "newmoon_f4": "✓ Discount on workshops",
     "newmoon_f5": "✓ -10% discount on Moon Café drinks",
     "btn_choose_newmoon": "Choose New Moon",
 
@@ -475,7 +475,7 @@ const translations = {
     "halfmoon_f1": "✓ 8 classes per month",
     "halfmoon_f2": "✓ 6 complementary disciplines",
     "halfmoon_f3": "Lagree · Reformer · Mat · Sculpt · Barre · Yoga",
-    "halfmoon_f4": "✓ Upcoming workshops",
+    "halfmoon_f4": "✓ Discount on workshops",
     "halfmoon_f5": "✓ -10% discount on Moon Café drinks",
     "btn_choose_halfmoon": "Choose Half Moon",
 
@@ -485,7 +485,7 @@ const translations = {
     "fullmoon_f1": "✓ 1 class per day max",
     "fullmoon_f2": "✓ 6 complementary disciplines",
     "fullmoon_f3": "Lagree · Reformer · Mat · Sculpt · Barre · Yoga",
-    "fullmoon_f4": "✓ Workshops (included)",
+    "fullmoon_f4": "✓ Exclusive discount on workshops",
     "fullmoon_f5": "✓ -10% discount on Moon Café drinks",
     "fullmoon_eng": "3-month minimum commitment<br/><span style=\"font-size:0.75rem; opacity:0.75; font-style:italic;\">*Based on 24 classes per month</span>",
     "btn_choose_fullmoon": "Choose Full Moon",
@@ -613,7 +613,7 @@ const translations = {
     "lbl_address": "Address",
     "lbl_phone": "Phone",
     "lbl_contact": "Contact",
-    "lbl_cafe_hours": "Moon Café Hours",
+    "lbl_cafe_hours": "Opening Hours",
     "lbl_social": "Social Media",
     "form_title": "Send Us a Message",
     "form_lbl_name": "First Name",
