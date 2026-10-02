@@ -3286,6 +3286,10 @@ ul { list-style: none; }
 }
 
 /* Visuals & Flyer / Photo Grid */
+.mooncafe-mobile-tabs {
+  display: none;
+}
+
 .mooncafe-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -3304,10 +3308,11 @@ ul { list-style: none; }
 }
 
 .mooncafe-flyer-card,
-.mooncafe-photo-card {
+.mooncafe-carousel-card {
   position: relative;
   width: 100%;
   max-width: 500px;
+  height: 580px;
   border-radius: 24px;
   overflow: hidden;
   box-shadow: 0 16px 45px rgba(58, 40, 32, 0.12);
@@ -3319,16 +3324,16 @@ ul { list-style: none; }
 }
 
 .mooncafe-flyer-card:hover,
-.mooncafe-photo-card:hover {
+.mooncafe-carousel-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 22px 55px rgba(196, 112, 82, 0.2);
 }
 
-.mooncafe-flyer-img,
-.mooncafe-photo-img {
+.mooncafe-flyer-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top center;
   display: block;
 }
 
@@ -3336,11 +3341,13 @@ ul { list-style: none; }
   position: absolute;
   bottom: 14px;
   right: 14px;
+  z-index: 5;
 }
 
 .mooncafe-zoom-btn {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   color: var(--terracotta) !important;
   border: 1.5px solid var(--terracotta) !important;
   font-size: 0.8rem;
@@ -3361,21 +3368,147 @@ ul { list-style: none; }
   border-color: var(--terracotta) !important;
 }
 
+/* Carousel wrapper & slides */
+.mooncafe-slides-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.mooncafe-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.45s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.45s;
+  pointer-events: none;
+}
+
+.mooncafe-slide.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.mooncafe-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* Carousel Navigation Arrows */
+.mooncafe-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(196, 112, 82, 0.25);
+  color: var(--terracotta);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 6;
+  box-shadow: 0 4px 16px rgba(58, 40, 32, 0.12);
+  transition: all 0.25s ease;
+}
+
+.mooncafe-arrow.prev {
+  left: 14px;
+}
+
+.mooncafe-arrow.next {
+  right: 14px;
+}
+
+.mooncafe-arrow:hover {
+  background: var(--terracotta);
+  color: #FFFFFF;
+  transform: translateY(-50%) scale(1.08);
+  box-shadow: 0 6px 20px rgba(196, 112, 82, 0.35);
+}
+
+/* Counter Badge */
+.mooncafe-counter-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: rgba(58, 40, 32, 0.72);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #FFFFFF;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 5px 12px;
+  border-radius: 20px;
+  z-index: 6;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Dots Indicators */
+.mooncafe-dots {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 6;
+  padding: 6px 12px;
+  background: rgba(58, 40, 32, 0.35);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 30px;
+}
+
+.mooncafe-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.55);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.mooncafe-dot.active {
+  width: 22px;
+  border-radius: 10px;
+  background: #FFFFFF;
+}
+
+/* Photo Caption Badge */
 .mooncafe-photo-badge {
   position: absolute;
   bottom: 14px;
   left: 14px;
   right: 14px;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   padding: 10px 16px;
   border-radius: 14px;
-  font-size: 0.85rem;
+  font-size: 0.84rem;
   font-weight: 600;
   color: var(--brown-text);
   text-align: center;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(196, 112, 82, 0.15);
+  border: 1px solid rgba(196, 112, 82, 0.18);
+  z-index: 5;
 }
 
 /* Banner / Info box */
@@ -3416,29 +3549,122 @@ ul { list-style: none; }
   margin: 0;
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
+/* Responsive Moon Cafe */
+@media (max-width: 900px) {
   .mooncafe-features {
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 14px;
+    padding: 6px 16px 14px;
+    margin: 0 -16px 24px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
   }
+  .mooncafe-features::-webkit-scrollbar {
+    display: none;
+  }
+  .mooncafe-feat-card {
+    flex: 0 0 74%;
+    max-width: 280px;
+    scroll-snap-align: start;
+    padding: 20px 16px;
+  }
+
+  .mooncafe-mobile-tabs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 0 auto 20px;
+    background: rgba(196, 112, 82, 0.08);
+    padding: 5px;
+    border-radius: 40px;
+    max-width: 380px;
+    border: 1px solid rgba(196, 112, 82, 0.16);
+  }
+
+  .mooncafe-tab-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 30px;
+    background: transparent;
+    color: var(--brown-text);
+    font-family: var(--font-sans);
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    white-space: nowrap;
+  }
+
+  .mooncafe-tab-btn .tab-count {
+    background: rgba(196, 112, 82, 0.18);
+    color: var(--terracotta);
+    font-size: 0.72rem;
+    padding: 2px 7px;
+    border-radius: 12px;
+    font-weight: 700;
+  }
+
+  .mooncafe-tab-btn.active {
+    background: #FFFFFF;
+    color: var(--terracotta);
+    box-shadow: 0 4px 15px rgba(58, 40, 32, 0.08);
+  }
+
+  .mooncafe-tab-btn.active .tab-count {
+    background: var(--terracotta);
+    color: #FFFFFF;
+  }
+
   .mooncafe-grid {
     grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 0 auto 36px;
+  }
+
+  /* When flyer view is active on mobile */
+  .mooncafe-grid[data-active-view="flyer"] #mooncafe-photo-col {
+    display: none !important;
+  }
+  .mooncafe-grid[data-active-view="flyer"] #mooncafe-flyer-col {
+    display: flex !important;
+  }
+
+  /* When photos view is active on mobile */
+  .mooncafe-grid[data-active-view="photos"] #mooncafe-flyer-col {
+    display: none !important;
+  }
+  .mooncafe-grid[data-active-view="photos"] #mooncafe-photo-col {
+    display: flex !important;
+  }
+
+  .mooncafe-flyer-card,
+  .mooncafe-carousel-card {
+    height: 480px;
+    max-width: 100%;
+  }
+
+  .mooncafe-arrow {
+    width: 38px;
+    height: 38px;
   }
 }
 
 @media (max-width: 640px) {
-  .mooncafe-features {
-    grid-template-columns: 1fr;
+  .mooncafe-flyer-card,
+  .mooncafe-carousel-card {
+    height: 440px;
   }
-  .mooncafe-menu-cols {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  .mooncafe-visuals {
-    grid-template-columns: 1fr;
-  }
-  .mooncafe-menu-card {
-    padding: 24px 20px;
+  .mooncafe-photo-badge {
+    font-size: 0.78rem;
+    padding: 8px 12px;
   }
   .mooncafe-banner {
     flex-direction: column;

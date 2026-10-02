@@ -1196,5 +1196,188 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // ─── MOON CAFÉ: CAROUSEL & MOBILE TABS ───
+  const cafeGrid = document.getElementById('mooncafe-grid');
+  const cafeTabs = document.querySelectorAll('.mooncafe-tab-btn');
+  const cafeSlides = document.querySelectorAll('#mooncafe-slides .mooncafe-slide');
+  const cafeDots = document.querySelectorAll('#mooncafe-dots .mooncafe-dot');
+  const cafeCounter = document.getElementById('mooncafe-counter');
+  const cafePrevBtn = document.getElementById('mooncafe-prev-btn');
+  const cafeNextBtn = document.getElementById('mooncafe-next-btn');
+  const cafeCarousel = document.getElementById('mooncafe-carousel');
+  const cafeFlyerCard = document.getElementById('mooncafe-flyer-card');
+
+  let currentCafeSlide = 0;
+  const totalCafeSlides = cafeSlides.length;
+  let cafeAutoplayTimer = null;
+
+  function setCafeView(view) {
+    if (!cafeGrid) return;
+    cafeGrid.setAttribute('data-active-view', view);
+    cafeTabs.forEach(tab => {
+      if (tab.getAttribute('data-view') === view) {
+        tab.classList.add('active');
+      } else {
+        tab.classList.remove('active');
+      }
+    });
+  }
+
+  cafeTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const targetView = tab.getAttribute('data-view');
+      if (targetView) setCafeView(targetView);
+    });
+  });
+
+  function showCafeSlide(index) {
+    if (totalCafeSlides === 0) return;
+    currentCafeSlide = (index + totalCafeSlides) % totalCafeSlides;
+    
+    cafeSlides.forEach((slide, i) => {
+      if (i === currentCafeSlide) {
+        slide.classList.add('active');
+      } else {
+        slide.classList.remove('active');
+      }
+    });
+
+    cafeDots.forEach((dot, i) => {
+      if (i === currentCafeSlide) {
+        dot.classList.add('active');
+      } else {
+        dot.classList.remove('active');
+      }
+    });
+
+    if (cafeCounter) {
+      cafeCounter.textContent = `${currentCafeSlide + 1} / ${totalCafeSlides}`;
+    }
+  }
+
+  function nextCafeSlide() {
+    showCafeSlide(currentCafeSlide + 1);
+  }
+
+  function prevCafeSlide() {
+    showCafeSlide(currentCafeSlide - 1);
+  }
+
+  if (cafeNextBtn) {
+    cafeNextBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      nextCafeSlide();
+      resetCafeAutoplay();
+    });
+  }
+
+  if (cafePrevBtn) {
+    cafePrevBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      prevCafeSlide();
+      resetCafeAutoplay();
+    });
+  }
+
+  cafeDots.forEach((dot) => {
+    dot.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const slideIdx = parseInt(dot.getAttribute('data-index'), 10);
+      if (!isNaN(slideIdx)) {
+        showCafeSlide(slideIdx);
+        resetCafeAutoplay();
+      }
+    });
+  });
+
+  function startCafeAutoplay() {
+    stopCafeAutoplay();
+    cafeAutoplayTimer = setInterval(nextCafeSlide, 4500);
+  }
+
+  function stopCafeAutoplay() {
+    if (cafeAutoplayTimer) {
+      clearInterval(cafeAutoplayTimer);
+      cafeAutoplayTimer = null;
+    }
+  }
+
+  function resetCafeAutoplay() {
+    stopCafeAutoplay();
+    startCafeAutoplay();
+  }
+
+  if (cafeCarousel) {
+    cafeCarousel.addEventListener('mouseenter', stopCafeAutoplay);
+    cafeCarousel.addEventListener('mouseleave', startCafeAutoplay);
+
+    // Touch Swipe on Carousel
+    let touchStartX = 0;
+    let touchStartY = 0;
+
+    cafeCarousel.addEventListener('touchstart', (e) => {
+      stopCafeAutoplay();
+      if (e.changedTouches && e.changedTouches.length > 0) {
+        touchStartX = e.changedTouches[0].screenX;
+        touchStartY = e.changedTouches[0].screenY;
+      }
+    }, { passive: true });
+
+    cafeCarousel.addEventListener('touchend', (e) => {
+      startCafeAutoplay();
+      if (e.changedTouches && e.changedTouches.length > 0) {
+        const touchEndX = e.changedTouches[0].screenX;
+        const touchEndY = e.changedTouches[0].screenY;
+        const diffX = touchEndX - touchStartX;
+        const diffY = touchEndY - touchStartY;
+
+        if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 35) {
+          if (diffX < 0) {
+            // swipe left -> next slide
+            nextCafeSlide();
+          } else {
+            // swipe right -> prev slide
+            if (currentCafeSlide === 0 && window.innerWidth <= 900) {
+              // On first slide, swipe right switches to flyer view on mobile
+              setCafeView('flyer');
+            } else {
+              prevCafeSlide();
+            }
+          }
+        }
+      }
+    }, { passive: true });
+
+    startCafeAutoplay();
+  }
+
+  // Touch Swipe on Flyer Card for Mobile
+  if (cafeFlyerCard) {
+    let flyerTouchStartX = 0;
+    let flyerTouchStartY = 0;
+
+    cafeFlyerCard.addEventListener('touchstart', (e) => {
+      if (e.target.closest('a, button')) return;
+      if (e.changedTouches && e.changedTouches.length > 0) {
+        flyerTouchStartX = e.changedTouches[0].screenX;
+        flyerTouchStartY = e.changedTouches[0].screenY;
+      }
+    }, { passive: true });
+
+    cafeFlyerCard.addEventListener('touchend', (e) => {
+      if (e.target.closest('a, button')) return;
+      if (e.changedTouches && e.changedTouches.length > 0) {
+        const diffX = e.changedTouches[0].screenX - flyerTouchStartX;
+        const diffY = e.changedTouches[0].screenY - flyerTouchStartY;
+        if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 35) {
+          if (diffX < 0 && window.innerWidth <= 900) {
+            // swipe left on flyer -> switch to photos
+            setCafeView('photos');
+          }
+        }
+      }
+    }, { passive: true });
+  }
+
 });
 
