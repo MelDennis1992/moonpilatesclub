@@ -276,7 +276,7 @@ const translations = {
     // Moon Café
     "cafe_label": "🍵 & ☕ Bar à Café & Matcha",
     "cafe_title": "Moon <em>Café</em>",
-    "cafe_sub": "Un espace chaleureux au cœur de Lausanne pour savourer des matchas de grade cérémonial et cafés de spécialité. Avant ou après votre cours, ou simplement pour une pause bienfaisante dans votre journée.",
+    "cafe_sub": "Un espace chaleureux au cœur de Lausanne pour savourer des matchas de grade cérémonial et cafés de spécialité. Avant ou après votre cours, ou simplement pour une pause dans votre journée.",
     "cafe_feat1_title": "Matcha Cérémonial",
     "cafe_feat1_desc": "Matcha d'exception préparé minute (Pure, Vanilla, Caramel, Coconut, Mango), chaud ou glacé.",
     "cafe_feat2_title": "Specialty Coffee",
@@ -632,7 +632,7 @@ const translations = {
     // Moon Café
     "cafe_label": "🍵 & ☕ Coffee & Matcha Bar",
     "cafe_title": "Moon <em>Café</em>",
-    "cafe_sub": "A warm space in the heart of Lausanne to enjoy ceremonial grade matcha and specialty coffee. Before or after your workout, or simply for a revitalizing break during your day.",
+    "cafe_sub": "A warm space in the heart of Lausanne to enjoy ceremonial grade matcha and specialty coffee. Before or after your workout, or simply for a break during your day.",
     "cafe_feat1_title": "Ceremonial Matcha",
     "cafe_feat1_desc": "Exceptional matcha freshly crafted (Pure, Vanilla, Caramel, Coconut, Mango), hot or iced.",
     "cafe_feat2_title": "Specialty Coffee",
