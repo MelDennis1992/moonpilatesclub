@@ -27,13 +27,23 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; font-size: 16px; }
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+}
 body {
   font-family: var(--font-sans);
   background: var(--cream);
   color: var(--brown-text);
   line-height: 1.7;
   overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+  position: relative;
+  -webkit-text-size-adjust: 100%;
 }
 
 img { display: block; max-width: 100%; }
@@ -1134,6 +1144,10 @@ ul { list-style: none; }
   box-shadow: 0 10px 40px rgba(58, 40, 32, 0.05);
   border: 1px solid rgba(123, 89, 89, 0.08);
   min-height: 700px;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  box-sizing: border-box;
 }
 
 /* ===========================
@@ -2819,9 +2833,13 @@ ul { list-style: none; }
   /* App section responsive */
   .app-card {
     grid-template-columns: 1fr;
-    padding: 48px 32px;
+    padding: 44px 24px 32px;
     text-align: center;
-    gap: 40px;
+    gap: 36px;
+    overflow: hidden;
+  }
+  .app-card::before {
+    display: none;
   }
   .app-desc {
     margin-left: auto;
@@ -2832,6 +2850,10 @@ ul { list-style: none; }
     margin-bottom: 12px;
   }
   .phone-mockup {
+    transform: none;
+  }
+  .app-card:hover .iphone-mockup.phone-left,
+  .app-card:hover .iphone-mockup.phone-right {
     transform: none;
   }
 
@@ -2885,11 +2907,15 @@ ul { list-style: none; }
   .decouverte-grid { grid-template-columns: 1fr; }
 
   .app-card {
-    padding: 40px 20px;
-    border-radius: 24px;
+    padding: 32px 14px 20px 14px;
+    border-radius: 22px;
+    overflow: hidden;
+  }
+  .app-card::before {
+    display: none;
   }
   .app-title {
-    font-size: 1.65rem;
+    font-size: 1.55rem;
   }
   .app-buttons {
     flex-direction: column;
@@ -2899,47 +2925,52 @@ ul { list-style: none; }
     width: 100%;
     justify-content: center;
   }
-  .app-card {
-    padding: 36px 20px 20px 20px;
-    overflow: visible;
-  }
   .app-mockup-wrap {
-    min-height: 400px;
+    min-height: 350px;
     max-width: 100%;
-    overflow: visible;
+    overflow: hidden;
   }
   .dual-iphones-container {
-    height: 390px;
-    max-width: 340px;
+    height: 340px;
+    max-width: 290px;
+    width: 100%;
     margin: 0 auto;
     position: relative;
   }
   .iphone-mockup.phone-left {
-    width: 172px;
-    height: 360px;
-    left: 2px;
+    width: 152px;
+    height: 310px;
+    left: 0;
     top: 5px;
-    border-radius: 28px;
-    padding: 5px;
+    border-radius: 24px;
+    padding: 4px;
+    transform: rotate(-3deg);
   }
   .iphone-mockup.phone-right {
-    width: 168px;
-    height: 350px;
-    right: 2px;
+    width: 146px;
+    height: 300px;
+    right: 0;
     bottom: 5px;
-    border-radius: 28px;
-    padding: 5px;
+    border-radius: 24px;
+    padding: 4px;
+    transform: rotate(2deg);
+  }
+  .app-card:hover .iphone-mockup.phone-left {
+    transform: rotate(-3deg);
+  }
+  .app-card:hover .iphone-mockup.phone-right {
+    transform: rotate(2deg);
   }
   .iphone-screen {
-    border-radius: 23px;
+    border-radius: 20px;
   }
   .feed-card-img-wrap {
-    height: 68px;
+    height: 60px;
   }
   .iphone-island {
-    width: 48px;
-    height: 13px;
-    top: 10px;
+    width: 44px;
+    height: 12px;
+    top: 8px;
   }
 }
 
@@ -3552,8 +3583,10 @@ ul { list-style: none; }
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     gap: 14px;
-    padding: 6px 16px 14px;
-    margin: 0 -16px 24px;
+    padding: 6px 4px 14px;
+    margin: 0 0 24px;
+    width: 100%;
+    box-sizing: border-box;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
   }
