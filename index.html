@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=35" />
+  <link rel="stylesheet" href="style.css?v=36" />
 
   <!-- Bsport Widget SDK -->
   <script id="insert-bsport-widget-cdn">!function (b, s, p, o, r, t) { typeof window.BsportWidget === "undefined" && !document.getElementById("bsport-widget-cdn") && !function () { m = b.createElement(s), m.id = "bsport-widget-cdn", m.src = p, b.getElementsByTagName("head")[0].appendChild(m) }() }(document, "script", "https://cdn.bsport.io/scripts/widget.js")</script>
@@ -152,6 +152,7 @@
           </div>
         </div>
         <a href="#cadeaux" class="nav-link" data-i18n="nav_cadeaux">Bons Cadeaux</a>
+        <a href="#mooncafe" class="nav-link" data-i18n="nav_cafe">Moon Café</a>
         <a href="#planning" class="nav-link" data-i18n="nav_planning">Planning</a>
         <a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a>
         <div class="nav-bsport-login" id="nav-bsport-login">
@@ -1246,6 +1247,154 @@
     </div>
   </section>
 
+  <!-- MOON CAFÉ -->
+  <section class="mooncafe-section" id="mooncafe">
+    <div class="container">
+      <div class="mooncafe-header">
+        <p class="section-label reveal" data-i18n="cafe_label">🍵 & ☕ Specialty Coffee & Matcha Bar</p>
+        <h2 class="section-title reveal" data-i18n-html="cafe_title">Moon <em>Café</em></h2>
+        <p class="mooncafe-sub reveal" data-i18n="cafe_sub">
+          Un espace convivial et chaleureux au cœur de Lausanne, pensé pour savourer des matchas d'exception de grade cérémonial et des cafés de spécialité. Avant ou après votre séance de Pilates, ou simplement pour une pause gourmande et revitalisante dans votre journée.
+        </p>
+      </div>
+
+      <!-- Features Row -->
+      <div class="mooncafe-features reveal">
+        <div class="mooncafe-feat-card">
+          <span class="mooncafe-feat-icon">🍵</span>
+          <h3 class="mooncafe-feat-title" data-i18n="cafe_feat1_title">Matcha Cérémonial</h3>
+          <p class="mooncafe-feat-desc" data-i18n="cafe_feat1_desc">Matcha japonais d'exception fouetté minute, riche en antioxydants et L-théanine pour une énergie douce et durable.</p>
+        </div>
+        <div class="mooncafe-feat-card">
+          <span class="mooncafe-feat-icon">☕</span>
+          <h3 class="mooncafe-feat-title" data-i18n="cafe_feat2_title">Specialty Coffee</h3>
+          <p class="mooncafe-feat-desc" data-i18n="cafe_feat2_desc">Cafés de terroir éthiques et torréfiés avec précision : espresso velouté, flat white soyeux et cold brew rafraîchissant.</p>
+        </div>
+        <div class="mooncafe-feat-card">
+          <span class="mooncafe-feat-icon">🥛</span>
+          <h3 class="mooncafe-feat-title" data-i18n="cafe_feat3_title">Laits Végétaux au Choix</h3>
+          <p class="mooncafe-feat-desc" data-i18n="cafe_feat3_desc">Lait d'avoine barista bio, amande ou coco selon vos envies, pour sublimer chaque création.</p>
+        </div>
+        <div class="mooncafe-feat-card">
+          <span class="mooncafe-feat-icon">✨</span>
+          <h3 class="mooncafe-feat-title" data-i18n="cafe_feat4_title">-10% pour les Membres</h3>
+          <p class="mooncafe-feat-desc" data-i18n="cafe_feat4_desc">Un avantage exclusif inclus dans tous nos abonnements Moon Pilates Club sur l'ensemble du café.</p>
+        </div>
+      </div>
+
+      <!-- Main Visuals & Menu Split -->
+      <div class="mooncafe-grid">
+        <!-- Visual Gallery -->
+        <div class="mooncafe-visuals reveal">
+          <div class="mooncafe-img-card">
+            <img src="cafe-1.png?v=1" alt="Moon Café - Bar à Matcha Lausanne" loading="lazy" />
+            <div class="mooncafe-img-badge" data-i18n="cafe_badge_bar">🍵 Bar à Matcha & Café</div>
+          </div>
+          <div class="mooncafe-img-card">
+            <img src="cafe-2.png?v=1" alt="Moon Café - Ambiance détente & bien-être" loading="lazy" />
+            <div class="mooncafe-img-badge" data-i18n="cafe_badge_ambiance">🤍 Espace Détente & Convivialité</div>
+          </div>
+        </div>
+
+        <!-- Menu Card -->
+        <div class="mooncafe-menu-card reveal">
+          <div class="mooncafe-menu-header">
+            <h3 class="mooncafe-menu-title" data-i18n="cafe_menu_title">Sélection du Bar</h3>
+            <span class="mooncafe-discount-pill" data-i18n="cafe_menu_discount">✨ -10% avec tout abonnement</span>
+          </div>
+
+          <div class="mooncafe-menu-cols">
+            <!-- Col 1: Matcha -->
+            <div class="mooncafe-col">
+              <div class="mooncafe-category-title" data-i18n="cafe_cat_matcha">🍵 Nos Matchas</div>
+              <div class="mooncafe-item-list">
+                <div class="mooncafe-item">
+                  <div class="mooncafe-item-top">
+                    <span class="mooncafe-item-name" data-i18n="cafe_item_matcha_latte">Ceremonial Matcha Latte</span>
+                    <span class="mooncafe-item-price">CHF 6.80</span>
+                  </div>
+                  <p class="mooncafe-item-desc" data-i18n="cafe_item_matcha_latte_desc">Matcha de grade cérémonial & lait végétal onctueux, chaud ou glacé</p>
+                </div>
+                <div class="mooncafe-item">
+                  <div class="mooncafe-item-top">
+                    <span class="mooncafe-item-name" data-i18n="cafe_item_strawberry">Iced Strawberry Matcha</span>
+                    <span class="mooncafe-item-price">CHF 7.80</span>
+                  </div>
+                  <p class="mooncafe-item-desc" data-i18n="cafe_item_strawberry_desc">Purée de fraises fraîches, lait végétal et couche de matcha cérémonial fouetté</p>
+                </div>
+                <div class="mooncafe-item">
+                  <div class="mooncafe-item-top">
+                    <span class="mooncafe-item-name" data-i18n="cafe_item_vanilla_matcha">Vanilla Cloud Matcha</span>
+                    <span class="mooncafe-item-price">CHF 7.40</span>
+                  </div>
+                  <p class="mooncafe-item-desc" data-i18n="cafe_item_vanilla_matcha_desc">Touche délicate de vanille naturelle, mousse légère et matcha japonais</p>
+                </div>
+                <div class="mooncafe-item">
+                  <div class="mooncafe-item-top">
+                    <span class="mooncafe-item-name" data-i18n="cafe_item_pure_matcha">Pure Ceremonial Shot</span>
+                    <span class="mooncafe-item-price">CHF 4.80</span>
+                  </div>
+                  <p class="mooncafe-item-desc" data-i18n="cafe_item_pure_matcha_desc">Préparé traditionnellement au chasen, pureté et puissance aromatique</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Col 2: Coffee -->
+            <div class="mooncafe-col">
+              <div class="mooncafe-category-title" data-i18n="cafe_cat_coffee">☕ Cafés & Signatures</div>
+              <div class="mooncafe-item-list">
+                <div class="mooncafe-item">
+                  <div class="mooncafe-item-top">
+                    <span class="mooncafe-item-name" data-i18n="cafe_item_espresso">Espresso / Double Shot</span>
+                    <span class="mooncafe-item-price">CHF 4.20 / 4.90</span>
+                  </div>
+                  <p class="mooncafe-item-desc" data-i18n="cafe_item_espresso_desc">Extraction pure, notes rondes de cacao et fruits secs</p>
+                </div>
+                <div class="mooncafe-item">
+                  <div class="mooncafe-item-top">
+                    <span class="mooncafe-item-name" data-i18n="cafe_item_flat_white">Flat White / Cappuccino</span>
+                    <span class="mooncafe-item-price">CHF 5.60</span>
+                  </div>
+                  <p class="mooncafe-item-desc" data-i18n="cafe_item_flat_white_desc">Micro-mousse soyeuse et équilibre parfait café-lait</p>
+                </div>
+                <div class="mooncafe-item">
+                  <div class="mooncafe-item-top">
+                    <span class="mooncafe-item-name" data-i18n="cafe_item_iced_latte">Café Latte / Iced Latte</span>
+                    <span class="mooncafe-item-price">CHF 5.90</span>
+                  </div>
+                  <p class="mooncafe-item-desc" data-i18n="cafe_item_iced_latte_desc">Doux, crémeux et revigorant sur glace ou velouté chaud</p>
+                </div>
+                <div class="mooncafe-item">
+                  <div class="mooncafe-item-top">
+                    <span class="mooncafe-item-name" data-i18n="cafe_item_cold_brew">Cold Brew Maison</span>
+                    <span class="mooncafe-item-price">CHF 5.50</span>
+                  </div>
+                  <p class="mooncafe-item-desc" data-i18n="cafe_item_cold_brew_desc">Infusion lente à froid de 16h, rondeur aromatique et fraîcheur</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mooncafe-menu-footer">
+            <span data-i18n="cafe_menu_note">💡 Tarifs et créations de saison disponibles sur place. Possibilité de consommer sur place ou à emporter.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Banner Info & Visit -->
+      <div class="mooncafe-banner reveal">
+        <div class="mooncafe-banner-text">
+          <span class="mooncafe-banner-icon">📍</span>
+          <div class="mooncafe-banner-info">
+            <h4 data-i18n="cafe_banner_title">Ouvert à tous · Avec ou sans séance</h4>
+            <p data-i18n="cafe_banner_desc">Galeries Benjamin-Constant 1, Lausanne · Espace lounge chaleureux avec Wi-Fi disponible.</p>
+          </div>
+        </div>
+        <a href="#contact" class="btn btn-outline" style="border-color: var(--terracotta); color: var(--terracotta);" data-i18n="cafe_banner_btn">Voir les horaires & accès →</a>
+      </div>
+    </div>
+  </section>
+
   <!-- PLANNING -->
   <section class="planning" id="planning">
     <div class="container">
@@ -1779,6 +1928,7 @@
         <a href="#forfaits" data-i18n="nav_forfaits">Formules</a>
         <a href="#prives" data-i18n="nav_prives">Cours Privés</a>
         <a href="#cadeaux" data-i18n="nav_cadeaux">Bons Cadeaux</a>
+        <a href="#mooncafe" data-i18n="nav_cafe">Moon Café</a>
         <a href="#planning" data-i18n="nav_planning">Planning</a>
         <a href="#acces" data-i18n="nav_acces">Accès au studio</a>
         <a href="#contact" data-i18n="nav_contact">Contact</a>
@@ -1798,7 +1948,7 @@
     </svg>
   </button>
 
-  <script src="translations.js?v=11"></script>
+  <script src="translations.js?v=12"></script>
   <script src="script.js?v=37"></script>
 </body>
 </html>
