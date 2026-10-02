@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=36" />
+  <link rel="stylesheet" href="style.css?v=37" />
 
   <!-- Bsport Widget SDK -->
   <script id="insert-bsport-widget-cdn">!function (b, s, p, o, r, t) { typeof window.BsportWidget === "undefined" && !document.getElementById("bsport-widget-cdn") && !function () { m = b.createElement(s), m.id = "bsport-widget-cdn", m.src = p, b.getElementsByTagName("head")[0].appendChild(m) }() }(document, "script", "https://cdn.bsport.io/scripts/widget.js")</script>
@@ -1299,84 +1299,128 @@
         <!-- Menu Card -->
         <div class="mooncafe-menu-card reveal">
           <div class="mooncafe-menu-header">
-            <h3 class="mooncafe-menu-title" data-i18n="cafe_menu_title">Sélection du Bar</h3>
-            <span class="mooncafe-discount-pill" data-i18n="cafe_menu_discount">✨ -10% avec tout abonnement</span>
+            <div>
+              <span class="mooncafe-menu-sub" data-i18n="cafe_menu_tagline">Bar à Café & Matcha</span>
+              <h3 class="mooncafe-menu-title" data-i18n="cafe_menu_title">Menu Moon Café</h3>
+            </div>
+            <span class="mooncafe-discount-pill" data-i18n="cafe_menu_discount">10% de rabais pour nos membres</span>
           </div>
 
           <div class="mooncafe-menu-cols">
-            <!-- Col 1: Matcha -->
+            <!-- Col 1: Coffee -->
             <div class="mooncafe-col">
-              <div class="mooncafe-category-title" data-i18n="cafe_cat_matcha">🍵 Nos Matchas</div>
+              <div class="mooncafe-category-header">
+                <span>☕</span>
+                <span data-i18n="cafe_cat_coffee">Coffee</span>
+              </div>
+
+              <div class="mooncafe-subcat-badge">HOT / ICED</div>
               <div class="mooncafe-item-list">
                 <div class="mooncafe-item">
-                  <div class="mooncafe-item-top">
-                    <span class="mooncafe-item-name" data-i18n="cafe_item_matcha_latte">Ceremonial Matcha Latte</span>
-                    <span class="mooncafe-item-price">CHF 6.80</span>
-                  </div>
-                  <p class="mooncafe-item-desc" data-i18n="cafe_item_matcha_latte_desc">Matcha de grade cérémonial & lait végétal onctueux, chaud ou glacé</p>
+                  <span class="mooncafe-item-name">Espresso</span>
+                  <span class="mooncafe-dots"></span>
+                  <span class="mooncafe-item-price">4,00</span>
                 </div>
                 <div class="mooncafe-item">
-                  <div class="mooncafe-item-top">
-                    <span class="mooncafe-item-name" data-i18n="cafe_item_strawberry">Iced Strawberry Matcha</span>
-                    <span class="mooncafe-item-price">CHF 7.80</span>
-                  </div>
-                  <p class="mooncafe-item-desc" data-i18n="cafe_item_strawberry_desc">Purée de fraises fraîches, lait végétal et couche de matcha cérémonial fouetté</p>
+                  <span class="mooncafe-item-name">Cortado</span>
+                  <span class="mooncafe-dots"></span>
+                  <span class="mooncafe-item-price">5,00</span>
                 </div>
                 <div class="mooncafe-item">
-                  <div class="mooncafe-item-top">
-                    <span class="mooncafe-item-name" data-i18n="cafe_item_vanilla_matcha">Vanilla Cloud Matcha</span>
-                    <span class="mooncafe-item-price">CHF 7.40</span>
-                  </div>
-                  <p class="mooncafe-item-desc" data-i18n="cafe_item_vanilla_matcha_desc">Touche délicate de vanille naturelle, mousse légère et matcha japonais</p>
+                  <span class="mooncafe-item-name">Americano</span>
+                  <span class="mooncafe-dots"></span>
+                  <span class="mooncafe-item-price">5,00</span>
                 </div>
                 <div class="mooncafe-item">
-                  <div class="mooncafe-item-top">
-                    <span class="mooncafe-item-name" data-i18n="cafe_item_pure_matcha">Pure Ceremonial Shot</span>
-                    <span class="mooncafe-item-price">CHF 4.80</span>
-                  </div>
-                  <p class="mooncafe-item-desc" data-i18n="cafe_item_pure_matcha_desc">Préparé traditionnellement au chasen, pureté et puissance aromatique</p>
+                  <span class="mooncafe-item-name">Latte</span>
+                  <span class="mooncafe-dots"></span>
+                  <span class="mooncafe-item-price">6,00</span>
+                </div>
+                <div class="mooncafe-item">
+                  <span class="mooncafe-item-name">Cappuccino</span>
+                  <span class="mooncafe-dots"></span>
+                  <span class="mooncafe-item-price">6,00</span>
+                </div>
+                <div class="mooncafe-item">
+                  <span class="mooncafe-item-name">Flat White</span>
+                  <span class="mooncafe-dots"></span>
+                  <span class="mooncafe-item-price">6,00</span>
+                </div>
+              </div>
+
+              <div class="mooncafe-subcat-badge" style="margin-top: 22px;">ICED</div>
+              <div class="mooncafe-item-list">
+                <div class="mooncafe-item">
+                  <span class="mooncafe-item-name">Iced Americano</span>
+                  <span class="mooncafe-dots"></span>
+                  <span class="mooncafe-item-price">5,00</span>
+                </div>
+                <div class="mooncafe-item">
+                  <span class="mooncafe-item-name">Iced Latte</span>
+                  <span class="mooncafe-dots"></span>
+                  <span class="mooncafe-item-price">6,00</span>
+                </div>
+                <div class="mooncafe-item">
+                  <span class="mooncafe-item-name">Freddo espresso</span>
+                  <span class="mooncafe-dots"></span>
+                  <span class="mooncafe-item-price">5,00</span>
                 </div>
               </div>
             </div>
 
-            <!-- Col 2: Coffee -->
+            <!-- Col 2: Matcha -->
             <div class="mooncafe-col">
-              <div class="mooncafe-category-title" data-i18n="cafe_cat_coffee">☕ Cafés & Signatures</div>
+              <div class="mooncafe-category-header">
+                <span>🍵</span>
+                <span data-i18n="cafe_cat_matcha">Matcha</span>
+              </div>
+
+              <div class="mooncafe-subcat-badge">HOT / ICED</div>
               <div class="mooncafe-item-list">
                 <div class="mooncafe-item">
-                  <div class="mooncafe-item-top">
-                    <span class="mooncafe-item-name" data-i18n="cafe_item_espresso">Espresso / Double Shot</span>
-                    <span class="mooncafe-item-price">CHF 4.20 / 4.90</span>
-                  </div>
-                  <p class="mooncafe-item-desc" data-i18n="cafe_item_espresso_desc">Extraction pure, notes rondes de cacao et fruits secs</p>
+                  <span class="mooncafe-item-name">Matcha Pure</span>
+                  <span class="mooncafe-dots"></span>
+                  <span class="mooncafe-item-price">7,00</span>
                 </div>
                 <div class="mooncafe-item">
-                  <div class="mooncafe-item-top">
-                    <span class="mooncafe-item-name" data-i18n="cafe_item_flat_white">Flat White / Cappuccino</span>
-                    <span class="mooncafe-item-price">CHF 5.60</span>
-                  </div>
-                  <p class="mooncafe-item-desc" data-i18n="cafe_item_flat_white_desc">Micro-mousse soyeuse et équilibre parfait café-lait</p>
+                  <span class="mooncafe-item-name">Matcha Latte</span>
+                  <span class="mooncafe-dots"></span>
+                  <span class="mooncafe-item-price">7,00</span>
                 </div>
                 <div class="mooncafe-item">
-                  <div class="mooncafe-item-top">
-                    <span class="mooncafe-item-name" data-i18n="cafe_item_iced_latte">Café Latte / Iced Latte</span>
-                    <span class="mooncafe-item-price">CHF 5.90</span>
-                  </div>
-                  <p class="mooncafe-item-desc" data-i18n="cafe_item_iced_latte_desc">Doux, crémeux et revigorant sur glace ou velouté chaud</p>
+                  <span class="mooncafe-item-name">Matcha Vanilla</span>
+                  <span class="mooncafe-dots"></span>
+                  <span class="mooncafe-item-price">7,50</span>
                 </div>
                 <div class="mooncafe-item">
-                  <div class="mooncafe-item-top">
-                    <span class="mooncafe-item-name" data-i18n="cafe_item_cold_brew">Cold Brew Maison</span>
-                    <span class="mooncafe-item-price">CHF 5.50</span>
-                  </div>
-                  <p class="mooncafe-item-desc" data-i18n="cafe_item_cold_brew_desc">Infusion lente à froid de 16h, rondeur aromatique et fraîcheur</p>
+                  <span class="mooncafe-item-name">Matcha Caramel</span>
+                  <span class="mooncafe-dots"></span>
+                  <span class="mooncafe-item-price">7,50</span>
                 </div>
+                <div class="mooncafe-item">
+                  <span class="mooncafe-item-name">Matcha Coconut</span>
+                  <span class="mooncafe-dots"></span>
+                  <span class="mooncafe-item-price">8,00</span>
+                </div>
+                <div class="mooncafe-item">
+                  <span class="mooncafe-item-name">Matcha Mango</span>
+                  <span class="mooncafe-dots"></span>
+                  <span class="mooncafe-item-price">8,00</span>
+                </div>
+              </div>
+
+              <div class="mooncafe-options-box">
+                <div class="mooncafe-option-row">
+                  <span data-i18n="cafe_opt_supp">SUPPLÉMENT : 0,5</span>
+                  <span class="mooncafe-option-price">+ 0,50</span>
+                </div>
+                <div class="mooncafe-option-sub" data-i18n="cafe_opt_milk">AU CHOIX : LAIT DE VACHE OU VÉGÉTAL</div>
               </div>
             </div>
           </div>
 
           <div class="mooncafe-menu-footer">
-            <span data-i18n="cafe_menu_note">💡 Tarifs et créations de saison disponibles sur place. Possibilité de consommer sur place ou à emporter.</span>
+            <span data-i18n="cafe_menu_note">☕ & 🍵 Préparé avec passion · Sur place ou à emporter · Galeries Benjamin-Constant 1, Lausanne</span>
           </div>
         </div>
       </div>
@@ -1948,7 +1992,7 @@
     </svg>
   </button>
 
-  <script src="translations.js?v=12"></script>
+  <script src="translations.js?v=13"></script>
   <script src="script.js?v=37"></script>
 </body>
 </html>

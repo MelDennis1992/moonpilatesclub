@@ -3357,14 +3357,25 @@ ul { list-style: none; }
   padding-bottom: 16px;
   margin-bottom: 24px;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 12px;
+}
+
+.mooncafe-menu-sub {
+  display: block;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin-bottom: 3px;
 }
 
 .mooncafe-menu-title {
   font-family: var(--font-serif);
-  font-size: 1.6rem;
+  font-size: 1.65rem;
   color: var(--brown-text);
   margin: 0;
+  line-height: 1.1;
 }
 
 .mooncafe-discount-pill {
@@ -3373,76 +3384,113 @@ ul { list-style: none; }
   gap: 6px;
   background: rgba(196, 112, 82, 0.12);
   color: var(--terracotta);
-  padding: 6px 14px;
+  padding: 7px 16px;
   border-radius: 30px;
-  font-size: 0.78rem;
-  font-weight: 600;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
 }
 
 .mooncafe-menu-cols {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 28px;
+  gap: 36px;
 }
 
-.mooncafe-category-title {
+.mooncafe-category-header {
   display: flex;
   align-items: center;
   gap: 8px;
+  margin-bottom: 14px;
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
   color: var(--terracotta);
-  margin-bottom: 16px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-size: 0.85rem;
+  border-bottom: 1.5px solid rgba(196, 112, 82, 0.18);
+  padding-bottom: 8px;
+}
+
+.mooncafe-subcat-badge {
+  display: inline-block;
+  font-size: 0.72rem;
   font-weight: 700;
+  letter-spacing: 0.14em;
+  color: rgba(58, 40, 32, 0.55);
+  margin-bottom: 10px;
+  text-transform: uppercase;
 }
 
 .mooncafe-item-list {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 10px;
 }
 
 .mooncafe-item {
   display: flex;
-  flex-direction: column;
-  gap: 3px;
-  padding-bottom: 10px;
-  border-bottom: 1px dashed rgba(196, 112, 82, 0.12);
-}
-
-.mooncafe-item:last-child {
-  border-bottom: none;
-  padding-bottom: 0;
-}
-
-.mooncafe-item-top {
-  display: flex;
-  justify-content: space-between;
   align-items: baseline;
-  gap: 12px;
+  gap: 8px;
+  padding: 4px 0;
+  font-size: 0.95rem;
 }
 
 .mooncafe-item-name {
-  font-weight: 600;
-  font-size: 0.95rem;
+  font-weight: 500;
   color: var(--brown-text);
+  white-space: nowrap;
+}
+
+.mooncafe-dots {
+  flex: 1;
+  border-bottom: 1.5px dotted rgba(74, 53, 37, 0.3);
+  margin-bottom: 3px;
+  min-width: 15px;
 }
 
 .mooncafe-item-price {
   font-family: var(--font-serif);
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   color: var(--terracotta);
   white-space: nowrap;
 }
 
-.mooncafe-item-desc {
-  font-size: 0.78rem;
+.mooncafe-options-box {
+  margin-top: 24px;
+  background: rgba(196, 112, 82, 0.07);
+  border: 1px dashed rgba(196, 112, 82, 0.35);
+  border-radius: 14px;
+  padding: 14px 18px;
+}
+
+.mooncafe-option-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.88rem;
+  font-weight: 700;
   color: var(--brown-text);
-  opacity: 0.7;
-  line-height: 1.4;
-  margin: 0;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.mooncafe-option-price {
+  color: var(--terracotta);
+  font-weight: 700;
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+}
+
+.mooncafe-option-sub {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--brown-text);
+  opacity: 0.85;
+  margin-top: 6px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 .mooncafe-menu-footer {
