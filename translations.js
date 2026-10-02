@@ -345,14 +345,15 @@ const translations = {
     // Access
     "access_title": "Accès au studio",
     "access_sub": "Galeries Benjamin-Constant 1, 6ème étage · 1003 Lausanne",
+    "access_weekend_notice": "ℹ️ <strong>Accès le week-end :</strong> l'entrée par la Galerie est fermée. L’entrée se fait par l'entrée du rez-supérieur, en face du restaurant Luigia.",
     "acc_m2_title": "Métro M2",
     "acc_m2_desc": "Arrêt <em>Bessières</em> (à 2 min à pied)",
     "acc_bus_title": "Lignes de Bus",
     "acc_bus_desc": "Arrêts <em>Benjamin-Constant</em> (13 & 16) ou <em>St-François</em>",
     "acc_park_title": "Parking",
-    "acc_park_desc": "Hôtel de la Paix (ext./souterrain) ou rue (3 CHF/h)",
-    "acc_mark_title": "Repère",
-    "acc_mark_desc": "Juste en face du restaurant <strong>Luigia&nbsp;!</strong>",
+    "acc_park_desc": "Hôtel de la Paix (souterrain) ou rue (3 CHF/h)",
+    "acc_mark_title": "Repère & Accès",
+    "acc_mark_desc": "En face du restaurant <strong>Luigia&nbsp;!</strong> (Le week-end, entrée par le rez-supérieur en face de Luigia)",
 
     // Footer
     "footer_tagline": "Studio lausannois · 6 disciplines<br/>Lagree · Reformer · Mat · Sculpt · Barre · Yoga",
@@ -701,14 +702,15 @@ const translations = {
     // Access
     "access_title": "Studio Access",
     "access_sub": "Galeries Benjamin-Constant 1, 6th Floor · 1003 Lausanne",
+    "access_weekend_notice": "ℹ️ <strong>Weekend access:</strong> The Gallery entrance is closed on weekends. Access is via the upper ground floor (rez-supérieur) entrance, directly opposite Luigia restaurant.",
     "acc_m2_title": "M2 Metro",
     "acc_m2_desc": "Stop <em>Bessières</em> (2 min walk)",
     "acc_bus_title": "Bus Lines",
     "acc_bus_desc": "Stops <em>Benjamin-Constant</em> (13 & 16) or <em>St-François</em>",
     "acc_park_title": "Parking",
-    "acc_park_desc": "Hôtel de la Paix (garage/outdoor) or street (3 CHF/h)",
-    "acc_mark_title": "Landmark",
-    "acc_mark_desc": "Right opposite <strong>Luigia Restaurant!</strong>",
+    "acc_park_desc": "Hôtel de la Paix (underground) or street (3 CHF/h)",
+    "acc_mark_title": "Landmark & Access",
+    "acc_mark_desc": "Opposite <strong>Luigia Restaurant!</strong> (On weekends, entrance via upper ground floor opposite Luigia)",
 
     // Footer
     "footer_tagline": "Lausanne boutique studio · 6 disciplines<br/>Lagree · Reformer · Mat · Sculpt · Barre · Yoga",
