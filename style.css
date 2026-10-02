@@ -3285,26 +3285,44 @@ ul { list-style: none; }
   margin: 0;
 }
 
-/* Visuals & Flyer / Photo Grid */
-.mooncafe-mobile-tabs {
-  display: none;
+/* Distinct Visual Blocks */
+.mooncafe-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.mooncafe-block-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.mooncafe-block-icon {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.mooncafe-block-title {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  color: var(--brown-text);
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 0.04em;
 }
 
 .mooncafe-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 36px;
-  align-items: stretch;
+  align-items: start;
   max-width: 1060px;
   margin: 0 auto 50px;
-}
-
-.mooncafe-flyer-col,
-.mooncafe-photo-col {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  width: 100%;
 }
 
 .mooncafe-flyer-card,
@@ -3571,78 +3589,11 @@ ul { list-style: none; }
     padding: 20px 16px;
   }
 
-  .mooncafe-mobile-tabs {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    margin: 0 auto 20px;
-    background: rgba(196, 112, 82, 0.08);
-    padding: 5px;
-    border-radius: 40px;
-    max-width: 380px;
-    border: 1px solid rgba(196, 112, 82, 0.16);
-  }
-
-  .mooncafe-tab-btn {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding: 10px 14px;
-    border: none;
-    border-radius: 30px;
-    background: transparent;
-    color: var(--brown-text);
-    font-family: var(--font-sans);
-    font-size: 0.88rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.25s ease;
-    white-space: nowrap;
-  }
-
-  .mooncafe-tab-btn .tab-count {
-    background: rgba(196, 112, 82, 0.18);
-    color: var(--terracotta);
-    font-size: 0.72rem;
-    padding: 2px 7px;
-    border-radius: 12px;
-    font-weight: 700;
-  }
-
-  .mooncafe-tab-btn.active {
-    background: #FFFFFF;
-    color: var(--terracotta);
-    box-shadow: 0 4px 15px rgba(58, 40, 32, 0.08);
-  }
-
-  .mooncafe-tab-btn.active .tab-count {
-    background: var(--terracotta);
-    color: #FFFFFF;
-  }
-
   .mooncafe-grid {
     grid-template-columns: 1fr;
+    gap: 44px;
     max-width: 480px;
     margin: 0 auto 36px;
-  }
-
-  /* When flyer view is active on mobile */
-  .mooncafe-grid[data-active-view="flyer"] #mooncafe-photo-col {
-    display: none !important;
-  }
-  .mooncafe-grid[data-active-view="flyer"] #mooncafe-flyer-col {
-    display: flex !important;
-  }
-
-  /* When photos view is active on mobile */
-  .mooncafe-grid[data-active-view="photos"] #mooncafe-flyer-col {
-    display: none !important;
-  }
-  .mooncafe-grid[data-active-view="photos"] #mooncafe-photo-col {
-    display: flex !important;
   }
 
   .mooncafe-flyer-card,

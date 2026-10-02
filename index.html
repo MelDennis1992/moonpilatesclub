@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=40" />
+  <link rel="stylesheet" href="style.css?v=41" />
 
   <!-- Bsport Widget SDK -->
   <script id="insert-bsport-widget-cdn">!function (b, s, p, o, r, t) { typeof window.BsportWidget === "undefined" && !document.getElementById("bsport-widget-cdn") && !function () { m = b.createElement(s), m.id = "bsport-widget-cdn", m.src = p, b.getElementsByTagName("head")[0].appendChild(m) }() }(document, "script", "https://cdn.bsport.io/scripts/widget.js")</script>
@@ -1282,33 +1282,28 @@
         </div>
       </div>
 
-      <!-- Mobile View Switcher (Visible only on mobile/tablet) -->
-      <div class="mooncafe-mobile-tabs reveal" id="mooncafe-mobile-tabs">
-        <button class="mooncafe-tab-btn active" data-view="flyer" type="button" id="mooncafe-tab-flyer">
-          <span class="tab-icon">📋</span>
-          <span data-i18n="cafe_tab_flyer">Menu Flyer</span>
-        </button>
-        <button class="mooncafe-tab-btn" data-view="photos" type="button" id="mooncafe-tab-photos">
-          <span class="tab-icon">📸</span>
-          <span data-i18n="cafe_tab_photos">Galerie Photos</span>
-          <span class="tab-count">4</span>
-        </button>
-      </div>
-
-      <!-- Main Visuals & Menu Split -->
-      <div class="mooncafe-grid" id="mooncafe-grid" data-active-view="flyer">
-        <!-- Official Flyer Showcase (Gauche) -->
-        <div class="mooncafe-flyer-col reveal" id="mooncafe-flyer-col">
+      <!-- Main Visuals: Menu & Photo Gallery Separated -->
+      <div class="mooncafe-grid" id="mooncafe-grid">
+        <!-- Block 1: Official Flyer (Menu & Tarifs) -->
+        <div class="mooncafe-block mooncafe-flyer-block reveal" id="mooncafe-flyer-block">
+          <div class="mooncafe-block-header">
+            <span class="mooncafe-block-icon">📋</span>
+            <h3 class="mooncafe-block-title" data-i18n="cafe_block_menu_title">Menu & Tarifs</h3>
+          </div>
           <div class="mooncafe-flyer-card" id="mooncafe-flyer-card">
-            <img src="flyer-moon-cafe.png?v=2" alt="Flyer Menu Moon Café Lausanne - Bar à Café & Matcha" class="mooncafe-flyer-img" loading="lazy" />
+            <img src="flyer-moon-cafe.png?v=3" alt="Flyer Menu Moon Café Lausanne - Bar à Café & Matcha" class="mooncafe-flyer-img" loading="lazy" />
             <div class="mooncafe-flyer-overlay">
-              <a href="flyer-moon-cafe.png?v=2" target="_blank" class="mooncafe-zoom-btn" data-i18n="cafe_view_flyer">🔍 Agrandir le flyer</a>
+              <a href="flyer-moon-cafe.png?v=3" target="_blank" class="mooncafe-zoom-btn" data-i18n="cafe_view_flyer">🔍 Agrandir le flyer</a>
             </div>
           </div>
         </div>
 
-        <!-- Photos Carousel Showcase (Droite) -->
-        <div class="mooncafe-photo-col reveal" id="mooncafe-photo-col">
+        <!-- Block 2: Photos Carousel (Galerie & Ambiance) -->
+        <div class="mooncafe-block mooncafe-photo-block reveal" id="mooncafe-photo-block">
+          <div class="mooncafe-block-header">
+            <span class="mooncafe-block-icon">📸</span>
+            <h3 class="mooncafe-block-title" data-i18n="cafe_block_gallery_title">Galerie & Ambiance</h3>
+          </div>
           <div class="mooncafe-carousel-card" id="mooncafe-carousel">
             <!-- Carousel Slides -->
             <div class="mooncafe-slides-wrapper" id="mooncafe-slides">
@@ -1934,7 +1929,7 @@
     </svg>
   </button>
 
-  <script src="translations.js?v=16"></script>
-  <script src="script.js?v=38"></script>
+  <script src="translations.js?v=17"></script>
+  <script src="script.js?v=39"></script>
 </body>
 </html>

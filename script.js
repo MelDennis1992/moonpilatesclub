@@ -1196,39 +1196,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // ─── MOON CAFÉ: CAROUSEL & MOBILE TABS ───
-  const cafeGrid = document.getElementById('mooncafe-grid');
-  const cafeTabs = document.querySelectorAll('.mooncafe-tab-btn');
+  // ─── MOON CAFÉ: PHOTO CAROUSEL ───
   const cafeSlides = document.querySelectorAll('#mooncafe-slides .mooncafe-slide');
   const cafeDots = document.querySelectorAll('#mooncafe-dots .mooncafe-dot');
   const cafeCounter = document.getElementById('mooncafe-counter');
   const cafePrevBtn = document.getElementById('mooncafe-prev-btn');
   const cafeNextBtn = document.getElementById('mooncafe-next-btn');
   const cafeCarousel = document.getElementById('mooncafe-carousel');
-  const cafeFlyerCard = document.getElementById('mooncafe-flyer-card');
 
   let currentCafeSlide = 0;
   const totalCafeSlides = cafeSlides.length;
   let cafeAutoplayTimer = null;
-
-  function setCafeView(view) {
-    if (!cafeGrid) return;
-    cafeGrid.setAttribute('data-active-view', view);
-    cafeTabs.forEach(tab => {
-      if (tab.getAttribute('data-view') === view) {
-        tab.classList.add('active');
-      } else {
-        tab.classList.remove('active');
-      }
-    });
-  }
-
-  cafeTabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      const targetView = tab.getAttribute('data-view');
-      if (targetView) setCafeView(targetView);
-    });
-  });
 
   function showCafeSlide(index) {
     if (totalCafeSlides === 0) return;
@@ -1337,46 +1315,13 @@ document.addEventListener('DOMContentLoaded', () => {
             nextCafeSlide();
           } else {
             // swipe right -> prev slide
-            if (currentCafeSlide === 0 && window.innerWidth <= 900) {
-              // On first slide, swipe right switches to flyer view on mobile
-              setCafeView('flyer');
-            } else {
-              prevCafeSlide();
-            }
+            prevCafeSlide();
           }
         }
       }
     }, { passive: true });
 
     startCafeAutoplay();
-  }
-
-  // Touch Swipe on Flyer Card for Mobile
-  if (cafeFlyerCard) {
-    let flyerTouchStartX = 0;
-    let flyerTouchStartY = 0;
-
-    cafeFlyerCard.addEventListener('touchstart', (e) => {
-      if (e.target.closest('a, button')) return;
-      if (e.changedTouches && e.changedTouches.length > 0) {
-        flyerTouchStartX = e.changedTouches[0].screenX;
-        flyerTouchStartY = e.changedTouches[0].screenY;
-      }
-    }, { passive: true });
-
-    cafeFlyerCard.addEventListener('touchend', (e) => {
-      if (e.target.closest('a, button')) return;
-      if (e.changedTouches && e.changedTouches.length > 0) {
-        const diffX = e.changedTouches[0].screenX - flyerTouchStartX;
-        const diffY = e.changedTouches[0].screenY - flyerTouchStartY;
-        if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 35) {
-          if (diffX < 0 && window.innerWidth <= 900) {
-            // swipe left on flyer -> switch to photos
-            setCafeView('photos');
-          }
-        }
-      }
-    }, { passive: true });
   }
 
 });
