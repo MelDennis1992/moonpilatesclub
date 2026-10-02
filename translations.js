@@ -297,6 +297,7 @@ const translations = {
     "cafe_badge_ambiance": "🤍 Espace Détente & Convivialité",
     "cafe_banner_title": "Ouvert à tous · Avec ou sans séance",
     "cafe_banner_desc": "Galeries Benjamin-Constant 1, Lausanne · Espace lounge chaleureux.",
+    "cafe_view_flyer": "🔍 Agrandir le flyer",
     "cafe_banner_btn": "Voir les horaires & accès →",
 
     // Planning
@@ -646,6 +647,7 @@ const translations = {
     "cafe_badge_ambiance": "🤍 Relaxing & Cozy Lounge",
     "cafe_banner_title": "Open to everyone · With or without a workout",
     "cafe_banner_desc": "Galeries Benjamin-Constant 1, Lausanne · Cozy lounge space.",
+    "cafe_view_flyer": "🔍 View full flyer",
     "cafe_banner_btn": "Opening hours & access →",
 
     // Planning
