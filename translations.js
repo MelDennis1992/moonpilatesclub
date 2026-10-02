@@ -352,8 +352,6 @@ const translations = {
     "acc_bus_desc": "Arrêts <em>Benjamin-Constant</em> (13 & 16) ou <em>St-François</em>",
     "acc_park_title": "Parking",
     "acc_park_desc": "Hôtel de la Paix (souterrain) ou rue (3 CHF/h)",
-    "acc_mark_title": "Repère & Accès",
-    "acc_mark_desc": "En face du restaurant <strong>Luigia&nbsp;!</strong> (Le week-end, entrée par le rez-supérieur en face de Luigia)",
 
     // Footer
     "footer_tagline": "Studio lausannois · 6 disciplines<br/>Lagree · Reformer · Mat · Sculpt · Barre · Yoga",
@@ -709,8 +707,6 @@ const translations = {
     "acc_bus_desc": "Stops <em>Benjamin-Constant</em> (13 & 16) or <em>St-François</em>",
     "acc_park_title": "Parking",
     "acc_park_desc": "Hôtel de la Paix (underground) or street (3 CHF/h)",
-    "acc_mark_title": "Landmark & Access",
-    "acc_mark_desc": "Opposite <strong>Luigia Restaurant!</strong> (On weekends, entrance via upper ground floor opposite Luigia)",
 
     // Footer
     "footer_tagline": "Lausanne boutique studio · 6 disciplines<br/>Lagree · Reformer · Mat · Sculpt · Barre · Yoga",
