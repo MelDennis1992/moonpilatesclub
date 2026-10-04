@@ -1324,38 +1324,56 @@ document.addEventListener('DOMContentLoaded', () => {
     startCafeAutoplay();
   }
 
-  // ─── FLOATING BANNER INAUGURATION (17.10.26) ───
-  const fb = document.getElementById('floating-banner');
-  const fbClose = document.getElementById('fb-close');
-  const fbRsvp = document.getElementById('fb-rsvp-btn');
+  // ─── MODAL POPUP INAUGURATION (17.10.26) ───
+  const popup = document.getElementById('inauguration-popup');
+  const popClose = document.getElementById('pop-close-btn');
+  const popDismiss = document.getElementById('pop-dismiss-btn');
+  const popRsvp = document.getElementById('pop-rsvp-btn');
   const announcementBar = document.querySelector('.announcement-bar');
 
-  function showFloatingBanner() {
-    if (fb) fb.classList.add('show');
+  function openPopup() {
+    if (!popup) return;
+    popup.classList.add('active');
+    document.body.classList.add('popup-open');
   }
 
-  function hideFloatingBanner() {
-    if (fb) {
-      fb.classList.remove('show');
-      try {
-        sessionStorage.setItem('moon_fb_closed', 'true');
-      } catch (e) {}
+  function closePopup() {
+    if (!popup) return;
+    popup.classList.remove('active');
+    document.body.classList.remove('popup-open');
+    try {
+      sessionStorage.setItem('moon_popup_closed', 'true');
+    } catch (e) {}
+  }
+
+  if (popClose) popClose.addEventListener('click', closePopup);
+  if (popDismiss) popDismiss.addEventListener('click', closePopup);
+
+  // Click on dark backdrop outside dialog to close
+  if (popup) {
+    popup.addEventListener('click', (e) => {
+      if (e.target === popup) closePopup();
+    });
+  }
+
+  // Escape key closes popup
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && popup && popup.classList.contains('active')) {
+      closePopup();
     }
-  }
-
-  if (fbClose) fbClose.addEventListener('click', hideFloatingBanner);
+  });
 
   if (announcementBar) {
     announcementBar.style.cursor = 'pointer';
     announcementBar.setAttribute('title', 'Cliquez pour voir les détails de l\'inauguration');
     announcementBar.addEventListener('click', () => {
-      showFloatingBanner();
+      openPopup();
     });
   }
 
-  if (fbRsvp) {
-    fbRsvp.addEventListener('click', () => {
-      hideFloatingBanner();
+  if (popRsvp) {
+    popRsvp.addEventListener('click', () => {
+      closePopup();
       const contactSection = document.getElementById('contact');
       if (contactSection) {
         contactSection.scrollIntoView({ behavior: 'smooth' });
@@ -1371,16 +1389,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Automatically show after 2 seconds
+  // Show after 1.5 seconds if not closed in this session (or force with ?popup=true)
+  const isForcePopup = window.location.search.includes('popup=true') || window.location.hash === '#inauguration';
   try {
-    if (!sessionStorage.getItem('moon_fb_closed')) {
-      setTimeout(showFloatingBanner, 2000);
+    if (isForcePopup || !sessionStorage.getItem('moon_popup_closed')) {
+      setTimeout(openPopup, 1400);
     }
   } catch (e) {
-    setTimeout(showFloatingBanner, 2000);
+    setTimeout(openPopup, 1400);
   }
 
-  window.showFloatingBanner = showFloatingBanner;
+  window.openInaugurationPopup = openPopup;
 
 });
 
