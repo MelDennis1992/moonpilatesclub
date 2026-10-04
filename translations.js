@@ -356,7 +356,25 @@ const translations = {
     // Footer
     "footer_tagline": "Studio lausannois · 6 disciplines<br/>Lagree · Reformer · Mat · Sculpt · Barre · Yoga",
     "footer_rights": "© 2026 Moon Pilates Club · Lausanne · Tous droits réservés ·",
-    "footer_cgv": "CGV"
+    "footer_cgv": "CGV",
+
+    // Inauguration Popup
+    "popup_badge": "✨ SAVE THE DATE ✨",
+    "popup_title": "Inauguration du <em>Studio</em>",
+    "popup_date_title": "Samedi 17 Octobre 2026",
+    "popup_date_sub": "Dès 13h00 · Galeries Benjamin-Constant 1, Lausanne",
+    "popup_intro": "Rejoignez-nous pour célébrer l'ouverture officielle de votre nouveau sanctuaire bien-être au cœur de Lausanne ! Au programme de cette journée festive :",
+    "popup_p1_title": "-50% sur tout le Moon Café",
+    "popup_p1_sub": "Matcha latte, café de spécialité & boissons",
+    "popup_p2_title": "Petite coupe de champagne offerte",
+    "popup_p2_sub": "Pour trinquer tous ensemble 🥂",
+    "popup_p3_title": "DJ Live & Buffet gourmand",
+    "popup_p3_sub": "Ambiance musicale festive et douceurs saines 🎶",
+    "popup_p4_title": "Goodies & Cadeaux à gagner",
+    "popup_p4_sub": "Surprises exclusives à remporter et à offrir 🎁",
+    "popup_highlight": "👥 <strong>Entrée libre · Venez accompagné(e)s !</strong> Amis, collègues et famille sont les bienvenus.",
+    "popup_btn_rsvp": "✨ Je confirme ma présence",
+    "popup_btn_dismiss": "Découvrir le site"
   },
 
   en: {
@@ -711,7 +729,25 @@ const translations = {
     // Footer
     "footer_tagline": "Lausanne boutique studio · 6 disciplines<br/>Lagree · Reformer · Mat · Sculpt · Barre · Yoga",
     "footer_rights": "© 2026 Moon Pilates Club · Lausanne · All rights reserved ·",
-    "footer_cgv": "Terms & Conditions"
+    "footer_cgv": "Terms & Conditions",
+
+    // Inauguration Popup
+    "popup_badge": "✨ SAVE THE DATE ✨",
+    "popup_title": "Studio Grand <em>Opening</em>",
+    "popup_date_title": "Saturday, October 17, 2026",
+    "popup_date_sub": "From 1:00 PM · Galeries Benjamin-Constant 1, Lausanne",
+    "popup_intro": "Join us to celebrate the official opening of your new movement and wellness sanctuary in the heart of Lausanne! On the agenda for this festive day:",
+    "popup_p1_title": "-50% off all Moon Café",
+    "popup_p1_sub": "Matcha lattes, specialty coffees & drinks",
+    "popup_p2_title": "Complimentary glass of champagne",
+    "popup_p2_sub": "To celebrate together 🥂",
+    "popup_p3_title": "Live DJ & Gourmet buffet",
+    "popup_p3_sub": "Festive music vibe & healthy treats 🎶",
+    "popup_p4_title": "Goodies & Giveaways to win",
+    "popup_p4_sub": "Exclusive gifts to win and share 🎁",
+    "popup_highlight": "👥 <strong>Free admission · Bring your friends!</strong> Friends, family, and colleagues welcome.",
+    "popup_btn_rsvp": "✨ RSVP / Count me in",
+    "popup_btn_dismiss": "Explore the site"
   }
 };
 
