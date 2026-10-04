@@ -175,8 +175,8 @@ const translations = {
     "btn_choose_fullmoon": "Choisir Full Moon",
 
     "annual_name": "Annuel",
-    "annual_tagline": "Flexibilité maximale",
-    "annual_valid": "Valide 1 an · Paiement unique",
+    "annual_tagline": "Payable en 1 fois · Presque 1 mois offert",
+    "annual_valid": "Valide 1 an · Payable en une fois",
     "btn_choose_annual": "Choisir Annuel",
 
     // Cours Privés
@@ -530,8 +530,8 @@ const translations = {
     "btn_choose_fullmoon": "Choose Full Moon",
 
     "annual_name": "Annual Pass",
-    "annual_tagline": "Maximum flexibility and freedom",
-    "annual_valid": "Valid 1 year · Single payment",
+    "annual_tagline": "Payable in 1 installment · Nearly 1 month free",
+    "annual_valid": "Valid 1 year · Payable in one installment",
     "btn_choose_annual": "Choose Annual Pass",
 
     // Cours Privés
