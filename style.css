@@ -2324,11 +2324,20 @@ ul { list-style: none; }
   overflow: hidden;
   transition: max-height 0.4s ease, padding 0.4s ease;
 }
-.faq-answer.open { max-height: 300px; padding-bottom: 20px; }
+.faq-answer.open { max-height: 500px; padding-bottom: 20px; }
 .faq-answer p {
   font-size: 0.9rem;
   color: rgba(58, 40, 32, 0.7);
   line-height: 1.8;
+}
+.faq-answer a {
+  color: var(--terracotta);
+  text-decoration: underline;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+}
+.faq-answer a:hover {
+  opacity: 0.8;
 }
 
 /* ===========================
