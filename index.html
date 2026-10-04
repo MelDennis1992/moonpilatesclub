@@ -1928,7 +1928,184 @@
     </svg>
   </button>
 
+  <!-- FLOATING BANNER INAUGURATION (17.10.26) -->
+  <style id="floating-banner-style">
+    .floating-banner {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      max-width: 380px;
+      width: calc(100% - 32px);
+      background: #FFFFFF;
+      background: linear-gradient(155deg, #FFFFFF 0%, #FAF6F1 100%);
+      border: 1.5px solid rgba(199, 126, 107, 0.4);
+      border-radius: 20px;
+      padding: 18px 20px 16px;
+      box-shadow: 0 16px 40px -8px rgba(44, 24, 16, 0.22), 0 0 0 1px rgba(255, 255, 255, 0.9) inset;
+      z-index: 9995;
+      transform: translateY(140%);
+      opacity: 0;
+      pointer-events: none;
+      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+      font-family: 'Inter', -apple-system, sans-serif;
+    }
+    .floating-banner.show {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .floating-banner-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 1px solid rgba(58, 40, 32, 0.12);
+      background: rgba(255, 255, 255, 0.9);
+      color: #3A2820;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      padding: 0;
+    }
+    .floating-banner-close:hover {
+      background: #C77E6B;
+      color: #FFFFFF;
+      border-color: #C77E6B;
+      transform: rotate(90deg);
+    }
+    .fb-badge {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, rgba(199, 126, 107, 0.15), rgba(212, 163, 115, 0.22));
+      border: 1px solid rgba(199, 126, 107, 0.35);
+      color: #9C4B37;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .fb-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.45rem;
+      font-weight: 600;
+      color: #2C1810;
+      line-height: 1.15;
+      margin: 0 0 4px;
+    }
+    .fb-title em {
+      font-style: italic;
+      color: #C77E6B;
+      font-weight: 400;
+    }
+    .fb-subtitle {
+      font-size: 0.78rem;
+      color: rgba(58, 40, 32, 0.85);
+      margin: 0 0 10px;
+      font-weight: 500;
+      line-height: 1.35;
+    }
+    .fb-perks {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+      margin-bottom: 10px;
+    }
+    .fb-perk-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.85);
+      border: 1px solid rgba(58, 40, 32, 0.08);
+      border-radius: 8px;
+      padding: 6px 8px;
+      font-size: 0.74rem;
+      color: #2C1810;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+    .fb-perk-icon {
+      font-size: 0.95rem;
+      flex-shrink: 0;
+    }
+    .fb-note {
+      font-size: 0.72rem;
+      color: rgba(58, 40, 32, 0.8);
+      margin-bottom: 10px;
+      line-height: 1.35;
+      background: rgba(199, 126, 107, 0.08);
+      border-left: 2px solid #C77E6B;
+      padding: 5px 8px;
+      border-radius: 4px;
+    }
+    .fb-cta {
+      display: block;
+      width: 100%;
+      padding: 10px 16px;
+      font-size: 0.86rem;
+      font-weight: 600;
+      text-align: center;
+      border-radius: 50px;
+      background: #C77E6B;
+      color: #FFFFFF;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 6px 18px rgba(199, 126, 107, 0.35);
+      transition: all 0.25s ease;
+      letter-spacing: 0.01em;
+      text-decoration: none;
+    }
+    .fb-cta:hover {
+      background: #B66D5B;
+      transform: translateY(-1px);
+      box-shadow: 0 8px 22px rgba(199, 126, 107, 0.45);
+    }
+    @media (max-width: 480px) {
+      .floating-banner {
+        bottom: 12px;
+        right: 12px;
+        left: 12px;
+        width: auto;
+        max-width: none;
+        padding: 16px 16px 14px;
+        border-radius: 16px;
+      }
+      .fb-title {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+
+  <div class="floating-banner" id="floating-banner" role="complementary" aria-label="Invitation Inauguration">
+    <button class="floating-banner-close" id="fb-close" aria-label="Fermer l'invitation">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    <span class="fb-badge">✨ SAVE THE DATE ✨</span>
+    <h3 class="fb-title">Inauguration du <em>Studio</em></h3>
+    <p class="fb-subtitle">🗓️ <strong>Samedi 17 Octobre 2026</strong> dès 13h · Galeries Benjamin-Constant 1</p>
+    <div class="fb-perks">
+      <div class="fb-perk-item"><span class="fb-perk-icon">☕</span><span><strong>-50%</strong> Moon Café</span></div>
+      <div class="fb-perk-item"><span class="fb-perk-icon">🥂</span><span>Champagne offert</span></div>
+      <div class="fb-perk-item"><span class="fb-perk-icon">🎧</span><span>DJ & Buffet</span></div>
+      <div class="fb-perk-item"><span class="fb-perk-icon">🎁</span><span>Goodies à gagner</span></div>
+    </div>
+    <div class="fb-note">
+      👥 <strong>Entrée libre · Venez accompagné(e)s !</strong> Amis & famille bienvenus.
+    </div>
+    <button class="fb-cta" id="fb-rsvp-btn">
+      ✨ Je confirme ma présence
+    </button>
+  </div>
+
   <script src="translations.js?v=25"></script>
-  <script src="script.js?v=42"></script>
+  <script src="script.js?v=43"></script>
 </body>
 </html>

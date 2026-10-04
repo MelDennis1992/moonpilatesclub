@@ -1324,5 +1324,63 @@ document.addEventListener('DOMContentLoaded', () => {
     startCafeAutoplay();
   }
 
+  // ─── FLOATING BANNER INAUGURATION (17.10.26) ───
+  const fb = document.getElementById('floating-banner');
+  const fbClose = document.getElementById('fb-close');
+  const fbRsvp = document.getElementById('fb-rsvp-btn');
+  const announcementBar = document.querySelector('.announcement-bar');
+
+  function showFloatingBanner() {
+    if (fb) fb.classList.add('show');
+  }
+
+  function hideFloatingBanner() {
+    if (fb) {
+      fb.classList.remove('show');
+      try {
+        sessionStorage.setItem('moon_fb_closed', 'true');
+      } catch (e) {}
+    }
+  }
+
+  if (fbClose) fbClose.addEventListener('click', hideFloatingBanner);
+
+  if (announcementBar) {
+    announcementBar.style.cursor = 'pointer';
+    announcementBar.setAttribute('title', 'Cliquez pour voir les détails de l\'inauguration');
+    announcementBar.addEventListener('click', () => {
+      showFloatingBanner();
+    });
+  }
+
+  if (fbRsvp) {
+    fbRsvp.addEventListener('click', () => {
+      hideFloatingBanner();
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+        const messageField = document.getElementById('contact-message');
+        const nameField = document.getElementById('contact-name');
+        if (messageField) {
+          messageField.value = "Bonjour l'équipe Moon Pilates, je souhaite participer à l'inauguration du studio le samedi 17.10.26 dès 13h ! (Nombre de personnes : 1)";
+        }
+        setTimeout(() => {
+          if (nameField) nameField.focus();
+        }, 700);
+      }
+    });
+  }
+
+  // Automatically show after 2 seconds
+  try {
+    if (!sessionStorage.getItem('moon_fb_closed')) {
+      setTimeout(showFloatingBanner, 2000);
+    }
+  } catch (e) {
+    setTimeout(showFloatingBanner, 2000);
+  }
+
+  window.showFloatingBanner = showFloatingBanner;
+
 });
 
