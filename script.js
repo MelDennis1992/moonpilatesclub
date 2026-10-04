@@ -1328,7 +1328,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const popup = document.getElementById('inauguration-popup');
   const popClose = document.getElementById('pop-close-btn');
   const popDismiss = document.getElementById('pop-dismiss-btn');
-  const popRsvp = document.getElementById('pop-rsvp-btn');
+  const popCloseLink = document.getElementById('pop-close-link');
   const announcementBar = document.querySelector('.announcement-bar');
 
   function openPopup() {
@@ -1348,6 +1348,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (popClose) popClose.addEventListener('click', closePopup);
   if (popDismiss) popDismiss.addEventListener('click', closePopup);
+  if (popCloseLink) popCloseLink.addEventListener('click', closePopup);
 
   // Click on dark backdrop outside dialog to close
   if (popup) {
@@ -1368,24 +1369,6 @@ document.addEventListener('DOMContentLoaded', () => {
     announcementBar.setAttribute('title', 'Cliquez pour voir les détails de l\'inauguration');
     announcementBar.addEventListener('click', () => {
       openPopup();
-    });
-  }
-
-  if (popRsvp) {
-    popRsvp.addEventListener('click', () => {
-      closePopup();
-      const contactSection = document.getElementById('contact');
-      if (contactSection) {
-        contactSection.scrollIntoView({ behavior: 'smooth' });
-        const messageField = document.getElementById('contact-message');
-        const nameField = document.getElementById('contact-name');
-        if (messageField) {
-          messageField.value = "Bonjour l'équipe Moon Pilates, je souhaite participer à l'inauguration du studio le samedi 17.10.26 dès 13h ! (Nombre de personnes : 1)";
-        }
-        setTimeout(() => {
-          if (nameField) nameField.focus();
-        }, 700);
-      }
     });
   }
 
