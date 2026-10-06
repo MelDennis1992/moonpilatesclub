@@ -2457,9 +2457,10 @@ ul { list-style: none; }
 .schedule-row {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
+  gap: 10px;
   font-size: 0.8rem;
-  padding: 3px 0;
+  padding: 4px 0;
   border-bottom: 1px dashed rgba(139, 94, 82, 0.08);
 }
 .schedule-row:last-child {
@@ -2468,10 +2469,16 @@ ul { list-style: none; }
 .schedule-row .day {
   font-weight: 600;
   color: var(--charcoal);
+  white-space: nowrap;
 }
 .schedule-row .hours {
   color: var(--brown-text);
   font-feature-settings: "tnum";
+  text-align: right;
+}
+.schedule-row.special .hours {
+  color: var(--terracotta);
+  font-weight: 500;
 }
 .schedule-row.closed .hours {
   color: var(--terracotta);
