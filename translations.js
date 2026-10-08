@@ -24,7 +24,7 @@ const translations = {
 
     // Hero
     "hero_title": "<em>Lagree</em><br/>& pilates",
-    "hero_sub": "Lagree · Reformer · Pilates Mat · Sculpt · Barre · Yoga<br/>Petits groupes de 6 personnes maximum",
+    "hero_sub": "Studio premium à Lausanne · Lagree, Reformer, Sculpt, Barre & Yoga<br/>Petits groupes (6 max) & coaching privé sur-mesure",
     "hero_btn_tarifs": "Découvrir les formules",
     "hero_btn_cours": "Nos cours →",
     "hero_scroll": "Défiler",
@@ -38,7 +38,7 @@ const translations = {
     // Concept / About
     "concept_label": "Notre concept",
     "concept_title": "Bienvenue chez<br/><em>Moon Club</em>",
-    "concept_p1": "Notre centre est un <strong>lieu dédié au mouvement, au bien-être et à la performance</strong>, vous proposant une approche globale et équilibrée à travers <strong>6 disciplines complémentaires</strong> : Lagree, Pilates Reformer, Pilates Mat, Sculpt, Barre et Yoga.",
+    "concept_p1": "Moon Pilates Club est un <strong>studio premium à Lausanne dédié au mouvement, au bien-être et au renforcement profond</strong>. Nous vous proposons une approche globale à travers <strong>6 disciplines complémentaires</strong> : Lagree, Pilates Reformer, Pilates Mat, Sculpt, Barre et Yoga, en petits groupes ou en <strong>cours privés</strong>.",
     "concept_p2": "Toutes nos disciplines sont <strong>à faible impact pour vos articulations</strong>. Elles allient renforcement profond, mobilité, posture et tonicité musculaire, pour sculpter et renforcer votre corps en toute sécurité.",
     "concept_p3": "Tous nos cours se déroulent en <strong>petits groupes de 6 personnes maximum</strong>, garantissant un encadrement d'exception et une attention sur-mesure.",
     "badge_groups": "Petits groupes",
@@ -182,7 +182,7 @@ const translations = {
     // Cours Privés
     "prives_label": "Sessions Privées",
     "prives_title": "Coaching <em>Privé</em>",
-    "prives_desc": "Un accompagnement 100 % sur mesure pour atteindre vos objectifs. Nos sessions privées de 50 minutes vous offrent un encadrement exclusif, adapté à votre niveau, votre condition physique et vos envies du moment.",
+    "prives_desc": "Des séances de coaching privé et cours particuliers premium à Lausanne, 100 % sur mesure pour progresser à votre rythme. Nos sessions privées de 50 minutes vous offrent un encadrement exclusif, adapté à votre niveau, votre condition physique et vos envies.",
     "prives_disc": "<strong>Discipline au choix :</strong> Lagree · Reformer · Mat Pilates · Sculpt · Barre · Hatha Yoga · Power Yoga 🌿",
     "badge_priv_custom": "Sur-mesure & Posture ciblée",
     "badge_priv_flex": "Créneaux Flexibles (Heures creuses)",
@@ -354,7 +354,7 @@ const translations = {
     "acc_park_desc": "Hôtel de la Paix (souterrain) ou rue (3 CHF/h)",
 
     // Footer
-    "footer_tagline": "Studio lausannois · 6 disciplines<br/>Lagree · Reformer · Mat · Sculpt · Barre · Yoga",
+    "footer_tagline": "Studio premium à Lausanne · Lagree, Pilates Reformer, Yoga, Sculpt & Barre<br/>Cours collectifs, coaching privé & bar à specialty coffee",
     "footer_rights": "© 2026 Moon Pilates Club · Lausanne · Tous droits réservés ·",
     "footer_cgv": "CGV"
   },
@@ -379,7 +379,7 @@ const translations = {
 
     // Hero
     "hero_title": "<em>Lagree</em><br/>& pilates",
-    "hero_sub": "Lagree · Reformer · Pilates Mat · Sculpt · Barre · Yoga<br/>Small groups of 6 people maximum",
+    "hero_sub": "Premium studio in Lausanne · Lagree, Reformer, Sculpt, Barre & Yoga<br/>Small groups of 6 max & bespoke private coaching",
     "hero_btn_tarifs": "Discover Pricing & Plans",
     "hero_btn_cours": "Our Classes →",
     "hero_scroll": "Scroll",
@@ -393,7 +393,7 @@ const translations = {
     // Concept / About
     "concept_label": "Our Concept",
     "concept_title": "Welcome to<br/><em>Moon Club</em>",
-    "concept_p1": "Our studio is a <strong>sanctuary dedicated to movement, wellness, and athletic performance</strong>, offering a comprehensive, balanced approach through <strong>6 complementary disciplines</strong>: Lagree, Pilates Reformer, Pilates Mat, Sculpt, Barre, and Yoga.",
+    "concept_p1": "Moon Pilates Club is a <strong>premium studio in Lausanne dedicated to movement, core strength, and wellness</strong>. We offer a holistic approach through <strong>6 complementary disciplines</strong>: Lagree, Pilates Reformer, Pilates Mat, Sculpt, Barre, and Yoga, in small groups or <strong>private coaching</strong>.",
     "concept_p2": "All our disciplines are <strong>low-impact on joints</strong>. They combine deep core strengthening, mobility, posture refinement, and muscle toning to sculpt and strengthen your body safely.",
     "concept_p3": "All classes are held in <strong>small groups of up to 6 people</strong>, ensuring exceptional personal guidance and bespoke attention.",
     "badge_groups": "Small Groups (6 max)",
@@ -537,7 +537,7 @@ const translations = {
     // Cours Privés
     "prives_label": "Private Sessions",
     "prives_title": "Private <em>Coaching</em>",
-    "prives_desc": "100% tailor-made guidance to reach your athletic and postural goals. Our 50-minute private sessions provide exclusive attention adapted to your exact level and physical condition.",
+    "prives_desc": "Bespoke private coaching and premium 1-on-1 sessions in Lausanne to reach your goals. Our 50-minute private classes offer exclusive attention tailored to your exact level and physical condition.",
     "prives_disc": "<strong>Discipline of your choice:</strong> Lagree · Reformer · Mat Pilates · Sculpt · Barre · Hatha Yoga · Power Yoga 🌿",
     "badge_priv_custom": "Tailor-Made & Targeted Alignment",
     "badge_priv_flex": "Flexible Off-Peak Scheduling",
@@ -709,7 +709,7 @@ const translations = {
     "acc_park_desc": "Hôtel de la Paix (underground) or street (3 CHF/h)",
 
     // Footer
-    "footer_tagline": "Lausanne boutique studio · 6 disciplines<br/>Lagree · Reformer · Mat · Sculpt · Barre · Yoga",
+    "footer_tagline": "Premium studio in Lausanne · Lagree, Pilates Reformer, Yoga, Sculpt & Barre<br/>Group classes, private coaching & specialty coffee bar",
     "footer_rights": "© 2026 Moon Pilates Club · Lausanne · All rights reserved ·",
     "footer_cgv": "Terms & Conditions"
   }
