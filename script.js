@@ -1111,11 +1111,58 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ─── HERO BACKGROUND SLIDER ───
+  const heroSlides = document.querySelectorAll('.hero-slide');
+  const heroDots = document.querySelectorAll('.hero-dot');
+  if (heroSlides.length > 1) {
+    let currentSlide = 0;
+    let slideTimer = null;
+
+    function showSlide(index) {
+      currentSlide = (index + heroSlides.length) % heroSlides.length;
+      heroSlides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === currentSlide);
+      });
+      heroDots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentSlide);
+      });
+    }
+
+    function startAutoSlide() {
+      stopAutoSlide();
+      slideTimer = setInterval(() => {
+        showSlide(currentSlide + 1);
+      }, 5000);
+    }
+
+    function stopAutoSlide() {
+      if (slideTimer) {
+        clearInterval(slideTimer);
+        slideTimer = null;
+      }
+    }
+
+    heroDots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        showSlide(i);
+        startAutoSlide();
+      });
+    });
+
+    const heroSection = document.getElementById('hero');
+    if (heroSection) {
+      heroSection.addEventListener('mouseenter', stopAutoSlide);
+      heroSection.addEventListener('mouseleave', startAutoSlide);
+    }
+
+    startAutoSlide();
+  }
+
   // ─── PARALLAX HERO (subtle) ───
-  const heroImg = document.querySelector('.hero-img');
+  const heroSlider = document.getElementById('hero-slider');
   window.addEventListener('scroll', () => {
-    if (heroImg && window.scrollY < window.innerHeight) {
-      heroImg.style.transform = `translateY(${window.scrollY * 0.25}px)`;
+    if (heroSlider && window.scrollY < window.innerHeight) {
+      heroSlider.style.transform = `translateY(${window.scrollY * 0.2}px)`;
     }
   }, { passive: true });
 

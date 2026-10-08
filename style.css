@@ -466,6 +466,20 @@ ul { list-style: none; }
 .hero-bg {
   position: absolute;
   inset: 0;
+  overflow: hidden;
+}
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1.4s cubic-bezier(0.4, 0, 0.2, 1), visibility 1.4s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: opacity, transform;
+}
+.hero-slide.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
 }
 .hero-img {
   width: 100%;
@@ -473,16 +487,87 @@ ul { list-style: none; }
   object-fit: cover;
   object-position: center 35%;
   filter: brightness(0.62) saturate(0.92);
+  transform: scale(1.04);
+  transition: transform 6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.hero-slide.active .hero-img {
+  transform: scale(1);
+}
+.hero-img-lagree {
+  object-position: center 25%;
 }
 .hero-overlay {
   position: absolute;
   inset: 0;
+  z-index: 2;
   background: linear-gradient(
     to bottom,
     rgba(30, 25, 23, 0.45) 0%,
     rgba(30, 25, 23, 0.22) 45%,
     rgba(30, 25, 23, 0.72) 100%
   );
+  pointer-events: none;
+}
+.hero-indicators {
+  position: absolute;
+  bottom: 28px;
+  left: 60px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.hero-dot {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(30, 25, 23, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 30px;
+  padding: 6px 14px;
+  color: rgba(255, 255, 255, 0.75);
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+.hero-dot-pill {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease;
+}
+.hero-dot:hover {
+  background: rgba(30, 25, 23, 0.75);
+  border-color: rgba(255, 255, 255, 0.55);
+  color: #FFFFFF;
+}
+.hero-dot.active {
+  background: rgba(123, 89, 89, 0.92);
+  border-color: rgba(212, 165, 116, 0.75);
+  color: #FFFFFF;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+.hero-dot.active .hero-dot-pill {
+  background: #D4A574;
+  transform: scale(1.3);
+}
+@media (max-width: 768px) {
+  .hero-indicators {
+    bottom: 22px;
+    left: 24px;
+    gap: 8px;
+  }
+  .hero-dot {
+    padding: 5px 11px;
+    font-size: 0.65rem;
+  }
 }
 .hero-content {
   position: relative;

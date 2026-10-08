@@ -27,7 +27,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=49" />
+  <link rel="stylesheet" href="style.css?v=50" />
 
   <!-- Bsport Widget SDK -->
   <script id="insert-bsport-widget-cdn">!function (b, s, p, o, r, t) { typeof window.BsportWidget === "undefined" && !document.getElementById("bsport-widget-cdn") && !function () { m = b.createElement(s), m.id = "bsport-widget-cdn", m.src = p, b.getElementsByTagName("head")[0].appendChild(m) }() }(document, "script", "https://cdn.bsport.io/scripts/widget.js")</script>
@@ -318,8 +318,13 @@
 
   <!-- HERO -->
   <section class="hero" id="hero">
-    <div class="hero-bg">
-      <img src="hero.jpg?v=3" alt="Studio Lagree et Pilates Reformer Moon Club Lausanne" class="hero-img" />
+    <div class="hero-bg" id="hero-slider">
+      <div class="hero-slide active" data-discipline="reformer">
+        <img src="hero.jpg?v=4" alt="Studio Pilates Reformer Moon Club Lausanne" class="hero-img" />
+      </div>
+      <div class="hero-slide" data-discipline="lagree">
+        <img src="lagree-hero.jpg?v=1" alt="Studio Lagree Fitness Moon Club Lausanne" class="hero-img hero-img-lagree" />
+      </div>
       <div class="hero-overlay"></div>
     </div>
     <div class="hero-content">
@@ -331,6 +336,16 @@
         <a href="#tarifs" class="btn btn-primary" data-i18n="hero_btn_tarifs">Découvrir les formules</a>
         <a href="#cours" class="btn btn-ghost" data-i18n="hero_btn_cours">Nos cours →</a>
       </div>
+    </div>
+    <div class="hero-indicators">
+      <button class="hero-dot active" type="button" aria-label="Pilates Reformer" data-slide="0">
+        <span class="hero-dot-pill"></span>
+        <span class="hero-dot-text">Pilates Reformer</span>
+      </button>
+      <button class="hero-dot" type="button" aria-label="Lagree Fitness" data-slide="1">
+        <span class="hero-dot-pill"></span>
+        <span class="hero-dot-text">Lagree Fitness</span>
+      </button>
     </div>
     <div class="hero-scroll-hint">
       <div class="scroll-line"></div>
@@ -2412,6 +2427,6 @@
   </div>
 
   <script src="translations.js?v=25"></script>
-  <script src="script.js?v=45"></script>
+  <script src="script.js?v=46"></script>
 </body>
 </html>
