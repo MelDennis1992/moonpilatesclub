@@ -494,7 +494,7 @@ ul { list-style: none; }
   transform: scale(1);
 }
 .hero-img-lagree {
-  object-position: center 25%;
+  object-position: center 45%;
 }
 .hero-overlay {
   position: absolute;

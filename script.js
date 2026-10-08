@@ -1132,7 +1132,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stopAutoSlide();
       slideTimer = setInterval(() => {
         showSlide(currentSlide + 1);
-      }, 5000);
+      }, 3000);
     }
 
     function stopAutoSlide() {
