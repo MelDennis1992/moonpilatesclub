@@ -23,8 +23,8 @@ const translations = {
     "nav_reserver": "Réserver",
 
     // Hero
-    "hero_title": "<em>Lagree</em><br/>& pilates",
-    "hero_sub": "Studio premium à Lausanne · Lagree, Reformer, Sculpt, Barre & Yoga<br/>Petits groupes (6 max) & coaching privé sur-mesure",
+    "hero_title": "<em>Lagree</em><br/>& pilates <span class=\"sr-only\">reformer, yoga, sculpt, barre & coaching privé à Lausanne</span>",
+    "hero_sub": "Studio premium à Lausanne · Lagree, Pilates Reformer, Yoga, Sculpt & Barre<br/>Petits groupes (6 max), coaching privé & coffee speciality",
     "hero_btn_tarifs": "Découvrir les formules",
     "hero_btn_cours": "Nos cours →",
     "hero_scroll": "Défiler",
@@ -36,7 +36,7 @@ const translations = {
     "ticker_item_4": "Galeries Benjamin-Constant · Lausanne",
 
     // Concept / About
-    "concept_label": "Notre concept",
+    "concept_label": "Studio Pilates Reformer & Lagree à Lausanne",
     "concept_title": "Bienvenue chez<br/><em>Moon Club</em>",
     "concept_p1": "Moon Pilates Club est un <strong>studio premium à Lausanne dédié au mouvement, au bien-être et au renforcement profond</strong>. Nous vous proposons une approche globale à travers <strong>6 disciplines complémentaires</strong> : Lagree, Pilates Reformer, Pilates Mat, Sculpt, Barre et Yoga, en petits groupes ou en <strong>cours privés</strong>.",
     "concept_p2": "Toutes nos disciplines sont <strong>à faible impact pour vos articulations</strong>. Elles allient renforcement profond, mobilité, posture et tonicité musculaire, pour sculpter et renforcer votre corps en toute sécurité.",
@@ -52,8 +52,8 @@ const translations = {
     "stat_disciplines": "disciplines",
 
     // Cours / Disciplines
-    "cours_label": "Nos disciplines",
-    "cours_title": "Des cours pour<br/><em>chaque objectif</em>",
+    "cours_label": "6 disciplines · Lagree, Reformer, Yoga, Sculpt & Barre",
+    "cours_title": "Lagree, Pilates Reformer & Yoga<br/><em>Des cours pour chaque objectif</em>",
     "lagree_title": "Lagree",
     "lagree_desc": "Entraînement intense sur Microformer. Gainage, endurance et tonicité musculaire au rendez-vous.",
     "lagree_tag1": "Tous niveaux",
@@ -180,9 +180,9 @@ const translations = {
     "btn_choose_annual": "Choisir Annuel",
 
     // Cours Privés
-    "prives_label": "Sessions Privées",
-    "prives_title": "Coaching <em>Privé</em>",
-    "prives_desc": "Des séances de coaching privé et cours particuliers premium à Lausanne, 100 % sur mesure pour progresser à votre rythme. Nos sessions privées de 50 minutes vous offrent un encadrement exclusif, adapté à votre niveau, votre condition physique et vos envies.",
+    "prives_label": "Sessions & Cours Privés à Lausanne",
+    "prives_title": "Coaching <em>Privé Premium</em>",
+    "prives_desc": "Des séances de coaching privé et cours particuliers premium à Lausanne, 100 % sur mesure pour progresser à votre rythme. Nos sessions privées de 50 minutes vous offrent un encadrement exclusif en Lagree, Pilates Reformer, Yoga, Sculpt et Barre.",
     "prives_disc": "<strong>Discipline au choix :</strong> Lagree · Reformer · Mat Pilates · Sculpt · Barre · Hatha Yoga · Power Yoga 🌿",
     "badge_priv_custom": "Sur-mesure & Posture ciblée",
     "badge_priv_flex": "Créneaux Flexibles (Heures creuses)",
@@ -274,9 +274,9 @@ const translations = {
     "cad_f5_all": "✓ Valable 1 an",
 
     // Moon Café
-    "cafe_label": "Bar à Café & Matcha",
-    "cafe_title": "Moon <em>Café</em>",
-    "cafe_sub": "Un espace chaleureux au cœur de Lausanne avec une vue à 180 degrés sur le Lac Léman pour savourer des matchas de grade cérémonial et cafés de spécialité. Avant ou après votre cours, ou simplement pour une pause dans votre journée.",
+    "cafe_label": "Barista · Coffee Speciality & Matcha",
+    "cafe_title": "Moon Café · <em>Coffee Speciality</em>",
+    "cafe_sub": "Un espace chaleureux au cœur de Lausanne avec une vue à 180 degrés sur le Lac Léman pour savourer nos sélections coffee speciality et matchas de grade cérémonial. Avant ou après votre cours, ou simplement pour une pause dans votre journée.",
     "cafe_feat1_title": "Matcha Cérémonial",
     "cafe_feat1_desc": "Matcha d'exception préparé minute (Pure, Vanilla, Caramel, Coconut, Mango), chaud ou glacé.",
     "cafe_feat2_title": "Specialty Coffee",
@@ -378,8 +378,8 @@ const translations = {
     "nav_reserver": "Book Now",
 
     // Hero
-    "hero_title": "<em>Lagree</em><br/>& pilates",
-    "hero_sub": "Premium studio in Lausanne · Lagree, Reformer, Sculpt, Barre & Yoga<br/>Small groups of 6 max & bespoke private coaching",
+    "hero_title": "<em>Lagree</em><br/>& pilates <span class=\"sr-only\">reformer, yoga, sculpt, barre & private coaching in Lausanne</span>",
+    "hero_sub": "Premium studio in Lausanne · Lagree, Pilates Reformer, Yoga, Sculpt & Barre<br/>Small groups of 6 max, private coaching & coffee speciality",
     "hero_btn_tarifs": "Discover Pricing & Plans",
     "hero_btn_cours": "Our Classes →",
     "hero_scroll": "Scroll",
@@ -391,7 +391,7 @@ const translations = {
     "ticker_item_4": "Galeries Benjamin-Constant · Lausanne",
 
     // Concept / About
-    "concept_label": "Our Concept",
+    "concept_label": "Pilates Reformer & Lagree Studio in Lausanne",
     "concept_title": "Welcome to<br/><em>Moon Club</em>",
     "concept_p1": "Moon Pilates Club is a <strong>premium studio in Lausanne dedicated to movement, core strength, and wellness</strong>. We offer a holistic approach through <strong>6 complementary disciplines</strong>: Lagree, Pilates Reformer, Pilates Mat, Sculpt, Barre, and Yoga, in small groups or <strong>private coaching</strong>.",
     "concept_p2": "All our disciplines are <strong>low-impact on joints</strong>. They combine deep core strengthening, mobility, posture refinement, and muscle toning to sculpt and strengthen your body safely.",
@@ -407,8 +407,8 @@ const translations = {
     "stat_disciplines": "disciplines",
 
     // Cours / Disciplines
-    "cours_label": "Our Disciplines",
-    "cours_title": "Classes for<br/><em>every goal</em>",
+    "cours_label": "6 disciplines · Lagree, Reformer, Yoga, Sculpt & Barre",
+    "cours_title": "Lagree, Pilates Reformer & Yoga<br/><em>Classes for every goal</em>",
     "lagree_title": "Lagree",
     "lagree_desc": "High-intensity, low-impact core and endurance workout on the Microformer. Tighten, tone, and sculpt.",
     "lagree_tag1": "All levels",
@@ -535,9 +535,9 @@ const translations = {
     "btn_choose_annual": "Choose Annual Pass",
 
     // Cours Privés
-    "prives_label": "Private Sessions",
-    "prives_title": "Private <em>Coaching</em>",
-    "prives_desc": "Bespoke private coaching and premium 1-on-1 sessions in Lausanne to reach your goals. Our 50-minute private classes offer exclusive attention tailored to your exact level and physical condition.",
+    "prives_label": "Private Coaching & 1-on-1 Classes in Lausanne",
+    "prives_title": "Private <em>Coaching Premium</em>",
+    "prives_desc": "Bespoke private coaching and premium 1-on-1 sessions in Lausanne to reach your goals. Our 50-minute private classes offer exclusive attention tailored to your exact level in Lagree, Pilates Reformer, Yoga, Sculpt, or Barre.",
     "prives_disc": "<strong>Discipline of your choice:</strong> Lagree · Reformer · Mat Pilates · Sculpt · Barre · Hatha Yoga · Power Yoga 🌿",
     "badge_priv_custom": "Tailor-Made & Targeted Alignment",
     "badge_priv_flex": "Flexible Off-Peak Scheduling",
@@ -629,9 +629,9 @@ const translations = {
     "cad_f5_all": "✓ Valid 1 year",
 
     // Moon Café
-    "cafe_label": "Coffee & Matcha Bar",
-    "cafe_title": "Moon <em>Café</em>",
-    "cafe_sub": "A warm space in the heart of Lausanne with a 180° view over Lake Geneva to enjoy ceremonial grade matcha and specialty coffee. Before or after your workout, or simply for a break during your day.",
+    "cafe_label": "Barista · Coffee Speciality & Matcha",
+    "cafe_title": "Moon Café · <em>Coffee Speciality</em>",
+    "cafe_sub": "A warm space in the heart of Lausanne with a 180° view over Lake Geneva to enjoy our coffee speciality brews and ceremonial grade matcha. Before or after your workout, or simply for a break during your day.",
     "cafe_feat1_title": "Ceremonial Matcha",
     "cafe_feat1_desc": "Exceptional matcha freshly crafted (Pure, Vanilla, Caramel, Coconut, Mango), hot or iced.",
     "cafe_feat2_title": "Specialty Coffee",
