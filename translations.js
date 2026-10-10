@@ -323,6 +323,8 @@ const translations = {
     // FAQ
     "faq_label": "Questions fréquentes",
     "faq_title": "Tout ce que vous<br/><em>devez savoir</em>",
+    "faq_diff_q": "Quelle est la différence entre le Lagree et le Pilates Reformer ?",
+    "faq_diff_a": "<p>Bien qu'ils utilisent tous les deux des machines à ressorts avec un chariot mobile, <strong>le Lagree et le Pilates Reformer sont deux méthodes bien distinctes et très complémentaires</strong> :</p><p style=\"margin-top: 10px;\">• <strong>Le Pilates Reformer</strong> (créé par Joseph Pilates) se concentre sur le contrôle du mouvement, l'alignement postural, la respiration, la souplesse et le renforcement des muscles profonds stabilisateurs. Le rythme est posé, fluide et précis, idéal pour allonger la silhouette et protéger le dos.</p><p style=\"margin-top: 10px;\">• <strong>La méthode Lagree</strong> (fondée par Sebastien Lagree) est un entraînement athlétique <em>High Intensity, Low Impact</em>. Sur le Microformer, les mouvements sont exécutés sous tension continue ultra-lente (4 à 8 secondes par répétition) avec des transitions immédiates. Cela stimule les fibres musculaires jusqu'à l'épuisement tout en activant le cardio et en brûlant un maximum de calories, sans aucun choc articulaire.</p><p style=\"margin-top: 10px;\"><strong>Chez Moon Pilates Club à Lausanne</strong>, vous n'avez pas à choisir : notre studio réunit ces deux disciplines sous le même toit pour sculpter, renforcer et affiner votre corps de manière optimale !</p>",
 
     // Contact
     "contact_label": "Nous trouver",
@@ -678,6 +680,8 @@ const translations = {
     // FAQ
     "faq_label": "Frequently Asked Questions",
     "faq_title": "Everything you<br/><em>need to know</em>",
+    "faq_diff_q": "What is the difference between Lagree and Pilates Reformer?",
+    "faq_diff_a": "<p>While both methods use spring-loaded resistance machines with a moving carriage, <strong>Lagree and Pilates Reformer are distinct yet highly complementary workouts</strong>:</p><p style=\"margin-top: 10px;\">• <strong>Pilates Reformer</strong> (created by Joseph Pilates) emphasizes core control, postural alignment, breathwork, mobility, and deep stabilizing muscle strength. The pace is mindful and precise, ideal for posture and body lengthening.</p><p style=\"margin-top: 10px;\">• <strong>The Lagree Method</strong> (founded by Sebastien Lagree) is an athletic <em>High Intensity, Low Impact</em> workout. Executed on the Microformer, movements follow ultra-slow continuous tension with rapid transitions to work muscles to failure and elevate heart rate without any joint stress.</p><p style=\"margin-top: 10px;\"><strong>At Moon Pilates Club in Lausanne</strong>, you don't have to choose: experience both under one roof to tone, strengthen, and sculpt your body effectively!</p>",
 
     // Contact
     "contact_label": "Find Us",

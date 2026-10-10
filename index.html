@@ -307,6 +307,31 @@
     }
   }
   </script>
+  <!-- FAQPage Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Quelle est la différence entre le Lagree et le Pilates Reformer ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Le Pilates Reformer se concentre sur l'alignement postural, le renforcement des muscles profonds et le contrôle moteur à un rythme posé. La méthode Lagree est un entraînement athlétique High Intensity, Low Impact sur Microformer exécuté sous tension continue ultra-lente pour sculpter et brûler des calories sans choc articulaire. Moon Pilates Club à Lausanne réunit les deux disciplines au sein de son studio."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Pourquoi proposer 6 disciplines complémentaires chez Moon Club ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Lagree, Pilates Reformer, Pilates Mat, Sculpt, Barre et Yoga ont été sélectionnés pour leur complémentarité : renforcement profond, tonicité, posture et mobilité en petits groupes de 6 maximum."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -1830,6 +1855,18 @@
       <h2 class="section-title reveal" style="text-align:center" data-i18n-html="faq_title">Tout ce que vous<br/><em>devez savoir</em></h2>
       <div class="faq-list">
         <div class="faq-item reveal">
+          <button class="faq-question" id="faq-btn-diff" aria-expanded="false" aria-controls="faq-ans-diff">
+            <span data-i18n="faq_diff_q">Quelle est la différence entre le Lagree et le Pilates Reformer ?</span>
+            <span class="faq-arrow">↓</span>
+          </button>
+          <div class="faq-answer" id="faq-ans-diff" role="region" aria-labelledby="faq-btn-diff" data-i18n-html="faq_diff_a">
+            <p>Bien qu'ils utilisent tous les deux des machines à ressorts avec un chariot mobile, <strong>le Lagree et le Pilates Reformer sont deux méthodes bien distinctes et très complémentaires</strong> :</p>
+            <p style="margin-top: 10px;">• <strong>Le Pilates Reformer</strong> (créé par Joseph Pilates) se concentre sur le contrôle du mouvement, l'alignement postural, la respiration, la souplesse et le renforcement des muscles profonds stabilisateurs. Le rythme est posé, fluide et précis, idéal pour allonger la silhouette et protéger le dos.</p>
+            <p style="margin-top: 10px;">• <strong>La méthode Lagree</strong> (fondée par Sebastien Lagree) est un entraînement athlétique <em>High Intensity, Low Impact</em>. Sur le Microformer, les mouvements sont exécutés sous tension continue ultra-lente (4 à 8 secondes par répétition) avec des transitions immédiates. Cela stimule les fibres musculaires jusqu'à l'épuisement tout en activant le cardio et en brûlant un maximum de calories, sans aucun choc articulaire.</p>
+            <p style="margin-top: 10px;"><strong>Chez Moon Pilates Club à Lausanne</strong>, vous n'avez pas à choisir : notre studio réunit ces deux disciplines sous le même toit pour sculpter, renforcer et affiner votre corps de manière optimale !</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
           <button class="faq-question" id="faq-btn-1" aria-expanded="false" aria-controls="faq-ans-1">
             Pourquoi le choix d'abonnements mensuels ?
             <span class="faq-arrow">↓</span>
@@ -2493,7 +2530,7 @@
     </div>
   </div>
 
-  <script src="translations.js?v=26"></script>
-  <script src="script.js?v=48"></script>
+  <script src="translations.js?v=27"></script>
+  <script src="script.js?v=49"></script>
 </body>
 </html>
