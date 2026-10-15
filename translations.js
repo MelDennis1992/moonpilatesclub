@@ -342,6 +342,8 @@ const translations = {
     "faq_pause_a": "<p>Oui, il est possible de suspendre ou mettre en pause votre abonnement jusqu'à un mois sans justificatif et sans frais (votre abonnement sera automatiquement décalé, sans perte de séances). Pour tout autre gel ou pause prolongée, merci de venir directement vers nous : nous pourrons en discuter très volontiers afin de trouver la meilleure solution !</p>",
     "faq_prives_q": "Comment se déroulent les cours privés Solo et Duo ?",
     "faq_prives_a": "<p>Nos séances privées d'une heure (60 minutes, Solo ou Duo) offrent un encadrement exclusif 100% sur mesure. Vous choisissez la discipline souhaitée parmi nos 7 disciplines (Lagree, Reformer, Mat Pilates, Sculpt, Barre, Yoga, StrAbs) et profitez d'horaires flexibles en heures creuses selon vos disponibilités. Après l'effort, un moment de détente au Moon Café vous attend pour prolonger l'expérience.</p>",
+    "faq_try_q": "Puis-je essayer avant de m'abonner ?",
+    "faq_try_a": "<p>Oui, les 3 séances Découverte sont tout à fait possibles ! Notre pack découverte de 3 séances est à 85 CHF les trois, ce qui revient à un équivalent de ≈ 28 CHF la séance. C'est l'option idéale pour tester nos machines, explorer nos différentes disciplines et découvrir l'ambiance du club avant de vous abonner.</p><p style=\"margin-top: 14px;\"><a href=\"#decouverte\" class=\"btn btn-outline\" style=\"display:inline-flex; align-items:center; gap:6px; padding:8px 18px; font-size:0.85rem; border-radius:20px;\">🌸 Découvrir les séances découverte →</a></p>",
 
     // Contact
     "contact_label": "Nous trouver",
@@ -716,6 +718,8 @@ const translations = {
     "faq_pause_a": "<p>Yes! You can pause or freeze your subscription for up to one month without medical proof and with zero fees (your renewal date will automatically shift forward without losing any sessions). For extended pauses, please come talk to our team directly: we are happy to assist and find the best personalized solution!</p>",
     "faq_prives_q": "How do Solo and Duo private sessions work?",
     "faq_prives_a": "<p>Our 1-hour private sessions (60 minutes, Solo or Duo) offer 100% personalized exclusive coaching. You choose your preferred discipline among our 7 offerings (Lagree, Reformer, Mat Pilates, Sculpt, Barre, Yoga, StrAbs) and enjoy flexible off-peak scheduling tailored to your availability. Afterward, unwind in our Moon Café lounge to complete your wellness experience.</p>",
+    "faq_try_q": "Can I try a class before getting a membership?",
+    "faq_try_a": "<p>Yes, discovery sessions are the perfect way to get started! Our 3-session discovery pack is CHF 85 for all three (≈ CHF 28 per class). It's the ideal option to try out our equipment, experience different disciplines, and get a feel for the club before subscribing.</p><p style=\"margin-top: 14px;\"><a href=\"#decouverte\" class=\"btn btn-outline\" style=\"display:inline-flex; align-items:center; gap:6px; padding:8px 18px; font-size:0.85rem; border-radius:20px;\">🌸 Explore Discovery Sessions →</a></p>",
 
     // Contact
     "contact_label": "Find Us",

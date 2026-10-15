@@ -61,6 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
           return;
         }
 
+        const href = link.getAttribute('href');
         navLinks.classList.remove('open');
         const parentDropdown = document.getElementById('nav-dropdown-formules');
         if (parentDropdown) parentDropdown.classList.remove('open');
@@ -68,6 +69,16 @@ document.addEventListener('DOMContentLoaded', () => {
           s.style.transform = '';
           s.style.opacity = '';
         });
+
+        if (href && href.startsWith('#') && href.length > 1) {
+          const targetEl = document.querySelector(href);
+          if (targetEl) {
+            e.preventDefault();
+            setTimeout(() => {
+              targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 60);
+          }
+        }
       });
     });
   }
@@ -1076,7 +1087,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const subnavSections = [
     document.getElementById('decouverte'),
     document.getElementById('forfaits'),
-    document.getElementById('prives')
+    document.getElementById('prives'),
+    document.getElementById('cadeaux')
   ].filter(Boolean);
 
   if (subnavTabs.length > 0 && subnavSections.length > 0) {
@@ -1110,6 +1122,22 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // Generic smooth scroll for in-page anchors (e.g. Hero button, FAQ links)
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    if (!anchor.closest('#nav-links') && !anchor.classList.contains('tarifs-subnav-tab')) {
+      anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href && href.startsWith('#') && href.length > 1) {
+          const target = document.querySelector(href);
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
+      });
+    }
+  });
 
   // ─── HERO BACKGROUND SLIDER ───
   const heroSlides = document.querySelectorAll('.hero-slide');

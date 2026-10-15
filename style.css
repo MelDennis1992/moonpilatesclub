@@ -3127,7 +3127,7 @@ a { text-decoration: none; color: inherit; }
    SUB-CATEGORIES NAVIGATION & QUICK NAV TABS (FORMULES)
    ======================================================== */
 
-#decouverte, #forfaits, #prives, #tarifs {
+#decouverte, #forfaits, #prives, #tarifs, #cadeaux {
   scroll-margin-top: 110px;
 }
 
@@ -3272,7 +3272,7 @@ a { text-decoration: none; color: inherit; }
 
 /* Mobile & Tablet Overrides */
 @media (max-width: 1024px) {
-  #decouverte, #forfaits, #prives, #tarifs {
+  #decouverte, #forfaits, #prives, #tarifs, #cadeaux {
     scroll-margin-top: 85px;
   }
   .nav-dropdown {

@@ -378,6 +378,10 @@
               <span class="dropdown-icon">👤</span>
               <span class="dropdown-text" data-i18n="nav_sub_prives">Séances privées</span>
             </a>
+            <a href="#cadeaux" class="dropdown-item">
+              <span class="dropdown-icon">🎁</span>
+              <span class="dropdown-text" data-i18n="nav_cadeaux">Bons Cadeaux</span>
+            </a>
           </div>
         </div>
         <a href="#cadeaux" class="nav-link" data-i18n="nav_cadeaux">Bons Cadeaux</a>
@@ -802,6 +806,10 @@
             <span class="subnav-tab-icon">👤</span>
             <span data-i18n="nav_sub_prives">Séances privées</span>
           </a>
+          <a href="#cadeaux" class="tarifs-subnav-tab" data-subnav-target="cadeaux">
+            <span class="subnav-tab-icon">🎁</span>
+            <span data-i18n="nav_cadeaux">Bons Cadeaux</span>
+          </a>
         </div>
       </div>
 
@@ -924,7 +932,18 @@
               <span class="dot active" data-target="dec-3"></span>
             </div>
             <button class="mobile-nav-arrow next" data-section="decouverte" aria-label="Offre suivante">›</button>
-             <p class="tarifs-sub reveal" style="text-align:center; margin-bottom:20px;" data-i18n="forfaits_sub">7 disciplines · Lausanne</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SEPARATOR -->
+      <div style="border-top: 1px solid rgba(123, 89, 89, 0.12); margin-bottom: 80px; margin-top: 80px;"></div>
+
+      <!-- FORMULES / FORFAITS -->
+      <div class="forfaits-section" id="forfaits" style="margin-bottom: 80px;">
+        <p class="section-label reveal" style="text-align:center" data-i18n="forfaits_label">Nos forfaits</p>
+        <h2 class="section-title reveal" style="text-align:center" data-i18n-html="forfaits_title">Choisissez votre<br/><em>formule</em></h2>
+        <p class="tarifs-sub reveal" style="text-align:center; margin-bottom:20px;" data-i18n="forfaits_sub">7 disciplines · Lausanne</p>
         <div class="forfaits-gel-pill-container reveal" style="display:flex; justify-content:center; margin-bottom:52px;">
           <div class="forfaits-gel-pill">
             <span data-i18n-html="forfaits_gel_badge">❄️ <strong>Avantage inclus :</strong> 1 mois de pause / gel offert sans frais sur tous nos forfaits</span>
@@ -1481,7 +1500,6 @@
           </div>
         </div>
       </div>
-      </div>
     </div>
   </section>
 
@@ -1916,11 +1934,12 @@
         </div>
         <div class="faq-item reveal">
           <button class="faq-question" id="faq-btn-3" aria-expanded="false" aria-controls="faq-ans-3">
-            Puis-je essayer avant de m'abonner ?
+            <span data-i18n="faq_try_q">Puis-je essayer avant de m'abonner ?</span>
             <span class="faq-arrow">↓</span>
           </button>
-          <div class="faq-answer" id="faq-ans-3" role="region" aria-labelledby="faq-btn-3">
+          <div class="faq-answer" id="faq-ans-3" role="region" aria-labelledby="faq-btn-3" data-i18n-html="faq_try_a">
             <p>Oui, les 3 séances Découverte sont tout à fait possibles ! Notre pack découverte de 3 séances est à 85 CHF les trois, ce qui revient à un équivalent de ≈ 28 CHF la séance. C'est l'option idéale pour tester nos machines, explorer nos différentes disciplines et découvrir l'ambiance du club avant de vous abonner.</p>
+            <p style="margin-top: 14px;"><a href="#decouverte" class="btn btn-outline" style="display:inline-flex; align-items:center; gap:6px; padding:8px 18px; font-size:0.85rem; border-radius:20px;">🌸 Découvrir les séances découverte →</a></p>
           </div>
         </div>
         <div class="faq-item reveal">
