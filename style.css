@@ -1194,6 +1194,19 @@ a { text-decoration: none; color: inherit; }
   gap: 20px;
   margin-bottom: 56px;
 }
+@media (min-width: 1025px) {
+  .cours-grid > .cours-card:nth-child(7) {
+    grid-column: 2;
+  }
+}
+@media (max-width: 1024px) and (min-width: 769px) {
+  .cours-grid > .cours-card:nth-child(7) {
+    grid-column: 1 / -1;
+    max-width: 480px;
+    justify-self: center;
+    width: 100%;
+  }
+}
 .cours-card {
   background: var(--charcoal-mid);
   border: 1px solid rgba(253, 209, 149, 0.1);

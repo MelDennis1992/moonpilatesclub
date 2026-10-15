@@ -325,7 +325,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { label: '6 mois', price: '150', per: 'CHF 37,5 / séance', eng: 'Engagement 6 mois', url: 'https://backoffice.bsport.io/checkout/4466/subscription/30689?force=true' },
         { label: '12 mois', price: '140', per: 'CHF 35 / séance', eng: 'Engagement 12 mois', url: 'https://backoffice.bsport.io/checkout/4466/subscription/30690?force=true' }
       ],
-      features: ['✓ 4 cours par mois', '✓ 6 disciplines complémentaires', 'Lagree · Reformer · Mat · Sculpt · Barre · Yoga', '✓ Rabais sur ateliers', '✓ 1 mois de gel offert sans frais', '✓ -10% sur vos boissons Moon Café'],
+      features: ['✓ 4 cours par mois', '✓ 7 disciplines complémentaires', 'Lagree · Reformer · Mat · Sculpt · Barre · Yoga · StrAbs', '✓ Rabais sur ateliers', '✓ Frais d\'inscription offerts', '✓ 1 mois de pause / gel offert sans frais', '✓ -10% sur vos boissons Moon Café'],
       isFeatured: false
     },
     'forfait-halfmoon': {
@@ -338,7 +338,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { label: '6 mois', price: '250', per: 'CHF 31,25 / séance', eng: 'Engagement 6 mois', url: 'https://backoffice.bsport.io/checkout/4466/subscription/30691?force=true' },
         { label: '12 mois', price: '240', per: 'CHF 30 / séance', eng: 'Engagement 12 mois', url: 'https://backoffice.bsport.io/checkout/4466/subscription/30693?force=true' }
       ],
-      features: ['✓ 8 cours par mois', '✓ 6 disciplines complémentaires', 'Lagree · Reformer · Mat · Sculpt · Barre · Yoga', '✓ Rabais sur ateliers', '✓ 1 mois de gel offert sans frais', '✓ -10% sur vos boissons Moon Café'],
+      features: ['✓ 8 cours par mois', '✓ 7 disciplines complémentaires', 'Lagree · Reformer · Mat · Sculpt · Barre · Yoga · StrAbs', '✓ Rabais sur ateliers', '✓ Frais d\'inscription offerts', '✓ 1 mois de pause / gel offert sans frais', '✓ -10% sur vos boissons Moon Café'],
       isFeatured: true
     },
     'forfait-fullmoon': {
@@ -348,7 +348,7 @@ document.addEventListener('DOMContentLoaded', () => {
       badge: 'Séances Illimitées',
       hasToggle: false,
       single: { price: '350', period: '/ mois', per: 'Séances illimitées · ~14 CHF / séance*', eng: 'Engagement 3 mois minimum (*base 24 séances/mois)', url: 'https://backoffice.bsport.io/checkout/4466/subscription/30694?force=true' },
-      features: ['✓ 1 cours par jour max', '✓ 6 disciplines complémentaires', 'Lagree · Reformer · Mat · Sculpt · Barre · Yoga', '✓ Rabais exclusif sur ateliers', '✓ 1 mois de gel offert sans frais', '✓ -10% sur vos boissons Moon Café'],
+      features: ['✓ 1 cours par jour max', '✓ 7 disciplines complémentaires', 'Lagree · Reformer · Mat · Sculpt · Barre · Yoga · StrAbs', '✓ Rabais exclusif sur ateliers', '✓ Frais d\'inscription offerts', '✓ 1 mois de pause / gel offert sans frais', '✓ -10% sur vos boissons Moon Café'],
       isFeatured: false
     },
     'forfait-annual': {
@@ -363,7 +363,7 @@ document.addEventListener('DOMContentLoaded', () => {
           price: "1'540",
           per: '4 cours par mois · CHF 32 / séance',
           eng: 'Valide 1 an · Payable en une fois',
-          features: ['✓ 4 cours par mois (48 séances / an)', '✓ Payable en 1 fois', '✓ 6 disciplines complémentaires', 'Lagree · Reformer · Mat · Sculpt · Barre · Yoga', '✓ Rabais sur ateliers', '✓ 1 mois de gel offert sans frais', '✓ -10% sur vos boissons Moon Café'],
+          features: ['✓ 4 cours par mois (48 séances / an)', '✓ Payable en 1 fois', '✓ 7 disciplines complémentaires', 'Lagree · Reformer · Mat · Sculpt · Barre · Yoga · StrAbs', '✓ Rabais sur ateliers', '✓ 1 mois de pause / gel offert sans frais', '✓ -10% sur vos boissons Moon Café'],
           url: 'https://backoffice.bsport.io/customer/payment/pass/682887/?membership=4466&force=true'
         },
         {
@@ -371,11 +371,11 @@ document.addEventListener('DOMContentLoaded', () => {
           price: "2'640",
           per: '8 cours par mois · CHF 27 / séance',
           eng: 'Valide 1 an · Payable en une fois',
-          features: ['✓ 8 cours par mois (96 séances / an)', '✓ Payable en 1 fois', '✓ 6 disciplines complémentaires', 'Lagree · Reformer · Mat · Sculpt · Barre · Yoga', '✓ Rabais sur ateliers', '✓ 1 mois de gel offert sans frais', '✓ -10% sur vos boissons Moon Café'],
+          features: ['✓ 8 cours par mois (96 séances / an)', '✓ Payable en 1 fois', '✓ 7 disciplines complémentaires', 'Lagree · Reformer · Mat · Sculpt · Barre · Yoga · StrAbs', '✓ Rabais sur ateliers', '✓ 1 mois de pause / gel offert sans frais', '✓ -10% sur vos boissons Moon Café'],
           url: 'https://backoffice.bsport.io/customer/payment/pass/682889/?membership=4466&force=true'
         }
       ],
-      features: ['✓ 8 cours par mois (96 séances / an)', '✓ Payable en 1 fois', '✓ 6 disciplines complémentaires', 'Lagree · Reformer · Mat · Sculpt · Barre · Yoga', '✓ Rabais sur ateliers', '✓ 1 mois de gel offert sans frais', '✓ -10% sur vos boissons Moon Café'],
+      features: ['✓ 8 cours par mois (96 séances / an)', '✓ Payable en 1 fois', '✓ 7 disciplines complémentaires', 'Lagree · Reformer · Mat · Sculpt · Barre · Yoga · StrAbs', '✓ Rabais sur ateliers', '✓ 1 mois de pause / gel offert sans frais', '✓ -10% sur vos boissons Moon Café'],
       isFeatured: true
     }
   };
@@ -543,8 +543,8 @@ document.addEventListener('DOMContentLoaded', () => {
       url: 'https://backoffice.bsport.io/checkout/4466/giftcard/13387/?force=true',
       features: [
         '✓ Utilisable sur les 3 séances découvertes',
-        '✓ 6 disciplines complémentaires',
-        'Lagree · Reformer · Mat · Sculpt · Barre · Yoga',
+        '✓ 7 disciplines complémentaires',
+        'Lagree · Reformer · Mat · Sculpt · Barre · Yoga · StrAbs',
         '✓ Accès Moon Café inclus',
         '✓ Valable 1 an'
       ]
@@ -559,8 +559,8 @@ document.addEventListener('DOMContentLoaded', () => {
       url: 'https://backoffice.bsport.io/checkout/4466/giftcard/13386/?force=true',
       features: [
         '✓ Utilisable sur les séances privées & abonnements annuels',
-        '✓ 6 disciplines complémentaires',
-        'Lagree · Reformer · Mat · Sculpt · Barre · Yoga',
+        '✓ 7 disciplines complémentaires',
+        'Lagree · Reformer · Mat · Sculpt · Barre · Yoga · StrAbs',
         '✓ Accès Moon Café inclus',
         '✓ Valable 1 an'
       ]
@@ -575,8 +575,8 @@ document.addEventListener('DOMContentLoaded', () => {
       url: 'https://backoffice.bsport.io/checkout/4466/giftcard/13389/?force=true',
       features: [
         '✓ Utilisable sur les séances privées & abonnements annuels',
-        '✓ 6 disciplines complémentaires',
-        'Lagree · Reformer · Mat · Sculpt · Barre · Yoga',
+        '✓ 7 disciplines complémentaires',
+        'Lagree · Reformer · Mat · Sculpt · Barre · Yoga · StrAbs',
         '✓ Accès Moon Café inclus',
         '✓ Valable 1 an'
       ]
@@ -591,8 +591,8 @@ document.addEventListener('DOMContentLoaded', () => {
       url: 'https://backoffice.bsport.io/checkout/4466/giftcard/13388/?force=true',
       features: [
         '✓ Utilisable sur les séances privées & abonnements annuels',
-        '✓ 6 disciplines complémentaires',
-        'Lagree · Reformer · Mat · Sculpt · Barre · Yoga',
+        '✓ 7 disciplines complémentaires',
+        'Lagree · Reformer · Mat · Sculpt · Barre · Yoga · StrAbs',
         '✓ Accès Moon Café inclus',
         '✓ Valable 1 an'
       ]
@@ -712,7 +712,7 @@ document.addEventListener('DOMContentLoaded', () => {
     solo: {
       '1': {
         name: '1 séance Solo',
-        tagline: '50 min d\'attention exclusive & personnalisée',
+        tagline: '1h d\'attention exclusive & personnalisée',
         price: '110',
         period: '/ séance',
         per: 'CHF 110.- / cours',
@@ -722,8 +722,8 @@ document.addEventListener('DOMContentLoaded', () => {
         btnClass: 'btn btn-outline',
         isFeatured: false,
         features: [
-          '✓ 50 minutes en tête-à-tête avec votre coach',
-          '✓ 1 discipline au choix parmi les 6',
+          '✓ 1 heure en tête-à-tête avec votre coach',
+          '✓ 1 discipline au choix parmi les 7',
           '✓ Correction posturale & intensité 100% adaptée',
           '✓ Idéal pour débuter ou cibler un objectif précis',
           '✓ Espace Moon Café accessible après votre cours'
@@ -742,7 +742,7 @@ document.addEventListener('DOMContentLoaded', () => {
         btnClass: 'btn btn-primary',
         isFeatured: true,
         features: [
-          '✓ 5 séances privées de 50 minutes',
+          '✓ 5 séances privées d\'une heure (60 min)',
           '✓ Programme évolutif selon vos objectifs',
           '✓ Combinez vos disciplines préférées',
           '✓ Créneaux réservés selon vos disponibilités',
@@ -762,9 +762,9 @@ document.addEventListener('DOMContentLoaded', () => {
         btnClass: 'btn btn-outline',
         isFeatured: false,
         features: [
-          '✓ 10 séances privées de 50 minutes',
+          '✓ 10 séances privées d\'une heure (60 min)',
           '✓ Accompagnement sur mesure continu',
-          '✓ Accès libre à l\'ensemble des 6 disciplines',
+          '✓ Accès libre à l\'ensemble des 7 disciplines',
           '✓ Flexibilité maximale de réservation',
           '✓ Espace lounge & Moon Café après vos cours'
         ],
@@ -784,10 +784,10 @@ document.addEventListener('DOMContentLoaded', () => {
         btnClass: 'btn btn-outline',
         isFeatured: false,
         features: [
-          '✓ 50 minutes en binôme avec votre coach',
+          '✓ 1 heure en binôme avec votre coach',
           '✓ Avec un ami, un proche ou votre partenaire',
           '✓ Séance adaptée aux niveaux des 2 personnes',
-          '✓ 1 discipline au choix parmi les 6',
+          '✓ 1 discipline au choix parmi les 7',
           '✓ Moment convivial au Moon Café après la séance'
         ],
         url: 'https://backoffice.bsport.io/customer/payment/pass/787322/?membership=4466&force=true'
@@ -804,9 +804,9 @@ document.addEventListener('DOMContentLoaded', () => {
         btnClass: 'btn btn-primary',
         isFeatured: true,
         features: [
-          '✓ 5 séances privées en duo (50 min)',
+          '✓ 5 séances privées en duo (1h)',
           '✓ Progression en binôme motivante & sur mesure',
-          '✓ Toutes les disciplines disponibles',
+          '✓ Toutes les 7 disciplines disponibles',
           '✓ Créneaux réservés selon vos disponibilités',
           '✓ Espace Moon Café accessible après l\'effort'
         ],
@@ -824,7 +824,7 @@ document.addEventListener('DOMContentLoaded', () => {
         btnClass: 'btn btn-outline',
         isFeatured: false,
         features: [
-          '✓ 10 séances privées en duo (50 min)',
+          '✓ 10 séances privées en duo (1h)',
           '✓ Le tarif le plus bas par séance et par personne',
           '✓ Encadrement sur mesure complet et régulier',
           '✓ Flexibilité de réservation sur l\'année',
