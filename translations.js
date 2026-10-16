@@ -52,8 +52,8 @@ const translations = {
     "stat_disciplines": "disciplines",
 
     // Cours / Disciplines
-    "cours_label": "7 disciplines · Lagree, Reformer, Yoga, Sculpt, Barre & StrAbs",
-    "cours_title": "Lagree, Pilates Reformer & Yoga<br/><em>Des cours pour chaque objectif</em>",
+    "cours_label": "7 disciplines · Lagree, Reformer, Pilates au sol, Sculpt, Barre, Yoga & StrAbs",
+    "cours_title": "Une approche complète & ciblée<br/><em>Des cours pour chaque objectif</em>",
     "lagree_title": "Lagree",
     "lagree_desc": "Entraînement intense sur Microformer. Gainage, endurance et tonicité musculaire au rendez-vous.",
     "lagree_tag1": "Tous niveaux",
@@ -66,7 +66,7 @@ const translations = {
     "reformer_tag2": "50 min",
     "reformer_tag3": "6 pers. max",
 
-    "mat_title": "Pilates Mat",
+    "mat_title": "Pilates au sol (Mat)",
     "mat_desc": "Les fondamentaux du Pilates au sol revisités à travers une méthode contemporaine. Respiration, centrage et renforcement profond pour développer posture et mobilité.",
     "mat_tag1": "Fondamentaux & Contemporain",
     "mat_tag2": "50 min",
@@ -375,7 +375,7 @@ const translations = {
     "acc_park_desc": "Hôtel de la Paix (souterrain) ou rue (3 CHF/h)",
 
     // Footer
-    "footer_tagline": "Studio premium à Lausanne · Lagree, Pilates Reformer, Yoga, Sculpt & Barre<br/>Cours collectifs, coaching privé & bar à specialty coffee",
+    "footer_tagline": "Studio premium à Lausanne · 7 disciplines complémentaires<br/>Cours collectifs, coaching privé & bar à specialty coffee",
     "footer_rights": "© 2026 Moon Pilates Club · Lausanne · Tous droits réservés ·",
     "footer_cgv": "CGV"
   },
@@ -428,8 +428,8 @@ const translations = {
     "stat_disciplines": "disciplines",
 
     // Cours / Disciplines
-    "cours_label": "7 disciplines · Lagree, Reformer, Yoga, Sculpt, Barre & StrAbs",
-    "cours_title": "Lagree, Pilates Reformer & Yoga<br/><em>Classes for every goal</em>",
+    "cours_label": "7 disciplines · Lagree, Reformer, Mat Pilates, Sculpt, Barre, Yoga & StrAbs",
+    "cours_title": "A complete & targeted approach<br/><em>Classes for every goal</em>",
     "lagree_title": "Lagree",
     "lagree_desc": "High-intensity, low-impact core and endurance workout on the Microformer. Tighten, tone, and sculpt.",
     "lagree_tag1": "All levels",
@@ -751,7 +751,7 @@ const translations = {
     "acc_park_desc": "Hôtel de la Paix (underground) or street (3 CHF/h)",
 
     // Footer
-    "footer_tagline": "Premium studio in Lausanne · Lagree, Pilates Reformer, Yoga, Sculpt & Barre<br/>Group classes, private coaching & specialty coffee bar",
+    "footer_tagline": "Premium studio in Lausanne · 7 complementary disciplines<br/>Group classes, private coaching & specialty coffee bar",
     "footer_rights": "© 2026 Moon Pilates Club · Lausanne · All rights reserved ·",
     "footer_cgv": "Terms & Conditions"
   }
