@@ -5,8 +5,7 @@
 
 const translations = {
   fr: {
-    // Announcement & Nav
-    "announcement_text": "🌙 Save the date : inauguration du studio le samedi 17.10.26 dès 13h 🌙",
+    // Nav
     "nav_concept": "À propos",
     "nav_cours": "Cours",
     "nav_coachs": "Coachs",
@@ -379,8 +378,7 @@ const translations = {
   },
 
   en: {
-    // Announcement & Nav
-    "announcement_text": "🌙 Save the date: Studio Grand Opening on Saturday 17.10.26 from 1:00 PM 🌙",
+    // Nav
     "nav_concept": "About",
     "nav_cours": "Classes",
     "nav_coachs": "Coaches",

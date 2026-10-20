@@ -4,23 +4,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // ─── ANNOUNCEMENT BAR CLOSE ───
-  const bar = document.getElementById('announcement-bar');
-  const closeBtn = document.getElementById('announcement-close');
   const navbar = document.getElementById('navbar');
-
-  if (closeBtn && bar) {
-    closeBtn.addEventListener('click', () => {
-      bar.style.maxHeight = bar.offsetHeight + 'px';
-      requestAnimationFrame(() => {
-        bar.style.transition = 'max-height 0.4s ease, padding 0.4s ease, opacity 0.3s';
-        bar.style.maxHeight = '0';
-        bar.style.padding = '0';
-        bar.style.opacity = '0';
-        bar.style.overflow = 'hidden';
-      });
-    });
-  }
 
   // ─── NAVBAR SCROLL ───
   window.addEventListener('scroll', () => {
@@ -1398,66 +1382,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     startCafeAutoplay();
   }
-
-  // ─── MODAL POPUP INAUGURATION (17.10.26) ───
-  const popup = document.getElementById('inauguration-popup');
-  const popClose = document.getElementById('pop-close-btn');
-  const popDismiss = document.getElementById('pop-dismiss-btn');
-  const popCloseLink = document.getElementById('pop-close-link');
-  const announcementBar = document.querySelector('.announcement-bar');
-
-  function openPopup() {
-    if (!popup) return;
-    popup.classList.add('active');
-    document.body.classList.add('popup-open');
-  }
-
-  function closePopup() {
-    if (!popup) return;
-    popup.classList.remove('active');
-    document.body.classList.remove('popup-open');
-    try {
-      sessionStorage.setItem('moon_popup_closed', 'true');
-    } catch (e) {}
-  }
-
-  if (popClose) popClose.addEventListener('click', closePopup);
-  if (popDismiss) popDismiss.addEventListener('click', closePopup);
-  if (popCloseLink) popCloseLink.addEventListener('click', closePopup);
-
-  // Click on dark backdrop outside dialog to close
-  if (popup) {
-    popup.addEventListener('click', (e) => {
-      if (e.target === popup) closePopup();
-    });
-  }
-
-  // Escape key closes popup
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && popup && popup.classList.contains('active')) {
-      closePopup();
-    }
-  });
-
-  if (announcementBar) {
-    announcementBar.style.cursor = 'pointer';
-    announcementBar.setAttribute('title', 'Cliquez pour voir les détails de l\'inauguration');
-    announcementBar.addEventListener('click', () => {
-      openPopup();
-    });
-  }
-
-  // Show after 1.5 seconds if not closed in this session (or force with ?popup=true)
-  const isForcePopup = window.location.search.includes('popup=true') || window.location.hash === '#inauguration';
-  try {
-    if (isForcePopup || !sessionStorage.getItem('moon_popup_closed')) {
-      setTimeout(openPopup, 1400);
-    }
-  } catch (e) {
-    setTimeout(openPopup, 1400);
-  }
-
-  window.openInaugurationPopup = openPopup;
 
 });
 
