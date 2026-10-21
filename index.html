@@ -336,6 +336,14 @@
           "@type": "Answer",
           "text": "Lagree, Pilates Reformer, Pilates Mat, Sculpt, Barre, Yoga et StrAbs ont été sélectionnés pour leur complémentarité : renforcement profond, tonicité, posture, souplesse et mobilité en petits groupes de 6 maximum."
         }
+      },
+      {
+        "@type": "Question",
+        "name": "Vos cours sont-ils remboursés par les assurances complémentaires (QualiCert) ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui, absolument ! Moon Pilates Club est officiellement certifié QualiCert. Grâce à cette labellisation de qualité reconnue en Suisse, la majorité des assurances maladie complémentaires remboursent une partie de vos abonnements ou packs de cours (généralement entre 200 et 800 CHF par an selon votre contrat). Une attestation de fréquentation / facture acquittée vous est délivrée sur simple demande pour votre remboursement."
+        }
       }
     ]
   }
@@ -349,7 +357,7 @@
     <!-- ANNOUNCEMENT BAR -->
     <div class="announcement-bar" id="announcement-bar">
       <div class="announcement-inner">
-        <span data-i18n-html="announcement_text">🌿 <strong>Certifié QualiCert :</strong> demandez maintenant à vos assurances ! <span class="separator">·</span> 🔥 <strong>Certifié Lagree Fitness</strong></span>
+        <span data-i18n-html="announcement_text">🌿 <strong>Certifié QualiCert :</strong> demandez maintenant à vos assurances ! <span class="separator">·</span> 🌶️ <strong>Certifié Lagree Fitness</strong></span>
       </div>
       <button class="announcement-close" id="announcement-close" aria-label="Fermer">×</button>
     </div>
@@ -526,7 +534,7 @@
       <h2 class="section-title reveal" style="text-align:center" data-i18n-html="cours_title">Une approche complète & ciblée<br/><em>Des cours pour chaque objectif</em></h2>
       <div class="cours-grid">
         <div class="cours-card reveal" style="--delay:0s">
-          <div class="cours-icon">🔥</div>
+          <div class="cours-icon">🌶️</div>
           <h3 data-i18n="lagree_title">Lagree</h3>
           <p data-i18n="lagree_desc">Entraînement intense sur Microformer. Gainage, endurance et tonicité musculaire au rendez-vous.</p>
           <ul>
@@ -1977,11 +1985,12 @@
         </div>
         <div class="faq-item reveal">
           <button class="faq-question" id="faq-btn-assurance" aria-expanded="false" aria-controls="faq-ans-assurance">
-            Proposez-vous des remboursements complémentaires avec assurance / QualiCert ou autres ?
+            <span data-i18n="faq_assurance_q">Vos cours sont-ils remboursés par les assurances complémentaires (QualiCert) ?</span>
             <span class="faq-arrow">↓</span>
           </button>
-          <div class="faq-answer" id="faq-ans-assurance" role="region" aria-labelledby="faq-btn-assurance">
-            <p>Oui, absolument ! Moon Pilates Club est certifié <strong>QualiCert</strong> et <strong>Lagree Fitness</strong>. Vous pouvez dès maintenant demander une attestation de fréquentation auprès de notre équipe pour la transmettre à votre assurance maladie complémentaire afin de bénéficier de votre remboursement.</p>
+          <div class="faq-answer" id="faq-ans-assurance" role="region" aria-labelledby="faq-btn-assurance" data-i18n-html="faq_assurance_a">
+            <p>Oui, absolument ! Moon Pilates Club est officiellement certifié <strong>QualiCert</strong>. Grâce à cette labellisation de qualité reconnue en Suisse, la majorité des assurances maladie complémentaires (Groupe Mutuel, Helsana, Swica, CSS, Sanitas, Concordia, Visana, etc.) prennent en charge une partie de vos abonnements ou packs de séances (généralement entre 200 et 800 CHF par an selon votre contrat).</p>
+            <p style="margin-top: 10px;">Demandez simplement une attestation de fréquentation / facture acquittée auprès de notre équipe pour la transmettre directement à votre assurance et bénéficier de votre remboursement !</p>
           </div>
         </div>
         <div class="faq-item reveal">
@@ -2205,7 +2214,7 @@
     </svg>
   </button>
 
-  <script src="translations.js?v=29"></script>
-  <script src="script.js?v=51"></script>
+  <script src="translations.js?v=30"></script>
+  <script src="script.js?v=52"></script>
 </body>
 </html>

@@ -6,7 +6,7 @@
 const translations = {
   fr: {
     // Announcement & Nav
-    "announcement_text": "🌿 <strong>Certifié QualiCert :</strong> demandez maintenant à vos assurances ! <span class=\"separator\">·</span> 🔥 <strong>Certifié Lagree Fitness</strong>",
+    "announcement_text": "🌿 <strong>Certifié QualiCert :</strong> demandez maintenant à vos assurances ! <span class=\"separator\">·</span> 🌶️ <strong>Certifié Lagree Fitness</strong>",
     "nav_concept": "À propos",
     "nav_cours": "Cours",
     "nav_coachs": "Coachs",
@@ -342,6 +342,8 @@ const translations = {
     "faq_prives_a": "<p>Nos séances privées d'une heure (60 minutes, Solo ou Duo) offrent un encadrement exclusif 100% sur mesure. Vous choisissez la discipline souhaitée parmi nos 7 disciplines (Lagree, Reformer, Mat Pilates, Sculpt, Barre, Yoga, StrAbs) et profitez d'horaires flexibles en heures creuses selon vos disponibilités. Après l'effort, un moment de détente au Moon Café vous attend pour prolonger l'expérience.</p>",
     "faq_try_q": "Puis-je essayer avant de m'abonner ?",
     "faq_try_a": "<p>Oui, les 3 séances Découverte sont tout à fait possibles ! Notre pack découverte de 3 séances est à 85 CHF les trois, ce qui revient à un équivalent de ≈ 28 CHF la séance. C'est l'option idéale pour tester nos machines, explorer nos différentes disciplines et découvrir l'ambiance du club avant de vous abonner.</p><p style=\"margin-top: 14px;\"><a href=\"#decouverte\" class=\"btn btn-outline\" style=\"display:inline-flex; align-items:center; gap:6px; padding:8px 18px; font-size:0.85rem; border-radius:20px;\">🌸 Découvrir les séances découverte →</a></p>",
+    "faq_assurance_q": "Vos cours sont-ils remboursés par les assurances complémentaires (QualiCert) ?",
+    "faq_assurance_a": "<p>Oui, absolument ! Moon Pilates Club est officiellement certifié <strong>QualiCert</strong>. Grâce à cette labellisation de qualité reconnue en Suisse, la majorité des assurances maladie complémentaires (Groupe Mutuel, Helsana, Swica, CSS, Sanitas, Concordia, Visana, etc.) prennent en charge une partie de vos abonnements ou packs de séances (généralement entre 200 et 800 CHF par an selon votre contrat).</p><p style=\"margin-top: 10px;\">Demandez simplement une attestation de fréquentation / facture acquittée auprès de notre équipe pour la transmettre directement à votre assurance et bénéficier de votre remboursement !</p>",
 
     // Contact
     "contact_label": "Nous trouver",
@@ -380,7 +382,7 @@ const translations = {
 
   en: {
     // Announcement & Nav
-    "announcement_text": "🌿 <strong>QualiCert Certified:</strong> check with your insurance now! <span class=\"separator\">·</span> 🔥 <strong>Certified Lagree Fitness</strong>",
+    "announcement_text": "🌿 <strong>QualiCert Certified:</strong> check with your insurance now! <span class=\"separator\">·</span> 🌶️ <strong>Certified Lagree Fitness</strong>",
     "nav_concept": "About",
     "nav_cours": "Classes",
     "nav_coachs": "Coaches",
@@ -716,6 +718,8 @@ const translations = {
     "faq_prives_a": "<p>Our 1-hour private sessions (60 minutes, Solo or Duo) offer 100% personalized exclusive coaching. You choose your preferred discipline among our 7 offerings (Lagree, Reformer, Mat Pilates, Sculpt, Barre, Yoga, StrAbs) and enjoy flexible off-peak scheduling tailored to your availability. Afterward, unwind in our Moon Café lounge to complete your wellness experience.</p>",
     "faq_try_q": "Can I try a class before getting a membership?",
     "faq_try_a": "<p>Yes, discovery sessions are the perfect way to get started! Our 3-session discovery pack is CHF 85 for all three (≈ CHF 28 per class). It's the ideal option to try out our equipment, experience different disciplines, and get a feel for the club before subscribing.</p><p style=\"margin-top: 14px;\"><a href=\"#decouverte\" class=\"btn btn-outline\" style=\"display:inline-flex; align-items:center; gap:6px; padding:8px 18px; font-size:0.85rem; border-radius:20px;\">🌸 Explore Discovery Sessions →</a></p>",
+    "faq_assurance_q": "Are classes and memberships covered by supplementary health insurance (QualiCert)?",
+    "faq_assurance_a": "<p>Yes, absolutely! Moon Pilates Club is officially <strong>QualiCert</strong> certified. Thanks to this recognized Swiss quality certification, many supplementary health insurance providers (Groupe Mutuel, Helsana, Swica, CSS, Sanitas, Concordia, Visana, etc.) cover a portion of your memberships or class packages (typically between CHF 200 and CHF 800 per year depending on your policy).</p><p style=\"margin-top: 10px;\">Simply ask our team for an attendance certificate / paid invoice to submit to your insurance company and receive your reimbursement!</p>",
 
     // Contact
     "contact_label": "Find Us",
