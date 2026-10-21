@@ -32,6 +32,7 @@ const translations = {
     // Ticker
     "ticker_item_1": "7 disciplines · Lagree — Reformer — Pilates Mat — Sculpt — Barre — Yoga — StrAbs",
     "ticker_item_2": "Petits groupes · Encadrement premium",
+    "ticker_item_cert": "🌿 Certifié QualiCert · Remboursé par vos assurances",
     "ticker_item_3": "Moon Café · Specialty Coffee & Matcha",
     "ticker_item_4": "Galeries Benjamin-Constant · Lausanne",
 
@@ -408,6 +409,7 @@ const translations = {
     // Ticker
     "ticker_item_1": "7 disciplines · Lagree — Reformer — Pilates Mat — Sculpt — Barre — Yoga — StrAbs",
     "ticker_item_2": "Small groups · Premium coaching",
+    "ticker_item_cert": "🌿 QualiCert Certified · Covered by health insurance",
     "ticker_item_3": "Moon Café · Specialty Coffee & Matcha",
     "ticker_item_4": "Galeries Benjamin-Constant · Lausanne",
 
