@@ -1,10 +1,25 @@
 /* ===========================
    MOON PILATES CLUB — SCRIPTS
    =========================== */
-
 document.addEventListener('DOMContentLoaded', () => {
 
+  // ─── ANNOUNCEMENT BAR CLOSE ───
+  const bar = document.getElementById('announcement-bar');
+  const closeBtn = document.getElementById('announcement-close');
   const navbar = document.getElementById('navbar');
+
+  if (closeBtn && bar) {
+    closeBtn.addEventListener('click', () => {
+      bar.style.maxHeight = bar.offsetHeight + 'px';
+      requestAnimationFrame(() => {
+        bar.style.transition = 'max-height 0.4s ease, padding 0.4s ease, opacity 0.3s';
+        bar.style.maxHeight = '0';
+        bar.style.padding = '0';
+        bar.style.opacity = '0';
+        bar.style.overflow = 'hidden';
+      });
+    });
+  }
 
   // ─── NAVBAR SCROLL ───
   window.addEventListener('scroll', () => {

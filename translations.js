@@ -5,7 +5,8 @@
 
 const translations = {
   fr: {
-    // Nav
+    // Announcement & Nav
+    "announcement_text": "🌿 <strong>Certifié QualiCert :</strong> demandez maintenant à vos assurances ! <span class=\"separator\">·</span> 🔥 <strong>Certifié Lagree Fitness</strong>",
     "nav_concept": "À propos",
     "nav_cours": "Cours",
     "nav_coachs": "Coachs",
@@ -378,7 +379,8 @@ const translations = {
   },
 
   en: {
-    // Nav
+    // Announcement & Nav
+    "announcement_text": "🌿 <strong>QualiCert Certified:</strong> check with your insurance now! <span class=\"separator\">·</span> 🔥 <strong>Certified Lagree Fitness</strong>",
     "nav_concept": "About",
     "nav_cours": "Classes",
     "nav_coachs": "Coaches",

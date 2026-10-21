@@ -67,6 +67,14 @@
 
   <!-- site-header -->
   <div class="site-header">
+    <!-- ANNOUNCEMENT BAR -->
+    <div class="announcement-bar" id="announcement-bar">
+      <div class="announcement-inner">
+        <span>🌿 <strong>Certifié QualiCert :</strong> demandez maintenant à vos assurances ! <span class="separator">·</span> 🔥 <strong>Certifié Lagree Fitness</strong></span>
+      </div>
+      <button class="announcement-close" id="announcement-close" aria-label="Fermer">×</button>
+    </div>
+
     <!-- NAVIGATION -->
     <nav class="nav scrolled" id="navbar" style="position: relative;">
       <a href="index.html#hero" class="nav-logo">
@@ -225,6 +233,15 @@
       }
 
 
+
+      // Simple close announcement bar
+      const bar = document.getElementById('announcement-bar');
+      const closeBtn = document.getElementById('announcement-close');
+      if (closeBtn && bar) {
+        closeBtn.addEventListener('click', () => {
+          bar.style.display = 'none';
+        });
+      }
 
       // Back to top button
       const backToTopBtn = document.getElementById('back-to-top');
