@@ -146,6 +146,11 @@ const translations = {
     "forfaits_title": "Choisissez votre<br/><em>formule</em>",
     "forfaits_sub": "7 disciplines · Lausanne",
     "forfaits_gel_badge": "❄️ <strong>Avantage inclus :</strong> 1 mois de pause / gel offert sans frais sur tous nos forfaits",
+    "qualicert_banner_tag": "🌿 LABEL OFFICIEL QUALICERT",
+    "qualicert_banner_highlight": "Prise en charge jusqu'à 800 CHF / an",
+    "qualicert_banner_title": "Vos abonnements remboursés par vos assurances maladie complémentaires",
+    "qualicert_banner_desc": "Moon Pilates Club est officiellement certifié <strong>QualiCert</strong>. Grâce à ce label de qualité suisse, bénéficiez d'une prise en charge annuelle sur vos abonnements et cours auprès de votre assurance complémentaire (Groupe Mutuel, Helsana, Swica, CSS, Sanitas, Concordia, Visana...). Une attestation / facture acquittée vous est délivrée sur simple demande !",
+    "qualicert_insurances_label": "Exemples d'assurances partenaires QualiCert :",
     "badge_popular": "Plus Populaire",
     "badge_best_price": "Meilleur Prix",
     "toggle_6m": "6 mois",
@@ -344,7 +349,7 @@ const translations = {
     "faq_try_q": "Puis-je essayer avant de m'abonner ?",
     "faq_try_a": "<p>Oui, les 3 séances Découverte sont tout à fait possibles ! Notre pack découverte de 3 séances est à 85 CHF les trois, ce qui revient à un équivalent de ≈ 28 CHF la séance. C'est l'option idéale pour tester nos machines, explorer nos différentes disciplines et découvrir l'ambiance du club avant de vous abonner.</p><p style=\"margin-top: 14px;\"><a href=\"#decouverte\" class=\"btn btn-outline\" style=\"display:inline-flex; align-items:center; gap:6px; padding:8px 18px; font-size:0.85rem; border-radius:20px;\">🌸 Découvrir les séances découverte →</a></p>",
     "faq_assurance_q": "Vos cours sont-ils remboursés par les assurances complémentaires (QualiCert) ?",
-    "faq_assurance_a": "<p>Oui, absolument ! Moon Pilates Club est officiellement certifié <strong>QualiCert</strong>. Grâce à cette labellisation de qualité reconnue en Suisse, la majorité des assurances maladie complémentaires (Groupe Mutuel, Helsana, Swica, CSS, Sanitas, Concordia, Visana, etc.) prennent en charge une partie de vos abonnements ou packs de séances (généralement entre 200 et 800 CHF par an selon votre contrat).</p><p style=\"margin-top: 10px;\">Demandez simplement une attestation de fréquentation / facture acquittée auprès de notre équipe pour la transmettre directement à votre assurance et bénéficier de votre remboursement !</p>",
+    "faq_assurance_a": "<div class=\"faq-assurance-layout\"><div class=\"faq-assurance-badge\"><img src=\"qualicert-certifie.jpg\" alt=\"Moon Pilates Club Certifié QualiCert\" class=\"faq-assurance-img\" loading=\"lazy\" /></div><div class=\"faq-assurance-details\"><p>Oui, absolument ! Moon Pilates Club est un studio officiellement certifié <strong>QualiCert</strong>. Grâce à cette labellisation reconnue en Suisse, la majorité des assurances maladie complémentaires (Groupe Mutuel, Helsana, Swica, CSS, Sanitas, Concordia, Visana, etc.) remboursent une partie de vos abonnements ou packs de séances (généralement entre 200 et 800 CHF par an selon votre contrat).</p><p style=\"margin-top: 10px;\">Demandez simplement une attestation de fréquentation / facture acquittée auprès de notre équipe pour la transmettre directement à votre assurance et bénéficier de votre remboursement !</p></div></div>",
 
     // Contact
     "contact_label": "Nous trouver",
@@ -523,6 +528,11 @@ const translations = {
     "forfaits_title": "Choose your<br/><em>membership</em>",
     "forfaits_sub": "7 disciplines · Lausanne",
     "forfaits_gel_badge": "❄️ <strong>Included benefit:</strong> 1 month free membership pause / freeze (no fees) on all plans",
+    "qualicert_banner_tag": "🌿 OFFICIAL QUALICERT LABEL",
+    "qualicert_banner_highlight": "Reimbursement up to CHF 800 / year",
+    "qualicert_banner_title": "Your memberships reimbursed by Swiss supplementary health insurances",
+    "qualicert_banner_desc": "Moon Pilates Club is officially <strong>QualiCert</strong> certified. Thanks to this Swiss quality seal, you can receive annual reimbursement on your memberships and classes through your supplementary health insurance (Groupe Mutuel, Helsana, Swica, CSS, Sanitas, Concordia, Visana...). Simply ask our team for an attendance certificate / paid invoice to claim your benefits!",
+    "qualicert_insurances_label": "Examples of QualiCert partner insurances:",
     "badge_popular": "Most Popular",
     "badge_best_price": "Best Value",
     "toggle_6m": "6 months",
@@ -721,7 +731,7 @@ const translations = {
     "faq_try_q": "Can I try a class before getting a membership?",
     "faq_try_a": "<p>Yes, discovery sessions are the perfect way to get started! Our 3-session discovery pack is CHF 85 for all three (≈ CHF 28 per class). It's the ideal option to try out our equipment, experience different disciplines, and get a feel for the club before subscribing.</p><p style=\"margin-top: 14px;\"><a href=\"#decouverte\" class=\"btn btn-outline\" style=\"display:inline-flex; align-items:center; gap:6px; padding:8px 18px; font-size:0.85rem; border-radius:20px;\">🌸 Explore Discovery Sessions →</a></p>",
     "faq_assurance_q": "Are classes and memberships covered by supplementary health insurance (QualiCert)?",
-    "faq_assurance_a": "<p>Yes, absolutely! Moon Pilates Club is officially <strong>QualiCert</strong> certified. Thanks to this recognized Swiss quality certification, many supplementary health insurance providers (Groupe Mutuel, Helsana, Swica, CSS, Sanitas, Concordia, Visana, etc.) cover a portion of your memberships or class packages (typically between CHF 200 and CHF 800 per year depending on your policy).</p><p style=\"margin-top: 10px;\">Simply ask our team for an attendance certificate / paid invoice to submit to your insurance company and receive your reimbursement!</p>",
+    "faq_assurance_a": "<div class=\"faq-assurance-layout\"><div class=\"faq-assurance-badge\"><img src=\"qualicert-certifie.jpg\" alt=\"Moon Pilates Club QualiCert Certified\" class=\"faq-assurance-img\" loading=\"lazy\" /></div><div class=\"faq-assurance-details\"><p>Yes, absolutely! Moon Pilates Club is officially <strong>QualiCert</strong> certified. Thanks to this recognized Swiss quality certification, many supplementary health insurance providers (Groupe Mutuel, Helsana, Swica, CSS, Sanitas, Concordia, Visana, etc.) cover a portion of your memberships or class packages (typically between CHF 200 and CHF 800 per year depending on your policy).</p><p style=\"margin-top: 10px;\">Simply ask our team for an attendance certificate / paid invoice to submit to your insurance company and receive your reimbursement!</p></div></div>",
 
     // Contact
     "contact_label": "Find Us",

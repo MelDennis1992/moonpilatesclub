@@ -2444,7 +2444,7 @@ a { text-decoration: none; color: inherit; }
   overflow: hidden;
   transition: max-height 0.4s ease, padding 0.4s ease;
 }
-.faq-answer.open { max-height: 500px; padding-bottom: 20px; }
+.faq-answer.open { max-height: 750px; padding-bottom: 20px; }
 .faq-answer p {
   font-size: 0.9rem;
   color: rgba(58, 40, 32, 0.7);
@@ -3785,6 +3785,201 @@ a { text-decoration: none; color: inherit; }
   .mooncafe-banner-text {
     flex-direction: column;
     text-align: center;
+  }
+}
+
+/* =====================================================
+   QUALICERT CERTIFICATION BANNER & FAQ REASSURANCE
+   ===================================================== */
+.qualicert-banner {
+  max-width: 980px;
+  margin: 0 auto 52px auto;
+  background: linear-gradient(135deg, #ffffff 0%, rgba(255, 245, 242, 0.95) 100%);
+  border: 1px solid rgba(123, 89, 89, 0.2);
+  border-radius: 24px;
+  padding: 30px 36px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  box-shadow: 0 12px 36px rgba(123, 89, 89, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+.qualicert-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--terracotta), var(--gold-light));
+  border-radius: 24px 0 0 24px;
+}
+.qualicert-banner-badge {
+  flex-shrink: 0;
+  width: 140px;
+  height: 140px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(123, 89, 89, 0.12);
+  border: 2px solid rgba(123, 89, 89, 0.15);
+  padding: 10px;
+  transition: transform 0.35s ease;
+}
+.qualicert-banner:hover .qualicert-banner-badge {
+  transform: scale(1.04) rotate(2deg);
+}
+.qualicert-banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+.qualicert-banner-content {
+  flex: 1;
+}
+.qualicert-badge-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.qualicert-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--terracotta);
+  background: rgba(123, 89, 89, 0.08);
+  padding: 5px 14px;
+  border-radius: 50px;
+  border: 1px solid rgba(123, 89, 89, 0.15);
+}
+.qualicert-highlight {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #1a6f3b;
+  background: rgba(46, 139, 87, 0.12);
+  border: 1px solid rgba(46, 139, 87, 0.2);
+  padding: 5px 14px;
+  border-radius: 50px;
+}
+.qualicert-banner-heading {
+  font-family: var(--font-serif);
+  font-size: 1.55rem;
+  font-weight: 600;
+  color: var(--charcoal);
+  margin-bottom: 10px;
+  line-height: 1.25;
+}
+.qualicert-banner-text {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: rgba(58, 40, 32, 0.85);
+  margin-bottom: 16px;
+}
+.qualicert-banner-text strong {
+  color: var(--charcoal);
+}
+.qualicert-insurances-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.qualicert-insurances-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: rgba(58, 40, 32, 0.65);
+  font-weight: 600;
+}
+.qualicert-insurances {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.insurance-pill {
+  font-size: 0.75rem;
+  color: var(--terracotta-dark);
+  background: #ffffff;
+  border: 1px solid rgba(123, 89, 89, 0.16);
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-weight: 500;
+  box-shadow: 0 2px 6px rgba(123, 89, 89, 0.04);
+}
+
+/* FAQ Assurance with Badge Layout */
+.faq-assurance-layout {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 6px 0;
+}
+.faq-assurance-badge {
+  flex-shrink: 0;
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid rgba(123, 89, 89, 0.15);
+  box-shadow: 0 6px 18px rgba(123, 89, 89, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}
+.faq-assurance-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+.faq-assurance-details {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .qualicert-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 24px 20px;
+    gap: 20px;
+  }
+  .qualicert-banner::before {
+    width: 100%;
+    height: 5px;
+    border-radius: 24px 24px 0 0;
+  }
+  .qualicert-banner-badge {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+  }
+  .qualicert-badge-header {
+    justify-content: center;
+  }
+  .qualicert-banner-heading {
+    font-size: 1.35rem;
+  }
+  .qualicert-insurances {
+    justify-content: center;
+  }
+  .faq-assurance-layout {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+  }
+  .faq-assurance-badge {
+    width: 85px;
+    height: 85px;
   }
 }
 

@@ -32,7 +32,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=52" />
+  <link rel="stylesheet" href="style.css?v=53" />
 
   <!-- Bsport Widget SDK -->
   <script id="insert-bsport-widget-cdn">!function (b, s, p, o, r, t) { typeof window.BsportWidget === "undefined" && !document.getElementById("bsport-widget-cdn") && !function () { m = b.createElement(s), m.id = "bsport-widget-cdn", m.src = p, b.getElementsByTagName("head")[0].appendChild(m) }() }(document, "script", "https://cdn.bsport.io/scripts/widget.js")</script>
@@ -953,9 +953,39 @@
         <p class="section-label reveal" style="text-align:center" data-i18n="forfaits_label">Nos forfaits</p>
         <h2 class="section-title reveal" style="text-align:center" data-i18n-html="forfaits_title">Choisissez votre<br/><em>formule</em></h2>
         <p class="tarifs-sub reveal" style="text-align:center; margin-bottom:20px;" data-i18n="forfaits_sub">7 disciplines · Lausanne</p>
-        <div class="forfaits-gel-pill-container reveal" style="display:flex; justify-content:center; margin-bottom:52px;">
+        <div class="forfaits-gel-pill-container reveal" style="display:flex; justify-content:center; margin-bottom:36px;">
           <div class="forfaits-gel-pill">
             <span data-i18n-html="forfaits_gel_badge">❄️ <strong>Avantage inclus :</strong> 1 mois de pause / gel offert sans frais sur tous nos forfaits</span>
+          </div>
+        </div>
+
+        <!-- BANDEAU QUALICERT RÉASSURANCE -->
+        <div class="qualicert-banner reveal">
+          <div class="qualicert-banner-badge">
+            <img src="qualicert-certifie.jpg" alt="Moon Pilates Club Certifié QualiCert" class="qualicert-banner-img" loading="lazy" />
+          </div>
+          <div class="qualicert-banner-content">
+            <div class="qualicert-badge-header">
+              <span class="qualicert-tag" data-i18n="qualicert_banner_tag">🌿 LABEL OFFICIEL QUALICERT</span>
+              <span class="qualicert-highlight" data-i18n="qualicert_banner_highlight">Prise en charge jusqu'à 800 CHF / an</span>
+            </div>
+            <h3 class="qualicert-banner-heading" data-i18n="qualicert_banner_title">Vos abonnements remboursés par vos assurances maladie complémentaires</h3>
+            <p class="qualicert-banner-text" data-i18n-html="qualicert_banner_desc">
+              Moon Pilates Club est officiellement certifié <strong>QualiCert</strong>. Grâce à ce label de qualité suisse, bénéficiez d'une prise en charge annuelle sur vos abonnements et cours auprès de votre assurance complémentaire (Groupe Mutuel, Helsana, Swica, CSS, Sanitas, Concordia, Visana...). Une attestation / facture acquittée vous est délivrée sur simple demande !
+            </p>
+            <div class="qualicert-insurances-wrap">
+              <span class="qualicert-insurances-label" data-i18n="qualicert_insurances_label">Exemples d'assurances partenaires QualiCert :</span>
+              <div class="qualicert-insurances">
+                <span class="insurance-pill">Groupe Mutuel</span>
+                <span class="insurance-pill">Helsana</span>
+                <span class="insurance-pill">Swica</span>
+                <span class="insurance-pill">CSS</span>
+                <span class="insurance-pill">Sanitas</span>
+                <span class="insurance-pill">Concordia</span>
+                <span class="insurance-pill">Visana</span>
+                <span class="insurance-pill">+ toutes complémentaires QualiCert</span>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -1993,8 +2023,15 @@
             <span class="faq-arrow">↓</span>
           </button>
           <div class="faq-answer" id="faq-ans-assurance" role="region" aria-labelledby="faq-btn-assurance" data-i18n-html="faq_assurance_a">
-            <p>Oui, absolument ! Moon Pilates Club est officiellement certifié <strong>QualiCert</strong>. Grâce à cette labellisation de qualité reconnue en Suisse, la majorité des assurances maladie complémentaires (Groupe Mutuel, Helsana, Swica, CSS, Sanitas, Concordia, Visana, etc.) prennent en charge une partie de vos abonnements ou packs de séances (généralement entre 200 et 800 CHF par an selon votre contrat).</p>
-            <p style="margin-top: 10px;">Demandez simplement une attestation de fréquentation / facture acquittée auprès de notre équipe pour la transmettre directement à votre assurance et bénéficier de votre remboursement !</p>
+            <div class="faq-assurance-layout">
+              <div class="faq-assurance-badge">
+                <img src="qualicert-certifie.jpg" alt="Moon Pilates Club Certifié QualiCert" class="faq-assurance-img" loading="lazy" />
+              </div>
+              <div class="faq-assurance-details">
+                <p>Oui, absolument ! Moon Pilates Club est un studio officiellement certifié <strong>QualiCert</strong>. Grâce à cette labellisation reconnue en Suisse, la majorité des assurances maladie complémentaires (Groupe Mutuel, Helsana, Swica, CSS, Sanitas, Concordia, Visana, etc.) remboursent une partie de vos abonnements ou packs de séances (généralement entre 200 et 800 CHF par an selon votre contrat).</p>
+                <p style="margin-top: 10px;">Demandez simplement une attestation de fréquentation / facture acquittée auprès de notre équipe pour la transmettre directement à votre assurance et bénéficier de votre remboursement !</p>
+              </div>
+            </div>
           </div>
         </div>
         <div class="faq-item reveal">
@@ -2218,7 +2255,7 @@
     </svg>
   </button>
 
-  <script src="translations.js?v=31"></script>
-  <script src="script.js?v=52"></script>
+  <script src="translations.js?v=32"></script>
+  <script src="script.js?v=53"></script>
 </body>
 </html>
