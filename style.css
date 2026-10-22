@@ -811,10 +811,16 @@ a { text-decoration: none; color: inherit; }
 }
 .coachs-grid-duo {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 36px;
-  max-width: 980px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  max-width: 1200px;
   margin: 0 auto 52px auto;
+}
+@media (max-width: 992px) {
+  .coachs-grid-duo {
+    grid-template-columns: 1fr;
+    max-width: 440px;
+  }
 }
 .coach-card {
   background: var(--white);
@@ -848,6 +854,9 @@ a { text-decoration: none; color: inherit; }
 }
 .coach-img.coach-img-ivy {
   object-position: center 78%;
+}
+.coach-img.coach-img-kali {
+  object-position: center 72%;
 }
 .coach-card:hover .coach-img {
   transform: scale(1.05);
@@ -1073,6 +1082,14 @@ a { text-decoration: none; color: inherit; }
 @media (min-width: 861px) {
   .coach-modal-img.coach-modal-img-ivy {
     object-position: center center;
+  }
+}
+.coach-modal-img.coach-modal-img-kali {
+  object-position: center 75%;
+}
+@media (min-width: 861px) {
+  .coach-modal-img.coach-modal-img-kali {
+    object-position: center 82%;
   }
 }
 .coach-modal-badge {

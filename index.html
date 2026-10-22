@@ -32,7 +32,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=55" />
+  <link rel="stylesheet" href="style.css?v=57" />
 
   <!-- Bsport Widget SDK -->
   <script id="insert-bsport-widget-cdn">!function (b, s, p, o, r, t) { typeof window.BsportWidget === "undefined" && !document.getElementById("bsport-widget-cdn") && !function () { m = b.createElement(s), m.id = "bsport-widget-cdn", m.src = p, b.getElementsByTagName("head")[0].appendChild(m) }() }(document, "script", "https://cdn.bsport.io/scripts/widget.js")</script>
@@ -675,6 +675,32 @@
             </div>
           </div>
         </div>
+
+        <!-- Kali -->
+        <div class="coach-card reveal" style="--delay:0.2s" data-coach-modal="modal-kali">
+          <div class="coach-img-wrap">
+            <img src="kali.jpg?v=1" alt="Kali - Coach Yoga & Breathwork Moon Pilates" class="coach-img coach-img-kali" />
+            <div class="coach-badge" data-i18n="badge_coach_moon">Coach Moon Club</div>
+            <div class="coach-hover-overlay">
+              <span data-i18n="coach_hover">Voir le profil & bio →</span>
+            </div>
+          </div>
+          <div class="coach-content">
+            <h3 class="coach-name">Kali</h3>
+            <p class="coach-role">Yoga · Breathwork · Holistic Artist</p>
+            <p class="coach-bio">Forte de plus de 10 ans d’expérience, Kali combine avec justesse l’art du yoga et la puissance du breathwork. Du flow dynamique à la pratique restaurative douce, elle propose un yoga conscient et intuitif adapté à chacun.</p>
+            <div class="coach-tags">
+              <span class="coach-tag">Yoga</span>
+              <span class="coach-tag">Breathwork</span>
+              <span class="coach-tag">Holistic</span>
+              <span class="coach-tag">Restorative</span>
+              <span class="coach-tag">Flow</span>
+            </div>
+            <div class="coach-footer">
+              <button type="button" class="coach-btn open-coach-modal" data-target="modal-kali" data-i18n="btn_discover_profile">Découvrir son profil & bio →</button>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- Coachs Callout -->
@@ -790,6 +816,60 @@
 
           <div class="coach-modal-actions">
             <a href="#planning" class="btn btn-primary coach-modal-cta">Réserver un cours avec Ivy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Kali -->
+  <div class="coach-modal-backdrop" id="modal-kali" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-kali-title">
+    <div class="coach-modal-container">
+      <button class="coach-modal-close" aria-label="Fermer la boîte de dialogue">×</button>
+      <div class="coach-modal-content">
+        <div class="coach-modal-photo-col">
+          <img src="kali.jpg?v=1" alt="Kali - Coach de Yoga, Breathwork & Holistic Artist" class="coach-modal-img coach-modal-img-kali" />
+          <div class="coach-modal-badge" data-i18n="badge_coach_moon">Coach Moon Club</div>
+        </div>
+        <div class="coach-modal-text-col">
+          <div class="coach-modal-header">
+            <p class="coach-modal-subtitle">Coach Moon Pilates Club</p>
+            <h3 class="coach-modal-title" id="modal-kali-title">Kali</h3>
+            <p class="coach-modal-specialties">Yoga · Breathwork · Holistic Artist</p>
+          </div>
+
+          <div class="coach-modal-body">
+            <p>Forte de plus de 10 ans d’expérience, Kali combine avec justesse l’art du yoga et la puissance du breathwork.</p>
+            <p>Du flow dynamique à la pratique restaurative douce, elle propose un yoga conscient et intuitif qu’elle adapte avec aisance à l'énergie du cours et aux besoins de chacun.</p>
+            <p>Grâce à sa sensibilité holistique et à sa maîtrise du souffle, elle crée un espace bienveillant où débutants comme confirmés peuvent explorer le mouvement, libérer les tensions et se reconnecter en profondeur.</p>
+            
+            <div class="coach-modal-details">
+              <div class="coach-detail-item">
+                <div class="coach-detail-icon">🧘‍♀️</div>
+                <div class="coach-detail-text">
+                  <strong>Sa signature :</strong>
+                  <span>Une alliance subtile entre fluidité du yoga, puissance du breathwork et écoute du corps pour libérer les tensions.</span>
+                </div>
+              </div>
+              <div class="coach-detail-item">
+                <div class="coach-detail-icon">✨</div>
+                <div class="coach-detail-text">
+                  <strong>Son approche holistique :</strong>
+                  <span>Plus de 10 ans d'expérience pour guider débutants comme confirmés vers un mouvement conscient et intuitif.</span>
+                </div>
+              </div>
+              <div class="coach-detail-item">
+                <div class="coach-detail-icon">🌿</div>
+                <div class="coach-detail-text">
+                  <strong>Dans ses cours :</strong>
+                  <span>Un espace bienveillant pour explorer le souffle, apaiser l'esprit et se reconnecter en profondeur.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="coach-modal-actions">
+            <a href="#planning" class="btn btn-primary coach-modal-cta">Réserver un cours avec Kali</a>
           </div>
         </div>
       </div>
