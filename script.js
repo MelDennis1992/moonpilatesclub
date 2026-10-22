@@ -1216,6 +1216,8 @@ document.addEventListener('DOMContentLoaded', () => {
   function openCoachModal(modalId) {
     const modal = document.getElementById(modalId);
     if (!modal) return;
+    closeCoachModals();
+    stopCoachAutoplay();
     modal.classList.add('active');
     modal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
@@ -1227,6 +1229,7 @@ document.addEventListener('DOMContentLoaded', () => {
       modal.setAttribute('aria-hidden', 'true');
     });
     document.body.style.overflow = '';
+    startCoachAutoplay();
   }
 
   // Clic sur une carte coach
@@ -1267,6 +1270,157 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       closeCoachModals();
+    }
+  });
+
+  // ─── COACHS: MOBILE HORIZONTAL CAROUSEL & AUTOPLAY ───
+  const coachsTrack = document.getElementById('coachs-track');
+  const coachCards = coachsTrack ? coachsTrack.querySelectorAll('.coach-card') : [];
+  const coachDots = document.querySelectorAll('#coachs-dots .coachs-dot');
+  const coachPrevBtn = document.getElementById('coachs-prev-btn');
+  const coachNextBtn = document.getElementById('coachs-next-btn');
+  const coachsSection = document.getElementById('coachs');
+
+  let currentCoachIdx = 0;
+  let coachAutoplayTimer = null;
+  let isCoachInteracting = false;
+  let coachResumeTimer = null;
+
+  function isMobileCoachView() {
+    return window.innerWidth <= 992 && coachsTrack && coachCards.length > 1;
+  }
+
+  function updateCoachDots(idx) {
+    currentCoachIdx = idx;
+    coachDots.forEach((dot, i) => {
+      const isActive = i === idx;
+      dot.classList.toggle('active', isActive);
+      dot.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    });
+  }
+
+  function scrollToCoach(idx, behavior = 'smooth') {
+    if (!coachsTrack || coachCards.length === 0) return;
+    const targetIdx = (idx + coachCards.length) % coachCards.length;
+    const targetCard = coachCards[targetIdx];
+    if (!targetCard) return;
+
+    const trackWidth = coachsTrack.clientWidth;
+    const cardWidth = targetCard.offsetWidth;
+    const targetLeft = targetCard.offsetLeft - (trackWidth - cardWidth) / 2;
+
+    coachsTrack.scrollTo({
+      left: Math.max(0, targetLeft),
+      behavior: behavior
+    });
+    updateCoachDots(targetIdx);
+  }
+
+  function nextCoach() {
+    scrollToCoach(currentCoachIdx + 1);
+  }
+
+  function prevCoach() {
+    scrollToCoach(currentCoachIdx - 1);
+  }
+
+  function startCoachAutoplay() {
+    stopCoachAutoplay();
+    if (!isMobileCoachView()) return;
+    coachAutoplayTimer = setInterval(() => {
+      if (!isCoachInteracting && isMobileCoachView()) {
+        nextCoach();
+      }
+    }, 4200);
+  }
+
+  function stopCoachAutoplay() {
+    if (coachAutoplayTimer) {
+      clearInterval(coachAutoplayTimer);
+      coachAutoplayTimer = null;
+    }
+  }
+
+  function pauseCoachAutoplayTemporarily() {
+    isCoachInteracting = true;
+    stopCoachAutoplay();
+    clearTimeout(coachResumeTimer);
+    coachResumeTimer = setTimeout(() => {
+      isCoachInteracting = false;
+      startCoachAutoplay();
+    }, 6000);
+  }
+
+  if (coachPrevBtn) {
+    coachPrevBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      prevCoach();
+      pauseCoachAutoplayTemporarily();
+    });
+  }
+
+  if (coachNextBtn) {
+    coachNextBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      nextCoach();
+      pauseCoachAutoplayTemporarily();
+    });
+  }
+
+  coachDots.forEach((dot) => {
+    dot.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const idx = parseInt(dot.getAttribute('data-index') || '0', 10);
+      scrollToCoach(idx);
+      pauseCoachAutoplayTemporarily();
+    });
+  });
+
+  let coachScrollDebounce = null;
+  if (coachsTrack) {
+    coachsTrack.addEventListener('scroll', () => {
+      if (!isMobileCoachView()) return;
+      clearTimeout(coachScrollDebounce);
+      coachScrollDebounce = setTimeout(() => {
+        const trackCenter = coachsTrack.scrollLeft + coachsTrack.clientWidth / 2;
+        let closestIdx = 0;
+        let minDiff = Infinity;
+        coachCards.forEach((card, i) => {
+          const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+          const diff = Math.abs(trackCenter - cardCenter);
+          if (diff < minDiff) {
+            minDiff = diff;
+            closestIdx = i;
+          }
+        });
+        if (closestIdx !== currentCoachIdx) {
+          updateCoachDots(closestIdx);
+        }
+      }, 50);
+    }, { passive: true });
+
+    coachsTrack.addEventListener('touchstart', () => pauseCoachAutoplayTemporarily(), { passive: true });
+    coachsTrack.addEventListener('mousedown', () => pauseCoachAutoplayTemporarily(), { passive: true });
+  }
+
+  if (coachsSection && 'IntersectionObserver' in window) {
+    const coachsSectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          startCoachAutoplay();
+        } else {
+          stopCoachAutoplay();
+        }
+      });
+    }, { threshold: 0.15 });
+    coachsSectionObserver.observe(coachsSection);
+  }
+
+  window.addEventListener('resize', () => {
+    if (isMobileCoachView()) {
+      startCoachAutoplay();
+    } else {
+      stopCoachAutoplay();
     }
   });
 

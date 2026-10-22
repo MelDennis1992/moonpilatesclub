@@ -32,7 +32,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=57" />
+  <link rel="stylesheet" href="style.css?v=58" />
 
   <!-- Bsport Widget SDK -->
   <script id="insert-bsport-widget-cdn">!function (b, s, p, o, r, t) { typeof window.BsportWidget === "undefined" && !document.getElementById("bsport-widget-cdn") && !function () { m = b.createElement(s), m.id = "bsport-widget-cdn", m.src = p, b.getElementsByTagName("head")[0].appendChild(m) }() }(document, "script", "https://cdn.bsport.io/scripts/widget.js")</script>
@@ -623,7 +623,7 @@
         <p class="section-subtitle reveal" data-i18n="coachs_subtitle">Des enseignantes passionnées et certifiées, dédiées à votre progression, votre alignement et votre bien-être au studio.</p>
       </div>
 
-      <div class="coachs-grid-duo">
+      <div class="coachs-grid-duo" id="coachs-track">
         <!-- Florence -->
         <div class="coach-card reveal" style="--delay:0s" data-coach-modal="modal-florence">
           <div class="coach-img-wrap">
@@ -701,6 +701,26 @@
             </div>
           </div>
         </div>
+      </div>
+
+      <!-- Coachs Carousel Controls (Mobile only) -->
+      <div class="coachs-carousel-nav" id="coachs-carousel-nav">
+        <button type="button" class="coachs-carousel-arrow coachs-carousel-prev" id="coachs-prev-btn" aria-label="Coach précédente">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        </button>
+        <div class="coachs-carousel-dots" id="coachs-dots" role="tablist" aria-label="Sélection du coach">
+          <button type="button" class="coachs-dot active" data-index="0" aria-label="Florence" role="tab" aria-selected="true"></button>
+          <button type="button" class="coachs-dot" data-index="1" aria-label="Ivy" role="tab" aria-selected="false"></button>
+          <button type="button" class="coachs-dot" data-index="2" aria-label="Kali" role="tab" aria-selected="false"></button>
+        </div>
+        <button type="button" class="coachs-carousel-arrow coachs-carousel-next" id="coachs-next-btn" aria-label="Coach suivante">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+
+      <!-- Hint for mobile swipe -->
+      <div class="coachs-swipe-hint" data-i18n="coachs_swipe_hint">
+        ← Glissez pour découvrir l'équipe →
       </div>
 
       <!-- Coachs Callout -->
@@ -2339,7 +2359,7 @@
     </svg>
   </button>
 
-  <script src="translations.js?v=34"></script>
-  <script src="script.js?v=56"></script>
+  <script src="translations.js?v=35"></script>
+  <script src="script.js?v=57"></script>
 </body>
 </html>

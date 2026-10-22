@@ -114,6 +114,7 @@ const translations = {
     "coach_callout_title": "Vous souhaitez un accompagnement sur-mesure ?",
     "coach_callout_desc": "Nos coachs sont également disponibles pour des séances individuelles privées ou en duo.",
     "btn_discover_private": "Découvrir le coaching privé",
+    "coachs_swipe_hint": "← Glissez pour découvrir l'équipe →",
 
     // Tarifs Découverte
     "dec_label": "Premiers pas",
@@ -497,6 +498,7 @@ const translations = {
     "coach_callout_title": "Looking for personalized guidance?",
     "coach_callout_desc": "Our coaches are also available for 1-on-1 private coaching or customized duo sessions.",
     "btn_discover_private": "Discover Private Coaching",
+    "coachs_swipe_hint": "← Swipe to meet the team →",
 
     // Tarifs Découverte
     "dec_label": "First Steps",
