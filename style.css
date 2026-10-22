@@ -846,6 +846,9 @@ a { text-decoration: none; color: inherit; }
   object-position: center 15%;
   transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
+.coach-img.coach-img-ivy {
+  object-position: center 78%;
+}
 .coach-card:hover .coach-img {
   transform: scale(1.05);
 }
@@ -1064,6 +1067,14 @@ a { text-decoration: none; color: inherit; }
   object-fit: cover;
   object-position: center 15%;
 }
+.coach-modal-img.coach-modal-img-ivy {
+  object-position: center 20%;
+}
+@media (min-width: 861px) {
+  .coach-modal-img.coach-modal-img-ivy {
+    object-position: center center;
+  }
+}
 .coach-modal-badge {
   position: absolute;
   bottom: 20px;
@@ -1167,7 +1178,8 @@ a { text-decoration: none; color: inherit; }
     grid-template-columns: 1fr;
   }
   .coach-modal-photo-col {
-    height: 320px;
+    min-height: 0;
+    height: 460px;
   }
   .coach-modal-text-col {
     padding: 32px 24px;
